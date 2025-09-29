@@ -1,0 +1,644 @@
+nohup: ignoring input
+[W929 16:21:42.595684429 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载预处理好的数据集...
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.60it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.60it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.88it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.33it/s]
+[W929 16:21:47.982147759 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W929 16:21:47.997390988 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W929 16:21:47.002225553 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W929 16:21:47.008144758 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/code/implement_final_v2.py:51: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/code/implement_final_v2.py:51: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/code/implement_final_v2.py:51: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/code/implement_final_v2.py:51: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /wandb/offline-run-20250929_162153-7fxc8cma
+  0%|          | 0/11259 [00:00<?, ?it/s][rank3]: Traceback (most recent call last):
+[rank3]:   File "/code/implement_final_v2.py", line 308, in <module>
+[rank3]:     main()
+[rank3]:   File "/code/implement_final_v2.py", line 304, in main
+[rank3]:     trainer.train()
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2328, in train
+[rank3]:     return inner_training_loop(
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2672, in _inner_training_loop
+[rank3]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank3]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 4009, in training_step
+[rank3]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/code/implement_final_v2.py", line 117, in compute_loss
+[rank3]:     log_probs_pi_y2 = self._get_log_probs(model, prompts, rejected_responses)
+[rank3]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/code/implement_final_v2.py", line 89, in _get_log_probs
+[rank3]:     outputs = model(input_ids, attention_mask=attention_mask, return_dict=True)
+[rank3]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank3]:     return model_forward(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank3]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank3]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank3]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank3]:     return model_forward(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank3]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank3]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 940, in wrapper
+[rank3]:     output = func(self, *args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+[rank3]:     outputs: BaseModelOutputWithPast = self.model(
+[rank3]:                                        ^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank3]:     outputs = func(self, *args, **kwargs)
+[rank3]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+[rank3]:     hidden_states = decoder_layer(
+[rank3]:                     ^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank3]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank3]:     return super().__call__(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 294, in forward
+[rank3]:     hidden_states, _ = self.self_attn(
+[rank3]:                        ^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 241, in forward
+[rank3]:     query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+[rank3]:                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 138, in apply_rotary_pos_emb
+[rank3]:     q_embed = (q * cos) + (rotate_half(q) * sin)
+[rank3]:                            ~~~~~~~~~~~~~~~^~~~~
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 3 has a total capacity of 79.25 GiB of which 58.94 MiB is free. Process 3110904 has 79.19 GiB memory in use. Of the allocated memory 76.95 GiB is allocated by PyTorch, and 1.33 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/code/implement_final_v2.py", line 308, in <module>
+    main()
+  File "/code/implement_final_v2.py", line 304, in main
+    trainer.train()
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2328, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2672, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 4009, in training_step
+    loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/implement_final_v2.py", line 117, in compute_loss
+    log_probs_pi_y2 = self._get_log_probs(model, prompts, rejected_responses)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/code/implement_final_v2.py", line 89, in _get_log_probs
+    outputs = model(input_ids, attention_mask=attention_mask, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+    return model_forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+    return model_forward(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 940, in wrapper
+    output = func(self, *args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+    outputs: BaseModelOutputWithPast = self.model(
+                                       ^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+    outputs = func(self, *args, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+    hidden_states = decoder_layer(
+                    ^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+    output = self._fsdp_wrapped_module(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 294, in forward
+    hidden_states, _ = self.self_attn(
+                       ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 241, in forward
+    query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 138, in apply_rotary_pos_emb
+    q_embed = (q * cos) + (rotate_half(q) * sin)
+                           ~~~~~~~~~~~~~~~^~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 8.94 MiB is free. Process 3110901 has 79.23 GiB memory in use. Of the allocated memory 76.90 GiB is allocated by PyTorch, and 1.44 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/code/implement_final_v2.py", line 308, in <module>
+[rank1]:     main()
+[rank1]:   File "/code/implement_final_v2.py", line 304, in main
+[rank1]:     trainer.train()
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2328, in train
+[rank1]:     return inner_training_loop(
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2672, in _inner_training_loop
+[rank1]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank1]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 4009, in training_step
+[rank1]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/code/implement_final_v2.py", line 117, in compute_loss
+[rank1]:     log_probs_pi_y2 = self._get_log_probs(model, prompts, rejected_responses)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/code/implement_final_v2.py", line 89, in _get_log_probs
+[rank1]:     outputs = model(input_ids, attention_mask=attention_mask, return_dict=True)
+[rank1]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank1]:     return model_forward(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank1]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank1]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank1]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank1]:     return model_forward(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank1]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank1]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 940, in wrapper
+[rank1]:     output = func(self, *args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+[rank1]:     outputs: BaseModelOutputWithPast = self.model(
+[rank1]:                                        ^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank1]:     outputs = func(self, *args, **kwargs)
+[rank1]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+[rank1]:     hidden_states = decoder_layer(
+[rank1]:                     ^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank1]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank1]:     return super().__call__(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 308, in forward
+[rank1]:     hidden_states = self.post_attention_layernorm(hidden_states)
+[rank1]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 64, in forward
+[rank1]:     hidden_states = hidden_states.to(torch.float32)
+[rank1]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 1 has a total capacity of 79.25 GiB of which 68.94 MiB is free. Process 3110902 has 79.18 GiB memory in use. Of the allocated memory 76.97 GiB is allocated by PyTorch, and 1.30 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/code/implement_final_v2.py", line 308, in <module>
+[rank2]:     main()
+[rank2]:   File "/code/implement_final_v2.py", line 304, in main
+[rank2]:     trainer.train()
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2328, in train
+[rank2]:     return inner_training_loop(
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2672, in _inner_training_loop
+[rank2]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank2]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 4009, in training_step
+[rank2]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/code/implement_final_v2.py", line 117, in compute_loss
+[rank2]:     log_probs_pi_y2 = self._get_log_probs(model, prompts, rejected_responses)
+[rank2]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/code/implement_final_v2.py", line 89, in _get_log_probs
+[rank2]:     outputs = model(input_ids, attention_mask=attention_mask, return_dict=True)
+[rank2]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank2]:     return model_forward(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank2]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank2]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank2]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank2]:     return model_forward(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank2]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank2]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 940, in wrapper
+[rank2]:     output = func(self, *args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+[rank2]:     outputs: BaseModelOutputWithPast = self.model(
+[rank2]:                                        ^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank2]:     outputs = func(self, *args, **kwargs)
+[rank2]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+[rank2]:     hidden_states = decoder_layer(
+[rank2]:                     ^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank2]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank2]:     return super().__call__(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 308, in forward
+[rank2]:     hidden_states = self.post_attention_layernorm(hidden_states)
+[rank2]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 65, in forward
+[rank2]:     variance = hidden_states.pow(2).mean(-1, keepdim=True)
+[rank2]:                ^^^^^^^^^^^^^^^^^^^^
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB. GPU 2 has a total capacity of 79.25 GiB of which 56.94 MiB is free. Process 3110903 has 79.19 GiB memory in use. Of the allocated memory 77.38 GiB is allocated by PyTorch, and 922.56 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/code/implement_final_v2.py", line 308, in <module>
+[rank0]:     main()
+[rank0]:   File "/code/implement_final_v2.py", line 304, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2328, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2672, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 4009, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/code/implement_final_v2.py", line 117, in compute_loss
+[rank0]:     log_probs_pi_y2 = self._get_log_probs(model, prompts, rejected_responses)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/code/implement_final_v2.py", line 89, in _get_log_probs
+[rank0]:     outputs = model(input_ids, attention_mask=attention_mask, return_dict=True)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank0]:     return model_forward(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank0]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 818, in forward
+[rank0]:     return model_forward(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/operations.py", line 806, in __call__
+[rank0]:     return convert_to_fp32(self.model_forward(*args, **kwargs))
+[rank0]:                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/amp/autocast_mode.py", line 44, in decorate_autocast
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 940, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 459, in forward
+[rank0]:     outputs: BaseModelOutputWithPast = self.model(
+[rank0]:                                        ^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank0]:     outputs = func(self, *args, **kwargs)
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 395, in forward
+[rank0]:     hidden_states = decoder_layer(
+[rank0]:                     ^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 854, in forward
+[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank0]:     return super().__call__(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 294, in forward
+[rank0]:     hidden_states, _ = self.self_attn(
+[rank0]:                        ^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 241, in forward
+[rank0]:     query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)
+[rank0]:                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 138, in apply_rotary_pos_emb
+[rank0]:     q_embed = (q * cos) + (rotate_half(q) * sin)
+[rank0]:                            ~~~~~~~~~~~~~~~^~~~~
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 79.25 GiB of which 8.94 MiB is free. Process 3110901 has 79.23 GiB memory in use. Of the allocated memory 76.90 GiB is allocated by PyTorch, and 1.44 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /wandb/offline-run-20250929_162153-7fxc8cma[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20250929_162153-7fxc8cma/logs[0m
+W0929 16:21:56.042000 500493 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 500778 closing signal SIGTERM
+W0929 16:21:56.044000 500493 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 500779 closing signal SIGTERM
+W0929 16:21:56.045000 500493 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 500780 closing signal SIGTERM
+E0929 16:21:56.660000 500493 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 500777) of binary: /root/miniconda3/envs/advan/bin/python3.12
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/advan/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1222, in launch_command
+    multi_gpu_launcher(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/code/implement_final_v2.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-09-29_16:21:56
+  host      : wLDmlp
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 500777)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
