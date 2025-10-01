@@ -1,0 +1,732 @@
+nohup: ignoring input
+[W1001 13:45:20.649626164 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.24it/s]
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+[W1001 13:45:25.720368502 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 96.84it/s]
+[W1001 13:45:25.922152444 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3.py:36: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3.py:36: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.28it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.70it/s]
+[W1001 13:45:26.492231581 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1001 13:45:26.570413564 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3.py:36: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3.py:36: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /root/wandb/offline-run-20251001_134531-4uad9dea
+  0%|          | 0/11259 [00:00<?, ?it/s]Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  0%|          | 1/11259 [00:03<12:01:32,  3.85s/it]{'loss': 385.7849, 'grad_norm': 1667.117431640625, 'learning_rate': 0.0, 'mean_ratio_chosen': 1.0052322149276733, 'mean_ratio_rejected': 0.3781120479106903, 'weight_chosen': 0.9214000105857849, 'weight_rejected': -0.05257560685276985, 'epoch': 0.0002664890073284477}
+                                                    {'loss': 385.7849, 'grad_norm': 1667.117431640625, 'learning_rate': 0.0, 'mean_ratio_chosen': 1.0052322149276733, 'mean_ratio_rejected': 0.3781120479106903, 'weight_chosen': 0.9214000105857849, 'weight_rejected': -0.05257560685276985, 'epoch': 0.0}
+  0%|          | 1/11259 [00:03<12:01:32,  3.85s/it]  0%|          | 2/11259 [00:07<11:45:08,  3.76s/it]  0%|          | 3/11259 [00:11<11:23:02,  3.64s/it]  0%|          | 4/11259 [00:14<10:45:08,  3.44s/it]  0%|          | 5/11259 [00:17<10:59:13,  3.51s/it]  0%|          | 6/11259 [00:21<11:13:21,  3.59s/it]  0%|          | 7/11259 [00:24<10:48:46,  3.46s/it]  0%|          | 8/11259 [00:28<10:48:59,  3.46s/it]  0%|          | 9/11259 [00:31<10:19:03,  3.30s/it]  0%|          | 10/11259 [00:34<10:18:17,  3.30s/it]{'loss': 320.3877, 'grad_norm': 2272.693603515625, 'learning_rate': 7.992895204262877e-09, 'mean_ratio_chosen': 1.2888935804367065, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.21970658004283905, 'weight_rejected': 2.5407636165618896, 'epoch': 0.002664890073284477}
+                                                     {'loss': 320.3877, 'grad_norm': 2272.693603515625, 'learning_rate': 7.992895204262877e-09, 'mean_ratio_chosen': 1.2888935804367065, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.21970658004283905, 'weight_rejected': 2.5407636165618896, 'epoch': 0.0}
+  0%|          | 10/11259 [00:34<10:18:17,  3.30s/it]  0%|          | 11/11259 [00:38<10:33:16,  3.38s/it]  0%|          | 12/11259 [00:41<10:43:57,  3.44s/it]  0%|          | 13/11259 [00:44<10:37:13,  3.40s/it]  0%|          | 14/11259 [00:48<10:25:25,  3.34s/it]  0%|          | 15/11259 [00:51<10:21:47,  3.32s/it]  0%|          | 16/11259 [00:54<10:22:48,  3.32s/it]  0%|          | 17/11259 [00:57<10:00:50,  3.21s/it]  0%|          | 18/11259 [01:01<10:24:19,  3.33s/it]  0%|          | 19/11259 [01:04<9:54:46,  3.17s/it]   0%|          | 20/11259 [01:07<9:50:11,  3.15s/it]{'loss': 396.5855, 'grad_norm': 1388.3414306640625, 'learning_rate': 1.6873889875666073e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -52.25347137451172, 'weight_rejected': 53.19024658203125, 'epoch': 0.005329780146568954}
+                                                    {'loss': 396.5855, 'grad_norm': 1388.3414306640625, 'learning_rate': 1.6873889875666073e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -52.25347137451172, 'weight_rejected': 53.19024658203125, 'epoch': 0.01}
+  0%|          | 20/11259 [01:07<9:50:11,  3.15s/it]  0%|          | 21/11259 [01:10<10:21:04,  3.32s/it]  0%|          | 22/11259 [01:16<12:22:13,  3.96s/it]  0%|          | 23/11259 [01:19<12:00:27,  3.85s/it]  0%|          | 24/11259 [01:22<10:59:49,  3.52s/it]  0%|          | 25/11259 [01:25<10:45:30,  3.45s/it]  0%|          | 26/11259 [01:28<10:22:16,  3.32s/it]  0%|          | 27/11259 [01:32<10:38:17,  3.41s/it]  0%|          | 28/11259 [01:35<10:10:34,  3.26s/it]  0%|          | 29/11259 [01:38<10:01:06,  3.21s/it]  0%|          | 30/11259 [01:41<10:05:02,  3.23s/it]{'loss': 267.0095, 'grad_norm': 2366.8173828125, 'learning_rate': 2.575488454706927e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -113.7303237915039, 'weight_rejected': 114.88040924072266, 'epoch': 0.007994670219853431}
+                                                     {'loss': 267.0095, 'grad_norm': 2366.8173828125, 'learning_rate': 2.575488454706927e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -113.7303237915039, 'weight_rejected': 114.88040924072266, 'epoch': 0.01}
+  0%|          | 30/11259 [01:41<10:05:02,  3.23s/it]  0%|          | 31/11259 [01:45<10:42:18,  3.43s/it]  0%|          | 32/11259 [01:49<10:50:13,  3.48s/it]  0%|          | 33/11259 [01:52<10:32:37,  3.38s/it]  0%|          | 34/11259 [01:56<11:11:32,  3.59s/it]  0%|          | 35/11259 [02:00<11:28:48,  3.68s/it]  0%|          | 36/11259 [02:04<12:04:00,  3.87s/it]  0%|          | 37/11259 [02:09<12:35:11,  4.04s/it]  0%|          | 38/11259 [02:13<12:25:00,  3.98s/it]  0%|          | 39/11259 [02:18<13:30:29,  4.33s/it]  0%|          | 40/11259 [02:21<12:21:07,  3.96s/it]{'loss': 373.0396, 'grad_norm': 7052.80859375, 'learning_rate': 3.4635879218472466e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -69.6528091430664, 'weight_rejected': 72.4461441040039, 'epoch': 0.010659560293137908}
+                                                     {'loss': 373.0396, 'grad_norm': 7052.80859375, 'learning_rate': 3.4635879218472466e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -69.6528091430664, 'weight_rejected': 72.4461441040039, 'epoch': 0.01}
+  0%|          | 40/11259 [02:21<12:21:07,  3.96s/it]  0%|          | 41/11259 [02:25<12:34:48,  4.04s/it]  0%|          | 42/11259 [02:28<11:29:23,  3.69s/it]  0%|          | 43/11259 [02:32<11:58:53,  3.85s/it]  0%|          | 44/11259 [02:35<11:12:13,  3.60s/it]  0%|          | 45/11259 [02:39<11:13:28,  3.60s/it]  0%|          | 46/11259 [02:42<11:19:20,  3.64s/it]  0%|          | 47/11259 [02:45<10:34:48,  3.40s/it]  0%|          | 48/11259 [02:49<10:47:43,  3.47s/it]  0%|          | 49/11259 [02:52<10:49:43,  3.48s/it]  0%|          | 50/11259 [02:55<10:17:56,  3.31s/it]{'loss': 334.0456, 'grad_norm': 3606.274169921875, 'learning_rate': 4.351687388987566e-08, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 4.129166603088379, 'weight_chosen': 17.2337589263916, 'weight_rejected': 0.82691490650177, 'epoch': 0.013324450366422385}
+                                                     {'loss': 334.0456, 'grad_norm': 3606.274169921875, 'learning_rate': 4.351687388987566e-08, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 4.129166603088379, 'weight_chosen': 17.2337589263916, 'weight_rejected': 0.82691490650177, 'epoch': 0.01}
+  0%|          | 50/11259 [02:55<10:17:56,  3.31s/it]  0%|          | 51/11259 [02:59<10:13:48,  3.29s/it]  0%|          | 52/11259 [03:02<10:44:43,  3.45s/it]  0%|          | 53/11259 [03:07<11:29:59,  3.69s/it]  0%|          | 54/11259 [03:10<11:21:35,  3.65s/it]  0%|          | 55/11259 [03:15<12:36:18,  4.05s/it]  0%|          | 56/11259 [03:20<13:42:00,  4.40s/it]  1%|          | 57/11259 [03:24<12:56:03,  4.16s/it]  1%|          | 58/11259 [03:27<12:01:20,  3.86s/it]  1%|          | 59/11259 [03:33<13:26:34,  4.32s/it]  1%|          | 60/11259 [03:36<12:11:47,  3.92s/it]{'loss': 322.2208, 'grad_norm': 0.0, 'learning_rate': 5.239786856127886e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -100.9726791381836, 'weight_rejected': 101.86028289794922, 'epoch': 0.015989340439706862}
+                                                     {'loss': 322.2208, 'grad_norm': 0.0, 'learning_rate': 5.239786856127886e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -100.9726791381836, 'weight_rejected': 101.86028289794922, 'epoch': 0.02}
+  1%|          | 60/11259 [03:36<12:11:47,  3.92s/it]  1%|          | 61/11259 [03:39<11:53:00,  3.82s/it]  1%|          | 62/11259 [03:43<11:29:05,  3.69s/it]  1%|          | 63/11259 [03:46<11:22:55,  3.66s/it]  1%|          | 64/11259 [03:50<11:29:15,  3.69s/it]  1%|          | 65/11259 [03:54<11:35:17,  3.73s/it]  1%|          | 66/11259 [03:57<11:21:17,  3.65s/it]  1%|          | 67/11259 [04:01<11:05:31,  3.57s/it]  1%|          | 68/11259 [04:04<10:33:22,  3.40s/it]  1%|          | 69/11259 [04:07<10:55:10,  3.51s/it]  1%|          | 70/11259 [04:11<10:46:05,  3.46s/it]{'loss': 318.237, 'grad_norm': 2508.77587890625, 'learning_rate': 6.127886323268205e-08, 'mean_ratio_chosen': 3.2254791259765625, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 0.8461223840713501, 'weight_rejected': -8.40713882446289, 'epoch': 0.018654230512991338}
+                                                     {'loss': 318.237, 'grad_norm': 2508.77587890625, 'learning_rate': 6.127886323268205e-08, 'mean_ratio_chosen': 3.2254791259765625, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 0.8461223840713501, 'weight_rejected': -8.40713882446289, 'epoch': 0.02}
+  1%|          | 70/11259 [04:11<10:46:05,  3.46s/it]  1%|          | 71/11259 [04:15<11:06:00,  3.57s/it]  1%|          | 72/11259 [04:18<10:50:49,  3.49s/it]  1%|          | 73/11259 [04:21<10:22:15,  3.34s/it]  1%|          | 74/11259 [04:24<10:19:45,  3.32s/it]  1%|          | 75/11259 [04:27<10:16:20,  3.31s/it]  1%|          | 76/11259 [04:32<11:27:37,  3.69s/it]  1%|          | 77/11259 [04:35<10:30:33,  3.38s/it]  1%|          | 78/11259 [04:38<10:43:29,  3.45s/it]  1%|          | 79/11259 [04:42<10:52:58,  3.50s/it]  1%|          | 80/11259 [04:46<11:06:59,  3.58s/it]{'loss': 342.8002, 'grad_norm': 2598.508544921875, 'learning_rate': 7.015985790408526e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.06041562557220459, 'weight_rejected': 35.1920280456543, 'epoch': 0.021319120586275817}
+                                                     {'loss': 342.8002, 'grad_norm': 2598.508544921875, 'learning_rate': 7.015985790408526e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.06041562557220459, 'weight_rejected': 35.1920280456543, 'epoch': 0.02}
+  1%|          | 80/11259 [04:46<11:06:59,  3.58s/it]  1%|          | 81/11259 [04:50<11:36:48,  3.74s/it]  1%|          | 82/11259 [04:53<10:58:59,  3.54s/it]  1%|          | 83/11259 [04:57<11:36:54,  3.74s/it]  1%|          | 84/11259 [05:01<11:41:17,  3.77s/it]  1%|          | 85/11259 [05:04<10:52:18,  3.50s/it]  1%|          | 86/11259 [05:07<10:52:52,  3.51s/it]  1%|          | 87/11259 [05:12<11:50:53,  3.82s/it]  1%|          | 88/11259 [05:15<11:10:22,  3.60s/it]  1%|          | 89/11259 [05:18<10:46:00,  3.47s/it]  1%|          | 90/11259 [05:21<10:41:11,  3.44s/it]{'loss': 376.8063, 'grad_norm': 2769.28515625, 'learning_rate': 7.904085257548846e-08, 'mean_ratio_chosen': 5.492420673370361, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 0.6188967823982239, 'weight_rejected': -1.3567521572113037, 'epoch': 0.023984010659560292}
+                                                     {'loss': 376.8063, 'grad_norm': 2769.28515625, 'learning_rate': 7.904085257548846e-08, 'mean_ratio_chosen': 5.492420673370361, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 0.6188967823982239, 'weight_rejected': -1.3567521572113037, 'epoch': 0.02}
+  1%|          | 90/11259 [05:22<10:41:11,  3.44s/it]  1%|          | 91/11259 [05:24<10:12:33,  3.29s/it]  1%|          | 92/11259 [05:28<10:33:16,  3.40s/it]  1%|          | 93/11259 [05:32<10:55:40,  3.52s/it]  1%|          | 94/11259 [05:35<10:25:36,  3.36s/it]  1%|          | 95/11259 [05:39<11:35:57,  3.74s/it]  1%|          | 96/11259 [05:43<11:22:47,  3.67s/it]  1%|          | 97/11259 [05:47<11:42:23,  3.78s/it]  1%|          | 98/11259 [05:51<12:08:06,  3.91s/it]  1%|          | 99/11259 [05:54<11:10:01,  3.60s/it]  1%|          | 100/11259 [05:57<10:22:27,  3.35s/it]{'loss': 318.6542, 'grad_norm': 1792.547119140625, 'learning_rate': 8.792184724689165e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -29.61209487915039, 'weight_rejected': 41.64543914794922, 'epoch': 0.02664890073284477}
+                                                      {'loss': 318.6542, 'grad_norm': 1792.547119140625, 'learning_rate': 8.792184724689165e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -29.61209487915039, 'weight_rejected': 41.64543914794922, 'epoch': 0.03}
+  1%|          | 100/11259 [05:57<10:22:27,  3.35s/it]  1%|          | 101/11259 [06:00<10:37:49,  3.43s/it]  1%|          | 102/11259 [06:04<11:07:38,  3.59s/it]  1%|          | 103/11259 [06:07<10:35:31,  3.42s/it]  1%|          | 104/11259 [06:12<11:16:50,  3.64s/it]  1%|          | 105/11259 [06:15<10:46:39,  3.48s/it]  1%|          | 106/11259 [06:19<11:18:56,  3.65s/it]  1%|          | 107/11259 [06:22<11:11:17,  3.61s/it]  1%|          | 108/11259 [06:26<11:22:09,  3.67s/it]  1%|          | 109/11259 [06:29<10:51:35,  3.51s/it]  1%|          | 110/11259 [06:32<10:29:59,  3.39s/it]{'loss': 353.695, 'grad_norm': 0.0, 'learning_rate': 9.680284191829484e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.1150360107421875, 'weight_rejected': 15.079026222229004, 'epoch': 0.029313790806129246}
+                                                      {'loss': 353.695, 'grad_norm': 0.0, 'learning_rate': 9.680284191829484e-08, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.1150360107421875, 'weight_rejected': 15.079026222229004, 'epoch': 0.03}
+  1%|          | 110/11259 [06:32<10:29:59,  3.39s/it]  1%|          | 111/11259 [06:36<10:54:07,  3.52s/it]  1%|          | 112/11259 [06:39<10:32:47,  3.41s/it]  1%|          | 113/11259 [06:42<10:19:25,  3.33s/it]  1%|          | 114/11259 [06:46<10:09:33,  3.28s/it]  1%|          | 115/11259 [06:49<9:56:42,  3.21s/it]   1%|          | 116/11259 [06:52<10:05:45,  3.26s/it]  1%|          | 117/11259 [06:55<10:07:52,  3.27s/it]  1%|          | 118/11259 [06:59<10:18:35,  3.33s/it]  1%|          | 119/11259 [07:04<12:25:47,  4.02s/it]  1%|          | 120/11259 [07:08<11:54:19,  3.85s/it]{'loss': 365.8044, 'grad_norm': 0.0, 'learning_rate': 1.0568383658969803e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.23959600925445557, 'weight_rejected': 42.504451751708984, 'epoch': 0.031978680879413725}
+                                                      {'loss': 365.8044, 'grad_norm': 0.0, 'learning_rate': 1.0568383658969803e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.23959600925445557, 'weight_rejected': 42.504451751708984, 'epoch': 0.03}
+  1%|          | 120/11259 [07:08<11:54:19,  3.85s/it]  1%|          | 121/11259 [07:11<11:25:09,  3.69s/it]  1%|          | 122/11259 [07:15<11:22:59,  3.68s/it]  1%|          | 123/11259 [07:18<11:09:59,  3.61s/it]  1%|          | 124/11259 [07:22<11:04:47,  3.58s/it]  1%|          | 125/11259 [07:25<10:57:32,  3.54s/it]  1%|          | 126/11259 [07:29<10:58:01,  3.55s/it]  1%|          | 127/11259 [07:32<10:41:22,  3.46s/it]  1%|          | 128/11259 [07:35<10:28:07,  3.39s/it]  1%|          | 129/11259 [07:40<11:23:00,  3.68s/it]  1%|          | 130/11259 [07:43<11:26:50,  3.70s/it]{'loss': 329.5833, 'grad_norm': 0.0, 'learning_rate': 1.1456483126110124e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -14.580606460571289, 'weight_rejected': 1.1327694654464722, 'epoch': 0.034643570952698204}
+                                                      {'loss': 329.5833, 'grad_norm': 0.0, 'learning_rate': 1.1456483126110124e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -14.580606460571289, 'weight_rejected': 1.1327694654464722, 'epoch': 0.03}
+  1%|          | 130/11259 [07:44<11:26:50,  3.70s/it]  1%|          | 131/11259 [07:47<10:53:25,  3.52s/it]  1%|          | 132/11259 [07:49<10:12:20,  3.30s/it]  1%|          | 133/11259 [07:53<10:34:09,  3.42s/it]  1%|          | 134/11259 [07:56<10:27:23,  3.38s/it]  1%|          | 135/11259 [08:00<10:43:39,  3.47s/it]  1%|          | 136/11259 [08:03<10:13:09,  3.31s/it]  1%|          | 137/11259 [08:06<9:55:17,  3.21s/it]   1%|          | 138/11259 [08:10<10:24:46,  3.37s/it]  1%|          | 139/11259 [08:13<10:00:38,  3.24s/it]  1%|          | 140/11259 [08:17<10:51:12,  3.51s/it]{'loss': 366.4076, 'grad_norm': 0.0, 'learning_rate': 1.2344582593250443e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 14.935830116271973, 'weight_rejected': 0.44219085574150085, 'epoch': 0.037308461025982675}
+                                                      {'loss': 366.4076, 'grad_norm': 0.0, 'learning_rate': 1.2344582593250443e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 14.935830116271973, 'weight_rejected': 0.44219085574150085, 'epoch': 0.04}
+  1%|          | 140/11259 [08:17<10:51:12,  3.51s/it]  1%|▏         | 141/11259 [08:20<10:26:48,  3.38s/it]  1%|▏         | 142/11259 [08:24<11:25:16,  3.70s/it]  1%|▏         | 143/11259 [08:27<10:57:01,  3.55s/it]  1%|▏         | 144/11259 [08:32<11:43:22,  3.80s/it]  1%|▏         | 145/11259 [08:37<12:40:44,  4.11s/it]  1%|▏         | 146/11259 [08:41<12:31:17,  4.06s/it]  1%|▏         | 147/11259 [08:45<12:53:05,  4.17s/it]  1%|▏         | 148/11259 [08:49<12:27:07,  4.03s/it]  1%|▏         | 149/11259 [08:52<11:50:36,  3.84s/it]  1%|▏         | 150/11259 [08:57<12:22:52,  4.01s/it]{'loss': 272.8928, 'grad_norm': 0.0, 'learning_rate': 1.3232682060390762e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.2508012652397156, 'weight_rejected': 57.73832702636719, 'epoch': 0.039973351099267154}
+                                                      {'loss': 272.8928, 'grad_norm': 0.0, 'learning_rate': 1.3232682060390762e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.2508012652397156, 'weight_rejected': 57.73832702636719, 'epoch': 0.04}
+  1%|▏         | 150/11259 [08:57<12:22:52,  4.01s/it]  1%|▏         | 151/11259 [09:01<12:36:27,  4.09s/it]  1%|▏         | 152/11259 [09:04<11:42:00,  3.79s/it]  1%|▏         | 153/11259 [09:07<11:27:46,  3.72s/it]  1%|▏         | 154/11259 [09:11<11:23:48,  3.69s/it]  1%|▏         | 155/11259 [09:14<10:57:07,  3.55s/it]  1%|▏         | 156/11259 [09:18<11:00:00,  3.57s/it]  1%|▏         | 157/11259 [09:21<10:46:05,  3.49s/it]  1%|▏         | 158/11259 [09:25<10:45:45,  3.49s/it]  1%|▏         | 159/11259 [09:28<10:29:45,  3.40s/it][rank2]:[W1001 13:55:02.540201010 TCPStore.cpp:125] [c10d] recvValue failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:682 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d6a8cd (0x7f5ffddf08cd in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b47a (0x7f5ffddf147a in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x31e (0x7f5ffddec19e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:55:02.543514676 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+  1%|▏         | 160/11259 [09:32<10:45:04,  3.49s/it]{'loss': 329.1475, 'grad_norm': 0.0, 'learning_rate': 1.4120781527531085e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.4109649658203125, 'weight_rejected': 17.90555763244629, 'epoch': 0.04263824117255163}
+                                                      {'loss': 329.1475, 'grad_norm': 0.0, 'learning_rate': 1.4120781527531085e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.4109649658203125, 'weight_rejected': 17.90555763244629, 'epoch': 0.04}
+  1%|▏         | 160/11259 [09:32<10:45:04,  3.49s/it]  1%|▏         | 161/11259 [09:35<10:25:46,  3.38s/it][rank3]:[W1001 13:55:08.271312508 TCPStore.cpp:125] [c10d] recvValue failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:682 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d6a8cd (0x7f49d59f08cd in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b47a (0x7f49d59f147a in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x31e (0x7f49d59ec19e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:55:08.274703812 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+  1%|▏         | 162/11259 [09:38<10:37:49,  3.45s/it]  1%|▏         | 163/11259 [09:41<10:04:09,  3.27s/it]  1%|▏         | 164/11259 [09:46<11:11:56,  3.63s/it]  1%|▏         | 165/11259 [09:50<12:05:14,  3.92s/it]  1%|▏         | 166/11259 [09:53<11:13:24,  3.64s/it]  1%|▏         | 167/11259 [09:57<11:23:09,  3.70s/it][rank0]:[W1001 13:55:31.619129782 TCPStore.cpp:125] [c10d] recvValue failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:682 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d6a8cd (0x7fde67ff08cd in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b47a (0x7fde67ff147a in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x31e (0x7fde67fec19e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:55:31.622425053 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+  1%|▏         | 168/11259 [10:01<11:37:51,  3.78s/it]  2%|▏         | 169/11259 [10:04<10:48:18,  3.51s/it]  2%|▏         | 170/11259 [10:07<10:08:43,  3.29s/it]{'loss': 347.6584, 'grad_norm': 1079.44921875, 'learning_rate': 1.5008880994671402e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -24.160640716552734, 'weight_rejected': 1.3147790431976318, 'epoch': 0.04530313124583611}
+                                                      {'loss': 347.6584, 'grad_norm': 1079.44921875, 'learning_rate': 1.5008880994671402e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -24.160640716552734, 'weight_rejected': 1.3147790431976318, 'epoch': 0.05}
+  2%|▏         | 170/11259 [10:07<10:08:43,  3.29s/it][rank0]:[W1001 13:55:40.623133126 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:55:40.626333827 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:55:42.546387175 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:55:42.549681995 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 171/11259 [10:11<10:44:29,  3.49s/it]  2%|▏         | 172/11259 [10:16<12:20:46,  4.01s/it][rank1]:[W1001 13:55:49.273565327 TCPStore.cpp:125] [c10d] recvValue failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+Exception raised from recvBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:682 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d6a8cd (0x7fbcab3f08cd in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b47a (0x7fbcab3f147a in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x31e (0x7fbcab3ec19e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:55:49.276798891 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Failed to recv, got 0 bytes. Connection was likely closed. Did the remote server shutdown or crash?
+[rank3]:[W1001 13:55:49.277604361 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:55:49.280758284 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 173/11259 [10:19<11:53:16,  3.86s/it]  2%|▏         | 174/11259 [10:23<11:24:07,  3.70s/it]  2%|▏         | 175/11259 [10:26<11:09:19,  3.62s/it]  2%|▏         | 176/11259 [10:29<10:42:52,  3.48s/it]  2%|▏         | 177/11259 [10:33<10:48:05,  3.51s/it]  2%|▏         | 178/11259 [10:37<11:03:01,  3.59s/it][rank2]:[W1001 13:56:10.551793087 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:56:10.555214328 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank0]:[W1001 13:56:10.628547049 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:56:10.631701312 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 179/11259 [10:40<10:37:38,  3.45s/it]  2%|▏         | 180/11259 [10:43<10:26:07,  3.39s/it]{'loss': 283.1391, 'grad_norm': 0.0, 'learning_rate': 1.5896980461811721e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -14.365413665771484, 'weight_rejected': 18.24112892150879, 'epoch': 0.047968021319120584}
+                                                      {'loss': 283.1391, 'grad_norm': 0.0, 'learning_rate': 1.5896980461811721e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -14.365413665771484, 'weight_rejected': 18.24112892150879, 'epoch': 0.05}
+  2%|▏         | 180/11259 [10:43<10:26:07,  3.39s/it][rank0]:[W1001 13:56:19.632443981 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:56:19.635751906 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 181/11259 [10:47<10:45:33,  3.50s/it]  2%|▏         | 182/11259 [10:51<11:52:35,  3.86s/it][rank0]:[W1001 13:56:27.636404626 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:56:27.639819705 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 183/11259 [10:55<11:41:22,  3.80s/it][rank0]:[W1001 13:56:30.640123585 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:56:30.643516692 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 184/11259 [10:59<11:53:05,  3.86s/it]  2%|▏         | 185/11259 [11:03<11:38:05,  3.78s/it]  2%|▏         | 186/11259 [11:06<11:05:54,  3.61s/it]  2%|▏         | 187/11259 [11:10<11:04:14,  3.60s/it]  2%|▏         | 188/11259 [11:13<10:39:11,  3.46s/it]  2%|▏         | 189/11259 [11:18<12:01:32,  3.91s/it]  2%|▏         | 190/11259 [11:21<11:38:35,  3.79s/it]{'loss': 360.5921, 'grad_norm': 431.0462646484375, 'learning_rate': 1.678507992895204e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.2461194396018982, 'weight_rejected': 0.39736101031303406, 'epoch': 0.05063291139240506}
+                                                      {'loss': 360.5921, 'grad_norm': 431.0462646484375, 'learning_rate': 1.678507992895204e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.2461194396018982, 'weight_rejected': 0.39736101031303406, 'epoch': 0.05}
+  2%|▏         | 190/11259 [11:21<11:38:35,  3.79s/it]  2%|▏         | 191/11259 [11:24<10:55:48,  3.56s/it][rank2]:[W1001 13:56:59.558786203 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:56:59.561990241 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank0]:[W1001 13:56:59.645748140 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:56:59.648917842 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 192/11259 [11:30<13:00:45,  4.23s/it]  2%|▏         | 193/11259 [11:33<12:03:45,  3.92s/it]  2%|▏         | 194/11259 [11:37<11:51:14,  3.86s/it]  2%|▏         | 195/11259 [11:40<11:27:12,  3.73s/it][rank1]:[W1001 13:57:13.282794085 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:57:13.286049891 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:57:13.286785338 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:57:13.289948247 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 196/11259 [11:43<10:51:40,  3.53s/it][rank2]:[W1001 13:57:19.563525449 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:57:19.566804989 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank0]:[W1001 13:57:19.650430777 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:57:19.653626640 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 197/11259 [11:49<12:45:22,  4.15s/it]  2%|▏         | 198/11259 [11:52<11:57:45,  3.89s/it]  2%|▏         | 199/11259 [11:56<11:55:47,  3.88s/it]  2%|▏         | 200/11259 [12:00<11:37:48,  3.79s/it]{'loss': 335.6224, 'grad_norm': 2408.3671875, 'learning_rate': 1.767317939609236e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.05169332027435303, 'weight_rejected': 12.506406784057617, 'epoch': 0.05329780146568954}
+                                                      {'loss': 335.6224, 'grad_norm': 2408.3671875, 'learning_rate': 1.767317939609236e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.05169332027435303, 'weight_rejected': 12.506406784057617, 'epoch': 0.05}
+  2%|▏         | 200/11259 [12:00<11:37:48,  3.79s/it][rank0]:[W1001 13:57:33.654678534 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:57:33.658000275 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 201/11259 [12:04<12:16:05,  3.99s/it]  2%|▏         | 202/11259 [12:07<11:21:11,  3.70s/it]  2%|▏         | 203/11259 [12:11<11:34:21,  3.77s/it]  2%|▏         | 204/11259 [12:14<10:51:26,  3.54s/it][rank1]:[W1001 13:57:49.288710758 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:57:49.291938871 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:57:49.292493795 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:57:49.295599396 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 205/11259 [12:17<10:38:14,  3.46s/it][rank2]:[W1001 13:57:54.569733107 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:57:54.572966550 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 206/11259 [12:22<11:39:51,  3.80s/it][rank1]:[W1001 13:57:57.292598615 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:57:57.295791541 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:57:57.296188205 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:57:57.299316429 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 207/11259 [12:25<11:15:41,  3.67s/it][rank0]:[W1001 13:58:00.659971724 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:58:00.663285841 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 208/11259 [12:29<11:27:27,  3.73s/it]  2%|▏         | 209/11259 [12:33<11:22:28,  3.71s/it]  2%|▏         | 210/11259 [12:36<11:07:12,  3.62s/it]{'loss': 325.3366, 'grad_norm': 2591.143798828125, 'learning_rate': 1.8561278863232683e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -1.3576457500457764, 'weight_rejected': 39.82292938232422, 'epoch': 0.05596269153897402}
+                                                      {'loss': 325.3366, 'grad_norm': 2591.143798828125, 'learning_rate': 1.8561278863232683e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -1.3576457500457764, 'weight_rejected': 39.82292938232422, 'epoch': 0.06}
+  2%|▏         | 210/11259 [12:36<11:07:12,  3.62s/it]  2%|▏         | 211/11259 [12:41<11:50:08,  3.86s/it]  2%|▏         | 212/11259 [12:44<10:54:36,  3.56s/it]  2%|▏         | 213/11259 [12:47<11:00:50,  3.59s/it]  2%|▏         | 214/11259 [12:52<11:39:16,  3.80s/it]  2%|▏         | 215/11259 [12:55<11:06:20,  3.62s/it][rank1]:[W1001 13:58:28.298105671 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:58:28.301355967 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:28.301573490 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:28.304731600 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 216/11259 [12:58<11:04:41,  3.61s/it][rank0]:[W1001 13:58:33.665646344 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49164, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fde83ed9eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fde67fef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fde67fefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fde67ff186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fde67fec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fde274d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fde0ae5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fde84c52ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fde84ce3a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank0]:[W1001 13:58:33.668908432 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 0] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+  2%|▏         | 217/11259 [13:01<10:41:09,  3.48s/it]  2%|▏         | 218/11259 [13:05<10:52:23,  3.55s/it][rank1]:[W1001 13:58:40.302425139 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:58:40.305682758 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:40.305680233 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:40.308735468 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:41.576423662 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:41.579608053 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank1]:[W1001 13:58:41.305915218 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:58:41.309175853 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:41.308870262 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:41.311731949 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:42.579810585 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:42.583011256 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank1]:[W1001 13:58:42.309410286 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:58:42.312675810 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:42.311871282 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:42.314711478 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:43.583227214 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:43.586617977 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank1]:[W1001 13:58:43.312921073 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49158, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7fbcc737eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7fbcab3ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7fbcab3efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7fbcab3f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7fbcab3ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7fbc6a8d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7fbc4e25abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7fbcc8153ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7fbcc81e4a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank1]:[W1001 13:58:43.316150690 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 1] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:43.314878503 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:43.317715573 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:44.586854854 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:44.590069823 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:44.317848814 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:44.320664794 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:45.590281452 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:45.593554732 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:45.320776424 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:45.323558369 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:46.593759087 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:46.597144059 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:46.323669448 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:46.326477293 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank2]:[W1001 13:58:47.597341371 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49162, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f5fbc412eb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f5ffddef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f5ffddefd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f5ffddf186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f5ffddec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f5fbd2d1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f5fa0a5abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f601a9eeac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f601aa7fa04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[W1001 13:58:47.600740750 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 2] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:47.326643867 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:47.329481098 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
+[rank3]:[W1001 13:58:48.329589962 TCPStore.cpp:106] [c10d] sendBytes failed on SocketImpl(fd=44, addr=localhost:49160, remote=localhost:29500): Broken pipe
+Exception raised from sendBytes at /pytorch/torch/csrc/distributed/c10d/Utils.hpp:653 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f49f197eeb0 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5d694d1 (0x7f49d59ef4d1 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: <unknown function> + 0x5d69d62 (0x7f49d59efd62 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: <unknown function> + 0x5d6b86e (0x7f49d59f186e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::check(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) + 0x30e (0x7f49d59ec18e in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::ProcessGroupNCCL::HeartbeatMonitor::runLoop() + 0x398 (0x7f4994ed1b18 in /root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so)
+frame #6: <unknown function> + 0xdbbf4 (0x7f497885abf4 in /root/miniconda3/envs/advan/bin/../lib/libstdc++.so.6)
+frame #7: <unknown function> + 0x94ac3 (0x7f49f2765ac3 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+frame #8: clone + 0x44 (0x7f49f27f6a04 in /usr/lib/x86_64-linux-gnu/libc.so.6)
+
+[rank3]:[W1001 13:58:48.332383049 ProcessGroupNCCL.cpp:1783] [PG ID 0 PG GUID 0(default_pg) Rank 3] Failed to check the "should dump" flag on TCPStore, (maybe TCPStore server has shut down too early), with error: Broken pipe
