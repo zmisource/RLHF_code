@@ -1,0 +1,178 @@
+nohup: ignoring input
+[W1007 16:21:50.283217175 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载预处理好的数据集...
+从磁盘加载预处理好的数据集...
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+加载用于训练的策略模型...
+加载用于训练的策略模型...
+从磁盘加载预处理好的数据集...
+加载用于训练的策略模型...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.34it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.32it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 87.72it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 89.55it/s]
+[W1007 16:21:56.655888479 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1007 16:21:56.660566706 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1007 16:21:56.663742910 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1007 16:21:56.676481028 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/code/implement_final_v3_non_clip.py:31: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/code/implement_final_v3_non_clip.py:31: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+初始化 CustomSymPOTrainer...
+初始化 CustomSymPOTrainer...
+/code/implement_final_v3_non_clip.py:31: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+/code/implement_final_v3_non_clip.py:31: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /root/wandb/offline-run-20251007_162201-3bdaopx6
+  0%|          | 0/189 [00:00<?, ?it/s]--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -454.2286071777344
+Sample 0 - pi_logp_chosen:  -219.52590942382812
+Sample 0 - ref_logp_chosen: -125.63105010986328
+Sample 0 - Difference (pi - ref): 234.70269775390625
+---------------------------------
+Sample 0 - pi_logp_chosen:  -202.61068725585938
+Sample 0 - Difference (pi - ref): -76.9796371459961
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -463.0064697265625
+Sample 0 - pi_logp_chosen:  -236.79489135742188
+Sample 0 - Difference (pi - ref): 226.21157836914062
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -349.48834228515625
+Sample 0 - pi_logp_chosen:  -171.11325073242188
+Sample 0 - Difference (pi - ref): 178.37509155273438
+---------------------------------
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+--- Sanity Check at Step 0 ------ Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -574.36083984375
+Sample 0 - pi_logp_chosen:  -706.2490234375
+
+Sample 0 - Difference (pi - ref): -131.88818359375
+---------------------------------
+Sample 0 - ref_logp_chosen: -289.1298828125
+Sample 0 - pi_logp_chosen:  -128.63067626953125
+Sample 0 - Difference (pi - ref): 160.49920654296875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -73.44949340820312
+Sample 0 - pi_logp_chosen:  -113.16349792480469
+Sample 0 - Difference (pi - ref): -39.71400451660156
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -70.83330535888672
+Sample 0 - pi_logp_chosen:  -70.94703674316406
+Sample 0 - Difference (pi - ref): -0.11373138427734375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -272.3818054199219
+Sample 0 - pi_logp_chosen:  -134.1796417236328
+Sample 0 - Difference (pi - ref): 138.20216369628906
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -240.143310546875
+Sample 0 - pi_logp_chosen:  -254.68722534179688
+Sample 0 - Difference (pi - ref): -14.543914794921875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -52.74650573730469
+Sample 0 - pi_logp_chosen:  -43.43755340576172
+Sample 0 - Difference (pi - ref): 9.308952331542969
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -613.1915283203125
+Sample 0 - pi_logp_chosen:  -105.83280944824219
+Sample 0 - Difference (pi - ref): 507.3587188720703
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -452.8829040527344
+Sample 0 - pi_logp_chosen:  -117.36759948730469
+Sample 0 - Difference (pi - ref): 335.5153045654297
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -1555.9371337890625
+Sample 0 - pi_logp_chosen:  -60.46356201171875
+Sample 0 - Difference (pi - ref): 1495.4735717773438--- Sanity Check at Step 0 ---
+
+Sample 0 - ref_logp_chosen: -319.42376708984375
+Sample 0 - pi_logp_chosen:  -318.60113525390625
+---------------------------------Sample 0 - Difference (pi - ref): 0.8226318359375
+---------------------------------
+
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -290.16748046875
+Sample 0 - pi_logp_chosen:  -322.7770080566406
+Sample 0 - Difference (pi - ref): -32.609527587890625
+---------------------------------
+  1%|          | 1/189 [00:04<12:33,  4.01s/it]{'loss': 0.602, 'grad_norm': nan, 'learning_rate': 0.0, 'mean_ratio_chosen': inf, 'mean_ratio_rejected': inf, 'weight_chosen': -149.27301025390625, 'weight_rejected': 150.13082885742188, 'epoch': 0.016}
+                                               {'loss': 0.602, 'grad_norm': nan, 'learning_rate': 0.0, 'mean_ratio_chosen': inf, 'mean_ratio_rejected': inf, 'weight_chosen': -149.27301025390625, 'weight_rejected': 150.13082885742188, 'epoch': 0.02}
+  1%|          | 1/189 [00:04<12:33,  4.01s/it]  1%|          | 2/189 [00:07<12:19,  3.96s/it]  2%|▏         | 3/189 [00:11<11:29,  3.71s/it]  2%|▏         | 4/189 [00:14<10:29,  3.40s/it]  3%|▎         | 5/189 [00:18<11:07,  3.63s/it]  3%|▎         | 6/189 [00:22<11:14,  3.69s/it]  4%|▎         | 7/189 [00:25<10:59,  3.62s/it]  4%|▍         | 8/189 [00:30<11:57,  3.97s/it]  5%|▍         | 9/189 [00:33<11:29,  3.83s/it]  5%|▌         | 10/189 [00:37<11:21,  3.81s/it]{'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.7368421052631574e-07, 'mean_ratio_chosen': nan, 'mean_ratio_rejected': nan, 'weight_chosen': nan, 'weight_rejected': nan, 'epoch': 0.16}
+                                                {'loss': 0.0, 'grad_norm': nan, 'learning_rate': 4.7368421052631574e-07, 'mean_ratio_chosen': nan, 'mean_ratio_rejected': nan, 'weight_chosen': nan, 'weight_rejected': nan, 'epoch': 0.16}
+  5%|▌         | 10/189 [00:37<11:21,  3.81s/it]  6%|▌         | 11/189 [00:40<10:35,  3.57s/it]  6%|▋         | 12/189 [00:43<10:10,  3.45s/it]  7%|▋         | 13/189 [00:47<10:00,  3.41s/it]  7%|▋         | 14/189 [00:50<09:35,  3.29s/it]  8%|▊         | 15/189 [00:52<09:08,  3.15s/it]  8%|▊         | 16/189 [00:56<09:14,  3.20s/it]  9%|▉         | 17/189 [00:59<09:15,  3.23s/it] 10%|▉         | 18/189 [01:02<08:58,  3.15s/it]W1007 16:23:05.163000 1215975 site-packages/torch/distributed/elastic/agent/server/api.py:723] Received 15 death signal, shutting down workers
+W1007 16:23:05.164000 1215975 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1216232 closing signal SIGTERM
+W1007 16:23:05.164000 1215975 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1216233 closing signal SIGTERM
+W1007 16:23:05.167000 1215975 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1216234 closing signal SIGTERM
+W1007 16:23:05.168000 1215975 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1216235 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/advan/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1222, in launch_command
+    multi_gpu_launcher(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 715, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 879, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 1215975 got signal: 15

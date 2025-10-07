@@ -40,6 +40,8 @@ class CustomSymPOTrainer(Trainer):
         self.inference_engine = None
 
     def _get_log_probs(self, model: AutoModelForCausalLM, prompts: List[str], responses: List[str]) -> torch.Tensor:
+        original_padding_side = self.processor.padding_side
+        self.processor.padding_side = 'left'
         full_texts = [p + r for p, r in zip(prompts, responses)]
         prompt_tokens = self.processor(prompts, padding=False, truncation=False)
         prompt_lengths = [len(p) for p in prompt_tokens['input_ids']]
@@ -70,16 +72,17 @@ class CustomSymPOTrainer(Trainer):
         response_mask = mask & attention_mask_shifted
         masked_log_probs = log_probs_per_token * response_mask
         total_log_probs = masked_log_probs.sum(dim=1)
+        self.processor.padding_side = original_padding_side
         return total_log_probs
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         prompts = inputs.pop("prompt")
         chosen_responses = inputs.pop("chosen")
         rejected_responses = inputs.pop("rejected")
-        log_probs_ref_y1 = inputs.pop("ref_log_probs_chosen").to(self.args.device)
-        log_probs_ref_y2 = inputs.pop("ref_log_probs_rejected").to(self.args.device)
-        f_y1 = inputs.pop("rewards_chosen").to(self.args.device)
-        f_y2 = inputs.pop("rewards_rejected").to(self.args.device)
+        log_probs_ref_y1 = inputs.pop("ref_logp_chosen").to(self.args.device)
+        log_probs_ref_y2 = inputs.pop("ref_logp_rejected").to(self.args.device)
+        f_y1 = inputs.pop("reward_chosen").to(self.args.device)
+        f_y2 = inputs.pop("reward_rejected").to(self.args.device)
         # log_probs_pi_y1 = self._get_log_probs(model, prompts, chosen_responses )
         # log_probs_pi_y2 = self._get_log_probs(model, prompts, rejected_responses)
         batch_size = len(prompts)
@@ -88,6 +91,12 @@ class CustomSymPOTrainer(Trainer):
         all_log_probs = self._get_log_probs(model, combined_prompts, combined_responses)
         log_probs_pi_y1 = all_log_probs[:batch_size]
         log_probs_pi_y2 = all_log_probs[batch_size:]
+        if self.state.global_step == 0:
+            print(f"--- Sanity Check at Step 0 ---")
+            print(f"Sample 0 - ref_logp_chosen: {log_probs_ref_y1[0].item()}")
+            print(f"Sample 0 - pi_logp_chosen:  {log_probs_pi_y1[0].item()}")
+            print(f"Sample 0 - Difference (pi - ref): {log_probs_pi_y1[0].item() - log_probs_ref_y1[0].item()}")
+            print(f"---------------------------------")
         log_ratio_y1 = log_probs_pi_y1 - log_probs_ref_y1
         log_ratio_y2 = log_probs_pi_y2 - log_probs_ref_y2
         with torch.no_grad():
@@ -95,10 +104,12 @@ class CustomSymPOTrainer(Trainer):
             kl_term2 = self.beta_kl * log_ratio_y2.detach()
             weight1 = 1 - f_y2 - kl_term1
             weight2 = f_y1 + kl_term2
-        clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-        ratio_y1 = torch.exp(clamped_log_ratio_y1)
-        clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-        ratio_y2 = torch.exp(clamped_log_ratio_y2)
+        # clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        # ratio_y1 = torch.exp(clamped_log_ratio_y1)
+        # clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        # ratio_y2 = torch.exp(clamped_log_ratio_y2)
+        ratio_y1 = torch.exp(log_ratio_y1)
+        ratio_y2 = torch.exp(log_ratio_y2)
         J_sym_objective = ratio_y1 * weight1 - ratio_y2 * weight2
         total_loss = -J_sym_objective.mean()
         
@@ -144,7 +155,7 @@ def parse_args():
     
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
-    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/preprocessed_traindataset", help="Path to the precomputed dataset.")
+    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/traindataset_1000_v4", help="Path to the precomputed dataset.")
     parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-default", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
@@ -187,7 +198,7 @@ def main():
 
     print("加载用于训练的策略模型...")
     policy_model = AutoModelForCausalLM.from_pretrained(
-        args.sft_model_path, attn_implementation="flash_attention_2", torch_dtype=torch.bfloat16
+        args.sft_model_path, attn_implementation="flash_attention_2", dtype=torch.bfloat16
     )
 
     # 4. 使用 args 对象来填充 TrainingArguments
@@ -196,7 +207,8 @@ def main():
         num_train_epochs=args.num_train_epochs,
         per_device_train_batch_size=args.per_device_train_batch_size,
         gradient_accumulation_steps=args.gradient_accumulation_steps,
-        gradient_checkpointing=args.gradient_checkpointing,
+        # gradient_checkpointing=args.gradient_checkpointing,
+        gradient_checkpointing=False,
         gradient_checkpointing_kwargs={'use_reentrant': False},
         optim="adamw_torch",
         learning_rate=args.learning_rate,

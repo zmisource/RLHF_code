@@ -1,0 +1,284 @@
+nohup: ignoring input
+[W1007 16:19:34.791208343 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载纯文本数据集...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载纯文本数据集...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载纯文本数据集...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]从磁盘加载纯文本数据集...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 86.58it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 89.63it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.12it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 88.75it/s]
+加载奖励模型 (Reward Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 93.33it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 84.95it/s]
+加载奖励模型 (Reward Model)...
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.36it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]加载奖励模型 (Reward Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 89.51it/s]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /train/f_model and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 97.63it/s]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /train/f_model and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 84.78it/s]
+加载奖励模型 (Reward Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.64it/s]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /train/f_model and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][W1007 16:19:39.238394212 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1007 16:19:39.239641472 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 91.28it/s]
+Some weights of LlamaForSequenceClassification were not initialized from the model checkpoint at /train/f_model and are newly initialized: ['score.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[W1007 16:19:39.336606507 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1007 16:19:40.494549394 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/code/implement_final_v3_compute_all.py:32: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+初始化 CustomSymPOTrainer...
+/code/implement_final_v3_compute_all.py:32: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+/code/implement_final_v3_compute_all.py:32: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/code/implement_final_v3_compute_all.py:32: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /root/wandb/offline-run-20251007_161953-jjvjmqs7
+  0%|          | 0/189 [00:00<?, ?it/s]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -62.25
+Sample 0 - pi_logp_chosen:  -62.05744552612305
+Sample 0 - Difference (pi - ref): 0.19255447387695312
+---------------------------------
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---Sample 0 - ref_logp_chosen: -340.0
+
+Sample 0 - pi_logp_chosen:  -339.01080322265625
+Sample 0 - Difference (pi - ref): 0.98919677734375Sample 0 - ref_logp_chosen: -159.0
+---------------------------------
+
+Sample 0 - pi_logp_chosen:  -158.86550903320312
+Sample 0 - Difference (pi - ref): 0.134490966796875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -354.0
+Sample 0 - pi_logp_chosen:  -353.0685119628906
+Sample 0 - Difference (pi - ref): 0.931488037109375
+---------------------------------
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -42.5
+Sample 0 - pi_logp_chosen:  -42.06453323364258
+Sample 0 - Difference (pi - ref): 0.4354667663574219
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -284.0
+Sample 0 - pi_logp_chosen:  -283.6502380371094
+Sample 0 - Difference (pi - ref): 0.349761962890625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -392.0
+Sample 0 - pi_logp_chosen:  -393.235595703125
+Sample 0 - Difference (pi - ref): -1.235595703125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -187.0
+Sample 0 - pi_logp_chosen:  -187.0722198486328
+Sample 0 - Difference (pi - ref): -0.0722198486328125
+---------------------------------
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -63.25
+Sample 0 - pi_logp_chosen:  -63.17892837524414
+Sample 0 - Difference (pi - ref): 0.07107162475585938
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -260.0
+Sample 0 - pi_logp_chosen:  -258.847412109375
+Sample 0 - Difference (pi - ref): 1.152587890625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -233.0
+Sample 0 - pi_logp_chosen:  -233.08926391601562
+Sample 0 - Difference (pi - ref): -0.089263916015625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -114.5
+Sample 0 - pi_logp_chosen:  -115.52951049804688
+Sample 0 - Difference (pi - ref): -1.029510498046875
+---------------------------------
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -92.5
+Sample 0 - pi_logp_chosen:  -92.73023986816406
+Sample 0 - Difference (pi - ref): -0.2302398681640625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -126.0
+Sample 0 - pi_logp_chosen:  -125.72650146484375
+Sample 0 - Difference (pi - ref): 0.27349853515625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -408.0
+Sample 0 - pi_logp_chosen:  -407.8282775878906--- Sanity Check at Step 0 ---
+
+Sample 0 - ref_logp_chosen: -346.0
+Sample 0 - pi_logp_chosen:  -345.7294006347656
+Sample 0 - Difference (pi - ref): 0.270599365234375Sample 0 - Difference (pi - ref): 0.171722412109375
+---------------------------------
+
+---------------------------------
+  1%|          | 1/189 [00:05<18:01,  5.75s/it]{'loss': -0.1754, 'grad_norm': 3275.125, 'learning_rate': 0.0, 'mean_ratio_chosen': 1.1873482465744019, 'mean_ratio_rejected': 0.8718628883361816, 'weight_chosen': 0.8500152826309204, 'weight_rejected': 0.7675377130508423, 'epoch': 0.016}
+                                               {'loss': -0.1754, 'grad_norm': 3275.125, 'learning_rate': 0.0, 'mean_ratio_chosen': 1.1873482465744019, 'mean_ratio_rejected': 0.8718628883361816, 'weight_chosen': 0.8500152826309204, 'weight_rejected': 0.7675377130508423, 'epoch': 0.02}
+  1%|          | 1/189 [00:05<18:01,  5.75s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+  1%|          | 2/189 [00:10<16:33,  5.31s/it]Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/code/implement_final_v3_compute_all.py", line 278, in <module>
+[rank2]:     main()
+[rank2]:   File "/code/implement_final_v3_compute_all.py", line 274, in main
+[rank2]:     trainer.train()
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2328, in train
+[rank2]:     return inner_training_loop(
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2672, in _inner_training_loop
+[rank2]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank2]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 4009, in training_step
+[rank2]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/code/implement_final_v3_compute_all.py", line 113, in compute_loss
+[rank2]:     all_log_probs_pi = self._get_log_probs(model, combined_prompts, combined_responses)
+[rank2]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/code/implement_final_v3_compute_all.py", line 64, in _get_log_probs
+[rank2]:     nll_per_token = loss_fct(shifted_logits.reshape(-1, shifted_logits.size(-1)), shifted_labels.reshape(-1))
+[rank2]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/modules/loss.py", line 1310, in forward
+[rank2]:     return F.cross_entropy(
+[rank2]:            ^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/nn/functional.py", line 3462, in cross_entropy
+[rank2]:     return torch._C._nn.cross_entropy_loss(
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.46 GiB. GPU 2 has a total capacity of 79.25 GiB of which 1.70 GiB is free. Process 1850301 has 77.55 GiB memory in use. Of the allocated memory 74.64 GiB is allocated by PyTorch, and 1.99 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+W1007 16:20:09.895000 1214867 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1215124 closing signal SIGTERM
+W1007 16:20:09.896000 1214867 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1215125 closing signal SIGTERM
+W1007 16:20:09.899000 1214867 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 1215127 closing signal SIGTERM
+E1007 16:20:11.867000 1214867 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 2 (pid: 1215126) of binary: /root/miniconda3/envs/advan/bin/python3.12
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/advan/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1222, in launch_command
+    multi_gpu_launcher(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/code/implement_final_v3_compute_all.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-10-07_16:20:09
+  host      : qKKL1n
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1215126)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
