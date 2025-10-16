@@ -109,17 +109,19 @@ class CustomSymPOTrainer(Trainer):
         
         with torch.no_grad():
             kl_term1 = self.beta_kl * log_ratio_y1.detach()
-            kl_term2 = self.beta_kl * log_ratio_y2.detach()
+            # kl_term2 = self.beta_kl * log_ratio_y2.detach()
             weight1 = 1 - f_y2 - kl_term1
-            weight2 = f_y1 + kl_term2
+            # weight2 = f_y1 + kl_term2
+            weight2 = f_y1
+
             
-        # clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-        # ratio_y1 = torch.exp(clamped_log_ratio_y1)
-        # clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-        # ratio_y2 = torch.exp(clamped_log_ratio_y2)
+        clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        ratio_y1 = torch.exp(clamped_log_ratio_y1)
+        clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        ratio_y2 = torch.exp(clamped_log_ratio_y2)
         
-        ratio_y1 = torch.exp(log_ratio_y1)
-        ratio_y2 = torch.exp(log_ratio_y2)
+        # ratio_y1 = torch.exp(log_ratio_y1)
+        # ratio_y2 = torch.exp(log_ratio_y2)
         J_sym_objective = ratio_y1 * weight1 - ratio_y2 * weight2
         total_loss = -J_sym_objective.mean()
         
@@ -132,6 +134,7 @@ class CustomSymPOTrainer(Trainer):
             "mean_ratio_rejected": ratio_y2.detach().mean().item(),
             "weight_chosen": weight1.detach().mean().item(),
             "weight_rejected": weight2.detach().mean().item(),
+            "kl_term_chosen": kl_term1.detach().mean().item(),
         }
         self._current_logs = logs
         
@@ -170,12 +173,12 @@ def parse_args():
     
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
-    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/traindataset_1000_v4", help="Path to the precomputed dataset.")
+    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/precomputed_traindataset", help="Path to the precomputed dataset.")
     parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-default", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
-    parser.add_argument("--num_train_epochs", type=int, default=3, help="Number of training epochs.")
+    parser.add_argument("--num_train_epochs", type=int, default=1, help="Number of training epochs.")
     parser.add_argument("--per_device_train_batch_size", type=int, default=1, help="Batch size per GPU.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=4, help="Number of gradient accumulation steps.")
     parser.add_argument("--gradient_checkpointing", action='store_true', help="Enable gradient checkpointing to save memory.")
@@ -186,7 +189,7 @@ def parse_args():
     parser.add_argument("--save_total_limit", type=int, default=20, help="Limit the total number of saved checkpoints.")
 
     # --- SymPO 特定参数 ---
-    parser.add_argument("--beta_kl", type=float, default=0.1, help="KL divergence penalty coefficient.")
+    parser.add_argument("--beta_kl", type=float, default=0.5, help="KL divergence penalty coefficient.")
     parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Minimum clip value for log probability ratio.")
     parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Maximum clip value for log probability ratio.")
     
@@ -218,8 +221,8 @@ def main():
     ref_model = AutoModelForCausalLM.from_pretrained(
         args.sft_model_path, attn_implementation="flash_attention_2", torch_dtype=torch.bfloat16
     )
-    # 将参考模型设置为评估模式，并且不需要计算它的梯度
-    ref_model.eval()
+    # # 将参考模型设置为评估模式，并且不需要计算它的梯度
+    # ref_model.eval()
 
     # TrainingArguments 定义无需修改
     training_args = TrainingArguments(
