@@ -1,0 +1,177 @@
+nohup: ignoring input
+[W1021 19:22:15.372097737 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]加载用于训练的策略模型 (Policy Model)...
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.12it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.99it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.93it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.39it/s]
+加载作为参考的SFT模型 (Reference Model)...
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.10it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][W1021 19:22:24.033989845 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 96.63it/s]
+[W1021 19:22:24.070613010 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.63it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.02it/s]
+[W1021 19:22:24.104674386 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1021 19:22:24.113116098 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+WARNING:accelerate.utils.other:Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /root/wandb/offline-run-20251021_192233-rtb8mjii
+  0%|          | 0/3753 [00:00<?, ?it/s]--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -199.0
+Sample 0 - pi_logp_chosen:  -198.89137268066406
+Sample 0 - Difference (pi - ref): 0.1086273193359375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -100.5
+Sample 0 - pi_logp_chosen:  -99.98401641845703
+Sample 0 - Difference (pi - ref): 0.5159835815429688
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -122.0
+Sample 0 - pi_logp_chosen:  -121.78414916992188
+Sample 0 - Difference (pi - ref): 0.215850830078125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -234.0
+Sample 0 - pi_logp_chosen:  -233.8189239501953
+Sample 0 - Difference (pi - ref): 0.1810760498046875
+---------------------------------
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -227.0
+Sample 0 - pi_logp_chosen:  -227.44651794433594
+Sample 0 - Difference (pi - ref): -0.4465179443359375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -248.0
+Sample 0 - pi_logp_chosen:  -248.48553466796875
+Sample 0 - Difference (pi - ref): -0.48553466796875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -209.0
+Sample 0 - pi_logp_chosen:  -208.68115234375
+Sample 0 - Difference (pi - ref): 0.31884765625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -728.0
+Sample 0 - pi_logp_chosen:  -728.8134155273438
+Sample 0 - Difference (pi - ref): -0.81341552734375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -240.0
+Sample 0 - pi_logp_chosen:  -240.24868774414062
+Sample 0 - Difference (pi - ref): -0.248687744140625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -252.0
+Sample 0 - pi_logp_chosen:  -252.66221618652344
+Sample 0 - Difference (pi - ref): -0.6622161865234375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -350.0
+Sample 0 - pi_logp_chosen:  -349.7069091796875
+Sample 0 - Difference (pi - ref): 0.2930908203125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -454.0
+Sample 0 - pi_logp_chosen:  -452.75640869140625
+Sample 0 - Difference (pi - ref): 1.24359130859375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -127.5
+Sample 0 - pi_logp_chosen:  -127.38422393798828
+Sample 0 - Difference (pi - ref): 0.11577606201171875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -98.5
+Sample 0 - pi_logp_chosen:  -98.45634460449219
+Sample 0 - Difference (pi - ref): 0.0436553955078125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -252.0
+Sample 0 - pi_logp_chosen:  -250.1884765625
+Sample 0 - Difference (pi - ref): 1.8115234375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -516.0
+Sample 0 - pi_logp_chosen:  -514.823974609375
+Sample 0 - Difference (pi - ref): 1.176025390625
+---------------------------------
+  0%|          | 1/3753 [00:04<4:47:46,  4.60s/it]{'loss': -0.7704, 'grad_norm': 5075.7001953125, 'learning_rate': 0.0, 'mean_ratio_chosen': 6.1197638511657715, 'mean_ratio_rejected': 1.318693995475769, 'weight_chosen': 0.7407695055007935, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 0.18115234375, 'epoch': 0.0002664890073284477}
+                                                  {'loss': -0.7704, 'grad_norm': 5075.7001953125, 'learning_rate': 0.0, 'mean_ratio_chosen': 6.1197638511657715, 'mean_ratio_rejected': 1.318693995475769, 'weight_chosen': 0.7407695055007935, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 0.18115234375, 'epoch': 0.0}
+  0%|          | 1/3753 [00:04<4:47:46,  4.60s/it]  0%|          | 2/3753 [00:09<5:03:01,  4.85s/it]  0%|          | 3/3753 [00:14<4:51:05,  4.66s/it]  0%|          | 4/3753 [00:17<4:30:39,  4.33s/it]  0%|          | 5/3753 [00:21<4:20:20,  4.17s/it]  0%|          | 6/3753 [00:26<4:31:38,  4.35s/it]  0%|          | 7/3753 [00:30<4:24:50,  4.24s/it]  0%|          | 8/3753 [00:34<4:29:25,  4.32s/it]  0%|          | 9/3753 [00:39<4:27:51,  4.29s/it]  0%|          | 10/3753 [00:42<4:12:31,  4.05s/it]{'loss': -0.7823, 'grad_norm': 4721.5625, 'learning_rate': 2.3936170212765956e-08, 'mean_ratio_chosen': 1.1965876817703247, 'mean_ratio_rejected': 2.0811281204223633, 'weight_chosen': 0.22713761031627655, 'weight_rejected': 0.4163219630718231, 'kl_term_chosen': 0.01794738881289959, 'epoch': 0.002664890073284477}
+                                                   {'loss': -0.7823, 'grad_norm': 4721.5625, 'learning_rate': 2.3936170212765956e-08, 'mean_ratio_chosen': 1.1965876817703247, 'mean_ratio_rejected': 2.0811281204223633, 'weight_chosen': 0.22713761031627655, 'weight_rejected': 0.4163219630718231, 'kl_term_chosen': 0.01794738881289959, 'epoch': 0.0}
+  0%|          | 10/3753 [00:42<4:12:31,  4.05s/it]  0%|          | 11/3753 [00:46<4:14:03,  4.07s/it]  0%|          | 12/3753 [00:51<4:23:50,  4.23s/it]  0%|          | 13/3753 [00:55<4:20:52,  4.19s/it]  0%|          | 14/3753 [00:59<4:15:29,  4.10s/it]  0%|          | 15/3753 [01:03<4:07:40,  3.98s/it]  0%|          | 16/3753 [01:06<3:58:28,  3.83s/it]  0%|          | 17/3753 [01:10<4:05:33,  3.94s/it]  0%|          | 18/3753 [01:15<4:20:09,  4.18s/it]  1%|          | 19/3753 [01:18<4:05:30,  3.95s/it]  1%|          | 20/3753 [01:22<4:02:14,  3.89s/it]{'loss': -0.9423, 'grad_norm': 8343.3056640625, 'learning_rate': 5.053191489361702e-08, 'mean_ratio_chosen': 1.5315101146697998, 'mean_ratio_rejected': 1.9765230417251587, 'weight_chosen': 0.6899663805961609, 'weight_rejected': 0.29665425419807434, 'kl_term_chosen': 0.04262542724609375, 'epoch': 0.005329780146568954}
+                                                   {'loss': -0.9423, 'grad_norm': 8343.3056640625, 'learning_rate': 5.053191489361702e-08, 'mean_ratio_chosen': 1.5315101146697998, 'mean_ratio_rejected': 1.9765230417251587, 'weight_chosen': 0.6899663805961609, 'weight_rejected': 0.29665425419807434, 'kl_term_chosen': 0.04262542724609375, 'epoch': 0.01}
+  1%|          | 20/3753 [01:22<4:02:14,  3.89s/it]  1%|          | 21/3753 [01:26<4:01:09,  3.88s/it]  1%|          | 22/3753 [01:33<4:50:06,  4.67s/it]  1%|          | 23/3753 [01:37<4:47:47,  4.63s/it]  1%|          | 24/3753 [01:40<4:23:42,  4.24s/it]  1%|          | 25/3753 [01:45<4:27:36,  4.31s/it]  1%|          | 26/3753 [01:48<4:13:46,  4.09s/it]  1%|          | 27/3753 [01:52<4:08:05,  4.00s/it]  1%|          | 28/3753 [01:56<3:59:33,  3.86s/it]  1%|          | 29/3753 [02:00<3:57:10,  3.82s/it]  1%|          | 30/3753 [02:04<4:00:48,  3.88s/it]{'loss': -1.4937, 'grad_norm': 5730.732421875, 'learning_rate': 7.712765957446808e-08, 'mean_ratio_chosen': 1.4437072277069092, 'mean_ratio_rejected': 2.5577425956726074, 'weight_chosen': 0.5912297964096069, 'weight_rejected': 0.5987815260887146, 'kl_term_chosen': 0.03672141954302788, 'epoch': 0.007994670219853431}
+                                                   {'loss': -1.4937, 'grad_norm': 5730.732421875, 'learning_rate': 7.712765957446808e-08, 'mean_ratio_chosen': 1.4437072277069092, 'mean_ratio_rejected': 2.5577425956726074, 'weight_chosen': 0.5912297964096069, 'weight_rejected': 0.5987815260887146, 'kl_term_chosen': 0.03672141954302788, 'epoch': 0.01}
+  1%|          | 30/3753 [02:04<4:00:48,  3.88s/it]  1%|          | 31/3753 [02:08<4:18:29,  4.17s/it]  1%|          | 32/3753 [02:12<4:05:33,  3.96s/it]  1%|          | 33/3753 [02:16<4:01:08,  3.89s/it]  1%|          | 34/3753 [02:22<4:43:58,  4.58s/it]  1%|          | 35/3753 [02:27<4:53:29,  4.74s/it]  1%|          | 36/3753 [02:32<5:09:20,  4.99s/it]  1%|          | 37/3753 [02:38<5:12:07,  5.04s/it]  1%|          | 38/3753 [02:42<4:52:48,  4.73s/it]  1%|          | 39/3753 [02:48<5:26:46,  5.28s/it]  1%|          | 40/3753 [02:52<5:00:24,  4.85s/it]{'loss': -1.4766, 'grad_norm': 7028.607421875, 'learning_rate': 1.0372340425531915e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 6.346916675567627, 'weight_chosen': 0.5183229446411133, 'weight_rejected': 0.1276526302099228, 'kl_term_chosen': 0.239471435546875, 'epoch': 0.010659560293137908}
+                                                   {'loss': -1.4766, 'grad_norm': 7028.607421875, 'learning_rate': 1.0372340425531915e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 6.346916675567627, 'weight_chosen': 0.5183229446411133, 'weight_rejected': 0.1276526302099228, 'kl_term_chosen': 0.239471435546875, 'epoch': 0.01}
+  1%|          | 40/3753 [02:52<5:00:24,  4.85s/it]  1%|          | 41/3753 [02:58<5:17:30,  5.13s/it]  1%|          | 42/3753 [03:02<4:52:33,  4.73s/it]  1%|          | 43/3753 [03:06<4:51:43,  4.72s/it]  1%|          | 44/3753 [03:10<4:31:35,  4.39s/it]  1%|          | 45/3753 [03:14<4:32:22,  4.41s/it]  1%|          | 46/3753 [03:19<4:37:35,  4.49s/it]  1%|▏         | 47/3753 [03:22<4:10:47,  4.06s/it]  1%|▏         | 48/3753 [03:26<4:07:45,  4.01s/it]  1%|▏         | 49/3753 [03:30<4:05:50,  3.98s/it]  1%|▏         | 50/3753 [03:34<4:01:29,  3.91s/it]{'loss': 0.9774, 'grad_norm': 0.0, 'learning_rate': 1.3031914893617022e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.47835591435432434, 'weight_rejected': 0.6851073503494263, 'kl_term_chosen': 0.3850357234477997, 'epoch': 0.013324450366422385}
+                                                   {'loss': 0.9774, 'grad_norm': 0.0, 'learning_rate': 1.3031914893617022e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.47835591435432434, 'weight_rejected': 0.6851073503494263, 'kl_term_chosen': 0.3850357234477997, 'epoch': 0.01}
+  1%|▏         | 50/3753 [03:34<4:01:29,  3.91s/it]  1%|▏         | 51/3753 [03:38<4:10:28,  4.06s/it]  1%|▏         | 52/3753 [03:43<4:19:38,  4.21s/it]  1%|▏         | 53/3753 [03:48<4:38:34,  4.52s/it]  1%|▏         | 54/3753 [03:51<4:18:54,  4.20s/it]  1%|▏         | 55/3753 [03:58<5:05:21,  4.95s/it]  1%|▏         | 56/3753 [04:04<5:30:08,  5.36s/it]  2%|▏         | 57/3753 [04:09<5:13:06,  5.08s/it]  2%|▏         | 58/3753 [04:12<4:42:54,  4.59s/it]  2%|▏         | 59/3753 [04:19<5:27:22,  5.32s/it]  2%|▏         | 60/3753 [04:23<4:52:36,  4.75s/it]{'loss': 3.6538, 'grad_norm': 0.0, 'learning_rate': 1.5691489361702126e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.4381710886955261, 'weight_rejected': 0.937210738658905, 'kl_term_chosen': 0.4683856964111328, 'epoch': 0.015989340439706862}
+                                                   {'loss': 3.6538, 'grad_norm': 0.0, 'learning_rate': 1.5691489361702126e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.4381710886955261, 'weight_rejected': 0.937210738658905, 'kl_term_chosen': 0.4683856964111328, 'epoch': 0.02}
+  2%|▏         | 60/3753 [04:23<4:52:36,  4.75s/it]  2%|▏         | 61/3753 [04:27<4:53:25,  4.77s/it]  2%|▏         | 62/3753 [04:32<4:41:00,  4.57s/it]  2%|▏         | 63/3753 [04:36<4:35:16,  4.48s/it]  2%|▏         | 64/3753 [04:41<4:42:39,  4.60s/it]  2%|▏         | 65/3753 [04:44<4:27:20,  4.35s/it]  2%|▏         | 66/3753 [04:49<4:25:04,  4.31s/it]  2%|▏         | 67/3753 [04:53<4:25:52,  4.33s/it]  2%|▏         | 68/3753 [04:57<4:17:12,  4.19s/it]  2%|▏         | 69/3753 [05:02<4:27:03,  4.35s/it]  2%|▏         | 70/3753 [05:05<4:13:41,  4.13s/it]{'loss': 4.3388, 'grad_norm': 0.0, 'learning_rate': 1.8351063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.027315139770507812, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 0.9905456900596619, 'epoch': 0.018654230512991338}
+                                                   {'loss': 4.3388, 'grad_norm': 0.0, 'learning_rate': 1.8351063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.027315139770507812, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 0.9905456900596619, 'epoch': 0.02}
+  2%|▏         | 70/3753 [05:05<4:13:41,  4.13s/it]  2%|▏         | 71/3753 [05:10<4:21:55,  4.27s/it]  2%|▏         | 72/3753 [05:14<4:17:26,  4.20s/it]  2%|▏         | 73/3753 [05:17<4:05:53,  4.01s/it]  2%|▏         | 74/3753 [05:21<3:59:16,  3.90s/it]  2%|▏         | 75/3753 [05:25<3:57:19,  3.87s/it]  2%|▏         | 76/3753 [05:30<4:21:00,  4.26s/it]  2%|▏         | 77/3753 [05:34<4:05:04,  4.00s/it]  2%|▏         | 78/3753 [05:38<4:17:02,  4.20s/it]  2%|▏         | 79/3753 [05:42<4:15:13,  4.17s/it]  2%|▏         | 80/3753 [05:47<4:23:17,  4.30s/it]{'loss': 4.6092, 'grad_norm': 0.0, 'learning_rate': 2.101063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -1.470184326171875, 'weight_rejected': 0.10230471193790436, 'kl_term_chosen': 2.3985931873321533, 'epoch': 0.021319120586275817}
+                                                   {'loss': 4.6092, 'grad_norm': 0.0, 'learning_rate': 2.101063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -1.470184326171875, 'weight_rejected': 0.10230471193790436, 'kl_term_chosen': 2.3985931873321533, 'epoch': 0.02}
+  2%|▏         | 80/3753 [05:47<4:23:17,  4.30s/it]  2%|▏         | 81/3753 [05:51<4:25:24,  4.34s/it]  2%|▏         | 82/3753 [05:55<4:13:41,  4.15s/it]  2%|▏         | 83/3753 [06:01<4:43:55,  4.64s/it]  2%|▏         | 84/3753 [06:05<4:37:47,  4.54s/it]  2%|▏         | 85/3753 [06:09<4:18:01,  4.22s/it]  2%|▏         | 86/3753 [06:13<4:14:42,  4.17s/it]  2%|▏         | 87/3753 [06:18<4:40:47,  4.60s/it]  2%|▏         | 88/3753 [06:22<4:24:55,  4.34s/it]  2%|▏         | 89/3753 [06:26<4:15:50,  4.19s/it]  2%|▏         | 90/3753 [06:30<4:08:54,  4.08s/it]{'loss': 4.5259, 'grad_norm': 0.0, 'learning_rate': 2.3670212765957445e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.2535032033920288, 'weight_rejected': 0.15002880990505219, 'kl_term_chosen': 1.0427368879318237, 'epoch': 0.023984010659560292}
+                                                   {'loss': 4.5259, 'grad_norm': 0.0, 'learning_rate': 2.3670212765957445e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.2535032033920288, 'weight_rejected': 0.15002880990505219, 'kl_term_chosen': 1.0427368879318237, 'epoch': 0.02}
+  2%|▏         | 90/3753 [06:30<4:08:54,  4.08s/it]  2%|▏         | 91/3753 [06:33<3:55:16,  3.85s/it]  2%|▏         | 92/3753 [06:37<3:58:25,  3.91s/it]  2%|▏         | 93/3753 [06:42<4:11:36,  4.12s/it]  3%|▎         | 94/3753 [06:45<4:01:18,  3.96s/it]  3%|▎         | 95/3753 [06:52<4:45:07,  4.68s/it]  3%|▎         | 96/3753 [06:55<4:30:32,  4.44s/it]  3%|▎         | 97/3753 [06:59<4:23:03,  4.32s/it]  3%|▎         | 98/3753 [07:05<4:39:19,  4.59s/it]  3%|▎         | 99/3753 [07:08<4:18:38,  4.25s/it]  3%|▎         | 100/3753 [07:12<4:05:24,  4.03s/it]{'loss': 4.1222, 'grad_norm': 0.0, 'learning_rate': 2.632978723404255e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.14628589153289795, 'weight_rejected': 0.14414885640144348, 'kl_term_chosen': 0.7742370963096619, 'epoch': 0.02664890073284477}
+                                                    {'loss': 4.1222, 'grad_norm': 0.0, 'learning_rate': 2.632978723404255e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.14628589153289795, 'weight_rejected': 0.14414885640144348, 'kl_term_chosen': 0.7742370963096619, 'epoch': 0.03}
+  3%|▎         | 100/3753 [07:12<4:05:24,  4.03s/it]  3%|▎         | 101/3753 [07:16<4:06:52,  4.06s/it]  3%|▎         | 102/3753 [07:20<4:04:50,  4.02s/it]  3%|▎         | 103/3753 [07:24<4:01:47,  3.97s/it]  3%|▎         | 104/3753 [07:29<4:28:23,  4.41s/it]  3%|▎         | 105/3753 [07:33<4:16:41,  4.22s/it]  3%|▎         | 106/3753 [07:37<4:24:00,  4.34s/it]  3%|▎         | 107/3753 [07:42<4:23:08,  4.33s/it]  3%|▎         | 108/3753 [07:46<4:21:47,  4.31s/it]  3%|▎         | 109/3753 [07:50<4:12:24,  4.16s/it]  3%|▎         | 110/3753 [07:54<4:05:45,  4.05s/it]{'loss': 5.1764, 'grad_norm': 0.0, 'learning_rate': 2.8989361702127657e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -1.1468703746795654, 'weight_rejected': 0.04146226868033409, 'kl_term_chosen': 2.060546875, 'epoch': 0.029313790806129246}
+                                                    {'loss': 5.1764, 'grad_norm': 0.0, 'learning_rate': 2.8989361702127657e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -1.1468703746795654, 'weight_rejected': 0.04146226868033409, 'kl_term_chosen': 2.060546875, 'epoch': 0.03}
+  3%|▎         | 110/3753 [07:54<4:05:45,  4.05s/it]  3%|▎         | 111/3753 [07:58<4:21:15,  4.30s/it]  3%|▎         | 112/3753 [08:02<4:14:14,  4.19s/it]

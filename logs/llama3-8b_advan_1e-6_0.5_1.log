@@ -1,0 +1,171 @@
+nohup: ignoring input
+[W1021 17:57:24.777858730 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.62it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 96.50it/s]
+加载作为参考的SFT模型 (Reference Model)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.43it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][W1021 17:57:32.601728199 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.15it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 83.71it/s]
+加载作为参考的SFT模型 (Reference Model)...
+[W1021 17:57:32.658033005 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 54.52it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 85.59it/s]
+[W1021 17:57:33.780824897 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 64.88it/s]
+[W1021 17:57:33.830604327 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+WARNING:accelerate.utils.other:Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/planner_helpers.py:418: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  device = getattr(value, "device", None)
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/default_planner.py:479: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  and md.size != obj.size()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/planner_helpers.py:418: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  device = getattr(value, "device", None)
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/default_planner.py:479: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  and md.size != obj.size()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/planner_helpers.py:418: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  device = getattr(value, "device", None)
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/planner_helpers.py:418: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  device = getattr(value, "device", None)
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/default_planner.py:479: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  and md.size != obj.size()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/default_planner.py:479: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  and md.size != obj.size()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:625: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  param_numel = param.size().numel()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:625: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  param_numel = param.size().numel()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:626: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  dim_0_size = param.size()[0]
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:625: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  param_numel = param.size().numel()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:626: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  dim_0_size = param.size()[0]
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:626: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  dim_0_size = param.size()[0]
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:625: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  param_numel = param.size().numel()
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:626: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  dim_0_size = param.size()[0]
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:652: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor = tensor.narrow(0, 0, param_numel).reshape(param.size())
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:652: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor = tensor.narrow(0, 0, param_numel).reshape(param.size())
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:652: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor = tensor.narrow(0, 0, param_numel).reshape(param.size())
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:652: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor = tensor.narrow(0, 0, param_numel).reshape(param.size())
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /root/wandb/offline-run-20251021_175751-x73ehnqp
+  0%|          | 0/3753 [00:00<?, ?it/s]Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+ 13%|█▎        | 501/3753 [00:04<00:28, 114.32it/s] 13%|█▎        | 504/3753 [00:20<00:28, 114.32it/s] 13%|█▎        | 505/3753 [00:23<03:23, 15.93it/s]  13%|█▎        | 506/3753 [00:27<04:18, 12.56it/s] 14%|█▎        | 508/3753 [00:40<04:18, 12.56it/s] 14%|█▎        | 509/3753 [00:41<08:18,  6.50it/s] 14%|█▎        | 510/3753 [00:45<10:01,  5.39it/s]{'loss': 34.162, 'grad_norm': 502.8284912109375, 'learning_rate': 9.961776821339456e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -0.45675361156463623, 'weight_rejected': 0.03358950838446617, 'kl_term_chosen': 1.4127349853515625, 'epoch': 0.13590939373750832}
+                                                  {'loss': 34.162, 'grad_norm': 502.8284912109375, 'learning_rate': 9.961776821339456e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -0.45675361156463623, 'weight_rejected': 0.03358950838446617, 'kl_term_chosen': 1.4127349853515625, 'epoch': 0.14}
+ 14%|█▎        | 510/3753 [00:45<10:01,  5.39it/s] 14%|█▎        | 513/3753 [00:59<18:00,  3.00it/s] 14%|█▎        | 514/3753 [01:04<21:48,  2.48it/s] 14%|█▎        | 516/3753 [01:13<31:25,  1.72it/s] 14%|█▍        | 518/3753 [01:20<40:57,  1.32it/s] 14%|█▍        | 519/3753 [01:25<49:15,  1.09it/s] 14%|█▍        | 520/3753 [01:30<1:00:24,  1.12s/it]{'loss': 17.3014, 'grad_norm': 1091.8416748046875, 'learning_rate': 9.955821687527552e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -15.710284233093262, 'weight_rejected': 0.052618950605392456, 'kl_term_chosen': 16.633323669433594, 'epoch': 0.13857428381079281}
+                                                    {'loss': 17.3014, 'grad_norm': 1091.8416748046875, 'learning_rate': 9.955821687527552e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -15.710284233093262, 'weight_rejected': 0.052618950605392456, 'kl_term_chosen': 16.633323669433594, 'epoch': 0.14}
+ 14%|█▍        | 520/3753 [01:30<1:00:24,  1.12s/it] 14%|█▍        | 521/3753 [01:34<1:11:21,  1.32s/it] 14%|█▍        | 522/3753 [01:38<1:26:04,  1.60s/it] 14%|█▍        | 523/3753 [01:43<1:48:41,  2.02s/it] 14%|█▍        | 524/3753 [01:48<2:09:17,  2.40s/it] 14%|█▍        | 525/3753 [01:52<2:21:48,  2.64s/it] 14%|█▍        | 526/3753 [01:55<2:28:14,  2.76s/it] 14%|█▍        | 527/3753 [01:59<2:36:58,  2.92s/it] 14%|█▍        | 528/3753 [02:03<2:54:30,  3.25s/it] 14%|█▍        | 529/3753 [02:06<2:56:46,  3.29s/it] 14%|█▍        | 530/3753 [02:10<3:06:49,  3.48s/it]{'loss': 12.5173, 'grad_norm': 61.96574401855469, 'learning_rate': 9.94943765952491e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 19.821033477783203, 'weight_rejected': 0.332852303981781, 'kl_term_chosen': -19.3851318359375, 'epoch': 0.14123917388407728}
+                                                    {'loss': 12.5173, 'grad_norm': 61.96574401855469, 'learning_rate': 9.94943765952491e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 19.821033477783203, 'weight_rejected': 0.332852303981781, 'kl_term_chosen': -19.3851318359375, 'epoch': 0.14}
+ 14%|█▍        | 530/3753 [02:10<3:06:49,  3.48s/it] 14%|█▍        | 531/3753 [02:14<3:09:50,  3.54s/it] 14%|█▍        | 532/3753 [02:19<3:25:56,  3.84s/it] 14%|█▍        | 533/3753 [02:24<3:42:09,  4.14s/it] 14%|█▍        | 534/3753 [02:27<3:31:43,  3.95s/it] 14%|█▍        | 535/3753 [02:31<3:35:05,  4.01s/it] 14%|█▍        | 536/3753 [02:35<3:39:21,  4.09s/it] 14%|█▍        | 537/3753 [02:40<3:44:43,  4.19s/it] 14%|█▍        | 538/3753 [02:43<3:29:26,  3.91s/it] 14%|█▍        | 539/3753 [02:47<3:25:49,  3.84s/it] 14%|█▍        | 540/3753 [02:50<3:20:31,  3.74s/it]{'loss': 16.8773, 'grad_norm': 310.8551940917969, 'learning_rate': 9.942625289827702e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 3.8287734985351562, 'weight_chosen': -4.462777137756348, 'weight_rejected': 0.1233656257390976, 'kl_term_chosen': 5.391185760498047, 'epoch': 0.14390406395736177}
+                                                    {'loss': 16.8773, 'grad_norm': 310.8551940917969, 'learning_rate': 9.942625289827702e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 3.8287734985351562, 'weight_chosen': -4.462777137756348, 'weight_rejected': 0.1233656257390976, 'kl_term_chosen': 5.391185760498047, 'epoch': 0.14}
+ 14%|█▍        | 540/3753 [02:50<3:20:31,  3.74s/it] 14%|█▍        | 541/3753 [02:54<3:21:48,  3.77s/it] 14%|█▍        | 542/3753 [02:58<3:24:21,  3.82s/it] 14%|█▍        | 543/3753 [03:01<3:14:56,  3.64s/it] 14%|█▍        | 544/3753 [03:05<3:22:01,  3.78s/it] 15%|█▍        | 545/3753 [03:09<3:21:40,  3.77s/it] 15%|█▍        | 546/3753 [03:13<3:16:36,  3.68s/it] 15%|█▍        | 547/3753 [03:17<3:29:22,  3.92s/it] 15%|█▍        | 548/3753 [03:24<4:15:17,  4.78s/it] 15%|█▍        | 549/3753 [03:28<3:59:02,  4.48s/it] 15%|█▍        | 550/3753 [03:33<4:07:16,  4.63s/it]{'loss': 41.6556, 'grad_norm': 90.98028564453125, 'learning_rate': 9.935385168002298e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10720942169427872, 'weight_chosen': -11.719476699829102, 'weight_rejected': 0.07585817575454712, 'kl_term_chosen': 12.65576171875, 'epoch': 0.14656895403064624}
+                                                    {'loss': 41.6556, 'grad_norm': 90.98028564453125, 'learning_rate': 9.935385168002298e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10720942169427872, 'weight_chosen': -11.719476699829102, 'weight_rejected': 0.07585817575454712, 'kl_term_chosen': 12.65576171875, 'epoch': 0.15}
+ 15%|█▍        | 550/3753 [03:33<4:07:16,  4.63s/it] 15%|█▍        | 551/3753 [03:37<4:00:11,  4.50s/it] 15%|█▍        | 552/3753 [03:40<3:41:18,  4.15s/it] 15%|█▍        | 553/3753 [03:44<3:35:21,  4.04s/it] 15%|█▍        | 554/3753 [03:48<3:37:44,  4.08s/it]

@@ -1,0 +1,685 @@
+nohup: ignoring input
+[W1021 17:02:53.680666873 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.05it/s]
+加载用于训练的策略模型 (Policy Model)...
+加载作为参考的SFT模型 (Reference Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 93.65it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 97.47it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 91.43it/s]
+[W1021 17:03:02.782046241 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 93.46it/s]
+[W1021 17:03:02.819181400 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.17it/s]
+[W1021 17:03:02.913087420 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 77.21it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 89.46it/s]
+[W1021 17:03:02.207990937 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+WARNING:accelerate.utils.other:Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_compute_f.py:30: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /root/wandb/offline-run-20251021_170311-oerzg79f
+  0%|          | 0/3753 [00:00<?, ?it/s]--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -199.0
+Sample 0 - pi_logp_chosen:  -198.89137268066406
+Sample 0 - Difference (pi - ref): 0.1086273193359375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -100.5
+Sample 0 - pi_logp_chosen:  -99.98401641845703
+Sample 0 - Difference (pi - ref): 0.5159835815429688
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -122.0
+Sample 0 - pi_logp_chosen:  -121.78414916992188
+Sample 0 - Difference (pi - ref): 0.215850830078125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -234.0
+Sample 0 - pi_logp_chosen:  -233.8189239501953
+Sample 0 - Difference (pi - ref): 0.1810760498046875
+---------------------------------
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -227.0
+Sample 0 - pi_logp_chosen:  -227.44651794433594
+Sample 0 - Difference (pi - ref): -0.4465179443359375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -248.0
+Sample 0 - pi_logp_chosen:  -248.48553466796875
+Sample 0 - Difference (pi - ref): -0.48553466796875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -209.0
+Sample 0 - pi_logp_chosen:  -208.68115234375
+Sample 0 - Difference (pi - ref): 0.31884765625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -728.0
+Sample 0 - pi_logp_chosen:  -728.8134155273438
+Sample 0 - Difference (pi - ref): -0.81341552734375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -240.0
+Sample 0 - pi_logp_chosen:  -240.24868774414062
+Sample 0 - Difference (pi - ref): -0.248687744140625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -252.0
+Sample 0 - pi_logp_chosen:  -252.66221618652344
+Sample 0 - Difference (pi - ref): -0.6622161865234375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -350.0
+Sample 0 - pi_logp_chosen:  -349.7069091796875
+Sample 0 - Difference (pi - ref): 0.2930908203125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -454.0
+Sample 0 - pi_logp_chosen:  -452.75640869140625
+Sample 0 - Difference (pi - ref): 1.24359130859375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -127.5
+Sample 0 - pi_logp_chosen:  -127.38422393798828
+Sample 0 - Difference (pi - ref): 0.11577606201171875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -98.5
+Sample 0 - pi_logp_chosen:  -98.45634460449219
+Sample 0 - Difference (pi - ref): 0.0436553955078125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -252.0
+Sample 0 - pi_logp_chosen:  -250.1884765625
+Sample 0 - Difference (pi - ref): 1.8115234375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -516.0
+Sample 0 - pi_logp_chosen:  -514.823974609375
+Sample 0 - Difference (pi - ref): 1.176025390625
+---------------------------------
+  0%|          | 1/3753 [00:04<4:46:52,  4.59s/it]{'loss': -0.2652, 'grad_norm': 2345.935302734375, 'learning_rate': 0.0, 'mean_ratio_chosen': 6.1197638511657715, 'mean_ratio_rejected': 1.318693995475769, 'weight_chosen': 0.016160130500793457, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 0.90576171875, 'epoch': 0.0002664890073284477}
+                                                  {'loss': -0.2652, 'grad_norm': 2345.935302734375, 'learning_rate': 0.0, 'mean_ratio_chosen': 6.1197638511657715, 'mean_ratio_rejected': 1.318693995475769, 'weight_chosen': 0.016160130500793457, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 0.90576171875, 'epoch': 0.0}
+  0%|          | 1/3753 [00:04<4:46:52,  4.59s/it]  0%|          | 2/3753 [00:09<5:02:01,  4.83s/it]  0%|          | 3/3753 [00:14<4:50:24,  4.65s/it]  0%|          | 4/3753 [00:17<4:30:04,  4.32s/it]  0%|          | 5/3753 [00:21<4:21:22,  4.18s/it]  0%|          | 6/3753 [00:26<4:32:16,  4.36s/it]  0%|          | 7/3753 [00:30<4:25:11,  4.25s/it]  0%|          | 8/3753 [00:34<4:29:46,  4.32s/it]  0%|          | 9/3753 [00:39<4:27:56,  4.29s/it]  0%|          | 10/3753 [00:42<4:12:24,  4.05s/it]{'loss': -0.2651, 'grad_norm': 3189.332275390625, 'learning_rate': 2.3936170212765956e-08, 'mean_ratio_chosen': 1.0970624685287476, 'mean_ratio_rejected': 1.3230878114700317, 'weight_chosen': 0.19876694679260254, 'weight_rejected': 0.4163219630718231, 'kl_term_chosen': 0.04631805419921875, 'epoch': 0.002664890073284477}
+                                                   {'loss': -0.2651, 'grad_norm': 3189.332275390625, 'learning_rate': 2.3936170212765956e-08, 'mean_ratio_chosen': 1.0970624685287476, 'mean_ratio_rejected': 1.3230878114700317, 'weight_chosen': 0.19876694679260254, 'weight_rejected': 0.4163219630718231, 'kl_term_chosen': 0.04631805419921875, 'epoch': 0.0}
+  0%|          | 10/3753 [00:42<4:12:24,  4.05s/it]  0%|          | 11/3753 [00:46<4:14:20,  4.08s/it]  0%|          | 12/3753 [00:51<4:24:07,  4.24s/it]  0%|          | 13/3753 [00:55<4:21:16,  4.19s/it]  0%|          | 14/3753 [00:59<4:15:51,  4.11s/it]  0%|          | 15/3753 [01:03<4:07:55,  3.98s/it]  0%|          | 16/3753 [01:06<3:58:54,  3.84s/it]  0%|          | 17/3753 [01:10<4:05:41,  3.95s/it]  0%|          | 18/3753 [01:15<4:20:19,  4.18s/it]  1%|          | 19/3753 [01:18<4:05:34,  3.95s/it]  1%|          | 20/3753 [01:22<4:02:35,  3.90s/it]{'loss': -0.3173, 'grad_norm': 2529.502197265625, 'learning_rate': 5.053191489361702e-08, 'mean_ratio_chosen': 1.1808617115020752, 'mean_ratio_rejected': 1.0032401084899902, 'weight_chosen': 0.6494695544242859, 'weight_rejected': 0.29665425419807434, 'kl_term_chosen': 0.08312225341796875, 'epoch': 0.005329780146568954}
+                                                   {'loss': -0.3173, 'grad_norm': 2529.502197265625, 'learning_rate': 5.053191489361702e-08, 'mean_ratio_chosen': 1.1808617115020752, 'mean_ratio_rejected': 1.0032401084899902, 'weight_chosen': 0.6494695544242859, 'weight_rejected': 0.29665425419807434, 'kl_term_chosen': 0.08312225341796875, 'epoch': 0.01}
+  1%|          | 20/3753 [01:22<4:02:35,  3.90s/it]  1%|          | 21/3753 [01:26<4:01:29,  3.88s/it]  1%|          | 22/3753 [01:33<4:52:13,  4.70s/it]  1%|          | 23/3753 [01:37<4:48:29,  4.64s/it]  1%|          | 24/3753 [01:41<4:24:15,  4.25s/it]  1%|          | 25/3753 [01:45<4:28:04,  4.31s/it]  1%|          | 26/3753 [01:49<4:17:10,  4.14s/it]  1%|          | 27/3753 [01:53<4:10:37,  4.04s/it]  1%|          | 28/3753 [01:56<4:01:29,  3.89s/it]  1%|          | 29/3753 [02:00<3:58:38,  3.85s/it]  1%|          | 30/3753 [02:04<4:01:53,  3.90s/it]{'loss': 0.5479, 'grad_norm': 2274.010498046875, 'learning_rate': 7.712765957446808e-08, 'mean_ratio_chosen': 0.956681489944458, 'mean_ratio_rejected': 1.3286868333816528, 'weight_chosen': 0.6500936150550842, 'weight_rejected': 0.5987815260887146, 'kl_term_chosen': -0.022142410278320312, 'epoch': 0.007994670219853431}
+                                                   {'loss': 0.5479, 'grad_norm': 2274.010498046875, 'learning_rate': 7.712765957446808e-08, 'mean_ratio_chosen': 0.956681489944458, 'mean_ratio_rejected': 1.3286868333816528, 'weight_chosen': 0.6500936150550842, 'weight_rejected': 0.5987815260887146, 'kl_term_chosen': -0.022142410278320312, 'epoch': 0.01}
+  1%|          | 30/3753 [02:04<4:01:53,  3.90s/it]  1%|          | 31/3753 [02:09<4:19:08,  4.18s/it]  1%|          | 32/3753 [02:12<4:06:10,  3.97s/it]  1%|          | 33/3753 [02:16<4:01:26,  3.89s/it]  1%|          | 34/3753 [02:22<4:49:28,  4.67s/it]  1%|          | 35/3753 [02:27<4:55:46,  4.77s/it]  1%|          | 36/3753 [02:33<5:10:24,  5.01s/it]  1%|          | 37/3753 [02:38<5:13:47,  5.07s/it]  1%|          | 38/3753 [02:42<4:54:10,  4.75s/it]  1%|          | 39/3753 [02:49<5:28:30,  5.31s/it]  1%|          | 40/3753 [02:53<5:00:44,  4.86s/it]{'loss': 0.9354, 'grad_norm': 2077.8125, 'learning_rate': 1.0372340425531915e-07, 'mean_ratio_chosen': 1.825023889541626, 'mean_ratio_rejected': 1.1829177141189575, 'weight_chosen': 0.4569978713989258, 'weight_rejected': 0.1276526302099228, 'kl_term_chosen': 0.3007965087890625, 'epoch': 0.010659560293137908}
+                                                   {'loss': 0.9354, 'grad_norm': 2077.8125, 'learning_rate': 1.0372340425531915e-07, 'mean_ratio_chosen': 1.825023889541626, 'mean_ratio_rejected': 1.1829177141189575, 'weight_chosen': 0.4569978713989258, 'weight_rejected': 0.1276526302099228, 'kl_term_chosen': 0.3007965087890625, 'epoch': 0.01}
+  1%|          | 40/3753 [02:53<5:00:44,  4.86s/it]  1%|          | 41/3753 [02:58<5:19:43,  5.17s/it]  1%|          | 42/3753 [03:02<4:55:08,  4.77s/it]  1%|          | 43/3753 [03:07<4:56:19,  4.79s/it]  1%|          | 44/3753 [03:11<4:35:22,  4.45s/it]  1%|          | 45/3753 [03:15<4:35:42,  4.46s/it]  1%|          | 46/3753 [03:20<4:40:20,  4.54s/it]  1%|▏         | 47/3753 [03:23<4:13:03,  4.10s/it]  1%|▏         | 48/3753 [03:27<4:09:44,  4.04s/it]  1%|▏         | 49/3753 [03:31<4:07:45,  4.01s/it]  1%|▏         | 50/3753 [03:35<4:03:25,  3.94s/it]{'loss': 0.495, 'grad_norm': 3379.51904296875, 'learning_rate': 1.3031914893617022e-07, 'mean_ratio_chosen': 2.5273075103759766, 'mean_ratio_rejected': 2.11997389793396, 'weight_chosen': 0.3998143672943115, 'weight_rejected': 0.6851073503494263, 'kl_term_chosen': 0.4635772705078125, 'epoch': 0.013324450366422385}
+                                                   {'loss': 0.495, 'grad_norm': 3379.51904296875, 'learning_rate': 1.3031914893617022e-07, 'mean_ratio_chosen': 2.5273075103759766, 'mean_ratio_rejected': 2.11997389793396, 'weight_chosen': 0.3998143672943115, 'weight_rejected': 0.6851073503494263, 'kl_term_chosen': 0.4635772705078125, 'epoch': 0.01}
+  1%|▏         | 50/3753 [03:35<4:03:25,  3.94s/it]  1%|▏         | 51/3753 [03:39<4:12:03,  4.09s/it]  1%|▏         | 52/3753 [03:44<4:24:50,  4.29s/it]  1%|▏         | 53/3753 [03:49<4:42:52,  4.59s/it]  1%|▏         | 54/3753 [03:53<4:22:27,  4.26s/it]  1%|▏         | 55/3753 [03:59<5:08:44,  5.01s/it]  1%|▏         | 56/3753 [04:06<5:32:12,  5.39s/it]  2%|▏         | 57/3753 [04:10<5:16:21,  5.14s/it]  2%|▏         | 58/3753 [04:14<4:45:42,  4.64s/it]  2%|▏         | 59/3753 [04:21<5:29:56,  5.36s/it]  2%|▏         | 60/3753 [04:24<4:54:26,  4.78s/it]{'loss': 0.5167, 'grad_norm': 1564.9324951171875, 'learning_rate': 1.5691489361702126e-07, 'mean_ratio_chosen': 0.6184439063072205, 'mean_ratio_rejected': 0.7141445279121399, 'weight_chosen': 0.27048903703689575, 'weight_rejected': 0.937210738658905, 'kl_term_chosen': -0.24027442932128906, 'epoch': 0.015989340439706862}
+                                                   {'loss': 0.5167, 'grad_norm': 1564.9324951171875, 'learning_rate': 1.5691489361702126e-07, 'mean_ratio_chosen': 0.6184439063072205, 'mean_ratio_rejected': 0.7141445279121399, 'weight_chosen': 0.27048903703689575, 'weight_rejected': 0.937210738658905, 'kl_term_chosen': -0.24027442932128906, 'epoch': 0.02}
+  2%|▏         | 60/3753 [04:24<4:54:26,  4.78s/it]  2%|▏         | 61/3753 [04:29<4:59:16,  4.86s/it]  2%|▏         | 62/3753 [04:33<4:45:47,  4.65s/it]  2%|▏         | 63/3753 [04:38<4:39:01,  4.54s/it]  2%|▏         | 64/3753 [04:43<4:46:15,  4.66s/it]  2%|▏         | 65/3753 [04:46<4:30:29,  4.40s/it]  2%|▏         | 66/3753 [04:51<4:27:52,  4.36s/it]  2%|▏         | 67/3753 [04:55<4:28:01,  4.36s/it]  2%|▏         | 68/3753 [04:59<4:19:03,  4.22s/it]  2%|▏         | 69/3753 [05:04<4:32:08,  4.43s/it]  2%|▏         | 70/3753 [05:08<4:17:42,  4.20s/it]{'loss': 0.7851, 'grad_norm': 2042.0797119140625, 'learning_rate': 1.8351063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 4.269937038421631, 'weight_chosen': -0.8012500405311584, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 1.7644805908203125, 'epoch': 0.018654230512991338}
+                                                   {'loss': 0.7851, 'grad_norm': 2042.0797119140625, 'learning_rate': 1.8351063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 4.269937038421631, 'weight_chosen': -0.8012500405311584, 'weight_rejected': 0.044680867344141006, 'kl_term_chosen': 1.7644805908203125, 'epoch': 0.02}
+  2%|▏         | 70/3753 [05:08<4:17:42,  4.20s/it]  2%|▏         | 71/3753 [05:12<4:25:30,  4.33s/it]  2%|▏         | 72/3753 [05:16<4:20:49,  4.25s/it]  2%|▏         | 73/3753 [05:20<4:08:38,  4.05s/it]  2%|▏         | 74/3753 [05:24<4:01:46,  3.94s/it]  2%|▏         | 75/3753 [05:27<4:00:31,  3.92s/it]  2%|▏         | 76/3753 [05:33<4:24:30,  4.32s/it]  2%|▏         | 77/3753 [05:36<4:07:39,  4.04s/it]  2%|▏         | 78/3753 [05:41<4:22:10,  4.28s/it]  2%|▏         | 79/3753 [05:45<4:19:14,  4.23s/it]  2%|▏         | 80/3753 [05:50<4:28:44,  4.39s/it]{'loss': 0.7196, 'grad_norm': 5796.38232421875, 'learning_rate': 2.101063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 2.1753203868865967, 'weight_chosen': -0.7003753781318665, 'weight_rejected': 0.10230471193790436, 'kl_term_chosen': 1.6287841796875, 'epoch': 0.021319120586275817}
+                                                   {'loss': 0.7196, 'grad_norm': 5796.38232421875, 'learning_rate': 2.101063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 2.1753203868865967, 'weight_chosen': -0.7003753781318665, 'weight_rejected': 0.10230471193790436, 'kl_term_chosen': 1.6287841796875, 'epoch': 0.02}
+  2%|▏         | 80/3753 [05:50<4:28:44,  4.39s/it]  2%|▏         | 81/3753 [05:54<4:29:41,  4.41s/it]  2%|▏         | 82/3753 [05:58<4:16:55,  4.20s/it]  2%|▏         | 83/3753 [06:04<4:46:11,  4.68s/it]  2%|▏         | 84/3753 [06:08<4:39:40,  4.57s/it]  2%|▏         | 85/3753 [06:12<4:19:55,  4.25s/it]  2%|▏         | 86/3753 [06:16<4:19:53,  4.25s/it]  2%|▏         | 87/3753 [06:21<4:44:53,  4.66s/it]  2%|▏         | 88/3753 [06:25<4:28:02,  4.39s/it]  2%|▏         | 89/3753 [06:29<4:18:17,  4.23s/it]  2%|▏         | 90/3753 [06:33<4:10:49,  4.11s/it]{'loss': 1.5732, 'grad_norm': 2804.2919921875, 'learning_rate': 2.3670212765957445e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 5.418501853942871, 'weight_chosen': -1.323620319366455, 'weight_rejected': 0.15002880990505219, 'kl_term_chosen': 2.11285400390625, 'epoch': 0.023984010659560292}
+                                                   {'loss': 1.5732, 'grad_norm': 2804.2919921875, 'learning_rate': 2.3670212765957445e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 5.418501853942871, 'weight_chosen': -1.323620319366455, 'weight_rejected': 0.15002880990505219, 'kl_term_chosen': 2.11285400390625, 'epoch': 0.02}
+  2%|▏         | 90/3753 [06:33<4:10:49,  4.11s/it]  2%|▏         | 91/3753 [06:36<3:57:07,  3.89s/it]  2%|▏         | 92/3753 [06:40<4:00:17,  3.94s/it]  2%|▏         | 93/3753 [06:45<4:13:32,  4.16s/it]  3%|▎         | 94/3753 [06:49<4:03:09,  3.99s/it]  3%|▎         | 95/3753 [06:55<4:56:29,  4.86s/it]  3%|▎         | 96/3753 [06:59<4:38:51,  4.58s/it]  3%|▎         | 97/3753 [07:03<4:29:35,  4.42s/it]  3%|▎         | 98/3753 [07:09<4:44:56,  4.68s/it]  3%|▎         | 99/3753 [07:12<4:23:12,  4.32s/it]  3%|▎         | 100/3753 [07:16<4:09:44,  4.10s/it]{'loss': 1.8056, 'grad_norm': 1507.4854736328125, 'learning_rate': 2.632978723404255e-07, 'mean_ratio_chosen': 0.5833570957183838, 'mean_ratio_rejected': 1.7756208181381226, 'weight_chosen': 0.8974290490150452, 'weight_rejected': 0.14414885640144348, 'kl_term_chosen': -0.26947784423828125, 'epoch': 0.02664890073284477}
+                                                    {'loss': 1.8056, 'grad_norm': 1507.4854736328125, 'learning_rate': 2.632978723404255e-07, 'mean_ratio_chosen': 0.5833570957183838, 'mean_ratio_rejected': 1.7756208181381226, 'weight_chosen': 0.8974290490150452, 'weight_rejected': 0.14414885640144348, 'kl_term_chosen': -0.26947784423828125, 'epoch': 0.03}
+  3%|▎         | 100/3753 [07:16<4:09:44,  4.10s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+  3%|▎         | 101/3753 [08:14<20:42:57, 20.42s/it]  3%|▎         | 102/3753 [08:18<15:42:28, 15.49s/it]  3%|▎         | 103/3753 [08:22<12:14:23, 12.07s/it]  3%|▎         | 104/3753 [08:28<10:09:40, 10.02s/it]  3%|▎         | 105/3753 [08:32<8:22:48,  8.27s/it]   3%|▎         | 106/3753 [08:36<7:16:59,  7.19s/it]  3%|▎         | 107/3753 [08:41<6:25:00,  6.34s/it]  3%|▎         | 108/3753 [08:45<5:48:33,  5.74s/it]  3%|▎         | 109/3753 [08:49<5:22:07,  5.30s/it]  3%|▎         | 110/3753 [08:54<5:04:00,  5.01s/it]{'loss': 1.187, 'grad_norm': 1492.233154296875, 'learning_rate': 2.8989361702127657e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 2.799609661102295, 'weight_chosen': -0.9235122203826904, 'weight_rejected': 0.04146226868033409, 'kl_term_chosen': 1.837188720703125, 'epoch': 0.029313790806129246}
+                                                    {'loss': 1.187, 'grad_norm': 1492.233154296875, 'learning_rate': 2.8989361702127657e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 2.799609661102295, 'weight_chosen': -0.9235122203826904, 'weight_rejected': 0.04146226868033409, 'kl_term_chosen': 1.837188720703125, 'epoch': 0.03}
+  3%|▎         | 110/3753 [08:54<5:04:00,  5.01s/it]  3%|▎         | 111/3753 [08:58<4:58:44,  4.92s/it]  3%|▎         | 112/3753 [09:02<4:33:05,  4.50s/it]  3%|▎         | 113/3753 [09:05<4:12:31,  4.16s/it]  3%|▎         | 114/3753 [09:09<4:07:51,  4.09s/it]  3%|▎         | 115/3753 [09:13<4:01:41,  3.99s/it]  3%|▎         | 116/3753 [09:18<4:12:36,  4.17s/it]  3%|▎         | 117/3753 [09:22<4:12:53,  4.17s/it]  3%|▎         | 118/3753 [09:26<4:12:10,  4.16s/it]  3%|▎         | 119/3753 [09:33<4:58:44,  4.93s/it]  3%|▎         | 120/3753 [09:37<4:45:52,  4.72s/it]{'loss': 0.8888, 'grad_norm': 1716.3897705078125, 'learning_rate': 3.1648936170212764e-07, 'mean_ratio_chosen': 6.353068828582764, 'mean_ratio_rejected': 1.5228182077407837, 'weight_chosen': -0.08791446685791016, 'weight_rejected': 0.49502578377723694, 'kl_term_chosen': 0.924468994140625, 'epoch': 0.031978680879413725}
+                                                    {'loss': 0.8888, 'grad_norm': 1716.3897705078125, 'learning_rate': 3.1648936170212764e-07, 'mean_ratio_chosen': 6.353068828582764, 'mean_ratio_rejected': 1.5228182077407837, 'weight_chosen': -0.08791446685791016, 'weight_rejected': 0.49502578377723694, 'kl_term_chosen': 0.924468994140625, 'epoch': 0.03}
+  3%|▎         | 120/3753 [09:37<4:45:52,  4.72s/it]  3%|▎         | 121/3753 [09:41<4:36:25,  4.57s/it]  3%|▎         | 122/3753 [09:46<4:36:13,  4.56s/it]  3%|▎         | 123/3753 [09:50<4:27:48,  4.43s/it]  3%|▎         | 124/3753 [09:53<4:15:25,  4.22s/it]  3%|▎         | 125/3753 [09:58<4:18:52,  4.28s/it]  3%|▎         | 126/3753 [10:03<4:26:23,  4.41s/it]  3%|▎         | 127/3753 [10:06<4:11:36,  4.16s/it]  3%|▎         | 128/3753 [10:11<4:15:53,  4.24s/it]  3%|▎         | 129/3753 [10:16<4:33:48,  4.53s/it]  3%|▎         | 130/3753 [10:20<4:29:38,  4.47s/it]{'loss': 1.0807, 'grad_norm': 2830.690185546875, 'learning_rate': 3.430851063829787e-07, 'mean_ratio_chosen': 6.040534496307373, 'mean_ratio_rejected': 0.26013022661209106, 'weight_chosen': -0.6017763018608093, 'weight_rejected': 0.10970578342676163, 'kl_term_chosen': 0.8992462158203125, 'epoch': 0.034643570952698204}
+                                                    {'loss': 1.0807, 'grad_norm': 2830.690185546875, 'learning_rate': 3.430851063829787e-07, 'mean_ratio_chosen': 6.040534496307373, 'mean_ratio_rejected': 0.26013022661209106, 'weight_chosen': -0.6017763018608093, 'weight_rejected': 0.10970578342676163, 'kl_term_chosen': 0.8992462158203125, 'epoch': 0.03}
+  3%|▎         | 130/3753 [10:20<4:29:38,  4.47s/it]  3%|▎         | 131/3753 [10:24<4:26:23,  4.41s/it]  4%|▎         | 132/3753 [10:28<4:07:53,  4.11s/it]  4%|▎         | 133/3753 [10:32<4:09:04,  4.13s/it]  4%|▎         | 134/3753 [10:36<4:15:17,  4.23s/it]  4%|▎         | 135/3753 [10:40<4:09:18,  4.13s/it]  4%|▎         | 136/3753 [10:44<3:58:32,  3.96s/it]  4%|▎         | 137/3753 [10:48<4:01:32,  4.01s/it]  4%|▎         | 138/3753 [10:53<4:13:04,  4.20s/it]  4%|▎         | 139/3753 [10:56<4:01:40,  4.01s/it]  4%|▎         | 140/3753 [11:01<4:09:36,  4.15s/it]{'loss': 2.2234, 'grad_norm': 2751.849853515625, 'learning_rate': 3.696808510638298e-07, 'mean_ratio_chosen': 2.5124659538269043, 'mean_ratio_rejected': 0.43604183197021484, 'weight_chosen': 0.399031400680542, 'weight_rejected': 0.14706450700759888, 'kl_term_chosen': 0.46063232421875, 'epoch': 0.037308461025982675}
+                                                    {'loss': 2.2234, 'grad_norm': 2751.849853515625, 'learning_rate': 3.696808510638298e-07, 'mean_ratio_chosen': 2.5124659538269043, 'mean_ratio_rejected': 0.43604183197021484, 'weight_chosen': 0.399031400680542, 'weight_rejected': 0.14706450700759888, 'kl_term_chosen': 0.46063232421875, 'epoch': 0.04}
+  4%|▎         | 140/3753 [11:01<4:09:36,  4.15s/it]  4%|▍         | 141/3753 [11:04<4:02:41,  4.03s/it]  4%|▍         | 142/3753 [11:10<4:34:44,  4.57s/it]  4%|▍         | 143/3753 [11:15<4:31:14,  4.51s/it]  4%|▍         | 144/3753 [11:20<4:50:11,  4.82s/it]  4%|▍         | 145/3753 [11:26<5:12:41,  5.20s/it]  4%|▍         | 146/3753 [11:31<5:10:42,  5.17s/it]  4%|▍         | 147/3753 [11:38<5:31:10,  5.51s/it]  4%|▍         | 148/3753 [11:42<5:16:01,  5.26s/it]  4%|▍         | 149/3753 [11:46<4:48:25,  4.80s/it]  4%|▍         | 150/3753 [11:52<5:07:04,  5.11s/it]{'loss': 1.9511, 'grad_norm': 1599.1678466796875, 'learning_rate': 3.962765957446808e-07, 'mean_ratio_chosen': 1.1240557432174683, 'mean_ratio_rejected': 0.40913617610931396, 'weight_chosen': 0.27698802947998047, 'weight_rejected': 0.5903069972991943, 'kl_term_chosen': 0.0584716796875, 'epoch': 0.039973351099267154}
+                                                    {'loss': 1.9511, 'grad_norm': 1599.1678466796875, 'learning_rate': 3.962765957446808e-07, 'mean_ratio_chosen': 1.1240557432174683, 'mean_ratio_rejected': 0.40913617610931396, 'weight_chosen': 0.27698802947998047, 'weight_rejected': 0.5903069972991943, 'kl_term_chosen': 0.0584716796875, 'epoch': 0.04}
+  4%|▍         | 150/3753 [11:52<5:07:04,  5.11s/it]  4%|▍         | 151/3753 [11:57<5:02:34,  5.04s/it]  4%|▍         | 152/3753 [12:01<4:53:47,  4.90s/it]  4%|▍         | 153/3753 [12:06<4:47:24,  4.79s/it]  4%|▍         | 154/3753 [12:10<4:35:12,  4.59s/it]  4%|▍         | 155/3753 [12:14<4:32:17,  4.54s/it]  4%|▍         | 156/3753 [12:19<4:24:42,  4.42s/it]  4%|▍         | 157/3753 [12:22<4:12:50,  4.22s/it]  4%|▍         | 158/3753 [12:27<4:17:56,  4.30s/it]  4%|▍         | 159/3753 [12:31<4:10:40,  4.18s/it]  4%|▍         | 160/3753 [12:35<4:12:57,  4.22s/it]{'loss': 2.763, 'grad_norm': 3259.171875, 'learning_rate': 4.228723404255319e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 2.2795422077178955, 'weight_chosen': -1.020532250404358, 'weight_rejected': 0.3372035324573517, 'kl_term_chosen': 1.7005615234375, 'epoch': 0.04263824117255163}
+                                                    {'loss': 2.763, 'grad_norm': 3259.171875, 'learning_rate': 4.228723404255319e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 2.2795422077178955, 'weight_chosen': -1.020532250404358, 'weight_rejected': 0.3372035324573517, 'kl_term_chosen': 1.7005615234375, 'epoch': 0.04}
+  4%|▍         | 160/3753 [12:35<4:12:57,  4.22s/it]  4%|▍         | 161/3753 [12:40<4:18:11,  4.31s/it]  4%|▍         | 162/3753 [12:43<4:09:11,  4.16s/it]  4%|▍         | 163/3753 [12:47<4:04:25,  4.09s/it]  4%|▍         | 164/3753 [12:54<4:49:54,  4.85s/it]  4%|▍         | 165/3753 [13:00<5:07:09,  5.14s/it]  4%|▍         | 166/3753 [13:03<4:38:31,  4.66s/it]  4%|▍         | 167/3753 [13:08<4:33:37,  4.58s/it]  4%|▍         | 168/3753 [13:13<4:38:44,  4.67s/it]  5%|▍         | 169/3753 [13:17<4:25:57,  4.45s/it]  5%|▍         | 170/3753 [13:20<4:13:40,  4.25s/it]{'loss': 2.454, 'grad_norm': 1621.4693603515625, 'learning_rate': 4.4946808510638295e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.6844229698181152, 'weight_rejected': 0.13568955659866333, 'kl_term_chosen': 1.5567703247070312, 'epoch': 0.04530313124583611}
+                                                    {'loss': 2.454, 'grad_norm': 1621.4693603515625, 'learning_rate': 4.4946808510638295e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.6844229698181152, 'weight_rejected': 0.13568955659866333, 'kl_term_chosen': 1.5567703247070312, 'epoch': 0.05}
+  5%|▍         | 170/3753 [13:20<4:13:40,  4.25s/it]  5%|▍         | 171/3753 [13:25<4:15:37,  4.28s/it]  5%|▍         | 172/3753 [13:32<5:12:42,  5.24s/it]  5%|▍         | 173/3753 [13:36<4:51:34,  4.89s/it]  5%|▍         | 174/3753 [13:40<4:37:19,  4.65s/it]  5%|▍         | 175/3753 [13:45<4:29:31,  4.52s/it]  5%|▍         | 176/3753 [13:48<4:13:41,  4.26s/it]  5%|▍         | 177/3753 [13:52<4:12:18,  4.23s/it]  5%|▍         | 178/3753 [13:57<4:21:37,  4.39s/it]  5%|▍         | 179/3753 [14:01<4:11:49,  4.23s/it]  5%|▍         | 180/3753 [14:06<4:19:28,  4.36s/it]{'loss': 3.7497, 'grad_norm': 1846.8958740234375, 'learning_rate': 4.76063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.8231300115585327, 'weight_chosen': -0.2687932252883911, 'weight_rejected': 0.09268777817487717, 'kl_term_chosen': 1.2041397094726562, 'epoch': 0.047968021319120584}
+                                                    {'loss': 3.7497, 'grad_norm': 1846.8958740234375, 'learning_rate': 4.76063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.8231300115585327, 'weight_chosen': -0.2687932252883911, 'weight_rejected': 0.09268777817487717, 'kl_term_chosen': 1.2041397094726562, 'epoch': 0.05}
+  5%|▍         | 180/3753 [14:06<4:19:28,  4.36s/it]  5%|▍         | 181/3753 [14:10<4:18:40,  4.35s/it]  5%|▍         | 182/3753 [14:17<5:00:34,  5.05s/it]  5%|▍         | 183/3753 [14:21<4:48:41,  4.85s/it]  5%|▍         | 184/3753 [14:26<4:50:58,  4.89s/it]  5%|▍         | 185/3753 [14:30<4:43:07,  4.76s/it]  5%|▍         | 186/3753 [14:34<4:27:40,  4.50s/it]  5%|▍         | 187/3753 [14:39<4:24:15,  4.45s/it]  5%|▌         | 188/3753 [14:43<4:21:11,  4.40s/it]  5%|▌         | 189/3753 [14:50<5:00:11,  5.05s/it]  5%|▌         | 190/3753 [14:54<4:52:06,  4.92s/it]{'loss': 4.0523, 'grad_norm': 3479.146484375, 'learning_rate': 5.026595744680851e-07, 'mean_ratio_chosen': 1.877619743347168, 'mean_ratio_rejected': 0.44635504484176636, 'weight_chosen': 0.5657946467399597, 'weight_rejected': 0.08509904146194458, 'kl_term_chosen': 0.31500244140625, 'epoch': 0.05063291139240506}
+                                                    {'loss': 4.0523, 'grad_norm': 3479.146484375, 'learning_rate': 5.026595744680851e-07, 'mean_ratio_chosen': 1.877619743347168, 'mean_ratio_rejected': 0.44635504484176636, 'weight_chosen': 0.5657946467399597, 'weight_rejected': 0.08509904146194458, 'kl_term_chosen': 0.31500244140625, 'epoch': 0.05}
+  5%|▌         | 190/3753 [14:54<4:52:06,  4.92s/it]  5%|▌         | 191/3753 [14:58<4:30:18,  4.55s/it]  5%|▌         | 192/3753 [15:05<5:09:30,  5.21s/it]  5%|▌         | 193/3753 [15:09<4:46:26,  4.83s/it]  5%|▌         | 194/3753 [15:13<4:44:10,  4.79s/it]  5%|▌         | 195/3753 [15:17<4:28:47,  4.53s/it]  5%|▌         | 196/3753 [15:21<4:17:22,  4.34s/it]  5%|▌         | 197/3753 [15:29<5:18:05,  5.37s/it]  5%|▌         | 198/3753 [15:34<5:08:21,  5.20s/it]  5%|▌         | 199/3753 [15:39<5:03:13,  5.12s/it]  5%|▌         | 200/3753 [15:43<4:44:49,  4.81s/it]{'loss': 3.6341, 'grad_norm': 1988.138671875, 'learning_rate': 5.292553191489362e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.3950626254081726, 'weight_chosen': -2.198437213897705, 'weight_rejected': 0.05582314357161522, 'kl_term_chosen': 3.14178466796875, 'epoch': 0.05329780146568954}
+                                                    {'loss': 3.6341, 'grad_norm': 1988.138671875, 'learning_rate': 5.292553191489362e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.3950626254081726, 'weight_chosen': -2.198437213897705, 'weight_rejected': 0.05582314357161522, 'kl_term_chosen': 3.14178466796875, 'epoch': 0.05}
+  5%|▌         | 200/3753 [15:43<4:44:49,  4.81s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+  5%|▌         | 201/3753 [16:43<21:17:33, 21.58s/it]  5%|▌         | 202/3753 [16:47<16:01:22, 16.24s/it]  5%|▌         | 203/3753 [16:52<12:34:01, 12.74s/it]  5%|▌         | 204/3753 [16:55<9:51:30, 10.00s/it]   5%|▌         | 205/3753 [16:59<7:58:54,  8.10s/it]  5%|▌         | 206/3753 [17:05<7:29:16,  7.60s/it]  6%|▌         | 207/3753 [17:09<6:23:19,  6.49s/it]  6%|▌         | 208/3753 [17:15<6:05:32,  6.19s/it]  6%|▌         | 209/3753 [17:20<5:45:33,  5.85s/it]  6%|▌         | 210/3753 [17:24<5:20:15,  5.42s/it]{'loss': 3.1117, 'grad_norm': 1775.8155517578125, 'learning_rate': 5.558510638297872e-07, 'mean_ratio_chosen': 5.1971845626831055, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.0053217411041259766, 'weight_rejected': 0.15304215252399445, 'kl_term_chosen': 0.8240585327148438, 'epoch': 0.05596269153897402}
+                                                    {'loss': 3.1117, 'grad_norm': 1775.8155517578125, 'learning_rate': 5.558510638297872e-07, 'mean_ratio_chosen': 5.1971845626831055, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.0053217411041259766, 'weight_rejected': 0.15304215252399445, 'kl_term_chosen': 0.8240585327148438, 'epoch': 0.06}
+  6%|▌         | 210/3753 [17:24<5:20:15,  5.42s/it]  6%|▌         | 211/3753 [17:29<5:10:00,  5.25s/it]  6%|▌         | 212/3753 [17:33<4:38:01,  4.71s/it]  6%|▌         | 213/3753 [17:37<4:31:03,  4.59s/it]  6%|▌         | 214/3753 [17:42<4:47:53,  4.88s/it]  6%|▌         | 215/3753 [17:46<4:30:49,  4.59s/it]  6%|▌         | 216/3753 [17:50<4:20:56,  4.43s/it]  6%|▌         | 217/3753 [17:54<4:11:03,  4.26s/it]  6%|▌         | 218/3753 [17:59<4:19:02,  4.40s/it]  6%|▌         | 219/3753 [18:03<4:09:20,  4.23s/it]  6%|▌         | 220/3753 [18:07<4:00:09,  4.08s/it]{'loss': 2.0224, 'grad_norm': 1173.012451171875, 'learning_rate': 5.824468085106384e-07, 'mean_ratio_chosen': 3.5950443744659424, 'mean_ratio_rejected': 1.0894056558609009, 'weight_chosen': 0.041948676109313965, 'weight_rejected': 0.1200256198644638, 'kl_term_chosen': 0.6397781372070312, 'epoch': 0.05862758161225849}
+                                                    {'loss': 2.0224, 'grad_norm': 1173.012451171875, 'learning_rate': 5.824468085106384e-07, 'mean_ratio_chosen': 3.5950443744659424, 'mean_ratio_rejected': 1.0894056558609009, 'weight_chosen': 0.041948676109313965, 'weight_rejected': 0.1200256198644638, 'kl_term_chosen': 0.6397781372070312, 'epoch': 0.06}
+  6%|▌         | 220/3753 [18:07<4:00:09,  4.08s/it]  6%|▌         | 221/3753 [18:10<3:52:28,  3.95s/it]  6%|▌         | 222/3753 [18:15<4:01:42,  4.11s/it]  6%|▌         | 223/3753 [18:18<3:48:44,  3.89s/it]  6%|▌         | 224/3753 [18:22<3:46:21,  3.85s/it]  6%|▌         | 225/3753 [18:26<3:53:05,  3.96s/it]  6%|▌         | 226/3753 [18:30<3:55:09,  4.00s/it]  6%|▌         | 227/3753 [18:35<4:09:46,  4.25s/it]  6%|▌         | 228/3753 [18:39<3:59:23,  4.07s/it]  6%|▌         | 229/3753 [18:43<4:04:54,  4.17s/it]  6%|▌         | 230/3753 [18:49<4:41:39,  4.80s/it]{'loss': 3.476, 'grad_norm': 1542.742919921875, 'learning_rate': 6.090425531914894e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 6.282311916351318, 'weight_chosen': -0.6660454273223877, 'weight_rejected': 0.1490352898836136, 'kl_term_chosen': 1.6032562255859375, 'epoch': 0.06129247168554297}
+                                                    {'loss': 3.476, 'grad_norm': 1542.742919921875, 'learning_rate': 6.090425531914894e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 6.282311916351318, 'weight_chosen': -0.6660454273223877, 'weight_rejected': 0.1490352898836136, 'kl_term_chosen': 1.6032562255859375, 'epoch': 0.06}
+  6%|▌         | 230/3753 [18:49<4:41:39,  4.80s/it]  6%|▌         | 231/3753 [18:54<4:47:25,  4.90s/it]  6%|▌         | 232/3753 [18:58<4:31:08,  4.62s/it]  6%|▌         | 233/3753 [19:03<4:27:38,  4.56s/it]  6%|▌         | 234/3753 [19:08<4:34:59,  4.69s/it]  6%|▋         | 235/3753 [19:15<5:23:22,  5.52s/it]  6%|▋         | 236/3753 [19:19<4:59:49,  5.11s/it]  6%|▋         | 237/3753 [19:23<4:30:53,  4.62s/it]  6%|▋         | 238/3753 [19:27<4:23:58,  4.51s/it]  6%|▋         | 239/3753 [19:32<4:29:43,  4.61s/it]  6%|▋         | 240/3753 [19:36<4:25:22,  4.53s/it]{'loss': 5.3683, 'grad_norm': 1456.2708740234375, 'learning_rate': 6.356382978723404e-07, 'mean_ratio_chosen': 3.9880435466766357, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 0.13949263095855713, 'weight_rejected': 0.17781086266040802, 'kl_term_chosen': 0.691650390625, 'epoch': 0.06395736175882745}
+                                                    {'loss': 5.3683, 'grad_norm': 1456.2708740234375, 'learning_rate': 6.356382978723404e-07, 'mean_ratio_chosen': 3.9880435466766357, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 0.13949263095855713, 'weight_rejected': 0.17781086266040802, 'kl_term_chosen': 0.691650390625, 'epoch': 0.06}
+  6%|▋         | 240/3753 [19:36<4:25:22,  4.53s/it]  6%|▋         | 241/3753 [19:40<4:13:06,  4.32s/it]  6%|▋         | 242/3753 [19:44<4:06:48,  4.22s/it]  6%|▋         | 243/3753 [19:49<4:15:11,  4.36s/it]  7%|▋         | 244/3753 [19:54<4:26:54,  4.56s/it]  7%|▋         | 245/3753 [19:58<4:19:27,  4.44s/it]  7%|▋         | 246/3753 [20:02<4:02:40,  4.15s/it]  7%|▋         | 247/3753 [20:09<4:54:29,  5.04s/it]  7%|▋         | 248/3753 [20:14<4:54:15,  5.04s/it]  7%|▋         | 249/3753 [20:18<4:47:13,  4.92s/it]  7%|▋         | 250/3753 [20:23<4:44:16,  4.87s/it]{'loss': 2.7501, 'grad_norm': 3376.268798828125, 'learning_rate': 6.622340425531915e-07, 'mean_ratio_chosen': 0.7079817652702332, 'mean_ratio_rejected': 0.14947371184825897, 'weight_chosen': 1.067457914352417, 'weight_rejected': 0.14804719388484955, 'kl_term_chosen': -0.17266845703125, 'epoch': 0.06662225183211193}
+                                                    {'loss': 2.7501, 'grad_norm': 3376.268798828125, 'learning_rate': 6.622340425531915e-07, 'mean_ratio_chosen': 0.7079817652702332, 'mean_ratio_rejected': 0.14947371184825897, 'weight_chosen': 1.067457914352417, 'weight_rejected': 0.14804719388484955, 'kl_term_chosen': -0.17266845703125, 'epoch': 0.07}
+  7%|▋         | 250/3753 [20:23<4:44:16,  4.87s/it]  7%|▋         | 251/3753 [20:29<5:07:22,  5.27s/it]  7%|▋         | 252/3753 [20:34<4:59:35,  5.13s/it]  7%|▋         | 253/3753 [20:39<4:50:16,  4.98s/it]  7%|▋         | 254/3753 [20:42<4:24:10,  4.53s/it]  7%|▋         | 255/3753 [20:46<4:09:25,  4.28s/it]  7%|▋         | 256/3753 [20:49<3:57:30,  4.08s/it]  7%|▋         | 257/3753 [20:54<4:07:08,  4.24s/it]  7%|▋         | 258/3753 [20:58<3:57:30,  4.08s/it]  7%|▋         | 259/3753 [21:01<3:47:44,  3.91s/it]  7%|▋         | 260/3753 [21:06<4:05:44,  4.22s/it]{'loss': 6.5736, 'grad_norm': 662.6026611328125, 'learning_rate': 6.888297872340425e-07, 'mean_ratio_chosen': 4.080188751220703, 'mean_ratio_rejected': 0.265836238861084, 'weight_chosen': 0.18413299322128296, 'weight_rejected': 0.13386748731136322, 'kl_term_chosen': 0.7030715942382812, 'epoch': 0.06928714190539641}
+                                                    {'loss': 6.5736, 'grad_norm': 662.6026611328125, 'learning_rate': 6.888297872340425e-07, 'mean_ratio_chosen': 4.080188751220703, 'mean_ratio_rejected': 0.265836238861084, 'weight_chosen': 0.18413299322128296, 'weight_rejected': 0.13386748731136322, 'kl_term_chosen': 0.7030715942382812, 'epoch': 0.07}
+  7%|▋         | 260/3753 [21:06<4:05:44,  4.22s/it]  7%|▋         | 261/3753 [21:10<4:05:20,  4.22s/it]  7%|▋         | 262/3753 [21:15<4:07:20,  4.25s/it]  7%|▋         | 263/3753 [21:19<4:07:35,  4.26s/it]  7%|▋         | 264/3753 [21:23<3:58:19,  4.10s/it]  7%|▋         | 265/3753 [21:27<4:02:37,  4.17s/it]  7%|▋         | 266/3753 [21:31<3:52:07,  3.99s/it]  7%|▋         | 267/3753 [21:34<3:47:15,  3.91s/it]  7%|▋         | 268/3753 [21:39<3:58:24,  4.10s/it]  7%|▋         | 269/3753 [21:43<3:56:22,  4.07s/it]  7%|▋         | 270/3753 [21:48<4:05:52,  4.24s/it]{'loss': 7.0447, 'grad_norm': 1268.294677734375, 'learning_rate': 7.154255319148937e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 4.541026592254639, 'weight_chosen': -0.9159025549888611, 'weight_rejected': 0.05033063143491745, 'kl_term_chosen': 1.8914794921875, 'epoch': 0.07195203197868089}
+                                                    {'loss': 7.0447, 'grad_norm': 1268.294677734375, 'learning_rate': 7.154255319148937e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 4.541026592254639, 'weight_chosen': -0.9159025549888611, 'weight_rejected': 0.05033063143491745, 'kl_term_chosen': 1.8914794921875, 'epoch': 0.07}
+  7%|▋         | 270/3753 [21:48<4:05:52,  4.24s/it]  7%|▋         | 271/3753 [21:52<4:06:05,  4.24s/it]  7%|▋         | 272/3753 [21:56<4:02:42,  4.18s/it]  7%|▋         | 273/3753 [21:59<3:51:14,  3.99s/it]  7%|▋         | 274/3753 [22:03<3:46:04,  3.90s/it]  7%|▋         | 275/3753 [22:07<3:53:06,  4.02s/it]  7%|▋         | 276/3753 [22:11<3:45:17,  3.89s/it]  7%|▋         | 277/3753 [22:16<4:07:44,  4.28s/it]  7%|▋         | 278/3753 [22:20<4:02:48,  4.19s/it]  7%|▋         | 279/3753 [22:25<4:05:35,  4.24s/it]  7%|▋         | 280/3753 [22:29<4:09:35,  4.31s/it]{'loss': 7.4253, 'grad_norm': 1068.29443359375, 'learning_rate': 7.420212765957447e-07, 'mean_ratio_chosen': 0.5108903646469116, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 1.2662584781646729, 'weight_rejected': 0.07263670116662979, 'kl_term_chosen': -0.3358001708984375, 'epoch': 0.07461692205196535}
+                                                    {'loss': 7.4253, 'grad_norm': 1068.29443359375, 'learning_rate': 7.420212765957447e-07, 'mean_ratio_chosen': 0.5108903646469116, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 1.2662584781646729, 'weight_rejected': 0.07263670116662979, 'kl_term_chosen': -0.3358001708984375, 'epoch': 0.07}
+  7%|▋         | 280/3753 [22:29<4:09:35,  4.31s/it]  7%|▋         | 281/3753 [22:33<4:02:01,  4.18s/it]  8%|▊         | 282/3753 [22:38<4:23:55,  4.56s/it]  8%|▊         | 283/3753 [22:43<4:22:40,  4.54s/it]  8%|▊         | 284/3753 [22:47<4:11:48,  4.36s/it]  8%|▊         | 285/3753 [22:54<4:56:14,  5.13s/it]  8%|▊         | 286/3753 [22:57<4:32:09,  4.71s/it]  8%|▊         | 287/3753 [23:02<4:22:16,  4.54s/it]  8%|▊         | 288/3753 [23:09<5:08:45,  5.35s/it]  8%|▊         | 289/3753 [23:13<4:52:47,  5.07s/it]  8%|▊         | 290/3753 [23:21<5:31:33,  5.74s/it]{'loss': 12.8345, 'grad_norm': 1492.6572265625, 'learning_rate': 7.686170212765957e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.6404237151145935, 'weight_rejected': 0.20946967601776123, 'kl_term_chosen': 1.393890380859375, 'epoch': 0.07728181212524983}
+                                                    {'loss': 12.8345, 'grad_norm': 1492.6572265625, 'learning_rate': 7.686170212765957e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.6404237151145935, 'weight_rejected': 0.20946967601776123, 'kl_term_chosen': 1.393890380859375, 'epoch': 0.08}
+  8%|▊         | 290/3753 [23:21<5:31:33,  5.74s/it]  8%|▊         | 291/3753 [23:25<5:02:33,  5.24s/it]  8%|▊         | 292/3753 [23:30<5:04:29,  5.28s/it]  8%|▊         | 293/3753 [23:34<4:42:46,  4.90s/it]  8%|▊         | 294/3753 [23:38<4:25:21,  4.60s/it]  8%|▊         | 295/3753 [23:43<4:27:46,  4.65s/it]  8%|▊         | 296/3753 [23:47<4:17:42,  4.47s/it]  8%|▊         | 297/3753 [23:51<4:13:27,  4.40s/it]  8%|▊         | 298/3753 [23:56<4:26:23,  4.63s/it]  8%|▊         | 299/3753 [24:00<4:16:55,  4.46s/it]  8%|▊         | 300/3753 [24:05<4:15:57,  4.45s/it]{'loss': 25.617, 'grad_norm': 5471.3173828125, 'learning_rate': 7.952127659574468e-07, 'mean_ratio_chosen': 4.017360210418701, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.22882932424545288, 'weight_rejected': 0.052618950605392456, 'kl_term_chosen': 0.6953125, 'epoch': 0.07994670219853431}
+                                                    {'loss': 25.617, 'grad_norm': 5471.3173828125, 'learning_rate': 7.952127659574468e-07, 'mean_ratio_chosen': 4.017360210418701, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.22882932424545288, 'weight_rejected': 0.052618950605392456, 'kl_term_chosen': 0.6953125, 'epoch': 0.08}
+  8%|▊         | 300/3753 [24:05<4:15:57,  4.45s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+  8%|▊         | 301/3753 [25:04<20:05:13, 20.95s/it]  8%|▊         | 302/3753 [25:09<15:22:03, 16.03s/it]  8%|▊         | 303/3753 [25:13<11:59:56, 12.52s/it]  8%|▊         | 304/3753 [25:16<9:18:49,  9.72s/it]   8%|▊         | 305/3753 [25:20<7:36:38,  7.95s/it]  8%|▊         | 306/3753 [25:24<6:24:08,  6.69s/it]  8%|▊         | 307/3753 [25:28<5:49:36,  6.09s/it]  8%|▊         | 308/3753 [25:35<5:51:57,  6.13s/it]  8%|▊         | 309/3753 [25:39<5:28:03,  5.72s/it]  8%|▊         | 310/3753 [25:43<4:56:42,  5.17s/it]{'loss': 4.4124, 'grad_norm': 671.9940185546875, 'learning_rate': 8.218085106382978e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 4.309546947479248, 'weight_rejected': 0.22815649211406708, 'kl_term_chosen': -3.6458778381347656, 'epoch': 0.08261159227181879}
+                                                    {'loss': 4.4124, 'grad_norm': 671.9940185546875, 'learning_rate': 8.218085106382978e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 4.309546947479248, 'weight_rejected': 0.22815649211406708, 'kl_term_chosen': -3.6458778381347656, 'epoch': 0.08}
+  8%|▊         | 310/3753 [25:43<4:56:42,  5.17s/it]  8%|▊         | 311/3753 [25:47<4:39:15,  4.87s/it]  8%|▊         | 312/3753 [25:51<4:21:23,  4.56s/it]  8%|▊         | 313/3753 [25:55<4:13:07,  4.42s/it]  8%|▊         | 314/3753 [26:01<4:40:24,  4.89s/it]  8%|▊         | 315/3753 [26:06<4:28:15,  4.68s/it]  8%|▊         | 316/3753 [26:09<4:11:51,  4.40s/it]  8%|▊         | 317/3753 [26:15<4:28:27,  4.69s/it]  8%|▊         | 318/3753 [26:19<4:20:17,  4.55s/it]  8%|▊         | 319/3753 [26:23<4:11:39,  4.40s/it]  9%|▊         | 320/3753 [26:27<4:09:53,  4.37s/it]{'loss': 26.3558, 'grad_norm': 537.2313842773438, 'learning_rate': 8.48404255319149e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -4.468718528747559, 'weight_rejected': 0.04084571450948715, 'kl_term_chosen': 5.4059295654296875, 'epoch': 0.08527648234510327}
+                                                    {'loss': 26.3558, 'grad_norm': 537.2313842773438, 'learning_rate': 8.48404255319149e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -4.468718528747559, 'weight_rejected': 0.04084571450948715, 'kl_term_chosen': 5.4059295654296875, 'epoch': 0.09}
+  9%|▊         | 320/3753 [26:27<4:09:53,  4.37s/it]  9%|▊         | 321/3753 [26:31<4:09:01,  4.35s/it]  9%|▊         | 322/3753 [26:35<3:58:55,  4.18s/it]  9%|▊         | 323/3753 [26:39<3:45:25,  3.94s/it]  9%|▊         | 324/3753 [26:45<4:34:16,  4.80s/it]  9%|▊         | 325/3753 [26:49<4:21:00,  4.57s/it]  9%|▊         | 326/3753 [26:54<4:25:32,  4.65s/it]  9%|▊         | 327/3753 [26:58<4:12:59,  4.43s/it]  9%|▊         | 328/3753 [27:02<4:01:27,  4.23s/it]  9%|▉         | 329/3753 [27:06<3:59:49,  4.20s/it]  9%|▉         | 330/3753 [27:11<4:05:44,  4.31s/it]{'loss': 43.4288, 'grad_norm': 336.1576843261719, 'learning_rate': 8.75e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 2.0985605716705322, 'weight_rejected': 0.22135066986083984, 'kl_term_chosen': -1.2370223999023438, 'epoch': 0.08794137241838774}
+                                                    {'loss': 43.4288, 'grad_norm': 336.1576843261719, 'learning_rate': 8.75e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 2.0985605716705322, 'weight_rejected': 0.22135066986083984, 'kl_term_chosen': -1.2370223999023438, 'epoch': 0.09}
+  9%|▉         | 330/3753 [27:11<4:05:44,  4.31s/it]  9%|▉         | 331/3753 [27:14<3:56:06,  4.14s/it]  9%|▉         | 332/3753 [27:18<3:50:30,  4.04s/it]  9%|▉         | 333/3753 [27:22<3:52:20,  4.08s/it]  9%|▉         | 334/3753 [27:30<4:49:30,  5.08s/it]  9%|▉         | 335/3753 [27:35<4:51:54,  5.12s/it]  9%|▉         | 336/3753 [27:38<4:21:58,  4.60s/it]  9%|▉         | 337/3753 [27:43<4:16:46,  4.51s/it]  9%|▉         | 338/3753 [27:46<3:58:14,  4.19s/it]  9%|▉         | 339/3753 [27:50<3:45:53,  3.97s/it]  9%|▉         | 340/3753 [27:54<3:48:03,  4.01s/it]{'loss': 30.0716, 'grad_norm': 563.402099609375, 'learning_rate': 9.01595744680851e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 11.34001350402832, 'weight_rejected': 0.7826625108718872, 'kl_term_chosen': -11.096370697021484, 'epoch': 0.09060626249167222}
+                                                    {'loss': 30.0716, 'grad_norm': 563.402099609375, 'learning_rate': 9.01595744680851e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 11.34001350402832, 'weight_rejected': 0.7826625108718872, 'kl_term_chosen': -11.096370697021484, 'epoch': 0.09}
+  9%|▉         | 340/3753 [27:54<3:48:03,  4.01s/it]  9%|▉         | 341/3753 [27:58<3:49:00,  4.03s/it]  9%|▉         | 342/3753 [28:02<3:44:20,  3.95s/it]  9%|▉         | 343/3753 [28:06<3:59:45,  4.22s/it]  9%|▉         | 344/3753 [28:10<3:55:29,  4.14s/it]  9%|▉         | 345/3753 [28:15<4:09:44,  4.40s/it]  9%|▉         | 346/3753 [28:19<4:01:34,  4.25s/it]  9%|▉         | 347/3753 [28:24<4:00:49,  4.24s/it]  9%|▉         | 348/3753 [28:28<4:12:57,  4.46s/it]  9%|▉         | 349/3753 [28:32<3:57:20,  4.18s/it]  9%|▉         | 350/3753 [28:37<4:04:46,  4.32s/it]{'loss': 35.9126, 'grad_norm': 2042.5882568359375, 'learning_rate': 9.281914893617021e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 2.866969108581543, 'weight_rejected': 0.2186693549156189, 'kl_term_chosen': -2.032562255859375, 'epoch': 0.09327115256495669}
+                                                    {'loss': 35.9126, 'grad_norm': 2042.5882568359375, 'learning_rate': 9.281914893617021e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 2.866969108581543, 'weight_rejected': 0.2186693549156189, 'kl_term_chosen': -2.032562255859375, 'epoch': 0.09}
+  9%|▉         | 350/3753 [28:37<4:04:46,  4.32s/it]  9%|▉         | 351/3753 [28:40<3:56:36,  4.17s/it]  9%|▉         | 352/3753 [28:45<3:55:33,  4.16s/it]  9%|▉         | 353/3753 [28:49<3:59:34,  4.23s/it]  9%|▉         | 354/3753 [28:53<3:57:18,  4.19s/it]  9%|▉         | 355/3753 [28:58<4:14:21,  4.49s/it]  9%|▉         | 356/3753 [29:02<4:05:52,  4.34s/it] 10%|▉         | 357/3753 [29:06<4:00:15,  4.24s/it] 10%|▉         | 358/3753 [29:11<4:00:49,  4.26s/it] 10%|▉         | 359/3753 [29:15<4:01:59,  4.28s/it] 10%|▉         | 360/3753 [29:19<3:57:17,  4.20s/it]{'loss': 47.3644, 'grad_norm': 249.2229461669922, 'learning_rate': 9.54787234042553e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -17.905771255493164, 'weight_rejected': 0.16667540371418, 'kl_term_chosen': 18.450088500976562, 'epoch': 0.09593604263824117}
+                                                    {'loss': 47.3644, 'grad_norm': 249.2229461669922, 'learning_rate': 9.54787234042553e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -17.905771255493164, 'weight_rejected': 0.16667540371418, 'kl_term_chosen': 18.450088500976562, 'epoch': 0.1}
+ 10%|▉         | 360/3753 [29:19<3:57:17,  4.20s/it] 10%|▉         | 361/3753 [29:24<4:11:54,  4.46s/it] 10%|▉         | 362/3753 [29:28<4:05:33,  4.34s/it] 10%|▉         | 363/3753 [29:32<3:59:03,  4.23s/it] 10%|▉         | 364/3753 [29:36<3:59:50,  4.25s/it] 10%|▉         | 365/3753 [29:40<3:43:21,  3.96s/it] 10%|▉         | 366/3753 [29:43<3:33:35,  3.78s/it] 10%|▉         | 367/3753 [29:47<3:35:14,  3.81s/it] 10%|▉         | 368/3753 [29:52<3:54:35,  4.16s/it] 10%|▉         | 369/3753 [29:57<4:04:53,  4.34s/it] 10%|▉         | 370/3753 [30:01<4:09:05,  4.42s/it]{'loss': 42.7807, 'grad_norm': 320.8905944824219, 'learning_rate': 9.813829787234042e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 8.003165245056152, 'weight_rejected': 0.20561504364013672, 'kl_term_chosen': -7.13885498046875, 'epoch': 0.09860093271152565}
+                                                    {'loss': 42.7807, 'grad_norm': 320.8905944824219, 'learning_rate': 9.813829787234042e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 8.003165245056152, 'weight_rejected': 0.20561504364013672, 'kl_term_chosen': -7.13885498046875, 'epoch': 0.1}
+ 10%|▉         | 370/3753 [30:01<4:09:05,  4.42s/it] 10%|▉         | 371/3753 [30:05<3:53:20,  4.14s/it] 10%|▉         | 372/3753 [30:09<3:55:36,  4.18s/it] 10%|▉         | 373/3753 [30:13<3:47:50,  4.04s/it] 10%|▉         | 374/3753 [30:19<4:22:39,  4.66s/it] 10%|▉         | 375/3753 [30:24<4:30:50,  4.81s/it] 10%|█         | 376/3753 [30:31<5:12:22,  5.55s/it] 10%|█         | 377/3753 [30:37<5:22:31,  5.73s/it] 10%|█         | 378/3753 [30:42<5:09:13,  5.50s/it] 10%|█         | 379/3753 [30:46<4:39:35,  4.97s/it] 10%|█         | 380/3753 [30:51<4:32:45,  4.85s/it]{'loss': 52.0266, 'grad_norm': 200.83973693847656, 'learning_rate': 9.999980527583044e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -7.424038410186768, 'weight_rejected': 0.02595735713839531, 'kl_term_chosen': 8.3843994140625, 'epoch': 0.10126582278481013}
+                                                    {'loss': 52.0266, 'grad_norm': 200.83973693847656, 'learning_rate': 9.999980527583044e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -7.424038410186768, 'weight_rejected': 0.02595735713839531, 'kl_term_chosen': 8.3843994140625, 'epoch': 0.1}
+ 10%|█         | 380/3753 [30:51<4:32:45,  4.85s/it] 10%|█         | 381/3753 [30:55<4:17:28,  4.58s/it] 10%|█         | 382/3753 [30:59<4:11:37,  4.48s/it] 10%|█         | 383/3753 [31:03<3:59:18,  4.26s/it] 10%|█         | 384/3753 [31:07<4:07:59,  4.42s/it] 10%|█         | 385/3753 [31:16<5:16:46,  5.64s/it] 10%|█         | 386/3753 [31:20<4:57:14,  5.30s/it] 10%|█         | 387/3753 [31:25<4:48:11,  5.14s/it] 10%|█         | 388/3753 [31:29<4:31:00,  4.83s/it] 10%|█         | 389/3753 [31:33<4:20:15,  4.64s/it] 10%|█         | 390/3753 [31:39<4:33:12,  4.87s/it]{'loss': 76.0961, 'grad_norm': 469.04827880859375, 'learning_rate': 9.999634355500922e-07, 'mean_ratio_chosen': 5.858976364135742, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.24515211582183838, 'weight_rejected': 0.8164063692092896, 'kl_term_chosen': 0.8839874267578125, 'epoch': 0.1039307128580946}
+                                                    {'loss': 76.0961, 'grad_norm': 469.04827880859375, 'learning_rate': 9.999634355500922e-07, 'mean_ratio_chosen': 5.858976364135742, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -0.24515211582183838, 'weight_rejected': 0.8164063692092896, 'kl_term_chosen': 0.8839874267578125, 'epoch': 0.1}
+ 10%|█         | 390/3753 [31:39<4:33:12,  4.87s/it] 10%|█         | 391/3753 [31:43<4:23:25,  4.70s/it] 10%|█         | 392/3753 [31:47<4:07:11,  4.41s/it] 10%|█         | 393/3753 [31:51<4:05:49,  4.39s/it] 10%|█         | 394/3753 [31:55<3:58:44,  4.26s/it] 11%|█         | 395/3753 [32:01<4:20:36,  4.66s/it] 11%|█         | 396/3753 [32:08<5:12:08,  5.58s/it] 11%|█         | 397/3753 [32:12<4:36:51,  4.95s/it] 11%|█         | 398/3753 [32:17<4:35:02,  4.92s/it] 11%|█         | 399/3753 [32:22<4:33:09,  4.89s/it] 11%|█         | 400/3753 [32:25<4:14:58,  4.56s/it]{'loss': 123.8817, 'grad_norm': 0.0, 'learning_rate': 9.998855497526103e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -4.967920303344727, 'weight_rejected': 0.25091278553009033, 'kl_term_chosen': 5.663051605224609, 'epoch': 0.10659560293137908}
+                                                    {'loss': 123.8817, 'grad_norm': 0.0, 'learning_rate': 9.998855497526103e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -4.967920303344727, 'weight_rejected': 0.25091278553009033, 'kl_term_chosen': 5.663051605224609, 'epoch': 0.11}
+ 11%|█         | 400/3753 [32:26<4:14:58,  4.56s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+ 11%|█         | 401/3753 [33:32<21:29:57, 23.09s/it] 11%|█         | 402/3753 [33:36<16:17:33, 17.50s/it] 11%|█         | 403/3753 [33:39<12:18:12, 13.22s/it] 11%|█         | 404/3753 [33:43<9:43:33, 10.45s/it]  11%|█         | 405/3753 [33:49<8:17:14,  8.91s/it] 11%|█         | 406/3753 [33:53<6:55:20,  7.45s/it] 11%|█         | 407/3753 [33:57<5:53:02,  6.33s/it] 11%|█         | 408/3753 [34:02<5:38:47,  6.08s/it] 11%|█         | 409/3753 [34:06<5:02:03,  5.42s/it] 11%|█         | 410/3753 [34:10<4:40:23,  5.03s/it]{'loss': 128.6902, 'grad_norm': 20.94369888305664, 'learning_rate': 9.997644021063695e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -13.581231117248535, 'weight_rejected': 0.28776782751083374, 'kl_term_chosen': 14.228137969970703, 'epoch': 0.10926049300466356}
+                                                    {'loss': 128.6902, 'grad_norm': 20.94369888305664, 'learning_rate': 9.997644021063695e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -13.581231117248535, 'weight_rejected': 0.28776782751083374, 'kl_term_chosen': 14.228137969970703, 'epoch': 0.11}
+ 11%|█         | 410/3753 [34:10<4:40:23,  5.03s/it] 11%|█         | 411/3753 [34:14<4:30:51,  4.86s/it] 11%|█         | 412/3753 [34:18<4:13:29,  4.55s/it] 11%|█         | 413/3753 [34:23<4:22:34,  4.72s/it] 11%|█         | 414/3753 [34:28<4:26:22,  4.79s/it] 11%|█         | 415/3753 [34:32<4:10:07,  4.50s/it] 11%|█         | 416/3753 [34:37<4:16:41,  4.62s/it] 11%|█         | 417/3753 [34:41<4:06:40,  4.44s/it] 11%|█         | 418/3753 [34:45<3:56:35,  4.26s/it] 11%|█         | 419/3753 [34:49<3:50:04,  4.14s/it] 11%|█         | 420/3753 [34:52<3:42:22,  4.00s/it]{'loss': 77.2458, 'grad_norm': 595.32763671875, 'learning_rate': 9.99600003095912e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 9.165453910827637, 'weight_rejected': 0.2727987766265869, 'kl_term_chosen': -8.51409912109375, 'epoch': 0.11192538307794804}
+                                                    {'loss': 77.2458, 'grad_norm': 595.32763671875, 'learning_rate': 9.99600003095912e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 9.165453910827637, 'weight_rejected': 0.2727987766265869, 'kl_term_chosen': -8.51409912109375, 'epoch': 0.11}
+ 11%|█         | 420/3753 [34:53<3:42:22,  4.00s/it] 11%|█         | 421/3753 [34:57<3:44:57,  4.05s/it] 11%|█         | 422/3753 [35:01<3:42:37,  4.01s/it] 11%|█▏        | 423/3753 [35:05<3:46:10,  4.08s/it] 11%|█▏        | 424/3753 [35:08<3:31:54,  3.82s/it] 11%|█▏        | 425/3753 [35:13<3:45:57,  4.07s/it] 11%|█▏        | 426/3753 [35:17<3:48:35,  4.12s/it] 11%|█▏        | 427/3753 [35:21<3:51:00,  4.17s/it] 11%|█▏        | 428/3753 [35:25<3:50:58,  4.17s/it] 11%|█▏        | 429/3753 [35:29<3:47:29,  4.11s/it] 11%|█▏        | 430/3753 [35:34<3:54:53,  4.24s/it]{'loss': 23.1854, 'grad_norm': 354.29107666015625, 'learning_rate': 9.99392366948904e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 8.516132354736328, 'weight_rejected': 0.27125170826911926, 'kl_term_chosen': -7.9525146484375, 'epoch': 0.1145902731512325}
+                                                    {'loss': 23.1854, 'grad_norm': 354.29107666015625, 'learning_rate': 9.99392366948904e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 8.516132354736328, 'weight_rejected': 0.27125170826911926, 'kl_term_chosen': -7.9525146484375, 'epoch': 0.11}
+ 11%|█▏        | 430/3753 [35:34<3:54:53,  4.24s/it] 11%|█▏        | 431/3753 [35:38<3:44:55,  4.06s/it] 12%|█▏        | 432/3753 [35:45<4:40:28,  5.07s/it] 12%|█▏        | 433/3753 [35:49<4:21:10,  4.72s/it] 12%|█▏        | 434/3753 [35:54<4:20:01,  4.70s/it] 12%|█▏        | 435/3753 [35:57<4:07:39,  4.48s/it] 12%|█▏        | 436/3753 [36:02<4:01:50,  4.37s/it] 12%|█▏        | 437/3753 [36:06<3:54:29,  4.24s/it] 12%|█▏        | 438/3753 [36:10<4:02:32,  4.39s/it] 12%|█▏        | 439/3753 [36:15<4:03:51,  4.42s/it] 12%|█▏        | 440/3753 [36:19<3:55:20,  4.26s/it]{'loss': 35.7402, 'grad_norm': 63.24653244018555, 'learning_rate': 9.991415116349067e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.18540243804454803, 'weight_chosen': -18.209964752197266, 'weight_rejected': 0.048136770725250244, 'kl_term_chosen': 19.16461181640625, 'epoch': 0.11725516322451698}
+                                                    {'loss': 35.7402, 'grad_norm': 63.24653244018555, 'learning_rate': 9.991415116349067e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.18540243804454803, 'weight_chosen': -18.209964752197266, 'weight_rejected': 0.048136770725250244, 'kl_term_chosen': 19.16461181640625, 'epoch': 0.12}
+ 12%|█▏        | 440/3753 [36:19<3:55:20,  4.26s/it] 12%|█▏        | 441/3753 [36:24<4:10:04,  4.53s/it] 12%|█▏        | 442/3753 [36:28<4:11:10,  4.55s/it] 12%|█▏        | 443/3753 [36:32<3:51:54,  4.20s/it] 12%|█▏        | 444/3753 [36:36<3:58:15,  4.32s/it] 12%|█▏        | 445/3753 [36:40<3:46:07,  4.10s/it] 12%|█▏        | 446/3753 [36:44<3:48:38,  4.15s/it] 12%|█▏        | 447/3753 [36:48<3:48:35,  4.15s/it] 12%|█▏        | 448/3753 [36:52<3:44:22,  4.07s/it] 12%|█▏        | 449/3753 [36:57<3:53:40,  4.24s/it] 12%|█▏        | 450/3753 [37:01<3:51:17,  4.20s/it]{'loss': 47.9745, 'grad_norm': 1454.103271484375, 'learning_rate': 9.988474588638185e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -3.5350658893585205, 'weight_rejected': 0.05582314357161522, 'kl_term_chosen': 4.428375244140625, 'epoch': 0.11992005329780146}
+                                                    {'loss': 47.9745, 'grad_norm': 1454.103271484375, 'learning_rate': 9.988474588638185e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -3.5350658893585205, 'weight_rejected': 0.05582314357161522, 'kl_term_chosen': 4.428375244140625, 'epoch': 0.12}
+ 12%|█▏        | 450/3753 [37:01<3:51:17,  4.20s/it] 12%|█▏        | 451/3753 [37:05<3:54:21,  4.26s/it] 12%|█▏        | 452/3753 [37:11<4:16:20,  4.66s/it] 12%|█▏        | 453/3753 [37:15<3:57:26,  4.32s/it] 12%|█▏        | 454/3753 [37:19<4:07:31,  4.50s/it] 12%|█▏        | 455/3753 [37:23<3:58:47,  4.34s/it] 12%|█▏        | 456/3753 [37:29<4:24:27,  4.81s/it] 12%|█▏        | 457/3753 [37:33<4:10:35,  4.56s/it] 12%|█▏        | 458/3753 [37:37<3:57:29,  4.32s/it] 12%|█▏        | 459/3753 [37:41<3:53:01,  4.24s/it] 12%|█▏        | 460/3753 [37:47<4:14:38,  4.64s/it]{'loss': 64.6966, 'grad_norm': 242.59019470214844, 'learning_rate': 9.985102340839976e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -22.556068420410156, 'weight_rejected': 0.04084571450948715, 'kl_term_chosen': 23.47454833984375, 'epoch': 0.12258494337108594}
+                                                    {'loss': 64.6966, 'grad_norm': 242.59019470214844, 'learning_rate': 9.985102340839976e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -22.556068420410156, 'weight_rejected': 0.04084571450948715, 'kl_term_chosen': 23.47454833984375, 'epoch': 0.12}
+ 12%|█▏        | 460/3753 [37:47<4:14:38,  4.64s/it] 12%|█▏        | 461/3753 [37:51<4:01:04,  4.39s/it] 12%|█▏        | 462/3753 [37:54<3:37:55,  3.97s/it] 12%|█▏        | 463/3753 [37:58<3:40:10,  4.02s/it] 12%|█▏        | 464/3753 [38:02<3:40:28,  4.02s/it] 12%|█▏        | 465/3753 [38:06<3:45:22,  4.11s/it] 12%|█▏        | 466/3753 [38:10<3:42:52,  4.07s/it] 12%|█▏        | 467/3753 [38:14<3:42:42,  4.07s/it] 12%|█▏        | 468/3753 [38:21<4:38:32,  5.09s/it] 12%|█▏        | 469/3753 [38:27<4:46:48,  5.24s/it] 13%|█▎        | 470/3753 [38:33<4:56:09,  5.41s/it]{'loss': 69.8143, 'grad_norm': 380.7480773925781, 'learning_rate': 9.981298664800593e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -21.89283561706543, 'weight_rejected': 0.08151976019144058, 'kl_term_chosen': 22.83782958984375, 'epoch': 0.1252498334443704}
+                                                    {'loss': 69.8143, 'grad_norm': 380.7480773925781, 'learning_rate': 9.981298664800593e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -21.89283561706543, 'weight_rejected': 0.08151976019144058, 'kl_term_chosen': 22.83782958984375, 'epoch': 0.13}
+ 13%|█▎        | 470/3753 [38:33<4:56:09,  5.41s/it] 13%|█▎        | 471/3753 [38:38<4:50:01,  5.30s/it] 13%|█▎        | 472/3753 [38:41<4:19:55,  4.75s/it] 13%|█▎        | 473/3753 [38:44<3:51:24,  4.23s/it] 13%|█▎        | 474/3753 [38:49<3:58:04,  4.36s/it] 13%|█▎        | 475/3753 [38:53<3:57:45,  4.35s/it] 13%|█▎        | 476/3753 [38:57<3:48:05,  4.18s/it] 13%|█▎        | 477/3753 [39:02<3:53:21,  4.27s/it] 13%|█▎        | 478/3753 [39:06<3:48:10,  4.18s/it] 13%|█▎        | 479/3753 [39:11<4:11:33,  4.61s/it] 13%|█▎        | 480/3753 [39:16<4:07:54,  4.54s/it]{'loss': 83.8238, 'grad_norm': 6.247206687927246, 'learning_rate': 9.9770638897035e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -7.006313323974609, 'weight_rejected': 0.23792988061904907, 'kl_term_chosen': 7.582855224609375, 'epoch': 0.1279147235176549}
+                                                    {'loss': 83.8238, 'grad_norm': 6.247206687927246, 'learning_rate': 9.9770638897035e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -7.006313323974609, 'weight_rejected': 0.23792988061904907, 'kl_term_chosen': 7.582855224609375, 'epoch': 0.13}
+ 13%|█▎        | 480/3753 [39:16<4:07:54,  4.54s/it] 13%|█▎        | 481/3753 [39:20<4:08:38,  4.56s/it] 13%|█▎        | 482/3753 [39:24<3:56:40,  4.34s/it] 13%|█▎        | 483/3753 [39:28<3:45:32,  4.14s/it] 13%|█▎        | 484/3753 [39:32<3:39:23,  4.03s/it] 13%|█▎        | 485/3753 [39:35<3:32:13,  3.90s/it] 13%|█▎        | 486/3753 [39:40<3:50:54,  4.24s/it] 13%|█▎        | 487/3753 [39:45<3:58:28,  4.38s/it] 13%|█▎        | 488/3753 [39:49<3:49:08,  4.21s/it] 13%|█▎        | 489/3753 [39:53<3:53:39,  4.30s/it] 13%|█▎        | 490/3753 [39:58<4:03:40,  4.48s/it]{'loss': 87.5421, 'grad_norm': 805.0996704101562, 'learning_rate': 9.972398382040988e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -6.571074485778809, 'weight_rejected': 0.054198723286390305, 'kl_term_chosen': 7.515251159667969, 'epoch': 0.13057961359093936}
+                                                    {'loss': 87.5421, 'grad_norm': 805.0996704101562, 'learning_rate': 9.972398382040988e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -6.571074485778809, 'weight_rejected': 0.054198723286390305, 'kl_term_chosen': 7.515251159667969, 'epoch': 0.13}
+ 13%|█▎        | 490/3753 [39:58<4:03:40,  4.48s/it] 13%|█▎        | 491/3753 [40:03<4:08:14,  4.57s/it] 13%|█▎        | 492/3753 [40:07<3:54:14,  4.31s/it] 13%|█▎        | 493/3753 [40:15<4:55:14,  5.43s/it] 13%|█▎        | 494/3753 [40:18<4:26:02,  4.90s/it] 13%|█▎        | 495/3753 [40:22<4:11:20,  4.63s/it] 13%|█▎        | 496/3753 [40:27<4:17:02,  4.74s/it] 13%|█▎        | 497/3753 [40:31<3:58:38,  4.40s/it] 13%|█▎        | 498/3753 [40:38<4:35:12,  5.07s/it] 13%|█▎        | 499/3753 [40:43<4:39:30,  5.15s/it] 13%|█▎        | 500/3753 [40:47<4:30:19,  4.99s/it]{'loss': 59.0484, 'grad_norm': 53.36759948730469, 'learning_rate': 9.967302545582453e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 2.582568407058716, 'weight_rejected': 0.22270013391971588, 'kl_term_chosen': -1.9401359558105469, 'epoch': 0.13324450366422386}
+                                                    {'loss': 59.0484, 'grad_norm': 53.36759948730469, 'learning_rate': 9.967302545582453e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 2.582568407058716, 'weight_rejected': 0.22270013391971588, 'kl_term_chosen': -1.9401359558105469, 'epoch': 0.13}
+ 13%|█▎        | 500/3753 [40:48<4:30:19,  4.99s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+ 13%|█▎        | 501/3753 [41:45<18:44:25, 20.75s/it] 13%|█▎        | 502/3753 [41:52<15:02:58, 16.67s/it] 13%|█▎        | 503/3753 [41:56<11:40:36, 12.93s/it] 13%|█▎        | 504/3753 [42:00<9:09:25, 10.15s/it]  13%|█▎        | 505/3753 [42:04<7:22:32,  8.17s/it] 13%|█▎        | 506/3753 [42:07<6:09:28,  6.83s/it] 14%|█▎        | 507/3753 [42:12<5:33:32,  6.17s/it] 14%|█▎        | 508/3753 [42:18<5:26:00,  6.03s/it] 14%|█▎        | 509/3753 [42:21<4:50:31,  5.37s/it] 14%|█▎        | 510/3753 [42:26<4:30:07,  5.00s/it]{'loss': 25.202, 'grad_norm': 0.0, 'learning_rate': 9.961776821339456e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 6.064745903015137, 'weight_rejected': 0.03358950838446617, 'kl_term_chosen': -5.1087646484375, 'epoch': 0.13590939373750832}
+                                                    {'loss': 25.202, 'grad_norm': 0.0, 'learning_rate': 9.961776821339456e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 6.064745903015137, 'weight_rejected': 0.03358950838446617, 'kl_term_chosen': -5.1087646484375, 'epoch': 0.14}
+ 14%|█▎        | 510/3753 [42:26<4:30:07,  5.00s/it] 14%|█▎        | 511/3753 [42:30<4:15:54,  4.74s/it] 14%|█▎        | 512/3753 [42:33<3:58:15,  4.41s/it] 14%|█▎        | 513/3753 [42:40<4:29:00,  4.98s/it] 14%|█▎        | 514/3753 [42:44<4:20:29,  4.83s/it] 14%|█▎        | 515/3753 [42:49<4:20:38,  4.83s/it] 14%|█▎        | 516/3753 [42:53<4:13:08,  4.69s/it] 14%|█▍        | 517/3753 [42:57<4:02:54,  4.50s/it] 14%|█▍        | 518/3753 [43:01<3:51:51,  4.30s/it] 14%|█▍        | 519/3753 [43:06<3:57:54,  4.41s/it] 14%|█▍        | 520/3753 [43:11<4:04:27,  4.54s/it]{'loss': 11.1574, 'grad_norm': 45.463993072509766, 'learning_rate': 9.955821687527552e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -14.972163200378418, 'weight_rejected': 0.052618950605392456, 'kl_term_chosen': 15.89520263671875, 'epoch': 0.13857428381079281}
+                                                    {'loss': 11.1574, 'grad_norm': 45.463993072509766, 'learning_rate': 9.955821687527552e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -14.972163200378418, 'weight_rejected': 0.052618950605392456, 'kl_term_chosen': 15.89520263671875, 'epoch': 0.14}
+ 14%|█▍        | 520/3753 [43:11<4:04:27,  4.54s/it] 14%|█▍        | 521/3753 [43:15<3:55:57,  4.38s/it] 14%|█▍        | 522/3753 [43:19<3:51:37,  4.30s/it] 14%|█▍        | 523/3753 [43:24<4:05:33,  4.56s/it] 14%|█▍        | 524/3753 [43:28<4:00:25,  4.47s/it] 14%|█▍        | 525/3753 [43:33<4:00:34,  4.47s/it] 14%|█▍        | 526/3753 [43:36<3:47:08,  4.22s/it] 14%|█▍        | 527/3753 [43:40<3:35:39,  4.01s/it] 14%|█▍        | 528/3753 [43:44<3:40:18,  4.10s/it] 14%|█▍        | 529/3753 [43:48<3:29:25,  3.90s/it] 14%|█▍        | 530/3753 [43:52<3:31:05,  3.93s/it]{'loss': 1.4674, 'grad_norm': 518.6856079101562, 'learning_rate': 9.94943765952491e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 33.334346771240234, 'weight_rejected': 0.332852303981781, 'kl_term_chosen': -32.89844512939453, 'epoch': 0.14123917388407728}
+                                                    {'loss': 1.4674, 'grad_norm': 518.6856079101562, 'learning_rate': 9.94943765952491e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 33.334346771240234, 'weight_rejected': 0.332852303981781, 'kl_term_chosen': -32.89844512939453, 'epoch': 0.14}
+ 14%|█▍        | 530/3753 [43:52<3:31:05,  3.93s/it] 14%|█▍        | 531/3753 [43:55<3:23:36,  3.79s/it] 14%|█▍        | 532/3753 [43:59<3:29:22,  3.90s/it] 14%|█▍        | 533/3753 [44:04<3:44:43,  4.19s/it] 14%|█▍        | 534/3753 [44:08<3:40:48,  4.12s/it] 14%|█▍        | 535/3753 [44:13<3:47:42,  4.25s/it] 14%|█▍        | 536/3753 [44:17<3:48:18,  4.26s/it] 14%|█▍        | 537/3753 [44:21<3:50:58,  4.31s/it] 14%|█▍        | 538/3753 [44:25<3:33:48,  3.99s/it] 14%|█▍        | 539/3753 [44:28<3:25:24,  3.83s/it] 14%|█▍        | 540/3753 [44:31<3:16:24,  3.67s/it]{'loss': 11.1057, 'grad_norm': 12.019047737121582, 'learning_rate': 9.942625289827702e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -9.421525001525879, 'weight_rejected': 0.1233656257390976, 'kl_term_chosen': 10.349933624267578, 'epoch': 0.14390406395736177}
+                                                    {'loss': 11.1057, 'grad_norm': 12.019047737121582, 'learning_rate': 9.942625289827702e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -9.421525001525879, 'weight_rejected': 0.1233656257390976, 'kl_term_chosen': 10.349933624267578, 'epoch': 0.14}
+ 14%|█▍        | 540/3753 [44:31<3:16:24,  3.67s/it] 14%|█▍        | 541/3753 [44:35<3:15:12,  3.65s/it] 14%|█▍        | 542/3753 [44:39<3:25:15,  3.84s/it] 14%|█▍        | 543/3753 [44:43<3:19:11,  3.72s/it] 14%|█▍        | 544/3753 [44:47<3:31:24,  3.95s/it] 15%|█▍        | 545/3753 [44:51<3:28:10,  3.89s/it] 15%|█▍        | 546/3753 [44:54<3:21:03,  3.76s/it] 15%|█▍        | 547/3753 [44:59<3:32:29,  3.98s/it] 15%|█▍        | 548/3753 [45:05<4:06:22,  4.61s/it] 15%|█▍        | 549/3753 [45:09<3:56:26,  4.43s/it] 15%|█▍        | 550/3753 [45:14<4:01:46,  4.53s/it]{'loss': 23.7486, 'grad_norm': 0.0, 'learning_rate': 9.935385168002298e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 10.044134140014648, 'weight_rejected': 0.07585817575454712, 'kl_term_chosen': -9.10784912109375, 'epoch': 0.14656895403064624}
+                                                    {'loss': 23.7486, 'grad_norm': 0.0, 'learning_rate': 9.935385168002298e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 10.044134140014648, 'weight_rejected': 0.07585817575454712, 'kl_term_chosen': -9.10784912109375, 'epoch': 0.15}
+ 15%|█▍        | 550/3753 [45:14<4:01:46,  4.53s/it] 15%|█▍        | 551/3753 [45:18<4:03:55,  4.57s/it] 15%|█▍        | 552/3753 [45:22<3:44:01,  4.20s/it] 15%|█▍        | 553/3753 [45:26<3:43:27,  4.19s/it] 15%|█▍        | 554/3753 [45:30<3:43:17,  4.19s/it] 15%|█▍        | 555/3753 [45:34<3:40:37,  4.14s/it] 15%|█▍        | 556/3753 [45:38<3:38:14,  4.10s/it] 15%|█▍        | 557/3753 [45:43<3:57:41,  4.46s/it] 15%|█▍        | 558/3753 [45:48<3:55:19,  4.42s/it] 15%|█▍        | 559/3753 [45:52<3:52:40,  4.37s/it] 15%|█▍        | 560/3753 [45:56<3:44:17,  4.21s/it]{'loss': 30.4996, 'grad_norm': 160.01214599609375, 'learning_rate': 9.927717920634233e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -8.88225269317627, 'weight_rejected': 0.18713268637657166, 'kl_term_chosen': 9.760566711425781, 'epoch': 0.1492338441039307}
+                                                    {'loss': 30.4996, 'grad_norm': 160.01214599609375, 'learning_rate': 9.927717920634233e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': -8.88225269317627, 'weight_rejected': 0.18713268637657166, 'kl_term_chosen': 9.760566711425781, 'epoch': 0.15}
+ 15%|█▍        | 560/3753 [45:56<3:44:17,  4.21s/it] 15%|█▍        | 561/3753 [45:59<3:34:31,  4.03s/it] 15%|█▍        | 562/3753 [46:05<3:54:10,  4.40s/it] 15%|█▌        | 563/3753 [46:09<3:47:01,  4.27s/it] 15%|█▌        | 564/3753 [46:13<3:40:50,  4.16s/it] 15%|█▌        | 565/3753 [46:17<3:46:06,  4.26s/it] 15%|█▌        | 566/3753 [46:21<3:42:45,  4.19s/it] 15%|█▌        | 567/3753 [46:26<3:55:00,  4.43s/it] 15%|█▌        | 568/3753 [46:33<4:34:30,  5.17s/it] 15%|█▌        | 569/3753 [46:37<4:15:38,  4.82s/it] 15%|█▌        | 570/3753 [46:40<3:53:32,  4.40s/it]{'loss': 17.3128, 'grad_norm': 554.9297485351562, 'learning_rate': 9.919624211273986e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 12.492355346679688, 'weight_rejected': 0.054198723286390305, 'kl_term_chosen': -11.52166748046875, 'epoch': 0.1518987341772152}
+                                                    {'loss': 17.3128, 'grad_norm': 554.9297485351562, 'learning_rate': 9.919624211273986e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 12.492355346679688, 'weight_rejected': 0.054198723286390305, 'kl_term_chosen': -11.52166748046875, 'epoch': 0.15}
+ 15%|█▌        | 570/3753 [46:40<3:53:32,  4.40s/it] 15%|█▌        | 571/3753 [46:46<4:08:00,  4.68s/it] 15%|█▌        | 572/3753 [46:49<3:45:02,  4.24s/it] 15%|█▌        | 573/3753 [46:53<3:35:56,  4.07s/it] 15%|█▌        | 574/3753 [46:56<3:32:15,  4.01s/it] 15%|█▌        | 575/3753 [47:03<4:18:21,  4.88s/it] 15%|█▌        | 576/3753 [47:08<4:10:26,  4.73s/it] 15%|█▌        | 577/3753 [47:12<4:06:54,  4.66s/it] 15%|█▌        | 578/3753 [47:17<4:06:00,  4.65s/it] 15%|█▌        | 579/3753 [47:20<3:44:05,  4.24s/it] 15%|█▌        | 580/3753 [47:24<3:42:45,  4.21s/it]{'loss': 15.0519, 'grad_norm': 0.0, 'learning_rate': 9.911104740379551e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 19.814725875854492, 'weight_rejected': 0.8499711751937866, 'kl_term_chosen': -19.705020904541016, 'epoch': 0.15456362425049966}
+                                                    {'loss': 15.0519, 'grad_norm': 0.0, 'learning_rate': 9.911104740379551e-07, 'mean_ratio_chosen': 0.10025884956121445, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': 19.814725875854492, 'weight_rejected': 0.8499711751937866, 'kl_term_chosen': -19.705020904541016, 'epoch': 0.15}
+ 15%|█▌        | 580/3753 [47:24<3:42:45,  4.21s/it] 15%|█▌        | 581/3753 [47:28<3:35:00,  4.07s/it] 16%|█▌        | 582/3753 [47:32<3:40:46,  4.18s/it] 16%|█▌        | 583/3753 [47:36<3:30:02,  3.98s/it] 16%|█▌        | 584/3753 [47:39<3:21:41,  3.82s/it] 16%|█▌        | 585/3753 [47:43<3:25:21,  3.89s/it] 16%|█▌        | 586/3753 [47:47<3:24:30,  3.87s/it] 16%|█▌        | 587/3753 [47:52<3:31:01,  4.00s/it] 16%|█▌        | 588/3753 [47:56<3:41:44,  4.20s/it] 16%|█▌        | 589/3753 [48:01<3:53:10,  4.42s/it] 16%|█▌        | 590/3753 [48:05<3:38:02,  4.14s/it]{'loss': 21.4415, 'grad_norm': 91.14606475830078, 'learning_rate': 9.902160245255826e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -19.43854522705078, 'weight_rejected': 0.12592275440692902, 'kl_term_chosen': 20.3126220703125, 'epoch': 0.15722851432378415}
+                                                    {'loss': 21.4415, 'grad_norm': 91.14606475830078, 'learning_rate': 9.902160245255826e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -19.43854522705078, 'weight_rejected': 0.12592275440692902, 'kl_term_chosen': 20.3126220703125, 'epoch': 0.16}
+ 16%|█▌        | 590/3753 [48:05<3:38:02,  4.14s/it] 16%|█▌        | 591/3753 [48:09<3:36:32,  4.11s/it] 16%|█▌        | 592/3753 [48:12<3:29:45,  3.98s/it] 16%|█▌        | 593/3753 [48:17<3:47:13,  4.31s/it] 16%|█▌        | 594/3753 [48:22<3:44:47,  4.27s/it] 16%|█▌        | 595/3753 [48:25<3:33:33,  4.06s/it] 16%|█▌        | 596/3753 [48:29<3:30:17,  4.00s/it] 16%|█▌        | 597/3753 [48:33<3:30:36,  4.00s/it] 16%|█▌        | 598/3753 [48:37<3:30:36,  4.01s/it] 16%|█▌        | 599/3753 [48:42<3:37:31,  4.14s/it] 16%|█▌        | 600/3753 [48:46<3:43:51,  4.26s/it]{'loss': 21.1378, 'grad_norm': 229.3905487060547, 'learning_rate': 9.892791499990784e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -5.366530418395996, 'weight_rejected': 0.08509904146194458, 'kl_term_chosen': 6.32806396484375, 'epoch': 0.15989340439706862}
+                                                    {'loss': 21.1378, 'grad_norm': 229.3905487060547, 'learning_rate': 9.892791499990784e-07, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 0.10025884956121445, 'weight_chosen': -5.366530418395996, 'weight_rejected': 0.08509904146194458, 'kl_term_chosen': 6.32806396484375, 'epoch': 0.16}
+ 16%|█▌        | 600/3753 [48:46<3:43:51,  4.26s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+Traceback (most recent call last):
+  File "/rlhf_code/code/implement_final_v3_compute_f.py", line 277, in <module>
+    main()
+  File "/rlhf_code/code/implement_final_v3_compute_f.py", line 273, in main
+    trainer.train()
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+    self._maybe_log_save_evaluate(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3228, in _maybe_log_save_evaluate
+    self._save_checkpoint(model, trial)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3345, in _save_checkpoint
+    self._save_optimizer_and_scheduler(output_dir)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3464, in _save_optimizer_and_scheduler
+    save_fsdp_model(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/fsdp_utils.py", line 151, in save_fsdp_model
+    dist_cp.save(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 277, in <module>
+[rank2]:     main()
+[rank2]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 273, in main
+[rank2]:     trainer.train()
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+[rank2]:     return inner_training_loop(
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+[rank2]:     self._maybe_log_save_evaluate(
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3228, in _maybe_log_save_evaluate
+[rank2]:     self._save_checkpoint(model, trial)
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3345, in _save_checkpoint
+[rank2]:     self._save_optimizer_and_scheduler(output_dir)
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3464, in _save_optimizer_and_scheduler
+[rank2]:     save_fsdp_model(
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/fsdp_utils.py", line 151, in save_fsdp_model
+[rank2]:     dist_cp.save(
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank2]:     result = func(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 475, in inner_func
+[rank2]:     return func(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 176, in save
+[rank2]:     return _save_state_dict(
+[rank2]:            ^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 379, in _save_state_dict
+[rank2]:     return distW.all_reduce("write", write_data, finish_checkpoint)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 259, in all_reduce
+[rank2]:     raise final_result
+[rank2]: torch.distributed.checkpoint.api.CheckpointException: CheckpointException ranks:dict_keys([0])
+[rank2]: Traceback (most recent call last): (RANK 0)
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 250, in all_reduce
+[rank2]:     result = reduce_fun(cast(list[T], all_data))
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank2]:     result = func(*args, **kwargs)
+[rank2]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 376, in finish_checkpoint
+[rank2]:     storage_writer.finish(metadata=global_metadata, results=all_results)
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 738, in finish
+[rank2]:     with self.fs.create_stream(tmp_path, "wb") as metadata_file:
+[rank2]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/contextlib.py", line 137, in __enter__
+[rank2]:     return next(self.gen)
+[rank2]:            ^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 511, in create_stream
+[rank2]:     with path.open(mode) as stream:
+[rank2]:          ^^^^^^^^^^^^^^^
+[rank2]:   File "/root/miniconda3/envs/advan/lib/python3.12/pathlib.py", line 1013, in open
+[rank2]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: FileNotFoundError: [Errno 2] No such file or directory: '/train/output_model/llama3-8b-sympo-1e-6_0.5/checkpoint-600/pytorch_model_fsdp_0/.metadata.tmp'
+
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 475, in inner_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 277, in <module>
+[rank1]:     main()
+[rank1]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 273, in main
+[rank1]:     trainer.train()
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+[rank1]:     return inner_training_loop(
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+[rank1]:     self._maybe_log_save_evaluate(
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3228, in _maybe_log_save_evaluate
+[rank1]:     self._save_checkpoint(model, trial)
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3345, in _save_checkpoint
+[rank1]:     self._save_optimizer_and_scheduler(output_dir)
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3464, in _save_optimizer_and_scheduler
+[rank1]:     save_fsdp_model(
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/fsdp_utils.py", line 151, in save_fsdp_model
+[rank1]:     dist_cp.save(
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank1]:     result = func(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 475, in inner_func
+[rank1]:     return func(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 176, in save
+[rank1]:     return _save_state_dict(
+[rank1]:            ^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 379, in _save_state_dict
+[rank1]:     return distW.all_reduce("write", write_data, finish_checkpoint)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 259, in all_reduce
+[rank1]:     raise final_result
+[rank1]: torch.distributed.checkpoint.api.CheckpointException: CheckpointException ranks:dict_keys([0])
+[rank1]: Traceback (most recent call last): (RANK 0)
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 250, in all_reduce
+[rank1]:     result = reduce_fun(cast(list[T], all_data))
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank1]:     result = func(*args, **kwargs)
+[rank1]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 376, in finish_checkpoint
+[rank1]:     storage_writer.finish(metadata=global_metadata, results=all_results)
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 738, in finish
+[rank1]:     with self.fs.create_stream(tmp_path, "wb") as metadata_file:
+[rank1]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/contextlib.py", line 137, in __enter__
+[rank1]:     return next(self.gen)
+[rank1]:            ^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 511, in create_stream
+[rank1]:     with path.open(mode) as stream:
+[rank1]:          ^^^^^^^^^^^^^^^
+[rank1]:   File "/root/miniconda3/envs/advan/lib/python3.12/pathlib.py", line 1013, in open
+[rank1]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: FileNotFoundError: [Errno 2] No such file or directory: '/train/output_model/llama3-8b-sympo-1e-6_0.5/checkpoint-600/pytorch_model_fsdp_0/.metadata.tmp'
+
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 277, in <module>
+[rank3]:     main()
+[rank3]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 273, in main
+[rank3]:     trainer.train()
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+[rank3]:     return inner_training_loop(
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+[rank3]:     self._maybe_log_save_evaluate(
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3228, in _maybe_log_save_evaluate
+[rank3]:     self._save_checkpoint(model, trial)
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3345, in _save_checkpoint
+[rank3]:     self._save_optimizer_and_scheduler(output_dir)
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3464, in _save_optimizer_and_scheduler
+[rank3]:     save_fsdp_model(
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/fsdp_utils.py", line 151, in save_fsdp_model
+[rank3]:     dist_cp.save(
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank3]:     result = func(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 475, in inner_func
+[rank3]:     return func(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 176, in save
+[rank3]:     return _save_state_dict(
+[rank3]:            ^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 379, in _save_state_dict
+[rank3]:     return distW.all_reduce("write", write_data, finish_checkpoint)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 259, in all_reduce
+[rank3]:     raise final_result
+[rank3]: torch.distributed.checkpoint.api.CheckpointException: CheckpointException ranks:dict_keys([0])
+[rank3]: Traceback (most recent call last): (RANK 0)
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 250, in all_reduce
+[rank3]:     result = reduce_fun(cast(list[T], all_data))
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank3]:     result = func(*args, **kwargs)
+[rank3]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 376, in finish_checkpoint
+[rank3]:     storage_writer.finish(metadata=global_metadata, results=all_results)
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 738, in finish
+[rank3]:     with self.fs.create_stream(tmp_path, "wb") as metadata_file:
+[rank3]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/contextlib.py", line 137, in __enter__
+[rank3]:     return next(self.gen)
+[rank3]:            ^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 511, in create_stream
+[rank3]:     with path.open(mode) as stream:
+[rank3]:          ^^^^^^^^^^^^^^^
+[rank3]:   File "/root/miniconda3/envs/advan/lib/python3.12/pathlib.py", line 1013, in open
+[rank3]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: FileNotFoundError: [Errno 2] No such file or directory: '/train/output_model/llama3-8b-sympo-1e-6_0.5/checkpoint-600/pytorch_model_fsdp_0/.metadata.tmp'
+
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 176, in save
+    return _save_state_dict(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 379, in _save_state_dict
+    return distW.all_reduce("write", write_data, finish_checkpoint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 259, in all_reduce
+    raise final_result
+torch.distributed.checkpoint.api.CheckpointException: CheckpointException ranks:dict_keys([0])
+Traceback (most recent call last): (RANK 0)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 250, in all_reduce
+    result = reduce_fun(cast(list[T], all_data))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+    result = func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 376, in finish_checkpoint
+    storage_writer.finish(metadata=global_metadata, results=all_results)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 738, in finish
+    with self.fs.create_stream(tmp_path, "wb") as metadata_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 511, in create_stream
+    with path.open(mode) as stream:
+         ^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/train/output_model/llama3-8b-sympo-1e-6_0.5/checkpoint-600/pytorch_model_fsdp_0/.metadata.tmp'
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 277, in <module>
+[rank0]:     main()
+[rank0]:   File "/rlhf_code/code/implement_final_v3_compute_f.py", line 273, in main
+[rank0]:     trainer.train()
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 2756, in _inner_training_loop
+[rank0]:     self._maybe_log_save_evaluate(
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3228, in _maybe_log_save_evaluate
+[rank0]:     self._save_checkpoint(model, trial)
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3345, in _save_checkpoint
+[rank0]:     self._save_optimizer_and_scheduler(output_dir)
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/trainer.py", line 3464, in _save_optimizer_and_scheduler
+[rank0]:     save_fsdp_model(
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/utils/fsdp_utils.py", line 151, in save_fsdp_model
+[rank0]:     dist_cp.save(
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank0]:     result = func(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 475, in inner_func
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 176, in save
+[rank0]:     return _save_state_dict(
+[rank0]:            ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 379, in _save_state_dict
+[rank0]:     return distW.all_reduce("write", write_data, finish_checkpoint)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 259, in all_reduce
+[rank0]:     raise final_result
+[rank0]: torch.distributed.checkpoint.api.CheckpointException: CheckpointException ranks:dict_keys([0])
+[rank0]: Traceback (most recent call last): (RANK 0)
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/utils.py", line 250, in all_reduce
+[rank0]:     result = reduce_fun(cast(list[T], all_data))
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/logger.py", line 87, in wrapper
+[rank0]:     result = func(*args, **kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/state_dict_saver.py", line 376, in finish_checkpoint
+[rank0]:     storage_writer.finish(metadata=global_metadata, results=all_results)
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 738, in finish
+[rank0]:     with self.fs.create_stream(tmp_path, "wb") as metadata_file:
+[rank0]:          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/contextlib.py", line 137, in __enter__
+[rank0]:     return next(self.gen)
+[rank0]:            ^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/checkpoint/filesystem.py", line 511, in create_stream
+[rank0]:     with path.open(mode) as stream:
+[rank0]:          ^^^^^^^^^^^^^^^
+[rank0]:   File "/root/miniconda3/envs/advan/lib/python3.12/pathlib.py", line 1013, in open
+[rank0]:     return io.open(self, mode, buffering, encoding, errors, newline)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: FileNotFoundError: [Errno 2] No such file or directory: '/train/output_model/llama3-8b-sympo-1e-6_0.5/checkpoint-600/pytorch_model_fsdp_0/.metadata.tmp'
+
+[1;34mwandb[0m: 
+[1;34mwandb[0m: You can sync this run to the cloud by running:
+[1;34mwandb[0m: [1mwandb sync /root/wandb/offline-run-20251021_170311-oerzg79f[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/offline-run-20251021_170311-oerzg79f/logs[0m
+W1021 17:52:18.764000 686146 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 686474 closing signal SIGTERM
+W1021 17:52:18.765000 686146 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 686475 closing signal SIGTERM
+W1021 17:52:18.766000 686146 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 686476 closing signal SIGTERM
+E1021 17:52:19.416000 686146 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 686473) of binary: /root/miniconda3/envs/advan/bin/python3.12
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/advan/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1222, in launch_command
+    multi_gpu_launcher(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/rlhf_code/code/implement_final_v3_compute_f.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-10-21_17:52:18
+  host      : Po5k3n
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 686473)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

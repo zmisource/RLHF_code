@@ -77,26 +77,13 @@ class CustomSymPOTrainer(Trainer):
         prompts = inputs.pop("prompt")
         chosen_responses = inputs.pop("chosen")
         rejected_responses = inputs.pop("rejected")
-        # 3. 移除从 inputs 中获取 ref_logp 的代码
-        # log_probs_ref_y1 = inputs.pop("ref_logp_chosen").to(self.args.device)
-        # log_probs_ref_y2 = inputs.pop("ref_logp_rejected").to(self.args.device)
-        f_y1 = inputs.pop("reward_chosen").to(self.args.device)
+
         f_y2 = inputs.pop("reward_rejected").to(self.args.device)
-
-        batch_size = len(prompts)
-        combined_prompts = prompts + prompts
-        combined_responses = chosen_responses + rejected_responses
-
-        # --- 计算策略模型的 log_probs ---
-        all_log_probs_pi = self._get_log_probs(model, combined_prompts, combined_responses)
-        log_probs_pi_y1 = all_log_probs_pi[:batch_size]
-        log_probs_pi_y2 = all_log_probs_pi[batch_size:]
+        log_probs_pi_y1 = self._get_log_probs(model, prompts, chosen_responses)
 
         # --- 4. 动态计算参考模型的 log_probs ---
         with torch.no_grad():
-            all_log_probs_ref = self._get_log_probs(self.ref_model, combined_prompts, combined_responses)
-            log_probs_ref_y1 = all_log_probs_ref[:batch_size]
-            log_probs_ref_y2 = all_log_probs_ref[batch_size:]
+            log_probs_ref_y1 = self._get_log_probs(self.ref_model, prompts, chosen_responses)
         if self.state.global_step == 0: # 只在第一步打印
             print(f"--- Sanity Check at Step 0 ---")
             print(f"Sample 0 - ref_logp_chosen: {log_probs_ref_y1[0].item()}")
@@ -105,24 +92,20 @@ class CustomSymPOTrainer(Trainer):
             print(f"---------------------------------")
         # --- 后续损失计算逻辑不变 ---
         log_ratio_y1 = log_probs_pi_y1 - log_probs_ref_y1
-        log_ratio_y2 = log_probs_pi_y2 - log_probs_ref_y2
+
         
         with torch.no_grad():
             kl_term1 = self.beta_kl * log_ratio_y1.detach()
             # kl_term2 = self.beta_kl * log_ratio_y2.detach()
             weight1 = 1 - f_y2 - kl_term1
-            # weight2 = f_y1 + kl_term2
-            weight2 = f_y1
 
             
         clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
         ratio_y1 = torch.exp(clamped_log_ratio_y1)
-        clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-        ratio_y2 = torch.exp(clamped_log_ratio_y2)
         
         # ratio_y1 = torch.exp(log_ratio_y1)
         # ratio_y2 = torch.exp(log_ratio_y2)
-        J_sym_objective = ratio_y1 * weight1 - ratio_y2 * weight2
+        J_sym_objective = ratio_y1 * weight1
         total_loss = -J_sym_objective.mean()
         
         logs = {
@@ -131,9 +114,9 @@ class CustomSymPOTrainer(Trainer):
             # "mean_log_probs_ref_chosen": log_probs_ref_y1.detach().mean().item(),
             # "mean_log_probs_ref_rejected": log_probs_ref_y2.detach().mean().item(),
             "mean_ratio_chosen": ratio_y1.detach().mean().item(),
-            "mean_ratio_rejected": ratio_y2.detach().mean().item(),
+            # "mean_ratio_rejected": ratio_y2.detach().mean().item(),
             "weight_chosen": weight1.detach().mean().item(),
-            "weight_rejected": weight2.detach().mean().item(),
+            # "weight_rejected": weight2.detach().mean().item(),
             "kl_term_chosen": kl_term1.detach().mean().item(),
         }
         self._current_logs = logs
@@ -174,7 +157,7 @@ def parse_args():
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
     parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/precomputed_traindataset", help="Path to the precomputed dataset.")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.1", help="Directory to save checkpoints and final model.")
+    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_no_term2", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
@@ -185,11 +168,11 @@ def parse_args():
     parser.add_argument("--warmup_ratio", type=float, default=0.1, help="Warmup ratio for learning rate scheduler.")
     parser.add_argument("--max_grad_norm", type=float, default=1.0, help="Max gradient norm for clipping.")
     parser.add_argument("--logging_steps", type=int, default=10, help="Log metrics every N steps.")
-    parser.add_argument("--save_steps", type=int, default=200, help="Save a checkpoint every N steps.")
+    parser.add_argument("--save_steps", type=int, default=300, help="Save a checkpoint every N steps.")
     parser.add_argument("--save_total_limit", type=int, default=20, help="Limit the total number of saved checkpoints.")
 
     # --- SymPO 特定参数 ---
-    parser.add_argument("--beta_kl", type=float, default=0.1, help="KL divergence penalty coefficient.")
+    parser.add_argument("--beta_kl", type=float, default=0.5, help="KL divergence penalty coefficient.")
     parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Minimum clip value for log probability ratio.")
     parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Maximum clip value for log probability ratio.")
     
