@@ -15,9 +15,9 @@ from alpaca_eval import evaluate
 def parse_args():
     """解析命令行参数"""
     parser = argparse.ArgumentParser(description="在服务器上对模型进行AlpacaEval推理和评估")
-    parser.add_argument("--model_path", type=str, default="/train/output_model/consolidate_model/checkpoint-500", help="要评估的合并后模型的路径")
+    parser.add_argument("--model_path", type=str, default="/train/output_model/llama3-8b-simpo-1e-6-merged/checkpoint-3500", help="要评估的合并后模型的路径")
     parser.add_argument("--model_display_name", type=str, default="checkpoint-500", help="在排行榜中显示的模型名称")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/alpaca", help="保存评估结果和配置文件的目录")
+    parser.add_argument("--output_dir", type=str, default="/train/output_model/alpaca/llama3-8b-simpo-1e-6-merged/checkpoint-3500", help="保存评估结果和配置文件的目录")
     parser.add_argument("--num_examples", type=int, default=805, help="用于评估的样本数量 (默认: 805, 即完整数据集)")
     parser.add_argument("--max_new_tokens", type=int, default=8192, help="模型生成时允许的最大token数")
     parser.add_argument("--temperature", type=float, default=0.9, help="生成时的温度参数")
