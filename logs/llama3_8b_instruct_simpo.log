@@ -1,0 +1,1045 @@
+[2025-10-29 15:48:36,684] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+INFO:root:Using nproc_per_node=4.
+[2025-10-29 15:48:37,716] torch.distributed.run: [WARNING] 
+[2025-10-29 15:48:37,716] torch.distributed.run: [WARNING] *****************************************
+[2025-10-29 15:48:37,716] torch.distributed.run: [WARNING] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+[2025-10-29 15:48:37,716] torch.distributed.run: [WARNING] *****************************************
+[W socket.cpp:464] [c10d] The server socket cannot be initialized on [::]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[2025-10-29 15:48:40,532] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-29 15:48:40,552] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-29 15:48:40,564] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-29 15:48:40,596] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-10-29 15:48:41,601] [INFO] [comm.py:637:init_distributed] cdb=None
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[2025-10-29 15:48:41,721] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-10-29 15:48:41,728] [INFO] [comm.py:637:init_distributed] cdb=None
+[2025-10-29 15:48:41,728] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2025-10-29 15:48:41,732] [INFO] [comm.py:637:init_distributed] cdb=None
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W socket.cpp:697] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+2025-10-29 15:48:41 - INFO - __main__ - Model parameters ModelArguments(base_model_revision=None, model_name_or_path='/train/Llama-3-8B-Instruct', model_revision='main', model_code_revision=None, torch_dtype=None, tokenizer_name_or_path=None, trust_remote_code=False, attn_implementation='flash_attention_2', use_peft=False, lora_r=16, lora_alpha=32, lora_dropout=0.05, lora_target_modules=None, lora_modules_to_save=None, load_in_8bit=False, load_in_4bit=False, bnb_4bit_quant_type='nf4', use_bnb_nested_quant=False, bnb_4bit_quant_storage='uint8')
+2025-10-29 15:48:41 - INFO - __main__ - Data parameters DataArguments(chat_template=None, dataset_mixer={'princeton-nlp/llama3-ultrafeedback-armorm': 1.0}, text_column='text', dataset_splits=['train', 'test'], dataset_configs=None, preprocessing_num_workers=12, truncation_side=None, auto_insert_empty_system_msg=True)
+2025-10-29 15:48:41 - INFO - __main__ - Training/evaluation parameters SimPOConfig(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'gradient_accumulation_kwargs': None},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+beta=2.5,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+dataset_num_proc=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_dropout=True,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=True,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_steps=400,
+evaluation_strategy=steps,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gamma_beta_ratio=0.55,
+generate_during_eval=False,
+gradient_accumulation_steps=16,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs={'use_reentrant': False},
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=simpo-exps,
+hub_private_repo=False,
+hub_strategy=every_save,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+is_encoder_decoder=None,
+jit_mode_eval=False,
+label_names=None,
+label_pad_token_id=-100,
+label_smoothing=0,
+label_smoothing_factor=0.0,
+learning_rate=1e-06,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=info,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=outputs/llama-3-8b-instruct-simpo/runs/Oct29_15-48-41_wEb919,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=5,
+logging_strategy=steps,
+loss_type=sigmoid,
+lr_scheduler_kwargs={},
+lr_scheduler_type=cosine,
+max_completion_length=None,
+max_grad_norm=1.0,
+max_length=2048,
+max_prompt_length=1800,
+max_steps=-1,
+max_target_length=None,
+metric_for_best_model=None,
+model_init_kwargs=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1,
+optim=adamw_torch,
+optim_args=None,
+optim_target_modules=None,
+output_dir=outputs/llama-3-8b-instruct-simpo,
+overwrite_output_dir=False,
+padding_value=None,
+past_index=-1,
+per_device_eval_batch_size=4,
+per_device_train_batch_size=2,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['wandb'],
+resume_from_checkpoint=None,
+run_name=llama-3-8b-instruct-simpo,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=400,
+save_strategy=steps,
+save_total_limit=20,
+seed=42,
+sft_weight=0.0,
+skip_memory_metrics=True,
+split_batches=None,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+truncation_mode=keep_end,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.1,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[WARNING|logging.py:314] 2025-10-29 15:48:53,307 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[WARNING|logging.py:314] 2025-10-29 15:48:53,588 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/SimPO-main/scripts/simpo_trainer.py:109: UserWarning: You passed a model_id to the SimPOTrainer. This will automatically create an `AutoModelForCausalLM` or a `PeftModel` (if you passed a `peft_config`) for you.
+  warnings.warn(
+[WARNING|logging.py:329] 2025-10-29 15:48:53,724 >> You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+[WARNING|logging.py:329] 2025-10-29 15:48:53,724 >> You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+2025-10-29 15:48:53 - INFO - __main__ - Training on the following splits: ['train : 59876', 'test : 1961']
+[INFO|tokenization_utils_base.py:2085] 2025-10-29 15:48:53,728 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2085] 2025-10-29 15:48:53,728 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2085] 2025-10-29 15:48:53,728 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2085] 2025-10-29 15:48:53,728 >> loading file tokenizer_config.json
+[WARNING|logging.py:329] 2025-10-29 15:48:53,729 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[WARNING|logging.py:329] 2025-10-29 15:48:53,731 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[WARNING|logging.py:314] 2025-10-29 15:48:53,744 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/SimPO-main/scripts/simpo_trainer.py:109: UserWarning: You passed a model_id to the SimPOTrainer. This will automatically create an `AutoModelForCausalLM` or a `PeftModel` (if you passed a `peft_config`) for you.
+  warnings.warn(
+[WARNING|logging.py:329] 2025-10-29 15:48:53,987 >> You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+[WARNING|logging.py:329] 2025-10-29 15:48:53,987 >> You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[WARNING|logging.py:329] 2025-10-29 15:48:53,991 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[WARNING|logging.py:329] 2025-10-29 15:48:53,994 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[WARNING|logging.py:314] 2025-10-29 15:48:54,030 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+/SimPO-main/scripts/simpo_trainer.py:109: UserWarning: You passed a model_id to the SimPOTrainer. This will automatically create an `AutoModelForCausalLM` or a `PeftModel` (if you passed a `peft_config`) for you.
+  warnings.warn(
+[WARNING|logging.py:329] 2025-10-29 15:48:54,147 >> You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+[WARNING|logging.py:329] 2025-10-29 15:48:54,147 >> You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[WARNING|logging.py:329] 2025-10-29 15:48:54,151 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[WARNING|logging.py:329] 2025-10-29 15:48:54,154 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+2025-10-29 15:48:54 - INFO - __main__ - Prompt sample 41905 of the raw training set:
+
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+Write a 500-word fictional story with the third-person point of view about a character who is trying to start a colony on Mars, focusing on their challenges and successes in terms of building the infrastructure, finding resources for survival, and establishing relationships with the newly-formed community. Ensure that the story has a clear beginning, middle, and end, and uses descriptive language to immerse the reader into the setting and emotions of the character.<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Chosen sample 41905 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+As the Mars Colonization Initiative's lone representative, Dr. Sophia Patel stood atop the rust-red Martian terrain, gazing out at the barren landscape. Her team of engineers and scientists had worked tirelessly to construct the colony's initial infrastructure, but the challenges they faced were daunting. The harsh environment, lack of resources, and isolation from Earth threatened to overwhelm them at every turn.
+
+Sophia's mind raced back to the years of planning and preparation that had brought her to this moment. She had always been fascinated by the Red Planet, and as a renowned astrobiologist, she had dedicated her career to understanding its potential for human life. The colonization initiative had been a dream come true, but now, as she gazed out at the unforgiving landscape, she wondered if they had been naive to think they could make it work.
+
+The colony's first few months had been a whirlwind of activity. The team had worked around the clock to establish a reliable food source, harnessing the planet's limited resources to grow crops and recycle water. They had also constructed habitats, life support systems, and communication arrays, all while battling against the unforgiving Martian winds and temperatures.
+
+But despite the progress, Sophia knew they were far from self-sufficient. The colony's supplies were dwindling, and they were struggling to find a reliable source of energy. The solar panels they had installed were malfunctioning, and the team was forced to rely on limited battery power. The psychological toll of isolation was also taking its toll, with tensions rising between the team members.
+
+As Sophia descended into the colony's central hub, she was greeted by the familiar faces of her team. They were gathered around the makeshift kitchen, sharing stories and laughter as they worked together to prepare a meager meal. Sophia's heart swelled with pride and gratitude as she realized that, despite the challenges, they had created a sense of community.
+
+Over the next few weeks, Sophia threw herself into finding a solution to their energy crisis. She spent long hours in the colony's makeshift laboratory, experimenting with different materials and designs. Finally, after weeks of trial and error, she developed a prototype for a Martian-specific solar panel that harnessed the planet's unique energy signature.
+
+The team's reaction was jubilant. With their new energy source, they were finally able to power their habitats and life support systems, ensuring their survival on the unforgiving Martian surface. As they celebrated, Sophia realized that they had finally overcome the biggest hurdle. The colony was no longer just a collection of individuals struggling to survive; it was a thriving community.
+
+As the months passed, Sophia watched her team grow and flourish. They established a thriving agricultural system, cultivated a diverse range of crops, and even began to explore the Martian terrain, uncovering hidden wonders and marvels. The colony's communication arrays were upgraded, allowing them to stay in touch with loved ones back on Earth and share their discoveries with the world.
+
+Sophia's own sense of purpose had shifted. She was no longer just a scientist trying to survive on a hostile planet; she was a leader, guiding her team towards a brighter future. As she looked out at the Martian landscape, now transformed into a vibrant tapestry of life, she knew that they had truly made it to Mars – and they would never look back.
+
+The end.<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Rejected sample 41905 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+As the dusty red landscape of Mars stretched out before her, Dr. Sophia Patel felt a mix of excitement and trepidation. She was the leader of the Mars Colony Initiative, a team of scientists and engineers who had spent years planning and preparing for this moment. Their goal was to establish a self-sustaining human settlement on the unforgiving planet, and Sophia was determined to make it a reality.
+
+The first few weeks were a whirlwind of activity as the team worked tirelessly to set up the colony's infrastructure. They had brought with them everything they needed to survive: food, water, shelter, and equipment. But as they began to unpack and assemble the various components, Sophia realized that the harsh Martian environment was far more challenging than they had anticipated.
+
+The days were long and arduous, with temperatures often soaring above 122 degrees Fahrenheit. The team had to work in shifts, taking breaks only to rest and rehydrate. Sophia, ever the perfectionist, was driven by a sense of responsibility to ensure the colony's success. She spent long hours monitoring the life support systems, checking for malfunctions and making adjustments as needed.
+
+Despite the challenges, the team made steady progress. They managed to establish a reliable source of water by melting the Martian soil, and built a makeshift greenhouse to provide fresh produce. The colony's power generation system, a combination of solar panels and wind turbines, hummed along smoothly.
+
+As the weeks turned into months, Sophia began to notice changes in the team. They were no longer just strangers thrown together by circumstance; they were a community, bonded by shared struggles and triumphs. There was Maria, the team's resident botanist, who had a green thumb and a kind heart. There was Jax, the young and reckless engineer, who always seemed to find a way to make the impossible possible. And there was Dr. Patel herself, who had grown from a leader to a mother figure, nurturing and guiding her team through the ups and downs of life on Mars.
+
+One day, as Sophia was inspecting the colony's perimeter, she stumbled upon a small, barren patch of ground that seemed to be teeming with life. It was a tiny oasis, a remnant of the planet's ancient past. She felt a lump form in her throat as she gazed upon it, a sense of awe and wonder that she had not felt in a long time. This was what it meant to be alive on Mars – to find beauty in the desolate, to find hope in the impossible.
+
+As the months turned into years, the colony flourished. The team had built a thriving ecosystem, with crops growing in the greenhouse and animals thriving in the colony's bio-domes. They had established a system of governance, with Sophia as their leader, and had even begun to explore the Martian surface, discovering new wonders and marvels.
+
+Sophia looked out upon her colony, her heart full of pride and gratitude. They had done it – they had created a home on Mars, a place where they could live and thrive in a world that was once thought impossible. And as she gazed up at the stars, she knew that this was just the beginning, that the true adventure was only just beginning.<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Prompt sample 7296 of the raw training set:
+
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+You are given a math word problem and you are supposed to apply multiple mathematical operators like addition, subtraction, multiplication or division on the numbers embedded in the text to answer the following question and then only report the final numerical answer.
+
+Input: Consider Input: While digging through her clothes for ice cream money , Joan found 15 dimes in her jacket , and 4 dimes in her shorts . How much money did Joan find ?
+
+Output: 1.9
+
+
+Input: Consider Input: Jason joined his school 's band . He bought a flute for $ 142.46 , a music tool for $ 8.89 , and a song book for $ 7 . How much did Jason spend at the music store ?
+
+Output: 158.35
+
+
+Input: Consider Input: In a bag there are 13 red marbles , 5 blue marbles , and 7 green marbles . What percent of the marbles are green ?<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Chosen sample 7296 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+Let's break down each problem step by step:
+
+**Problem 1: How much money did Joan find?**
+
+Joan found 15 dimes in her jacket, and 4 dimes in her shorts. Each dime is worth $0.10.
+
+Total dimes = 15 + 4 = 19
+Total amount of money = 19 x $0.10 = $1.90
+
+Answer: 1.9
+
+**Problem 2: How much did Jason spend at the music store?**
+
+Jason bought a flute for $142.46, a music tool for $8.89, and a song book for $7.
+
+Total amount spent = $142.46 + $8.89 + $7 = $158.35
+
+Answer: 158.35
+
+**Problem 3: What percent of the marbles are green?**
+
+In a bag, there are 13 red marbles, 5 blue marbles, and 7 green marbles.
+
+Total number of marbles = 13 + 5 + 7 = 25
+
+Number of green marbles = 7
+
+Percent of green marbles = (7/25) x 100% = 28%
+
+Note: The problem doesn't ask for the exact percentage, but rather what percent of the marbles are green. The answer is 28%.<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Rejected sample 7296 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+I'm ready to help!<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Prompt sample 1639 of the raw training set:
+
+<|begin_of_text|><|start_header_id|>user<|end_header_id|>
+
+how can i upload the app that i write on android studio as a project to the google play store<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Chosen sample 1639 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+To publish your app on the Google Play Store, you'll need to follow these steps:
+
+**Step 1: Prepare your app**
+
+1. Make sure your app is complete and thoroughly tested.
+2. Ensure your app's name, logo, and icon are suitable for the Play Store.
+3. Optimize your app's graphics, text, and layout for various screen sizes and devices.
+
+**Step 2: Create a developer account**
+
+1. Go to the Google Play Console ([play.google.com/console](http://play.google.com/console)) and sign in with your Google account.
+2. If you don't have a Google account, create one.
+3. Fill out the registration form and agree to the Developer Distribution Agreement.
+4. Pay the one-time registration fee ($25).
+
+**Step 3: Create a new app listing**
+
+1. Log in to the Google Play Console and click on "Create application".
+2. Fill out the app's basic information:
+	* App name
+	* Package name (e.g., com.example.myapp)
+	* Default language
+	* Category and subcategory
+3. Upload your app's icon and screenshots.
+
+**Step 4: Prepare your app for release**
+
+1. In Android Studio, go to **Build** > **Generate signed bundle/APK**.
+2. Choose **Android App Bundle** (AAB) as the build format.
+3. Sign your app with a private key (e.g., using the Android Studio built-in signing tool).
+4. Create a new APK file or use an existing one.
+
+**Step 5: Upload your app to the Google Play Store**
+
+1. Go to the Google Play Console and select your app.
+2. Click on **Release management** > **Production**.
+3. Click on **Create release** and select **Production**.
+4. Upload your signed AAB file or APK file.
+5. Fill out the release notes and click **Save**.
+
+**Step 6: Publish your app**
+
+1. Review your app's listing and ensure everything is correct.
+2. Click on **Publish** to make your app live and available for download.
+
+**Additional tips:**
+
+* Make sure your app complies with the Google Play Store's policies and guidelines.
+* Use a unique package name to avoid conflicts with other apps.
+* Test your app on various devices and screen sizes before publishing.
+* Keep your app's updates and bug fixes organized using the Google Play Console's release management features.
+
+Remember to follow the official Google Play Store documentation and the Android Studio guides for more detailed instructions. Good luck with your app's publication!<|eot_id|>
+2025-10-29 15:48:54 - INFO - __main__ - Rejected sample 1639 of the raw training set:
+
+<|start_header_id|>assistant<|end_header_id|>
+
+Congratulations on completing your app development using Android Studio! To upload your app to the Google Play Store, follow these steps:
+
+**Prepare your app for release**
+
+1. **Make sure your app is ready for release**: Ensure that your app is complete, tested, and free of bugs. You can use Android Studio's built-in testing tools, such as the Emulator or a physical device, to test your app.
+2. **Create a release build**: In Android Studio, go to `Build` > `Generate Signed Bundle/APK` and follow the prompts to create a signed release build. This will create a `.apk` file that can be uploaded to the Google Play Store.
+3. **Create a keystore**: You'll need a keystore to sign your app. If you don't have one, create a new keystore by following the prompts in Android Studio or using an existing one.
+
+**Create a Google Play Developer account**
+
+1. **Create a Google Play Developer account**: If you haven't already, create a Google Play Developer account by signing up on the Google Play Console website.
+2. **Pay the registration fee**: The registration fee is $25, which is non-refundable.
+3. **Verify your account**: Verify your account by following the prompts in the Google Play Console.
+
+**Upload your app to the Google Play Store**
+
+1. **Log in to the Google Play Console**: Log in to the Google Play Console using your Google Play Developer account credentials.
+2. **Create a new release**: Click on the "Create Release" button and select "Android App" as the release type.
+3. **Upload your app**: Select the `.apk` file you created earlier and upload it to the Google Play Console.
+4. **Fill in the app information**: Fill in the required information, such as the app name, description, and keywords.
+5. **Set the pricing and distribution**: Set the pricing and distribution information for your app.
+6. **Submit the app for review**: Click the "Submit for Review" button to submit your app for review by the Google Play Store team.
+
+**Wait for review and approval**
+
+1. **Wait for review**: The Google Play Store team will review your app for compliance with the Google Play Developer Policy.
+2. **Address any issues**: If the team identifies any issues with your app, you'll need to address them and resubmit your app.
+3. **Get approved**: Once your app is approved, it will be available for download on the Google Play Store.
+
+**Additional tips**
+
+* **Use a consistent naming convention**: Use a consistent naming convention for your app and package name to avoid conflicts with other apps.
+* **Test your app on different devices and Android versions**: Test your app on different devices and Android versions to ensure compatibility.
+* **Provide a high-quality app icon and screenshots**: Provide a high-quality app icon and screenshots to showcase your app in the Google Play Store.
+
+By following these steps, you can successfully upload your app to the Google Play Store and make it available to millions of users around the world.<|eot_id|>
+/SimPO-main/scripts/simpo_trainer.py:109: UserWarning: You passed a model_id to the SimPOTrainer. This will automatically create an `AutoModelForCausalLM` or a `PeftModel` (if you passed a `peft_config`) for you.
+  warnings.warn(
+[INFO|configuration_utils.py:724] 2025-10-29 15:48:54,426 >> loading configuration file /train/Llama-3-8B-Instruct/config.json
+[INFO|configuration_utils.py:789] 2025-10-29 15:48:54,427 >> Model config LlamaConfig {
+  "_name_or_path": "/train/Llama-3-8B-Instruct",
+  "architectures": [
+    "LlamaForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "bos_token_id": 128000,
+  "eos_token_id": 128009,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 14336,
+  "max_position_embeddings": 8192,
+  "model_type": "llama",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 32,
+  "num_key_value_heads": 8,
+  "pretraining_tp": 1,
+  "rms_norm_eps": 1e-05,
+  "rope_scaling": null,
+  "rope_theta": 500000.0,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.40.2",
+  "use_cache": false,
+  "vocab_size": 128256
+}
+
+[INFO|modeling_utils.py:3426] 2025-10-29 15:48:54,431 >> loading weights file /train/Llama-3-8B-Instruct/model.safetensors.index.json
+[INFO|modeling_utils.py:3538] 2025-10-29 15:48:54,432 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[WARNING|logging.py:329] 2025-10-29 15:48:54,434 >> You are attempting to use Flash Attention 2.0 without specifying a torch dtype. This might lead to unexpected behaviour
+[WARNING|logging.py:329] 2025-10-29 15:48:54,434 >> You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+[WARNING|logging.py:329] 2025-10-29 15:48:54,439 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaForCausalLM is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[INFO|configuration_utils.py:928] 2025-10-29 15:48:54,439 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "eos_token_id": 128009,
+  "use_cache": false
+}
+
+[WARNING|logging.py:329] 2025-10-29 15:48:54,441 >> Flash Attention 2.0 only supports torch.float16 and torch.bfloat16 dtypes, but the current dype in LlamaModel is torch.float32. You should run training or inference using Automatic Mixed-Precision via the `with torch.autocast(device_type='torch_device'):` decorator, or load the model with the `torch_dtype` argument. Example: `model = AutoModel.from_pretrained("openai/whisper-tiny", attn_implementation="flash_attention_2", torch_dtype=torch.float16)`
+[2025-10-29 15:48:55,673] [INFO] [partition_parameters.py:347:__exit__] finished initializing model - num_params = 291, num_elems = 8.03B
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.23it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.10it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:00,  4.11it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.34it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.11it/s]Loading checkpoint shards:  50%|█████     | 2/4 [00:00<00:00,  4.08it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.07it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.98it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.98it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.98it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.86it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.84it/s]
+/SimPO-main/scripts/simpo_trainer.py:231: UserWarning: When using DPODataCollatorWithPadding, you should set `remove_unused_columns=False` in your TrainingArguments we have set it for you, but you should do it yourself in the future.
+  warnings.warn(
+Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.79it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.79it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.78it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:01<00:00,  2.78it/s]
+/SimPO-main/scripts/simpo_trainer.py:231: UserWarning: When using DPODataCollatorWithPadding, you should set `remove_unused_columns=False` in your TrainingArguments we have set it for you, but you should do it yourself in the future.
+  warnings.warn(
+/SimPO-main/scripts/simpo_trainer.py:231: UserWarning: When using DPODataCollatorWithPadding, you should set `remove_unused_columns=False` in your TrainingArguments we have set it for you, but you should do it yourself in the future.
+  warnings.warn(
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.06it/s]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:02<00:00,  1.07it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.46it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.29it/s]
+[INFO|modeling_utils.py:4170] 2025-10-29 15:48:58,837 >> All model checkpoint weights were used when initializing LlamaForCausalLM.
+
+[INFO|modeling_utils.py:4178] 2025-10-29 15:48:58,837 >> All the weights of LlamaForCausalLM were initialized from the model checkpoint at /train/Llama-3-8B-Instruct.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use LlamaForCausalLM for predictions without further training.
+[INFO|configuration_utils.py:881] 2025-10-29 15:48:58,841 >> loading configuration file /train/Llama-3-8B-Instruct/generation_config.json
+[INFO|configuration_utils.py:928] 2025-10-29 15:48:58,841 >> Generate config GenerationConfig {
+  "bos_token_id": 128000,
+  "do_sample": true,
+  "eos_token_id": [
+    128001,
+    128009
+  ],
+  "max_length": 4096,
+  "temperature": 0.6,
+  "top_p": 0.9
+}
+
+/SimPO-main/scripts/simpo_trainer.py:231: UserWarning: When using DPODataCollatorWithPadding, you should set `remove_unused_columns=False` in your TrainingArguments we have set it for you, but you should do it yourself in the future.
+  warnings.warn(
+2025-10-29 15:48:59 - WARNING - accelerate.utils.other - Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+[INFO|trainer.py:626] 2025-10-29 15:48:59,155 >> Using auto half precision backend
+[2025-10-29 15:48:59,838] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.12.2, git-hash=unknown, git-branch=unknown
+[2025-10-29 15:48:59,850] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2025-10-29 15:48:59,851] [INFO] [logging.py:96:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2025-10-29 15:48:59,851] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2025-10-29 15:48:59,867] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2025-10-29 15:48:59,867] [INFO] [utils.py:56:is_zero_supported_optimizer] Checking ZeRO support for optimizer=AdamW type=<class 'torch.optim.adamw.AdamW'>
+[2025-10-29 15:48:59,867] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2025-10-29 15:48:59,867] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+[2025-10-29 15:49:00,020] [INFO] [utils.py:802:see_memory_usage] Stage 3 initialize beginning
+[2025-10-29 15:49:00,021] [INFO] [utils.py:803:see_memory_usage] MA 3.86 GB         Max_MA 6.68 GB         CA 4.03 GB         Max_CA 7 GB 
+[2025-10-29 15:49:00,022] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.46 GB, percent = 0.9%
+[2025-10-29 15:49:00,024] [INFO] [stage3.py:126:__init__] Reduce bucket size 500,000,000
+[2025-10-29 15:49:00,024] [INFO] [stage3.py:127:__init__] Prefetch bucket size 50,000,000
+[2025-10-29 15:49:00,154] [INFO] [utils.py:802:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2025-10-29 15:49:00,155] [INFO] [utils.py:803:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 4.03 GB         Max_CA 4 GB 
+[2025-10-29 15:49:00,157] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.46 GB, percent = 0.9%
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+[2025-10-29 15:49:00,313] [INFO] [utils.py:802:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2025-10-29 15:49:00,314] [INFO] [utils.py:803:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 4.03 GB         Max_CA 4 GB 
+[2025-10-29 15:49:00,316] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.47 GB, percent = 0.9%
+[2025-10-29 15:49:00,446] [INFO] [utils.py:802:see_memory_usage] Before creating fp16 partitions
+[2025-10-29 15:49:00,446] [INFO] [utils.py:803:see_memory_usage] MA 3.86 GB         Max_MA 3.86 GB         CA 4.03 GB         Max_CA 4 GB 
+[2025-10-29 15:49:00,448] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.48 GB, percent = 0.9%
+[2025-10-29 15:49:01,685] [INFO] [utils.py:802:see_memory_usage] After creating fp16 partitions: 3
+[2025-10-29 15:49:01,686] [INFO] [utils.py:803:see_memory_usage] MA 3.87 GB         Max_MA 3.87 GB         CA 7.44 GB         Max_CA 7 GB 
+[2025-10-29 15:49:01,688] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 11.9 GB, percent = 1.5%
+[2025-10-29 15:49:01,842] [INFO] [utils.py:802:see_memory_usage] Before creating fp32 partitions
+[2025-10-29 15:49:01,843] [INFO] [utils.py:803:see_memory_usage] MA 3.87 GB         Max_MA 3.87 GB         CA 7.44 GB         Max_CA 7 GB 
+[2025-10-29 15:49:01,844] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 12.43 GB, percent = 1.6%
+[2025-10-29 15:49:02,003] [INFO] [utils.py:802:see_memory_usage] After creating fp32 partitions
+[2025-10-29 15:49:02,003] [INFO] [utils.py:803:see_memory_usage] MA 11.35 GB         Max_MA 13.22 GB         CA 16.79 GB         Max_CA 17 GB 
+[2025-10-29 15:49:02,005] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 13.0 GB, percent = 1.6%
+[2025-10-29 15:49:03,201] [INFO] [utils.py:802:see_memory_usage] Before initializing optimizer states
+[2025-10-29 15:49:03,202] [INFO] [utils.py:803:see_memory_usage] MA 11.35 GB         Max_MA 11.35 GB         CA 16.79 GB         Max_CA 17 GB 
+[2025-10-29 15:49:03,203] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.64 GB, percent = 1.0%
+[2025-10-29 15:49:03,397] [INFO] [utils.py:802:see_memory_usage] After initializing optimizer states
+[2025-10-29 15:49:03,398] [INFO] [utils.py:803:see_memory_usage] MA 26.31 GB         Max_MA 33.79 GB         CA 39.24 GB         Max_CA 39 GB 
+[2025-10-29 15:49:03,399] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.69 GB, percent = 1.0%
+[2025-10-29 15:49:03,399] [INFO] [stage3.py:460:_setup_for_real_optimizer] optimizer state initialized
+[2025-10-29 15:49:03,689] [INFO] [utils.py:802:see_memory_usage] After initializing ZeRO optimizer
+[2025-10-29 15:49:03,689] [INFO] [utils.py:803:see_memory_usage] MA 30.98 GB         Max_MA 32.94 GB         CA 42.17 GB         Max_CA 42 GB 
+[2025-10-29 15:49:03,691] [INFO] [utils.py:810:see_memory_usage] CPU Virtual Memory:  used = 7.95 GB, percent = 1.0%
+[2025-10-29 15:49:03,691] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = AdamW
+[2025-10-29 15:49:03,691] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using client LR scheduler
+[2025-10-29 15:49:03,691] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2025-10-29 15:49:03,691] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0, 0.0], mom=[(0.9, 0.999), (0.9, 0.999)]
+[2025-10-29 15:49:03,692] [INFO] [config.py:972:print] DeepSpeedEngine configuration:
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True}
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   amp_enabled .................. False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   amp_params ................... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   bfloat16_enabled ............. True
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   checkpoint_parallel_write_pipeline  False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   checkpoint_tag_validation_enabled  True
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   checkpoint_tag_validation_fail  False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f5a306ba9e0>
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   communication_data_type ...... None
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   curriculum_enabled_legacy .... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   curriculum_params_legacy ..... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   data_efficiency_enabled ...... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   dataloader_drop_last ......... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   disable_allgather ............ False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   dump_state ................... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   dynamic_loss_scale_args ...... None
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   eigenvalue_enabled ........... False
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   eigenvalue_gas_boundary_resolution  1
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2025-10-29 15:49:03,693] [INFO] [config.py:976:print]   eigenvalue_layer_num ......... 0
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   eigenvalue_max_iter .......... 100
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   eigenvalue_stability ......... 1e-06
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   eigenvalue_tol ............... 0.01
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   eigenvalue_verbose ........... False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   elasticity_enabled ........... False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   fp16_auto_cast ............... None
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   fp16_enabled ................. False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   fp16_master_weights_and_gradients  False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   global_rank .................. 0
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   grad_accum_dtype ............. None
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   gradient_accumulation_steps .. 16
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   gradient_clipping ............ 1.0
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   gradient_predivide_factor .... 1.0
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   initial_dynamic_scale ........ 1
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   load_universal_checkpoint .... False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   loss_scale ................... 1.0
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   memory_breakdown ............. False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   mics_hierarchial_params_gather  False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   mics_shard_size .............. -1
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') enabled=False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   optimizer_legacy_fusion ...... False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   optimizer_name ............... None
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   optimizer_params ............. None
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0}
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   pld_enabled .................. False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   pld_params ................... False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   prescale_gradients ........... False
+[2025-10-29 15:49:03,694] [INFO] [config.py:976:print]   scheduler_name ............... None
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   scheduler_params ............. None
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   seq_parallel_communication_data_type  torch.float32
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   sparse_attention ............. None
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   sparse_gradients_enabled ..... False
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   steps_per_print .............. inf
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   train_batch_size ............. 128
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   train_micro_batch_size_per_gpu  2
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   use_node_local_storage ....... False
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   wall_clock_breakdown ......... False
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   weight_quantization_config ... None
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   world_size ................... 4
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   zero_allow_untested_optimizer  True
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500,000,000 allgather_partitions=True allgather_bucket_size=500,000,000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='none', nvme_path=None, buffer_count=5, buffer_size=100,000,000, max_in_cpu=1,000,000,000, pin_memory=False) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='none', nvme_path=None, buffer_count=4, pin_memory=False, pipeline=False, pipeline_read=False, pipeline_write=False, fast_init=False) sub_group_size=1,000,000,000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50,000,000 param_persistence_threshold=100,000 model_persistence_threshold=sys.maxsize max_live_parameters=1,000,000,000 max_reuse_distance=1,000,000,000 gather_16bit_weights_on_model_save=True stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   zero_enabled ................. True
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   zero_force_ds_cpu_optimizer .. True
+[2025-10-29 15:49:03,695] [INFO] [config.py:976:print]   zero_optimization_stage ...... 3
+[2025-10-29 15:49:03,695] [INFO] [config.py:962:print_user_config]   json = {
+    "train_batch_size": 128, 
+    "train_micro_batch_size_per_gpu": 2, 
+    "gradient_accumulation_steps": 16, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "offload_param": {
+            "device": "none", 
+            "nvme_path": null
+        }, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "bf16": {
+        "enabled": true
+    }, 
+    "fp16": {
+        "enabled": false
+    }, 
+    "zero_allow_untested_optimizer": true
+}
+[INFO|trainer.py:2048] 2025-10-29 15:49:03,695 >> ***** Running training *****
+[INFO|trainer.py:2049] 2025-10-29 15:49:03,695 >>   Num examples = 59,876
+[INFO|trainer.py:2050] 2025-10-29 15:49:03,695 >>   Num Epochs = 1
+[INFO|trainer.py:2051] 2025-10-29 15:49:03,695 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:2054] 2025-10-29 15:49:03,695 >>   Total train batch size (w. parallel, distributed & accumulation) = 128
+[INFO|trainer.py:2055] 2025-10-29 15:49:03,695 >>   Gradient Accumulation steps = 16
+[INFO|trainer.py:2056] 2025-10-29 15:49:03,696 >>   Total optimization steps = 467
+[INFO|trainer.py:2057] 2025-10-29 15:49:03,697 >>   Number of trainable parameters = 8,030,261,248
+[INFO|integration_utils.py:723] 2025-10-29 15:49:03,699 >> Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+wandb: Tracking run with wandb version 0.13.11
+wandb: W&B syncing is set to `offline` in this directory.  
+wandb: Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+  0%|          | 0/467 [00:00<?, ?it/s]/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[WARNING|modeling_utils.py:1188] 2025-10-29 15:49:12,322 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+[WARNING|modeling_utils.py:1188] 2025-10-29 15:49:12,323 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+[WARNING|modeling_utils.py:1188] 2025-10-29 15:49:12,323 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+[WARNING|modeling_utils.py:1188] 2025-10-29 15:49:12,323 >> Could not estimate the number of tokens of the input, floating-point operations will not be computed
+  0%|          | 1/467 [00:26<3:29:10, 26.93s/it]  0%|          | 2/467 [00:56<3:40:07, 28.40s/it]  1%|          | 3/467 [01:21<3:28:25, 26.95s/it]  1%|          | 4/467 [01:46<3:21:52, 26.16s/it]  1%|          | 5/467 [02:13<3:24:07, 26.51s/it]                                                 {'loss': 1.6025, 'grad_norm': 12.888096498360655, 'learning_rate': 1.0638297872340425e-07, 'rewards/chosen': -0.6854560971260071, 'rewards/rejected': -0.6794203519821167, 'rewards/accuracies': 0.4312500059604645, 'rewards/margins': -0.0060358671471476555, 'logps/rejected': -0.27176812291145325, 'logps/chosen': -0.2741824686527252, 'logits/rejected': -0.9797267913818359, 'logits/chosen': -1.0089805126190186, 'epoch': 0.01}
+  1%|          | 5/467 [02:13<3:24:07, 26.51s/it]  1%|▏         | 6/467 [02:40<3:25:42, 26.77s/it]  1%|▏         | 7/467 [03:06<3:22:20, 26.39s/it]  2%|▏         | 8/467 [03:35<3:28:46, 27.29s/it]  2%|▏         | 9/467 [04:05<3:34:51, 28.15s/it]  2%|▏         | 10/467 [04:32<3:30:44, 27.67s/it]                                                  {'loss': 1.5895, 'grad_norm': 9.115210927608906, 'learning_rate': 2.127659574468085e-07, 'rewards/chosen': -0.7358354330062866, 'rewards/rejected': -0.7482743263244629, 'rewards/accuracies': 0.5, 'rewards/margins': 0.012438981793820858, 'logps/rejected': -0.29930973052978516, 'logps/chosen': -0.2943341135978699, 'logits/rejected': -0.9731810688972473, 'logits/chosen': -1.0397950410842896, 'epoch': 0.02}
+  2%|▏         | 10/467 [04:32<3:30:44, 27.67s/it]  2%|▏         | 11/467 [04:58<3:27:11, 27.26s/it]  3%|▎         | 12/467 [05:27<3:29:29, 27.62s/it]  3%|▎         | 13/467 [05:52<3:23:04, 26.84s/it]  3%|▎         | 14/467 [06:17<3:19:46, 26.46s/it][2025-10-29 15:55:57,321] [WARNING] [stage3.py:1949:step] 1 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+  3%|▎         | 15/467 [06:47<3:25:58, 27.34s/it]                                                  {'loss': 1.5719, 'grad_norm': 11.908346137793094, 'learning_rate': 3.1914893617021275e-07, 'rewards/chosen': -0.660351574420929, 'rewards/rejected': -0.7518342137336731, 'rewards/accuracies': 0.6000000238418579, 'rewards/margins': 0.09148270636796951, 'logps/rejected': -0.30073368549346924, 'logps/chosen': -0.26414060592651367, 'logits/rejected': -0.9883796572685242, 'logits/chosen': -0.9694021344184875, 'epoch': 0.03}
+  3%|▎         | 15/467 [06:47<3:25:58, 27.34s/it]  3%|▎         | 16/467 [07:14<3:24:34, 27.22s/it]  4%|▎         | 17/467 [07:39<3:19:54, 26.66s/it]  4%|▍         | 18/467 [08:06<3:21:24, 26.91s/it]  4%|▍         | 19/467 [08:35<3:23:30, 27.26s/it]  4%|▍         | 20/467 [09:01<3:20:33, 26.92s/it]                                                  {'loss': 1.5727, 'grad_norm': 22.200403877558884, 'learning_rate': 4.25531914893617e-07, 'rewards/chosen': -0.6937790513038635, 'rewards/rejected': -0.7289490699768066, 'rewards/accuracies': 0.5062500238418579, 'rewards/margins': 0.03516992926597595, 'logps/rejected': -0.29157957434654236, 'logps/chosen': -0.2775116264820099, 'logits/rejected': -0.9367250204086304, 'logits/chosen': -0.963182806968689, 'epoch': 0.04}
+  4%|▍         | 20/467 [09:01<3:20:33, 26.92s/it]  4%|▍         | 21/467 [09:27<3:19:22, 26.82s/it]  5%|▍         | 22/467 [09:55<3:20:24, 27.02s/it]  5%|▍         | 23/467 [10:23<3:22:16, 27.33s/it]  5%|▌         | 24/467 [10:49<3:18:51, 26.93s/it]  5%|▌         | 25/467 [11:16<3:17:58, 26.87s/it]                                                  {'loss': 1.5853, 'grad_norm': 12.12776268970131, 'learning_rate': 5.319148936170212e-07, 'rewards/chosen': -0.6794422268867493, 'rewards/rejected': -0.6965305209159851, 'rewards/accuracies': 0.5, 'rewards/margins': 0.017088374122977257, 'logps/rejected': -0.2786122262477875, 'logps/chosen': -0.27177685499191284, 'logits/rejected': -0.9880523681640625, 'logits/chosen': -1.0175772905349731, 'epoch': 0.05}
+  5%|▌         | 25/467 [11:16<3:17:58, 26.87s/it]  6%|▌         | 26/467 [11:42<3:17:38, 26.89s/it]  6%|▌         | 27/467 [12:07<3:11:20, 26.09s/it]  6%|▌         | 28/467 [12:32<3:08:47, 25.80s/it]  6%|▌         | 29/467 [12:59<3:11:27, 26.23s/it]  6%|▋         | 30/467 [13:26<3:13:18, 26.54s/it]                                                  {'loss': 1.5663, 'grad_norm': 11.068321424076283, 'learning_rate': 6.382978723404255e-07, 'rewards/chosen': -0.6848121881484985, 'rewards/rejected': -0.6982718706130981, 'rewards/accuracies': 0.4437499940395355, 'rewards/margins': 0.013459649868309498, 'logps/rejected': -0.2793087661266327, 'logps/chosen': -0.27392488718032837, 'logits/rejected': -0.9457516670227051, 'logits/chosen': -0.9898959398269653, 'epoch': 0.06}
+  6%|▋         | 30/467 [13:26<3:13:18, 26.54s/it]  7%|▋         | 31/467 [13:52<3:10:50, 26.26s/it]  7%|▋         | 32/467 [14:21<3:16:32, 27.11s/it]  7%|▋         | 33/467 [14:48<3:15:30, 27.03s/it]  7%|▋         | 34/467 [15:15<3:14:22, 26.93s/it]  7%|▋         | 35/467 [15:43<3:17:47, 27.47s/it]                                                  {'loss': 1.5609, 'grad_norm': 15.027932425612299, 'learning_rate': 7.446808510638297e-07, 'rewards/chosen': -0.7395063042640686, 'rewards/rejected': -0.8105236291885376, 'rewards/accuracies': 0.5249999761581421, 'rewards/margins': 0.0710173100233078, 'logps/rejected': -0.32420945167541504, 'logps/chosen': -0.2958025336265564, 'logits/rejected': -0.9718740582466125, 'logits/chosen': -1.0471231937408447, 'epoch': 0.07}
+  7%|▋         | 35/467 [15:43<3:17:47, 27.47s/it]  8%|▊         | 36/467 [16:10<3:15:00, 27.15s/it]  8%|▊         | 37/467 [16:37<3:14:03, 27.08s/it]  8%|▊         | 38/467 [17:02<3:10:34, 26.65s/it]  8%|▊         | 39/467 [17:29<3:10:32, 26.71s/it]  9%|▊         | 40/467 [17:56<3:11:14, 26.87s/it]                                                  {'loss': 1.565, 'grad_norm': 12.297343531565184, 'learning_rate': 8.51063829787234e-07, 'rewards/chosen': -0.7009513974189758, 'rewards/rejected': -0.8281424641609192, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.12719111144542694, 'logps/rejected': -0.3312569856643677, 'logps/chosen': -0.2803805470466614, 'logits/rejected': -0.954240620136261, 'logits/chosen': -0.9976441264152527, 'epoch': 0.09}
+  9%|▊         | 40/467 [17:56<3:11:14, 26.87s/it]  9%|▉         | 41/467 [18:23<3:11:06, 26.92s/it]  9%|▉         | 42/467 [18:49<3:07:54, 26.53s/it]  9%|▉         | 43/467 [19:20<3:17:13, 27.91s/it]  9%|▉         | 44/467 [19:48<3:17:00, 27.94s/it] 10%|▉         | 45/467 [20:15<3:15:02, 27.73s/it]                                                  {'loss': 1.5604, 'grad_norm': 11.281071544254665, 'learning_rate': 9.574468085106384e-07, 'rewards/chosen': -0.843073844909668, 'rewards/rejected': -0.9861847162246704, 'rewards/accuracies': 0.518750011920929, 'rewards/margins': 0.14311087131500244, 'logps/rejected': -0.3944738507270813, 'logps/chosen': -0.33722954988479614, 'logits/rejected': -1.000240683555603, 'logits/chosen': -1.0433628559112549, 'epoch': 0.1}
+ 10%|▉         | 45/467 [20:15<3:15:02, 27.73s/it] 10%|▉         | 46/467 [20:44<3:17:12, 28.10s/it] 10%|█         | 47/467 [21:14<3:19:13, 28.46s/it] 10%|█         | 48/467 [21:39<3:12:01, 27.50s/it] 10%|█         | 49/467 [22:05<3:07:40, 26.94s/it] 11%|█         | 50/467 [22:30<3:04:57, 26.61s/it]                                                  {'loss': 1.578, 'grad_norm': 36.00633349564656, 'learning_rate': 9.998741174712533e-07, 'rewards/chosen': -0.9276779294013977, 'rewards/rejected': -1.0526825189590454, 'rewards/accuracies': 0.48750001192092896, 'rewards/margins': 0.1250046044588089, 'logps/rejected': -0.4210730195045471, 'logps/chosen': -0.3710711598396301, 'logits/rejected': -0.9734001159667969, 'logits/chosen': -1.0221301317214966, 'epoch': 0.11}
+ 11%|█         | 50/467 [22:30<3:04:57, 26.61s/it] 11%|█         | 51/467 [22:57<3:04:49, 26.66s/it] 11%|█         | 52/467 [23:23<3:02:32, 26.39s/it] 11%|█▏        | 53/467 [23:49<3:01:51, 26.36s/it] 12%|█▏        | 54/467 [24:17<3:04:49, 26.85s/it] 12%|█▏        | 55/467 [24:45<3:06:15, 27.12s/it]                                                  {'loss': 1.5365, 'grad_norm': 27.351027872932395, 'learning_rate': 9.991050648838675e-07, 'rewards/chosen': -0.7814325094223022, 'rewards/rejected': -0.9423151016235352, 'rewards/accuracies': 0.581250011920929, 'rewards/margins': 0.1608826071023941, 'logps/rejected': -0.3769260048866272, 'logps/chosen': -0.3125729560852051, 'logits/rejected': -1.012986421585083, 'logits/chosen': -1.0469247102737427, 'epoch': 0.12}
+ 12%|█▏        | 55/467 [24:45<3:06:15, 27.12s/it] 12%|█▏        | 56/467 [25:11<3:02:37, 26.66s/it] 12%|█▏        | 57/467 [25:40<3:07:29, 27.44s/it] 12%|█▏        | 58/467 [26:09<3:10:25, 27.94s/it] 13%|█▎        | 59/467 [26:36<3:08:23, 27.70s/it] 13%|█▎        | 60/467 [27:03<3:06:23, 27.48s/it]                                                  {'loss': 1.5412, 'grad_norm': 17.69402546378315, 'learning_rate': 9.97637968732563e-07, 'rewards/chosen': -0.8467636108398438, 'rewards/rejected': -0.9119359850883484, 'rewards/accuracies': 0.5625, 'rewards/margins': 0.0651722177863121, 'logps/rejected': -0.3647744059562683, 'logps/chosen': -0.33870548009872437, 'logits/rejected': -1.0740492343902588, 'logits/chosen': -1.106860876083374, 'epoch': 0.13}
+ 13%|█▎        | 60/467 [27:03<3:06:23, 27.48s/it] 13%|█▎        | 61/467 [27:28<3:01:34, 26.83s/it] 13%|█▎        | 62/467 [27:54<2:59:30, 26.59s/it] 13%|█▎        | 63/467 [28:20<2:57:42, 26.39s/it] 14%|█▎        | 64/467 [28:46<2:55:17, 26.10s/it] 14%|█▍        | 65/467 [29:14<2:58:35, 26.65s/it]                                                  {'loss': 1.5199, 'grad_norm': 17.33185436528533, 'learning_rate': 9.954748808839674e-07, 'rewards/chosen': -1.0046615600585938, 'rewards/rejected': -1.1668000221252441, 'rewards/accuracies': 0.5874999761581421, 'rewards/margins': 0.16213849186897278, 'logps/rejected': -0.46672001481056213, 'logps/chosen': -0.401864618062973, 'logits/rejected': -0.9925398826599121, 'logits/chosen': -1.0216938257217407, 'epoch': 0.14}
+ 14%|█▍        | 65/467 [29:14<2:58:35, 26.65s/it] 14%|█▍        | 66/467 [29:41<2:59:22, 26.84s/it] 14%|█▍        | 67/467 [30:08<2:58:32, 26.78s/it] 15%|█▍        | 68/467 [30:35<3:00:16, 27.11s/it] 15%|█▍        | 69/467 [30:59<2:52:47, 26.05s/it] 15%|█▍        | 70/467 [31:27<2:55:50, 26.58s/it]                                                  {'loss': 1.5299, 'grad_norm': 10.034275768957718, 'learning_rate': 9.926188266120295e-07, 'rewards/chosen': -0.9155513644218445, 'rewards/rejected': -1.1374136209487915, 'rewards/accuracies': 0.550000011920929, 'rewards/margins': 0.22186227142810822, 'logps/rejected': -0.4549654424190521, 'logps/chosen': -0.36622053384780884, 'logits/rejected': -1.0108648538589478, 'logits/chosen': -1.0347007513046265, 'epoch': 0.15}
+ 15%|█▍        | 70/467 [31:27<2:55:50, 26.58s/it] 15%|█▌        | 71/467 [31:54<2:57:03, 26.83s/it] 15%|█▌        | 72/467 [32:24<3:01:59, 27.64s/it] 16%|█▌        | 73/467 [32:51<3:00:03, 27.42s/it] 16%|█▌        | 74/467 [33:18<2:58:59, 27.33s/it] 16%|█▌        | 75/467 [33:46<3:00:24, 27.61s/it]                                                  {'loss': 1.5224, 'grad_norm': 26.878682162165433, 'learning_rate': 9.890738003669027e-07, 'rewards/chosen': -0.9412970542907715, 'rewards/rejected': -1.1160409450531006, 'rewards/accuracies': 0.543749988079071, 'rewards/margins': 0.17474384605884552, 'logps/rejected': -0.44641637802124023, 'logps/chosen': -0.3765188157558441, 'logits/rejected': -0.9268046617507935, 'logits/chosen': -0.9962709546089172, 'epoch': 0.16}
+ 16%|█▌        | 75/467 [33:46<3:00:24, 27.61s/it] 16%|█▋        | 76/467 [34:12<2:57:20, 27.21s/it] 16%|█▋        | 77/467 [34:38<2:53:25, 26.68s/it] 17%|█▋        | 78/467 [35:04<2:51:22, 26.43s/it] 17%|█▋        | 79/467 [35:30<2:51:16, 26.49s/it] 17%|█▋        | 80/467 [35:57<2:51:06, 26.53s/it]                                                  {'loss': 1.4894, 'grad_norm': 11.498218535220069, 'learning_rate': 9.848447601883433e-07, 'rewards/chosen': -0.9184859991073608, 'rewards/rejected': -1.1901525259017944, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.2716664671897888, 'logps/rejected': -0.4760609567165375, 'logps/chosen': -0.3673943877220154, 'logits/rejected': -0.9784826040267944, 'logits/chosen': -0.992286205291748, 'epoch': 0.17}
+ 17%|█▋        | 80/467 [35:57<2:51:06, 26.53s/it] 17%|█▋        | 81/467 [36:24<2:52:27, 26.81s/it] 18%|█▊        | 82/467 [36:51<2:51:52, 26.79s/it] 18%|█▊        | 83/467 [37:17<2:50:21, 26.62s/it] 18%|█▊        | 84/467 [37:46<2:53:43, 27.22s/it] 18%|█▊        | 85/467 [38:14<2:54:10, 27.36s/it]                                                  {'loss': 1.4881, 'grad_norm': 15.904476874327427, 'learning_rate': 9.799376207714444e-07, 'rewards/chosen': -0.8936190605163574, 'rewards/rejected': -1.0573793649673462, 'rewards/accuracies': 0.625, 'rewards/margins': 0.16376033425331116, 'logps/rejected': -0.42295175790786743, 'logps/chosen': -0.3574475944042206, 'logits/rejected': -0.9884153604507446, 'logits/chosen': -1.010321855545044, 'epoch': 0.18}
+ 18%|█▊        | 85/467 [38:14<2:54:10, 27.36s/it] 18%|█▊        | 86/467 [38:41<2:53:03, 27.25s/it] 19%|█▊        | 87/467 [39:07<2:50:17, 26.89s/it] 19%|█▉        | 88/467 [39:36<2:54:25, 27.61s/it] 19%|█▉        | 89/467 [40:03<2:51:53, 27.28s/it] 19%|█▉        | 90/467 [40:28<2:48:01, 26.74s/it]                                                  {'loss': 1.5317, 'grad_norm': 16.70885418699432, 'learning_rate': 9.743592451943998e-07, 'rewards/chosen': -1.1527549028396606, 'rewards/rejected': -1.4179401397705078, 'rewards/accuracies': 0.574999988079071, 'rewards/margins': 0.26518529653549194, 'logps/rejected': -0.5671760439872742, 'logps/chosen': -0.4611019194126129, 'logits/rejected': -1.0220941305160522, 'logits/chosen': -1.0564963817596436, 'epoch': 0.19}
+ 19%|█▉        | 90/467 [40:28<2:48:01, 26.74s/it] 19%|█▉        | 91/467 [40:55<2:49:01, 26.97s/it] 20%|█▉        | 92/467 [41:23<2:50:23, 27.26s/it] 20%|█▉        | 93/467 [41:49<2:46:34, 26.72s/it] 20%|██        | 94/467 [42:14<2:43:45, 26.34s/it] 20%|██        | 95/467 [42:39<2:39:17, 25.69s/it]                                                  {'loss': 1.5237, 'grad_norm': 13.347425304377284, 'learning_rate': 9.681174353198686e-07, 'rewards/chosen': -1.2127007246017456, 'rewards/rejected': -1.3113454580307007, 'rewards/accuracies': 0.550000011920929, 'rewards/margins': 0.0986446887254715, 'logps/rejected': -0.5245381593704224, 'logps/chosen': -0.4850803315639496, 'logits/rejected': -1.0611437559127808, 'logits/chosen': -1.142113208770752, 'epoch': 0.2}
+ 20%|██        | 95/467 [42:39<2:39:17, 25.69s/it] 21%|██        | 96/467 [43:05<2:40:15, 25.92s/it] 21%|██        | 97/467 [43:34<2:45:13, 26.79s/it] 21%|██        | 98/467 [43:59<2:41:30, 26.26s/it] 21%|██        | 99/467 [44:25<2:41:07, 26.27s/it] 21%|██▏       | 100/467 [44:52<2:41:40, 26.43s/it]                                                   {'loss': 1.5348, 'grad_norm': 20.06808415637341, 'learning_rate': 9.612209208833646e-07, 'rewards/chosen': -1.2522799968719482, 'rewards/rejected': -1.3622233867645264, 'rewards/accuracies': 0.59375, 'rewards/margins': 0.10994338989257812, 'logps/rejected': -0.5448893308639526, 'logps/chosen': -0.5009120106697083, 'logits/rejected': -1.007050633430481, 'logits/chosen': -1.0310673713684082, 'epoch': 0.21}
+ 21%|██▏       | 100/467 [44:52<2:41:40, 26.43s/it] 22%|██▏       | 101/467 [45:17<2:38:21, 25.96s/it] 22%|██▏       | 102/467 [45:42<2:36:59, 25.81s/it] 22%|██▏       | 103/467 [46:08<2:37:06, 25.90s/it] 22%|██▏       | 104/467 [46:38<2:43:42, 27.06s/it] 22%|██▏       | 105/467 [47:02<2:37:13, 26.06s/it]                                                   {'loss': 1.515, 'grad_norm': 17.731682755383407, 'learning_rate': 9.536793472839324e-07, 'rewards/chosen': -1.081419587135315, 'rewards/rejected': -1.391627550125122, 'rewards/accuracies': 0.65625, 'rewards/margins': 0.31020796298980713, 'logps/rejected': -0.5566509962081909, 'logps/chosen': -0.432567834854126, 'logits/rejected': -0.9837942123413086, 'logits/chosen': -1.0363305807113647, 'epoch': 0.22}
+ 22%|██▏       | 105/467 [47:02<2:37:13, 26.06s/it] 23%|██▎       | 106/467 [47:29<2:38:52, 26.41s/it] 23%|██▎       | 107/467 [47:55<2:36:53, 26.15s/it] 23%|██▎       | 108/467 [48:22<2:39:24, 26.64s/it] 23%|██▎       | 109/467 [48:49<2:38:34, 26.58s/it] 24%|██▎       | 110/467 [49:15<2:37:05, 26.40s/it]                                                   {'loss': 1.486, 'grad_norm': 18.859911017711166, 'learning_rate': 9.455032620941839e-07, 'rewards/chosen': -1.260772705078125, 'rewards/rejected': -1.6537472009658813, 'rewards/accuracies': 0.6499999761581421, 'rewards/margins': 0.3929746747016907, 'logps/rejected': -0.6614989042282104, 'logps/chosen': -0.5043090581893921, 'logits/rejected': -0.9323428869247437, 'logits/chosen': -0.9925776720046997, 'epoch': 0.24}
+ 24%|██▎       | 110/467 [49:15<2:37:05, 26.40s/it] 24%|██▍       | 111/467 [49:41<2:36:19, 26.35s/it] 24%|██▍       | 112/467 [50:07<2:35:00, 26.20s/it] 24%|██▍       | 113/467 [50:34<2:35:28, 26.35s/it] 24%|██▍       | 114/467 [51:00<2:36:00, 26.52s/it] 25%|██▍       | 115/467 [51:26<2:33:47, 26.21s/it]                                                   {'loss': 1.4331, 'grad_norm': 23.115688285424127, 'learning_rate': 9.367041003085648e-07, 'rewards/chosen': -1.386796474456787, 'rewards/rejected': -1.5730355978012085, 'rewards/accuracies': 0.6312500238418579, 'rewards/margins': 0.18623916804790497, 'logps/rejected': -0.6292142271995544, 'logps/chosen': -0.5547186136245728, 'logits/rejected': -0.9856929779052734, 'logits/chosen': -1.0445668697357178, 'epoch': 0.25}
+ 25%|██▍       | 115/467 [51:26<2:33:47, 26.21s/it] 25%|██▍       | 116/467 [51:54<2:35:38, 26.61s/it] 25%|██▌       | 117/467 [52:22<2:38:40, 27.20s/it] 25%|██▌       | 118/467 [52:47<2:34:04, 26.49s/it] 25%|██▌       | 119/467 [53:14<2:34:29, 26.64s/it] 26%|██▌       | 120/467 [53:41<2:34:47, 26.76s/it]                                                   {'loss': 1.4182, 'grad_norm': 16.77026890127666, 'learning_rate': 9.272941683504808e-07, 'rewards/chosen': -1.4613654613494873, 'rewards/rejected': -2.0669097900390625, 'rewards/accuracies': 0.7437499761581421, 'rewards/margins': 0.6055442690849304, 'logps/rejected': -0.826763927936554, 'logps/chosen': -0.5845462083816528, 'logits/rejected': -0.910631000995636, 'logits/chosen': -0.9988773465156555, 'epoch': 0.26}
+ 26%|██▌       | 120/467 [53:41<2:34:47, 26.76s/it] 26%|██▌       | 121/467 [54:12<2:42:00, 28.09s/it] 26%|██▌       | 122/467 [54:40<2:40:16, 27.87s/it] 26%|██▋       | 123/467 [55:08<2:41:04, 28.09s/it] 27%|██▋       | 124/467 [55:33<2:35:26, 27.19s/it] 27%|██▋       | 125/467 [55:59<2:32:58, 26.84s/it]                                                   {'loss': 1.3983, 'grad_norm': 20.299249543504814, 'learning_rate': 9.172866268606513e-07, 'rewards/chosen': -1.654895544052124, 'rewards/rejected': -1.9378883838653564, 'rewards/accuracies': 0.668749988079071, 'rewards/margins': 0.28299278020858765, 'logps/rejected': -0.775155246257782, 'logps/chosen': -0.6619582176208496, 'logits/rejected': -1.019165277481079, 'logits/chosen': -1.060925841331482, 'epoch': 0.27}
+ 27%|██▋       | 125/467 [55:59<2:32:58, 26.84s/it] 27%|██▋       | 126/467 [56:27<2:33:32, 27.01s/it] 27%|██▋       | 127/467 [56:51<2:29:11, 26.33s/it] 27%|██▋       | 128/467 [57:15<2:24:40, 25.61s/it] 28%|██▊       | 129/467 [57:43<2:27:42, 26.22s/it] 28%|██▊       | 130/467 [58:10<2:28:34, 26.45s/it]                                                   {'loss': 1.3564, 'grad_norm': 24.558264690442144, 'learning_rate': 9.066954722907638e-07, 'rewards/chosen': -1.675657033920288, 'rewards/rejected': -2.515779733657837, 'rewards/accuracies': 0.7250000238418579, 'rewards/margins': 0.840122401714325, 'logps/rejected': -1.0063118934631348, 'logps/chosen': -0.67026287317276, 'logits/rejected': -1.0686769485473633, 'logits/chosen': -1.075835108757019, 'epoch': 0.28}
+ 28%|██▊       | 130/467 [58:10<2:28:34, 26.45s/it] 28%|██▊       | 131/467 [58:36<2:26:57, 26.24s/it] 28%|██▊       | 132/467 [59:03<2:28:14, 26.55s/it] 28%|██▊       | 133/467 [59:28<2:25:32, 26.15s/it] 29%|██▊       | 134/467 [59:54<2:24:04, 25.96s/it] 29%|██▉       | 135/467 [1:00:20<2:24:05, 26.04s/it]                                                     {'loss': 1.342, 'grad_norm': 20.452803145166683, 'learning_rate': 8.955355173281707e-07, 'rewards/chosen': -1.8763084411621094, 'rewards/rejected': -2.2783126831054688, 'rewards/accuracies': 0.71875, 'rewards/margins': 0.40200406312942505, 'logps/rejected': -0.9113250970840454, 'logps/chosen': -0.7505235075950623, 'logits/rejected': -0.9908943176269531, 'logits/chosen': -1.0378972291946411, 'epoch': 0.29}
+ 29%|██▉       | 135/467 [1:00:20<2:24:05, 26.04s/it] 29%|██▉       | 136/467 [1:00:46<2:24:17, 26.16s/it] 29%|██▉       | 137/467 [1:01:12<2:23:16, 26.05s/it] 30%|██▉       | 138/467 [1:01:39<2:24:08, 26.29s/it] 30%|██▉       | 139/467 [1:02:06<2:24:45, 26.48s/it] 30%|██▉       | 140/467 [1:02:32<2:24:24, 26.50s/it]                                                     {'loss': 1.3403, 'grad_norm': 26.52723366262503, 'learning_rate': 8.838223701790055e-07, 'rewards/chosen': -2.337310314178467, 'rewards/rejected': -2.71272349357605, 'rewards/accuracies': 0.7250000238418579, 'rewards/margins': 0.37541332840919495, 'logps/rejected': -1.0850894451141357, 'logps/chosen': -0.9349241256713867, 'logits/rejected': -1.0829144716262817, 'logits/chosen': -1.1055816411972046, 'epoch': 0.3}
+ 30%|██▉       | 140/467 [1:02:32<2:24:24, 26.50s/it] 30%|███       | 141/467 [1:02:58<2:22:25, 26.21s/it] 30%|███       | 142/467 [1:03:24<2:21:01, 26.04s/it] 31%|███       | 143/467 [1:03:53<2:25:32, 26.95s/it] 31%|███       | 144/467 [1:04:21<2:27:27, 27.39s/it] 31%|███       | 145/467 [1:04:49<2:27:13, 27.43s/it]                                                     {'loss': 1.2764, 'grad_norm': 27.30555648716937, 'learning_rate': 8.71572412738697e-07, 'rewards/chosen': -2.5383858680725098, 'rewards/rejected': -3.3052818775177, 'rewards/accuracies': 0.737500011920929, 'rewards/margins': 0.7668956518173218, 'logps/rejected': -1.3221126794815063, 'logps/chosen': -1.0153543949127197, 'logits/rejected': -0.9698688387870789, 'logits/chosen': -0.9956777691841125, 'epoch': 0.31}
+ 31%|███       | 145/467 [1:04:49<2:27:13, 27.43s/it] 31%|███▏      | 146/467 [1:05:18<2:30:19, 28.10s/it] 31%|███▏      | 147/467 [1:05:46<2:28:57, 27.93s/it] 32%|███▏      | 148/467 [1:06:13<2:27:47, 27.80s/it] 32%|███▏      | 149/467 [1:06:41<2:26:29, 27.64s/it] 32%|███▏      | 150/467 [1:07:07<2:24:25, 27.34s/it]                                                     {'loss': 1.2855, 'grad_norm': 30.500870866060858, 'learning_rate': 8.588027776804058e-07, 'rewards/chosen': -2.9630022048950195, 'rewards/rejected': -3.6017117500305176, 'rewards/accuracies': 0.7875000238418579, 'rewards/margins': 0.6387096047401428, 'logps/rejected': -1.4406845569610596, 'logps/chosen': -1.185200810432434, 'logits/rejected': -0.9498230218887329, 'logits/chosen': -0.9700800776481628, 'epoch': 0.32}
+ 32%|███▏      | 150/467 [1:07:07<2:24:25, 27.34s/it] 32%|███▏      | 151/467 [1:07:34<2:23:18, 27.21s/it] 33%|███▎      | 152/467 [1:08:00<2:21:12, 26.90s/it] 33%|███▎      | 153/467 [1:08:25<2:17:17, 26.23s/it] 33%|███▎      | 154/467 [1:08:52<2:17:19, 26.32s/it] 33%|███▎      | 155/467 [1:09:18<2:17:10, 26.38s/it]                                                     {'loss': 1.2365, 'grad_norm': 31.672702759741455, 'learning_rate': 8.455313244934324e-07, 'rewards/chosen': -3.411040782928467, 'rewards/rejected': -4.540043830871582, 'rewards/accuracies': 0.737500011920929, 'rewards/margins': 1.1290032863616943, 'logps/rejected': -1.816017508506775, 'logps/chosen': -1.3644163608551025, 'logits/rejected': -0.8894359469413757, 'logits/chosen': -0.9143723249435425, 'epoch': 0.33}
+ 33%|███▎      | 155/467 [1:09:18<2:17:10, 26.38s/it] 33%|███▎      | 156/467 [1:09:46<2:19:32, 26.92s/it] 34%|███▎      | 157/467 [1:10:14<2:19:48, 27.06s/it] 34%|███▍      | 158/467 [1:10:39<2:17:20, 26.67s/it] 34%|███▍      | 159/467 [1:11:06<2:17:00, 26.69s/it] 34%|███▍      | 160/467 [1:11:33<2:16:13, 26.62s/it]                                                     {'loss': 1.2436, 'grad_norm': 42.00781419521962, 'learning_rate': 8.317766145051057e-07, 'rewards/chosen': -4.3249006271362305, 'rewards/rejected': -5.759701728820801, 'rewards/accuracies': 0.75, 'rewards/margins': 1.4348008632659912, 'logps/rejected': -2.3038806915283203, 'logps/chosen': -1.7299602031707764, 'logits/rejected': -0.8335658311843872, 'logits/chosen': -0.8535367846488953, 'epoch': 0.34}
+ 34%|███▍      | 160/467 [1:11:33<2:16:13, 26.62s/it] 34%|███▍      | 161/467 [1:11:57<2:12:54, 26.06s/it] 35%|███▍      | 162/467 [1:12:24<2:13:10, 26.20s/it] 35%|███▍      | 163/467 [1:12:49<2:11:29, 25.95s/it] 35%|███▌      | 164/467 [1:13:15<2:10:17, 25.80s/it] 35%|███▌      | 165/467 [1:13:43<2:13:13, 26.47s/it]                                                     {'loss': 1.1789, 'grad_norm': 29.018346076624272, 'learning_rate': 8.175578849210894e-07, 'rewards/chosen': -4.826342582702637, 'rewards/rejected': -6.214109420776367, 'rewards/accuracies': 0.731249988079071, 'rewards/margins': 1.3877665996551514, 'logps/rejected': -2.4856438636779785, 'logps/chosen': -1.9305369853973389, 'logits/rejected': -0.8083701133728027, 'logits/chosen': -0.8338901400566101, 'epoch': 0.35}
+ 35%|███▌      | 165/467 [1:13:43<2:13:13, 26.47s/it] 36%|███▌      | 166/467 [1:14:11<2:15:47, 27.07s/it] 36%|███▌      | 167/467 [1:14:40<2:17:36, 27.52s/it] 36%|███▌      | 168/467 [1:15:08<2:18:33, 27.80s/it] 36%|███▌      | 169/467 [1:15:34<2:15:05, 27.20s/it] 36%|███▋      | 170/467 [1:16:02<2:15:15, 27.33s/it]                                                     {'loss': 1.1499, 'grad_norm': 39.14623538526674, 'learning_rate': 8.028950219204099e-07, 'rewards/chosen': -4.89322566986084, 'rewards/rejected': -6.401937961578369, 'rewards/accuracies': 0.768750011920929, 'rewards/margins': 1.5087121725082397, 'logps/rejected': -2.5607752799987793, 'logps/chosen': -1.9572904109954834, 'logits/rejected': -0.7707605957984924, 'logits/chosen': -0.7946473360061646, 'epoch': 0.36}
+ 36%|███▋      | 170/467 [1:16:02<2:15:15, 27.33s/it] 37%|███▋      | 171/467 [1:16:26<2:10:11, 26.39s/it] 37%|███▋      | 172/467 [1:16:51<2:07:44, 25.98s/it] 37%|███▋      | 173/467 [1:17:18<2:08:23, 26.20s/it] 37%|███▋      | 174/467 [1:17:45<2:10:14, 26.67s/it] 37%|███▋      | 175/467 [1:18:11<2:07:53, 26.28s/it]                                                     {'loss': 1.0586, 'grad_norm': 59.8156092245748, 'learning_rate': 7.878085328428368e-07, 'rewards/chosen': -5.7357587814331055, 'rewards/rejected': -6.7740373611450195, 'rewards/accuracies': 0.75, 'rewards/margins': 1.0382788181304932, 'logps/rejected': -2.7096152305603027, 'logps/chosen': -2.2943036556243896, 'logits/rejected': -0.7142573595046997, 'logits/chosen': -0.768779456615448, 'epoch': 0.37}
+ 37%|███▋      | 175/467 [1:18:11<2:07:53, 26.28s/it] 38%|███▊      | 176/467 [1:18:38<2:09:37, 26.73s/it] 38%|███▊      | 177/467 [1:19:05<2:08:14, 26.53s/it] 38%|███▊      | 178/467 [1:19:34<2:11:32, 27.31s/it] 38%|███▊      | 179/467 [1:20:02<2:12:39, 27.64s/it] 39%|███▊      | 180/467 [1:20:28<2:09:23, 27.05s/it]                                                     {'loss': 1.0288, 'grad_norm': 49.02208573812245, 'learning_rate': 7.723195175075135e-07, 'rewards/chosen': -5.757909774780273, 'rewards/rejected': -7.471815586090088, 'rewards/accuracies': 0.800000011920929, 'rewards/margins': 1.7139055728912354, 'logps/rejected': -2.9887259006500244, 'logps/chosen': -2.303163766860962, 'logits/rejected': -0.6547490954399109, 'logits/chosen': -0.6713071465492249, 'epoch': 0.38}
+ 39%|███▊      | 180/467 [1:20:28<2:09:23, 27.05s/it] 39%|███▉      | 181/467 [1:20:57<2:11:49, 27.66s/it] 39%|███▉      | 182/467 [1:21:26<2:13:16, 28.06s/it] 39%|███▉      | 183/467 [1:21:53<2:11:57, 27.88s/it] 39%|███▉      | 184/467 [1:22:21<2:11:28, 27.88s/it] 40%|███▉      | 185/467 [1:22:47<2:07:35, 27.15s/it]                                                     {'loss': 1.0681, 'grad_norm': 50.114241774958195, 'learning_rate': 7.564496387029531e-07, 'rewards/chosen': -6.330680847167969, 'rewards/rejected': -8.316485404968262, 'rewards/accuracies': 0.8687499761581421, 'rewards/margins': 1.9858043193817139, 'logps/rejected': -3.3265938758850098, 'logps/chosen': -2.5322725772857666, 'logits/rejected': -0.6322872042655945, 'logits/chosen': -0.7031759023666382, 'epoch': 0.4}
+ 40%|███▉      | 185/467 [1:22:47<2:07:35, 27.15s/it] 40%|███▉      | 186/467 [1:23:12<2:04:45, 26.64s/it] 40%|████      | 187/467 [1:23:41<2:07:07, 27.24s/it] 40%|████      | 188/467 [1:24:07<2:05:41, 27.03s/it] 40%|████      | 189/467 [1:24:34<2:05:17, 27.04s/it] 41%|████      | 190/467 [1:25:00<2:02:56, 26.63s/it]                                                     {'loss': 0.9973, 'grad_norm': 43.41410385905166, 'learning_rate': 7.402210918896689e-07, 'rewards/chosen': -7.14475154876709, 'rewards/rejected': -9.336918830871582, 'rewards/accuracies': 0.800000011920929, 'rewards/margins': 2.192166566848755, 'logps/rejected': -3.734767198562622, 'logps/chosen': -2.857900619506836, 'logits/rejected': -0.65375816822052, 'logits/chosen': -0.6457262635231018, 'epoch': 0.41}
+ 41%|████      | 190/467 [1:25:00<2:02:56, 26.63s/it] 41%|████      | 191/467 [1:25:26<2:02:17, 26.58s/it] 41%|████      | 192/467 [1:25:54<2:03:18, 26.90s/it] 41%|████▏     | 193/467 [1:26:23<2:05:23, 27.46s/it] 42%|████▏     | 194/467 [1:26:46<1:59:23, 26.24s/it] 42%|████▏     | 195/467 [1:27:13<1:59:58, 26.47s/it]                                                     {'loss': 1.0008, 'grad_norm': 52.295970807740595, 'learning_rate': 7.236565741578162e-07, 'rewards/chosen': -7.354376316070557, 'rewards/rejected': -9.1632080078125, 'rewards/accuracies': 0.762499988079071, 'rewards/margins': 1.8088304996490479, 'logps/rejected': -3.6652824878692627, 'logps/chosen': -2.9417505264282227, 'logits/rejected': -0.5349078178405762, 'logits/chosen': -0.5577117204666138, 'epoch': 0.42}
+ 42%|████▏     | 195/467 [1:27:13<1:59:58, 26.47s/it] 42%|████▏     | 196/467 [1:27:43<2:04:03, 27.47s/it] 42%|████▏     | 197/467 [1:28:11<2:03:55, 27.54s/it] 42%|████▏     | 198/467 [1:28:40<2:06:11, 28.15s/it] 43%|████▎     | 199/467 [1:29:07<2:03:58, 27.76s/it] 43%|████▎     | 200/467 [1:29:32<1:59:35, 26.88s/it]                                                     {'loss': 0.9273, 'grad_norm': 53.992252100599345, 'learning_rate': 7.067792524832603e-07, 'rewards/chosen': -7.512259483337402, 'rewards/rejected': -9.655927658081055, 'rewards/accuracies': 0.7749999761581421, 'rewards/margins': 2.143667697906494, 'logps/rejected': -3.862370729446411, 'logps/chosen': -3.004903793334961, 'logits/rejected': -0.4895959794521332, 'logits/chosen': -0.5144085884094238, 'epoch': 0.43}
+ 43%|████▎     | 200/467 [1:29:32<1:59:35, 26.88s/it] 43%|████▎     | 201/467 [1:29:59<1:58:57, 26.83s/it] 43%|████▎     | 202/467 [1:30:25<1:57:58, 26.71s/it] 43%|████▎     | 203/467 [1:30:52<1:58:06, 26.84s/it] 44%|████▎     | 204/467 [1:31:17<1:55:27, 26.34s/it] 44%|████▍     | 205/467 [1:31:44<1:55:03, 26.35s/it]                                                     {'loss': 1.0386, 'grad_norm': 49.3964727652581, 'learning_rate': 6.896127313264642e-07, 'rewards/chosen': -8.318066596984863, 'rewards/rejected': -10.320368766784668, 'rewards/accuracies': 0.762499988079071, 'rewards/margins': 2.0023019313812256, 'logps/rejected': -4.128148078918457, 'logps/chosen': -3.3272271156311035, 'logits/rejected': -0.43907609581947327, 'logits/chosen': -0.5228335857391357, 'epoch': 0.44}
+ 44%|████▍     | 205/467 [1:31:44<1:55:03, 26.35s/it] 44%|████▍     | 206/467 [1:32:08<1:51:57, 25.74s/it] 44%|████▍     | 207/467 [1:32:37<1:55:21, 26.62s/it] 45%|████▍     | 208/467 [1:33:07<1:58:52, 27.54s/it] 45%|████▍     | 209/467 [1:33:34<1:57:50, 27.41s/it] 45%|████▍     | 210/467 [1:34:00<1:56:00, 27.08s/it]                                                     {'loss': 0.947, 'grad_norm': 52.37465928006768, 'learning_rate': 6.721810196195174e-07, 'rewards/chosen': -8.714922904968262, 'rewards/rejected': -10.610664367675781, 'rewards/accuracies': 0.8062499761581421, 'rewards/margins': 1.8957417011260986, 'logps/rejected': -4.244266033172607, 'logps/chosen': -3.485969066619873, 'logits/rejected': -0.5193942785263062, 'logits/chosen': -0.5371614694595337, 'epoch': 0.45}
+ 45%|████▍     | 210/467 [1:34:00<1:56:00, 27.08s/it] 45%|████▌     | 211/467 [1:34:28<1:56:22, 27.28s/it] 45%|████▌     | 212/467 [1:34:55<1:55:39, 27.21s/it] 46%|████▌     | 213/467 [1:35:21<1:53:21, 26.78s/it] 46%|████▌     | 214/467 [1:35:47<1:52:10, 26.60s/it] 46%|████▌     | 215/467 [1:36:14<1:52:39, 26.82s/it]                                                     {'loss': 0.9352, 'grad_norm': 63.30304756245422, 'learning_rate': 6.545084971874736e-07, 'rewards/chosen': -8.464836120605469, 'rewards/rejected': -10.732386589050293, 'rewards/accuracies': 0.800000011920929, 'rewards/margins': 2.2675509452819824, 'logps/rejected': -4.292954921722412, 'logps/chosen': -3.385934352874756, 'logits/rejected': -0.47393107414245605, 'logits/chosen': -0.5076950192451477, 'epoch': 0.46}
+ 46%|████▌     | 215/467 [1:36:14<1:52:39, 26.82s/it] 46%|████▋     | 216/467 [1:36:39<1:49:36, 26.20s/it] 46%|████▋     | 217/467 [1:37:06<1:50:10, 26.44s/it] 47%|████▋     | 218/467 [1:37:35<1:53:23, 27.32s/it] 47%|████▋     | 219/467 [1:38:02<1:52:46, 27.28s/it] 47%|████▋     | 220/467 [1:38:29<1:51:42, 27.14s/it]                                                     {'loss': 0.8842, 'grad_norm': 50.07715746805688, 'learning_rate': 6.3661988065096e-07, 'rewards/chosen': -8.331748962402344, 'rewards/rejected': -10.7562894821167, 'rewards/accuracies': 0.7562500238418579, 'rewards/margins': 2.424539804458618, 'logps/rejected': -4.302515983581543, 'logps/chosen': -3.33270001411438, 'logits/rejected': -0.5422503352165222, 'logits/chosen': -0.5706010460853577, 'epoch': 0.47}
+ 47%|████▋     | 220/467 [1:38:29<1:51:42, 27.14s/it] 47%|████▋     | 221/467 [1:38:58<1:53:05, 27.58s/it] 48%|████▊     | 222/467 [1:39:26<1:52:57, 27.66s/it] 48%|████▊     | 223/467 [1:39:54<1:53:57, 28.02s/it] 48%|████▊     | 224/467 [1:40:21<1:52:12, 27.70s/it] 48%|████▊     | 225/467 [1:40:48<1:49:58, 27.27s/it]                                                     {'loss': 0.9209, 'grad_norm': 35.57267570557055, 'learning_rate': 6.185401888577487e-07, 'rewards/chosen': -8.499489784240723, 'rewards/rejected': -10.534418106079102, 'rewards/accuracies': 0.7562500238418579, 'rewards/margins': 2.034928798675537, 'logps/rejected': -4.213767051696777, 'logps/chosen': -3.3997960090637207, 'logits/rejected': -0.5275887846946716, 'logits/chosen': -0.580278217792511, 'epoch': 0.48}
+ 48%|████▊     | 225/467 [1:40:48<1:49:58, 27.27s/it] 48%|████▊     | 226/467 [1:41:16<1:50:19, 27.47s/it] 49%|████▊     | 227/467 [1:41:45<1:52:23, 28.10s/it] 49%|████▉     | 228/467 [1:42:12<1:50:51, 27.83s/it] 49%|████▉     | 229/467 [1:42:38<1:48:05, 27.25s/it] 49%|████▉     | 230/467 [1:43:05<1:46:55, 27.07s/it]                                                     {'loss': 0.8846, 'grad_norm': 39.78522247360421, 'learning_rate': 6.002947078916364e-07, 'rewards/chosen': -8.216705322265625, 'rewards/rejected': -10.295825958251953, 'rewards/accuracies': 0.7562500238418579, 'rewards/margins': 2.0791208744049072, 'logps/rejected': -4.118330478668213, 'logps/chosen': -3.28668212890625, 'logits/rejected': -0.5876234769821167, 'logits/chosen': -0.6670597791671753, 'epoch': 0.49}
+ 49%|████▉     | 230/467 [1:43:05<1:46:55, 27.07s/it] 49%|████▉     | 231/467 [1:43:31<1:45:10, 26.74s/it] 50%|████▉     | 232/467 [1:43:59<1:46:39, 27.23s/it] 50%|████▉     | 233/467 [1:44:25<1:44:24, 26.77s/it] 50%|█████     | 234/467 [1:44:52<1:43:38, 26.69s/it] 50%|█████     | 235/467 [1:45:19<1:43:44, 26.83s/it]                                                     {'loss': 0.8524, 'grad_norm': 45.97403544884016, 'learning_rate': 5.819089557075688e-07, 'rewards/chosen': -8.432060241699219, 'rewards/rejected': -10.98790168762207, 'rewards/accuracies': 0.7875000238418579, 'rewards/margins': 2.555840492248535, 'logps/rejected': -4.395159721374512, 'logps/chosen': -3.372824192047119, 'logits/rejected': -0.6412734985351562, 'logits/chosen': -0.6912712454795837, 'epoch': 0.5}
+ 50%|█████     | 235/467 [1:45:19<1:43:44, 26.83s/it] 51%|█████     | 236/467 [1:45:48<1:46:03, 27.55s/it] 51%|█████     | 237/467 [1:46:15<1:44:49, 27.35s/it] 51%|█████     | 238/467 [1:46:40<1:41:43, 26.65s/it] 51%|█████     | 239/467 [1:47:11<1:46:24, 28.00s/it] 51%|█████▏    | 240/467 [1:47:37<1:43:17, 27.30s/it]                                                     {'loss': 0.8913, 'grad_norm': 40.06310047532807, 'learning_rate': 5.634086464424742e-07, 'rewards/chosen': -8.18222713470459, 'rewards/rejected': -10.630617141723633, 'rewards/accuracies': 0.78125, 'rewards/margins': 2.4483895301818848, 'logps/rejected': -4.252246379852295, 'logps/chosen': -3.27289080619812, 'logits/rejected': -0.6237722635269165, 'logits/chosen': -0.6299446821212769, 'epoch': 0.51}
+ 51%|█████▏    | 240/467 [1:47:37<1:43:17, 27.30s/it] 52%|█████▏    | 241/467 [1:48:03<1:41:14, 26.88s/it] 52%|█████▏    | 242/467 [1:48:31<1:42:07, 27.23s/it] 52%|█████▏    | 243/467 [1:48:59<1:43:13, 27.65s/it] 52%|█████▏    | 244/467 [1:49:26<1:41:51, 27.41s/it] 52%|█████▏    | 245/467 [1:49:54<1:41:55, 27.55s/it]                                                     {'loss': 0.7877, 'grad_norm': 39.09325168128836, 'learning_rate': 5.448196544517167e-07, 'rewards/chosen': -8.648660659790039, 'rewards/rejected': -11.5954008102417, 'rewards/accuracies': 0.84375, 'rewards/margins': 2.946739673614502, 'logps/rejected': -4.638160228729248, 'logps/chosen': -3.4594643115997314, 'logits/rejected': -0.6433712244033813, 'logits/chosen': -0.7414380311965942, 'epoch': 0.52}
+ 52%|█████▏    | 245/467 [1:49:54<1:41:55, 27.55s/it] 53%|█████▎    | 246/467 [1:50:19<1:38:19, 26.70s/it] 53%|█████▎    | 247/467 [1:50:45<1:37:58, 26.72s/it] 53%|█████▎    | 248/467 [1:51:12<1:37:43, 26.77s/it] 53%|█████▎    | 249/467 [1:51:42<1:39:59, 27.52s/it] 54%|█████▎    | 250/467 [1:52:08<1:38:30, 27.24s/it]                                                     {'loss': 0.8423, 'grad_norm': 63.05824039154921, 'learning_rate': 5.26167978121472e-07, 'rewards/chosen': -9.006478309631348, 'rewards/rejected': -11.914793014526367, 'rewards/accuracies': 0.8500000238418579, 'rewards/margins': 2.9083151817321777, 'logps/rejected': -4.7659173011779785, 'logps/chosen': -3.6025912761688232, 'logits/rejected': -0.5843411684036255, 'logits/chosen': -0.6174741983413696, 'epoch': 0.53}
+ 54%|█████▎    | 250/467 [1:52:08<1:38:30, 27.24s/it] 54%|█████▎    | 251/467 [1:52:37<1:39:32, 27.65s/it] 54%|█████▍    | 252/467 [1:53:00<1:34:34, 26.39s/it] 54%|█████▍    | 253/467 [1:53:26<1:34:01, 26.36s/it] 54%|█████▍    | 254/467 [1:53:53<1:33:13, 26.26s/it] 55%|█████▍    | 255/467 [1:54:21<1:34:37, 26.78s/it]                                                     {'loss': 0.8382, 'grad_norm': 45.5022586649385, 'learning_rate': 5.074797035076318e-07, 'rewards/chosen': -9.779658317565918, 'rewards/rejected': -12.287615776062012, 'rewards/accuracies': 0.8187500238418579, 'rewards/margins': 2.5079574584960938, 'logps/rejected': -4.915046215057373, 'logps/chosen': -3.911863327026367, 'logits/rejected': -0.6267393231391907, 'logits/chosen': -0.6631960868835449, 'epoch': 0.55}
+ 55%|█████▍    | 255/467 [1:54:21<1:34:37, 26.78s/it] 55%|█████▍    | 256/467 [1:54:46<1:32:52, 26.41s/it] 55%|█████▌    | 257/467 [1:55:11<1:30:58, 25.99s/it] 55%|█████▌    | 258/467 [1:55:38<1:31:00, 26.13s/it] 55%|█████▌    | 259/467 [1:56:03<1:29:48, 25.90s/it] 56%|█████▌    | 260/467 [1:56:28<1:28:04, 25.53s/it]                                                     {'loss': 0.8631, 'grad_norm': 53.38259903887288, 'learning_rate': 4.887809678520975e-07, 'rewards/chosen': -9.89667797088623, 'rewards/rejected': -12.543662071228027, 'rewards/accuracies': 0.824999988079071, 'rewards/margins': 2.646984338760376, 'logps/rejected': -5.017465114593506, 'logps/chosen': -3.9586715698242188, 'logits/rejected': -0.5520322918891907, 'logits/chosen': -0.6052541136741638, 'epoch': 0.56}
+ 56%|█████▌    | 260/467 [1:56:28<1:28:04, 25.53s/it] 56%|█████▌    | 261/467 [1:56:54<1:28:22, 25.74s/it] 56%|█████▌    | 262/467 [1:57:20<1:28:29, 25.90s/it] 56%|█████▋    | 263/467 [1:57:46<1:27:59, 25.88s/it] 57%|█████▋    | 264/467 [1:58:14<1:29:25, 26.43s/it] 57%|█████▋    | 265/467 [1:58:39<1:28:14, 26.21s/it]                                                     {'loss': 0.8084, 'grad_norm': 37.835625646491046, 'learning_rate': 4.700979230274829e-07, 'rewards/chosen': -10.538328170776367, 'rewards/rejected': -13.328262329101562, 'rewards/accuracies': 0.8125, 'rewards/margins': 2.7899365425109863, 'logps/rejected': -5.331305980682373, 'logps/chosen': -4.215331077575684, 'logits/rejected': -0.5399174690246582, 'logits/chosen': -0.5709387063980103, 'epoch': 0.57}
+ 57%|█████▋    | 265/467 [1:58:39<1:28:14, 26.21s/it] 57%|█████▋    | 266/467 [1:59:09<1:31:21, 27.27s/it] 57%|█████▋    | 267/467 [1:59:34<1:28:49, 26.65s/it] 57%|█████▋    | 268/467 [2:00:01<1:28:50, 26.79s/it] 58%|█████▊    | 269/467 [2:00:30<1:29:56, 27.25s/it] 58%|█████▊    | 270/467 [2:00:58<1:30:49, 27.66s/it]                                                     {'loss': 0.8032, 'grad_norm': 53.01461871262824, 'learning_rate': 4.514566989613559e-07, 'rewards/chosen': -9.096091270446777, 'rewards/rejected': -12.012422561645508, 'rewards/accuracies': 0.8374999761581421, 'rewards/margins': 2.9163310527801514, 'logps/rejected': -4.804969310760498, 'logps/chosen': -3.6384365558624268, 'logits/rejected': -0.5727846622467041, 'logits/chosen': -0.6225727796554565, 'epoch': 0.58}
+ 58%|█████▊    | 270/467 [2:00:58<1:30:49, 27.66s/it] 58%|█████▊    | 271/467 [2:01:23<1:27:47, 26.88s/it] 58%|█████▊    | 272/467 [2:01:51<1:28:09, 27.12s/it] 58%|█████▊    | 273/467 [2:02:19<1:28:14, 27.29s/it] 59%|█████▊    | 274/467 [2:02:47<1:28:43, 27.58s/it] 59%|█████▉    | 275/467 [2:03:12<1:25:44, 26.79s/it]                                                     {'loss': 0.878, 'grad_norm': 38.92872397084735, 'learning_rate': 4.328833670911724e-07, 'rewards/chosen': -9.200883865356445, 'rewards/rejected': -11.79206657409668, 'rewards/accuracies': 0.8187500238418579, 'rewards/margins': 2.591181516647339, 'logps/rejected': -4.716826438903809, 'logps/chosen': -3.6803536415100098, 'logits/rejected': -0.5669853091239929, 'logits/chosen': -0.6388397216796875, 'epoch': 0.59}
+ 59%|█████▉    | 275/467 [2:03:12<1:25:44, 26.79s/it] 59%|█████▉    | 276/467 [2:03:40<1:26:33, 27.19s/it] 59%|█████▉    | 277/467 [2:04:06<1:24:31, 26.69s/it] 60%|█████▉    | 278/467 [2:04:30<1:21:37, 25.91s/it] 60%|█████▉    | 279/467 [2:04:55<1:20:35, 25.72s/it] 60%|█████▉    | 280/467 [2:05:21<1:20:13, 25.74s/it]                                                     {'loss': 0.8278, 'grad_norm': 43.28965666827907, 'learning_rate': 4.144039039010124e-07, 'rewards/chosen': -9.403914451599121, 'rewards/rejected': -12.1908597946167, 'rewards/accuracies': 0.8062499761581421, 'rewards/margins': 2.7869458198547363, 'logps/rejected': -4.876344203948975, 'logps/chosen': -3.761565685272217, 'logits/rejected': -0.712674081325531, 'logits/chosen': -0.7517099976539612, 'epoch': 0.6}
+ 60%|█████▉    | 280/467 [2:05:21<1:20:13, 25.74s/it] 60%|██████    | 281/467 [2:05:46<1:19:19, 25.59s/it] 60%|██████    | 282/467 [2:06:13<1:20:18, 26.04s/it] 61%|██████    | 283/467 [2:06:40<1:20:38, 26.30s/it] 61%|██████    | 284/467 [2:07:07<1:21:07, 26.60s/it] 61%|██████    | 285/467 [2:07:35<1:21:26, 26.85s/it]                                                     {'loss': 0.6701, 'grad_norm': 46.37283951475693, 'learning_rate': 3.960441545911204e-07, 'rewards/chosen': -9.774145126342773, 'rewards/rejected': -12.979395866394043, 'rewards/accuracies': 0.8500000238418579, 'rewards/margins': 3.2052505016326904, 'logps/rejected': -5.191758155822754, 'logps/chosen': -3.9096579551696777, 'logits/rejected': -0.6091086268424988, 'logits/chosen': -0.6907120943069458, 'epoch': 0.61}
+ 61%|██████    | 285/467 [2:07:35<1:21:26, 26.85s/it] 61%|██████    | 286/467 [2:08:02<1:20:57, 26.83s/it] 61%|██████▏   | 287/467 [2:08:27<1:19:02, 26.34s/it] 62%|██████▏   | 288/467 [2:08:54<1:19:26, 26.63s/it] 62%|██████▏   | 289/467 [2:09:23<1:21:13, 27.38s/it] 62%|██████▏   | 290/467 [2:09:50<1:20:38, 27.34s/it]                                                     {'loss': 0.8325, 'grad_norm': 47.5967114009172, 'learning_rate': 3.778297969310529e-07, 'rewards/chosen': -9.718877792358398, 'rewards/rejected': -12.477339744567871, 'rewards/accuracies': 0.8187500238418579, 'rewards/margins': 2.7584621906280518, 'logps/rejected': -4.990936279296875, 'logps/chosen': -3.8875510692596436, 'logits/rejected': -0.6131510734558105, 'logits/chosen': -0.6953595876693726, 'epoch': 0.62}
+ 62%|██████▏   | 290/467 [2:09:50<1:20:38, 27.34s/it] 62%|██████▏   | 291/467 [2:10:20<1:22:11, 28.02s/it] 63%|██████▎   | 292/467 [2:10:47<1:20:24, 27.57s/it] 63%|██████▎   | 293/467 [2:11:14<1:19:40, 27.47s/it] 63%|██████▎   | 294/467 [2:11:41<1:19:22, 27.53s/it] 63%|██████▎   | 295/467 [2:12:08<1:18:17, 27.31s/it]                                                     {'loss': 0.7297, 'grad_norm': 46.79155977183782, 'learning_rate': 3.5978630534699865e-07, 'rewards/chosen': -9.2520170211792, 'rewards/rejected': -12.097265243530273, 'rewards/accuracies': 0.8062499761581421, 'rewards/margins': 2.845247507095337, 'logps/rejected': -4.838906288146973, 'logps/chosen': -3.7008070945739746, 'logits/rejected': -0.6146784424781799, 'logits/chosen': -0.6609585881233215, 'epoch': 0.63}
+ 63%|██████▎   | 295/467 [2:12:08<1:18:17, 27.31s/it] 63%|██████▎   | 296/467 [2:12:36<1:17:57, 27.35s/it] 64%|██████▎   | 297/467 [2:13:01<1:15:30, 26.65s/it] 64%|██████▍   | 298/467 [2:13:28<1:16:01, 26.99s/it] 64%|██████▍   | 299/467 [2:13:54<1:14:38, 26.66s/it] 64%|██████▍   | 300/467 [2:14:21<1:14:04, 26.62s/it]                                                     {'loss': 0.9483, 'grad_norm': 49.04349455461831, 'learning_rate': 3.4193891529348795e-07, 'rewards/chosen': -10.27973747253418, 'rewards/rejected': -12.749013900756836, 'rewards/accuracies': 0.762499988079071, 'rewards/margins': 2.469276189804077, 'logps/rejected': -5.099605560302734, 'logps/chosen': -4.1118950843811035, 'logits/rejected': -0.479193776845932, 'logits/chosen': -0.5210562348365784, 'epoch': 0.64}
+ 64%|██████▍   | 300/467 [2:14:21<1:14:04, 26.62s/it] 64%|██████▍   | 301/467 [2:14:47<1:13:34, 26.59s/it] 65%|██████▍   | 302/467 [2:15:17<1:15:11, 27.34s/it] 65%|██████▍   | 303/467 [2:15:42<1:13:31, 26.90s/it] 65%|██████▌   | 304/467 [2:16:12<1:15:02, 27.62s/it] 65%|██████▌   | 305/467 [2:16:37<1:12:43, 26.93s/it]                                                     {'loss': 0.8295, 'grad_norm': 38.72476744648026, 'learning_rate': 3.243125879593286e-07, 'rewards/chosen': -9.854573249816895, 'rewards/rejected': -12.368618965148926, 'rewards/accuracies': 0.793749988079071, 'rewards/margins': 2.5140466690063477, 'logps/rejected': -4.947447776794434, 'logps/chosen': -3.941828966140747, 'logits/rejected': -0.5490232110023499, 'logits/chosen': -0.6492729783058167, 'epoch': 0.65}
+ 65%|██████▌   | 305/467 [2:16:37<1:12:43, 26.93s/it] 66%|██████▌   | 306/467 [2:17:01<1:10:06, 26.13s/it] 66%|██████▌   | 307/467 [2:17:29<1:10:38, 26.49s/it] 66%|██████▌   | 308/467 [2:17:55<1:10:30, 26.61s/it] 66%|██████▌   | 309/467 [2:18:24<1:11:34, 27.18s/it] 66%|██████▋   | 310/467 [2:18:51<1:10:46, 27.05s/it]                                                     {'loss': 0.8178, 'grad_norm': 50.999227027909754, 'learning_rate': 3.069319753571269e-07, 'rewards/chosen': -10.107980728149414, 'rewards/rejected': -13.027798652648926, 'rewards/accuracies': 0.8374999761581421, 'rewards/margins': 2.9198172092437744, 'logps/rejected': -5.211119651794434, 'logps/chosen': -4.043192386627197, 'logits/rejected': -0.6723056435585022, 'logits/chosen': -0.7191243171691895, 'epoch': 0.66}
+ 66%|██████▋   | 310/467 [2:18:51<1:10:46, 27.05s/it] 67%|██████▋   | 311/467 [2:19:17<1:09:43, 26.82s/it] 67%|██████▋   | 312/467 [2:19:43<1:08:52, 26.66s/it] 67%|██████▋   | 313/467 [2:20:10<1:08:33, 26.71s/it] 67%|██████▋   | 314/467 [2:20:36<1:07:11, 26.35s/it] 67%|██████▋   | 315/467 [2:21:02<1:07:02, 26.46s/it]                                                     {'loss': 0.8184, 'grad_norm': 49.9938645184984, 'learning_rate': 2.898213858452173e-07, 'rewards/chosen': -10.101465225219727, 'rewards/rejected': -13.026128768920898, 'rewards/accuracies': 0.8500000238418579, 'rewards/margins': 2.9246644973754883, 'logps/rejected': -5.210452079772949, 'logps/chosen': -4.040585994720459, 'logits/rejected': -0.5842748880386353, 'logits/chosen': -0.6923729181289673, 'epoch': 0.67}
+ 67%|██████▋   | 315/467 [2:21:02<1:07:02, 26.46s/it] 68%|██████▊   | 316/467 [2:21:31<1:08:08, 27.07s/it] 68%|██████▊   | 317/467 [2:21:59<1:08:19, 27.33s/it] 68%|██████▊   | 318/467 [2:22:26<1:07:59, 27.38s/it] 68%|██████▊   | 319/467 [2:22:53<1:06:50, 27.10s/it] 69%|██████▊   | 320/467 [2:23:19<1:05:32, 26.75s/it]                                                     {'loss': 0.7502, 'grad_norm': 63.02060928974209, 'learning_rate': 2.730047501302266e-07, 'rewards/chosen': -10.617971420288086, 'rewards/rejected': -14.11120319366455, 'rewards/accuracies': 0.856249988079071, 'rewards/margins': 3.4932315349578857, 'logps/rejected': -5.644481182098389, 'logps/chosen': -4.247188091278076, 'logits/rejected': -0.6568723917007446, 'logits/chosen': -0.6785680055618286, 'epoch': 0.68}
+ 69%|██████▊   | 320/467 [2:23:19<1:05:32, 26.75s/it] 69%|██████▊   | 321/467 [2:23:47<1:05:56, 27.10s/it] 69%|██████▉   | 322/467 [2:24:14<1:05:57, 27.29s/it] 69%|██████▉   | 323/467 [2:24:40<1:04:26, 26.85s/it] 69%|██████▉   | 324/467 [2:25:06<1:03:37, 26.69s/it] 70%|██████▉   | 325/467 [2:25:33<1:02:46, 26.52s/it]                                                     {'loss': 0.7725, 'grad_norm': 49.74248182807322, 'learning_rate': 2.5650558779781635e-07, 'rewards/chosen': -10.947015762329102, 'rewards/rejected': -14.692761421203613, 'rewards/accuracies': 0.8500000238418579, 'rewards/margins': 3.745744228363037, 'logps/rejected': -5.877103328704834, 'logps/chosen': -4.378806114196777, 'logits/rejected': -0.6528199911117554, 'logits/chosen': -0.7468307018280029, 'epoch': 0.69}
+ 70%|██████▉   | 325/467 [2:25:33<1:02:46, 26.52s/it] 70%|██████▉   | 326/467 [2:26:02<1:04:05, 27.28s/it] 70%|███████   | 327/467 [2:26:26<1:01:32, 26.37s/it] 70%|███████   | 328/467 [2:26:55<1:02:57, 27.18s/it] 70%|███████   | 329/467 [2:27:22<1:02:28, 27.16s/it] 71%|███████   | 330/467 [2:27:49<1:02:11, 27.24s/it]                                                     {'loss': 0.8004, 'grad_norm': 39.35769448460357, 'learning_rate': 2.403469744184154e-07, 'rewards/chosen': -10.94829273223877, 'rewards/rejected': -13.646944999694824, 'rewards/accuracies': 0.824999988079071, 'rewards/margins': 2.698652744293213, 'logps/rejected': -5.458778381347656, 'logps/chosen': -4.379317283630371, 'logits/rejected': -0.5348566174507141, 'logits/chosen': -0.6175782680511475, 'epoch': 0.71}
+ 71%|███████   | 330/467 [2:27:49<1:02:11, 27.24s/it] 71%|███████   | 331/467 [2:28:16<1:01:32, 27.15s/it] 71%|███████   | 332/467 [2:28:43<1:00:47, 27.02s/it] 71%|███████▏  | 333/467 [2:29:08<58:50, 26.35s/it]   72%|███████▏  | 334/467 [2:29:38<1:00:51, 27.45s/it] 72%|███████▏  | 335/467 [2:30:06<1:01:03, 27.75s/it]                                                     {'loss': 0.7326, 'grad_norm': 42.80445639334705, 'learning_rate': 2.2455150927394878e-07, 'rewards/chosen': -10.754598617553711, 'rewards/rejected': -13.843243598937988, 'rewards/accuracies': 0.8374999761581421, 'rewards/margins': 3.0886447429656982, 'logps/rejected': -5.53729772567749, 'logps/chosen': -4.301839351654053, 'logits/rejected': -0.5655622482299805, 'logits/chosen': -0.6059099435806274, 'epoch': 0.72}
+ 72%|███████▏  | 335/467 [2:30:06<1:01:03, 27.75s/it] 72%|███████▏  | 336/467 [2:30:34<1:00:21, 27.65s/it] 72%|███████▏  | 337/467 [2:30:59<58:30, 27.01s/it]   72%|███████▏  | 338/467 [2:31:25<57:17, 26.65s/it] 73%|███████▎  | 339/467 [2:31:51<56:18, 26.40s/it] 73%|███████▎  | 340/467 [2:32:17<55:49, 26.37s/it]                                                   {'loss': 0.7918, 'grad_norm': 51.408950490444006, 'learning_rate': 2.0914128375069722e-07, 'rewards/chosen': -9.94651985168457, 'rewards/rejected': -13.20177936553955, 'rewards/accuracies': 0.8687499761581421, 'rewards/margins': 3.2552578449249268, 'logps/rejected': -5.2807111740112305, 'logps/chosen': -3.9786083698272705, 'logits/rejected': -0.6336539387702942, 'logits/chosen': -0.6969559192657471, 'epoch': 0.73}
+ 73%|███████▎  | 340/467 [2:32:17<55:49, 26.37s/it] 73%|███████▎  | 341/467 [2:32:45<56:30, 26.91s/it] 73%|███████▎  | 342/467 [2:33:11<55:14, 26.51s/it] 73%|███████▎  | 343/467 [2:33:37<54:31, 26.38s/it] 74%|███████▎  | 344/467 [2:34:06<55:31, 27.09s/it] 74%|███████▍  | 345/467 [2:34:34<55:55, 27.50s/it]                                                   {'loss': 0.7803, 'grad_norm': 46.2741618232142, 'learning_rate': 1.9413785044249676e-07, 'rewards/chosen': -10.668214797973633, 'rewards/rejected': -14.167187690734863, 'rewards/accuracies': 0.893750011920929, 'rewards/margins': 3.4989731311798096, 'logps/rejected': -5.666875839233398, 'logps/chosen': -4.2672858238220215, 'logits/rejected': -0.6529925465583801, 'logits/chosen': -0.6941946744918823, 'epoch': 0.74}
+ 74%|███████▍  | 345/467 [2:34:34<55:55, 27.50s/it] 74%|███████▍  | 346/467 [2:35:00<54:32, 27.05s/it] 74%|███████▍  | 347/467 [2:35:28<54:35, 27.30s/it] 75%|███████▍  | 348/467 [2:35:55<53:46, 27.12s/it] 75%|███████▍  | 349/467 [2:36:22<53:06, 27.01s/it] 75%|███████▍  | 350/467 [2:36:49<52:52, 27.12s/it]                                                   {'loss': 0.7493, 'grad_norm': 46.10678770534329, 'learning_rate': 1.7956219300748792e-07, 'rewards/chosen': -9.743430137634277, 'rewards/rejected': -12.91081714630127, 'rewards/accuracies': 0.831250011920929, 'rewards/margins': 3.167383909225464, 'logps/rejected': -5.164326190948486, 'logps/chosen': -3.8973727226257324, 'logits/rejected': -0.6955029368400574, 'logits/chosen': -0.7147095799446106, 'epoch': 0.75}
+ 75%|███████▍  | 350/467 [2:36:49<52:52, 27.12s/it] 75%|███████▌  | 351/467 [2:37:17<52:44, 27.28s/it] 75%|███████▌  | 352/467 [2:37:45<52:47, 27.54s/it] 76%|███████▌  | 353/467 [2:38:14<53:16, 28.04s/it] 76%|███████▌  | 354/467 [2:38:44<53:49, 28.58s/it] 76%|███████▌  | 355/467 [2:39:12<53:07, 28.46s/it]                                                   {'loss': 0.7035, 'grad_norm': 43.11892136912228, 'learning_rate': 1.6543469682057104e-07, 'rewards/chosen': -10.208775520324707, 'rewards/rejected': -13.41859245300293, 'rewards/accuracies': 0.856249988079071, 'rewards/margins': 3.2098171710968018, 'logps/rejected': -5.36743688583374, 'logps/chosen': -4.083510398864746, 'logits/rejected': -0.5739885568618774, 'logits/chosen': -0.5745077133178711, 'epoch': 0.76}
+ 76%|███████▌  | 355/467 [2:39:12<53:07, 28.46s/it] 76%|███████▌  | 356/467 [2:39:39<51:43, 27.96s/it] 76%|███████▋  | 357/467 [2:40:06<50:55, 27.77s/it] 77%|███████▋  | 358/467 [2:40:30<48:18, 26.59s/it] 77%|███████▋  | 359/467 [2:40:56<47:37, 26.46s/it] 77%|███████▋  | 360/467 [2:41:23<47:33, 26.67s/it]                                                   {'loss': 0.7908, 'grad_norm': 47.3777402980346, 'learning_rate': 1.5177512046261666e-07, 'rewards/chosen': -10.200235366821289, 'rewards/rejected': -13.885045051574707, 'rewards/accuracies': 0.8125, 'rewards/margins': 3.6848087310791016, 'logps/rejected': -5.554018020629883, 'logps/chosen': -4.080094337463379, 'logits/rejected': -0.6376675963401794, 'logits/chosen': -0.6652762293815613, 'epoch': 0.77}
+ 77%|███████▋  | 360/467 [2:41:23<47:33, 26.67s/it] 77%|███████▋  | 361/467 [2:41:49<46:43, 26.45s/it] 78%|███████▊  | 362/467 [2:42:18<47:24, 27.09s/it] 78%|███████▊  | 363/467 [2:42:45<47:11, 27.22s/it] 78%|███████▊  | 364/467 [2:43:12<46:19, 26.99s/it] 78%|███████▊  | 365/467 [2:43:37<45:03, 26.51s/it]                                                   {'loss': 0.7269, 'grad_norm': 42.35126345780461, 'learning_rate': 1.3860256808630427e-07, 'rewards/chosen': -10.400849342346191, 'rewards/rejected': -14.035197257995605, 'rewards/accuracies': 0.8374999761581421, 'rewards/margins': 3.6343493461608887, 'logps/rejected': -5.614079475402832, 'logps/chosen': -4.160338878631592, 'logits/rejected': -0.60911625623703, 'logits/chosen': -0.7390018701553345, 'epoch': 0.78}
+ 78%|███████▊  | 365/467 [2:43:37<45:03, 26.51s/it] 78%|███████▊  | 366/467 [2:44:02<43:30, 25.85s/it] 79%|███████▊  | 367/467 [2:44:27<43:08, 25.89s/it] 79%|███████▉  | 368/467 [2:44:53<42:19, 25.65s/it] 79%|███████▉  | 369/467 [2:45:21<43:08, 26.41s/it] 79%|███████▉  | 370/467 [2:45:48<43:00, 26.60s/it]                                                   {'loss': 0.7781, 'grad_norm': 56.783082303424074, 'learning_rate': 1.2593546269723647e-07, 'rewards/chosen': -10.225667953491211, 'rewards/rejected': -13.21320915222168, 'rewards/accuracies': 0.831250011920929, 'rewards/margins': 2.987541675567627, 'logps/rejected': -5.28528356552124, 'logps/chosen': -4.090267181396484, 'logits/rejected': -0.6191793084144592, 'logits/chosen': -0.6535335779190063, 'epoch': 0.79}
+ 79%|███████▉  | 370/467 [2:45:48<43:00, 26.60s/it] 79%|███████▉  | 371/467 [2:46:13<41:53, 26.18s/it] 80%|███████▉  | 372/467 [2:46:40<41:58, 26.51s/it] 80%|███████▉  | 373/467 [2:47:08<41:57, 26.78s/it] 80%|████████  | 374/467 [2:47:33<40:57, 26.43s/it] 80%|████████  | 375/467 [2:47:59<40:17, 26.28s/it]                                                   {'loss': 0.6833, 'grad_norm': 41.66139787555119, 'learning_rate': 1.1379152038770029e-07, 'rewards/chosen': -10.67398738861084, 'rewards/rejected': -13.928608894348145, 'rewards/accuracies': 0.875, 'rewards/margins': 3.25462007522583, 'logps/rejected': -5.5714430809021, 'logps/chosen': -4.269595146179199, 'logits/rejected': -0.6696565747261047, 'logits/chosen': -0.6827294826507568, 'epoch': 0.8}
+ 80%|████████  | 375/467 [2:47:59<40:17, 26.28s/it] 81%|████████  | 376/467 [2:48:26<40:01, 26.39s/it] 81%|████████  | 377/467 [2:48:51<38:51, 25.90s/it] 81%|████████  | 378/467 [2:49:18<38:58, 26.28s/it] 81%|████████  | 379/467 [2:49:47<40:01, 27.29s/it] 81%|████████▏ | 380/467 [2:50:16<40:07, 27.68s/it]                                                   {'loss': 0.79, 'grad_norm': 71.14221916858493, 'learning_rate': 1.0218772555910954e-07, 'rewards/chosen': -10.072470664978027, 'rewards/rejected': -13.20030403137207, 'rewards/accuracies': 0.8500000238418579, 'rewards/margins': 3.1278326511383057, 'logps/rejected': -5.280121803283691, 'logps/chosen': -4.028988361358643, 'logits/rejected': -0.6687701940536499, 'logits/chosen': -0.709218442440033, 'epoch': 0.81}
+ 81%|████████▏ | 380/467 [2:50:16<40:07, 27.68s/it] 82%|████████▏ | 381/467 [2:50:45<40:02, 27.94s/it] 82%|████████▏ | 382/467 [2:51:10<38:40, 27.30s/it] 82%|████████▏ | 383/467 [2:51:37<37:48, 27.00s/it] 82%|████████▏ | 384/467 [2:52:07<38:37, 27.93s/it] 82%|████████▏ | 385/467 [2:52:33<37:26, 27.39s/it]                                                   {'loss': 0.6909, 'grad_norm': 42.25617410538258, 'learning_rate': 9.114030716778432e-08, 'rewards/chosen': -10.261972427368164, 'rewards/rejected': -14.340555191040039, 'rewards/accuracies': 0.856249988079071, 'rewards/margins': 4.078583717346191, 'logps/rejected': -5.736221790313721, 'logps/chosen': -4.104788780212402, 'logits/rejected': -0.6447485685348511, 'logits/chosen': -0.6918102502822876, 'epoch': 0.82}
+ 82%|████████▏ | 385/467 [2:52:33<37:26, 27.39s/it] 83%|████████▎ | 386/467 [2:52:59<36:22, 26.94s/it] 83%|████████▎ | 387/467 [2:53:25<35:27, 26.59s/it] 83%|████████▎ | 388/467 [2:53:52<35:11, 26.73s/it] 83%|████████▎ | 389/467 [2:54:20<35:30, 27.31s/it] 84%|████████▎ | 390/467 [2:54:46<34:26, 26.83s/it]                                                   {'loss': 0.7631, 'grad_norm': 54.33327433144023, 'learning_rate': 8.066471602728803e-08, 'rewards/chosen': -10.660463333129883, 'rewards/rejected': -14.097650527954102, 'rewards/accuracies': 0.875, 'rewards/margins': 3.437187910079956, 'logps/rejected': -5.639060020446777, 'logps/chosen': -4.264184951782227, 'logits/rejected': -0.6640996932983398, 'logits/chosen': -0.711421012878418, 'epoch': 0.83}
+ 84%|████████▎ | 390/467 [2:54:46<34:26, 26.83s/it] 84%|████████▎ | 391/467 [2:55:11<33:22, 26.34s/it] 84%|████████▍ | 392/467 [2:55:37<32:33, 26.05s/it] 84%|████████▍ | 393/467 [2:56:02<31:49, 25.81s/it] 84%|████████▍ | 394/467 [2:56:28<31:23, 25.80s/it] 85%|████████▍ | 395/467 [2:56:54<31:19, 26.10s/it]                                                   {'loss': 0.7584, 'grad_norm': 43.16056499949137, 'learning_rate': 7.077560319906694e-08, 'rewards/chosen': -10.199991226196289, 'rewards/rejected': -13.424860954284668, 'rewards/accuracies': 0.8374999761581421, 'rewards/margins': 3.2248692512512207, 'logps/rejected': -5.3699445724487305, 'logps/chosen': -4.079996109008789, 'logits/rejected': -0.677092969417572, 'logits/chosen': -0.7242591381072998, 'epoch': 0.84}
+ 85%|████████▍ | 395/467 [2:56:54<31:19, 26.10s/it] 85%|████████▍ | 396/467 [2:57:22<31:34, 26.69s/it] 85%|████████▌ | 397/467 [2:57:47<30:24, 26.06s/it] 85%|████████▌ | 398/467 [2:58:13<30:00, 26.10s/it] 85%|████████▌ | 399/467 [2:58:39<29:35, 26.10s/it] 86%|████████▌ | 400/467 [2:59:06<29:22, 26.31s/it]                                                   {'loss': 0.7108, 'grad_norm': 38.47129853480111, 'learning_rate': 6.148679950161672e-08, 'rewards/chosen': -10.553030014038086, 'rewards/rejected': -13.50909423828125, 'rewards/accuracies': 0.8500000238418579, 'rewards/margins': 2.956063985824585, 'logps/rejected': -5.403637886047363, 'logps/chosen': -4.221212387084961, 'logits/rejected': -0.6498729586601257, 'logits/chosen': -0.6891533136367798, 'epoch': 0.86}
+ 86%|████████▌ | 400/467 [2:59:06<29:22, 26.31s/it][INFO|trainer.py:3614] 2025-10-29 18:48:16,806 >> ***** Running Evaluation *****
+[INFO|trainer.py:3616] 2025-10-29 18:48:16,807 >>   Num examples = 1961
+[INFO|trainer.py:3619] 2025-10-29 18:48:16,807 >>   Batch size = 4
+
+  0%|          | 0/123 [00:00<?, ?it/s][A
+  2%|▏         | 2/123 [00:00<00:51,  2.34it/s][A
+  2%|▏         | 3/123 [00:01<01:10,  1.70it/s][A
+  3%|▎         | 4/123 [00:02<01:13,  1.62it/s][A
+  4%|▍         | 5/123 [00:03<01:50,  1.07it/s][A
+  5%|▍         | 6/123 [00:04<01:40,  1.16it/s][A
+  6%|▌         | 7/123 [00:05<01:48,  1.07it/s][A
+  7%|▋         | 8/123 [00:07<02:23,  1.24s/it][A
+  7%|▋         | 9/123 [00:08<02:12,  1.16s/it][A
+  8%|▊         | 10/123 [00:10<02:38,  1.41s/it][A
+  9%|▉         | 11/123 [00:12<02:59,  1.60s/it][A
+ 10%|▉         | 12/123 [00:13<02:30,  1.36s/it][A
+ 11%|█         | 13/123 [00:14<02:15,  1.23s/it][A
+ 11%|█▏        | 14/123 [00:14<01:54,  1.05s/it][A
+ 12%|█▏        | 15/123 [00:15<01:40,  1.08it/s][A
+ 13%|█▎        | 16/123 [00:16<01:33,  1.15it/s][A
+ 14%|█▍        | 17/123 [00:17<01:34,  1.12it/s][A
+ 15%|█▍        | 18/123 [00:18<01:32,  1.13it/s][A
+ 15%|█▌        | 19/123 [00:19<01:32,  1.12it/s][A
+ 16%|█▋        | 20/123 [00:19<01:31,  1.12it/s][A
+ 17%|█▋        | 21/123 [00:20<01:25,  1.19it/s][A
+ 18%|█▊        | 22/123 [00:21<01:20,  1.26it/s][A
+ 19%|█▊        | 23/123 [00:21<01:13,  1.35it/s][A
+ 20%|█▉        | 24/123 [00:22<01:21,  1.21it/s][A
+ 20%|██        | 25/123 [00:23<01:21,  1.20it/s][A
+ 21%|██        | 26/123 [00:24<01:26,  1.12it/s][A
+ 22%|██▏       | 27/123 [00:25<01:30,  1.07it/s][A
+ 23%|██▎       | 28/123 [00:26<01:24,  1.13it/s][A
+ 24%|██▎       | 29/123 [00:27<01:19,  1.18it/s][A
+ 24%|██▍       | 30/123 [00:28<01:18,  1.18it/s][A
+ 25%|██▌       | 31/123 [00:28<01:11,  1.29it/s][A
+ 26%|██▌       | 32/123 [00:29<01:07,  1.35it/s][A
+ 27%|██▋       | 33/123 [00:30<01:04,  1.39it/s][A
+ 28%|██▊       | 34/123 [00:31<01:13,  1.20it/s][A
+ 28%|██▊       | 35/123 [00:32<01:14,  1.17it/s][A
+ 29%|██▉       | 36/123 [00:33<01:16,  1.14it/s][A
+ 30%|███       | 37/123 [00:34<01:21,  1.06it/s][A
+ 31%|███       | 38/123 [00:34<01:15,  1.12it/s][A
+ 32%|███▏      | 39/123 [00:37<01:43,  1.23s/it][A
+ 33%|███▎      | 40/123 [00:37<01:26,  1.04s/it][A
+ 33%|███▎      | 41/123 [00:38<01:16,  1.07it/s][A
+ 34%|███▍      | 42/123 [00:39<01:17,  1.04it/s][A
+ 35%|███▍      | 43/123 [00:41<01:36,  1.21s/it][A
+ 36%|███▌      | 44/123 [00:41<01:26,  1.10s/it][A
+ 37%|███▋      | 45/123 [00:43<01:27,  1.12s/it][A
+ 37%|███▋      | 46/123 [00:43<01:15,  1.02it/s][A
+ 38%|███▊      | 47/123 [00:44<01:08,  1.10it/s][A
+ 39%|███▉      | 48/123 [00:45<01:05,  1.15it/s][A
+ 40%|███▉      | 49/123 [00:46<01:03,  1.17it/s][A
+ 41%|████      | 50/123 [00:47<01:05,  1.12it/s][A
+ 41%|████▏     | 51/123 [00:47<01:00,  1.20it/s][A
+ 42%|████▏     | 52/123 [00:48<00:59,  1.19it/s][A
+ 43%|████▎     | 53/123 [00:49<00:54,  1.27it/s][A
+ 44%|████▍     | 54/123 [00:49<00:52,  1.33it/s][A
+ 45%|████▍     | 55/123 [00:51<00:58,  1.16it/s][A
+ 46%|████▌     | 56/123 [00:52<01:10,  1.05s/it][A
+ 46%|████▋     | 57/123 [00:53<01:08,  1.03s/it][A
+ 47%|████▋     | 58/123 [00:55<01:24,  1.31s/it][A
+ 48%|████▊     | 59/123 [00:56<01:18,  1.22s/it][A
+ 49%|████▉     | 60/123 [00:57<01:07,  1.07s/it][A
+ 50%|████▉     | 61/123 [00:58<01:01,  1.00it/s][A
+ 50%|█████     | 62/123 [00:59<01:06,  1.09s/it][A
+ 51%|█████     | 63/123 [01:00<00:58,  1.02it/s][A
+ 52%|█████▏    | 64/123 [01:01<00:59,  1.01s/it][A
+ 53%|█████▎    | 65/123 [01:02<01:07,  1.17s/it][A
+ 54%|█████▎    | 66/123 [01:03<01:02,  1.10s/it][A
+ 54%|█████▍    | 67/123 [01:04<00:58,  1.04s/it][A
+ 55%|█████▌    | 68/123 [01:05<00:58,  1.06s/it][A
+ 56%|█████▌    | 69/123 [01:07<01:05,  1.21s/it][A
+ 57%|█████▋    | 70/123 [01:08<01:01,  1.16s/it][A
+ 58%|█████▊    | 71/123 [01:09<00:58,  1.13s/it][A
+ 59%|█████▊    | 72/123 [01:10<00:51,  1.00s/it][A
+ 59%|█████▉    | 73/123 [01:11<00:52,  1.05s/it][A
+ 60%|██████    | 74/123 [01:11<00:45,  1.07it/s][A
+ 61%|██████    | 75/123 [01:12<00:43,  1.10it/s][A
+ 62%|██████▏   | 76/123 [01:13<00:40,  1.16it/s][A
+ 63%|██████▎   | 77/123 [01:14<00:39,  1.16it/s][A
+ 63%|██████▎   | 78/123 [01:15<00:38,  1.16it/s][A
+ 64%|██████▍   | 79/123 [01:16<00:40,  1.10it/s][A
+ 65%|██████▌   | 80/123 [01:16<00:37,  1.15it/s][A
+ 66%|██████▌   | 81/123 [01:18<00:38,  1.08it/s][A
+ 67%|██████▋   | 82/123 [01:19<00:41,  1.00s/it][A
+ 67%|██████▋   | 83/123 [01:20<00:38,  1.03it/s][A
+ 68%|██████▊   | 84/123 [01:20<00:35,  1.11it/s][A
+ 69%|██████▉   | 85/123 [01:21<00:34,  1.09it/s][A
+ 70%|██████▉   | 86/123 [01:22<00:31,  1.18it/s][A
+ 71%|███████   | 87/123 [01:23<00:30,  1.18it/s][A
+ 72%|███████▏  | 88/123 [01:25<00:42,  1.23s/it][A
+ 72%|███████▏  | 89/123 [01:27<00:48,  1.43s/it][A
+ 73%|███████▎  | 90/123 [01:28<00:42,  1.29s/it][A
+ 74%|███████▍  | 91/123 [01:28<00:34,  1.07s/it][A
+ 75%|███████▍  | 92/123 [01:30<00:33,  1.09s/it][A
+ 76%|███████▌  | 93/123 [01:31<00:36,  1.22s/it][A
+ 76%|███████▋  | 94/123 [01:32<00:30,  1.06s/it][A
+ 77%|███████▋  | 95/123 [01:33<00:27,  1.02it/s][A
+ 78%|███████▊  | 96/123 [01:33<00:24,  1.11it/s][A
+ 79%|███████▉  | 97/123 [01:34<00:25,  1.04it/s][A
+ 80%|███████▉  | 98/123 [01:35<00:23,  1.07it/s][A
+ 80%|████████  | 99/123 [01:36<00:22,  1.07it/s][A
+ 81%|████████▏ | 100/123 [01:37<00:20,  1.12it/s][A
+ 82%|████████▏ | 101/123 [01:38<00:19,  1.12it/s][A
+ 83%|████████▎ | 102/123 [01:39<00:18,  1.15it/s][A
+ 84%|████████▎ | 103/123 [01:39<00:16,  1.21it/s][A
+ 85%|████████▍ | 104/123 [01:40<00:15,  1.21it/s][A
+ 85%|████████▌ | 105/123 [01:41<00:14,  1.22it/s][A
+ 86%|████████▌ | 106/123 [01:42<00:15,  1.10it/s][A
+ 87%|████████▋ | 107/123 [01:43<00:15,  1.06it/s][A
+ 88%|████████▊ | 108/123 [01:44<00:13,  1.09it/s][A
+ 89%|████████▊ | 109/123 [01:45<00:12,  1.12it/s][A
+ 89%|████████▉ | 110/123 [01:46<00:11,  1.15it/s][A
+ 90%|█████████ | 111/123 [01:47<00:10,  1.14it/s][A
+ 91%|█████████ | 112/123 [01:47<00:09,  1.20it/s][A
+ 92%|█████████▏| 113/123 [01:48<00:07,  1.36it/s][A
+ 93%|█████████▎| 114/123 [01:49<00:06,  1.37it/s][A
+ 93%|█████████▎| 115/123 [01:50<00:06,  1.23it/s][A
+ 94%|█████████▍| 116/123 [01:50<00:05,  1.18it/s][A
+ 95%|█████████▌| 117/123 [01:52<00:05,  1.02it/s][A
+ 96%|█████████▌| 118/123 [01:53<00:04,  1.07it/s][A
+ 97%|█████████▋| 119/123 [01:54<00:03,  1.07it/s][A
+ 98%|█████████▊| 120/123 [01:54<00:02,  1.07it/s][A
+ 98%|█████████▊| 121/123 [01:56<00:02,  1.07s/it][A
+ 99%|█████████▉| 122/123 [01:57<00:00,  1.01it/s][A
+100%|██████████| 123/123 [01:57<00:00,  1.05it/s][A                                                   
+                                                 [A{'eval_loss': 0.7165624499320984, 'eval_runtime': 119.5936, 'eval_samples_per_second': 16.397, 'eval_steps_per_second': 1.028, 'eval_rewards/chosen': -10.458882331848145, 'eval_rewards/rejected': -13.652863502502441, 'eval_rewards/accuracies': 0.8516260385513306, 'eval_rewards/margins': 3.193981170654297, 'eval_logps/rejected': -5.461144924163818, 'eval_logps/chosen': -4.1835527420043945, 'eval_logits/rejected': -0.9749628901481628, 'eval_logits/chosen': -0.9764418601989746, 'epoch': 0.86}
+ 86%|████████▌ | 400/467 [3:01:06<29:22, 26.31s/it]
+100%|██████████| 123/123 [01:58<00:00,  1.05it/s][A
+                                                 [A[INFO|trainer.py:3305] 2025-10-29 18:50:19,346 >> Saving model checkpoint to outputs/llama-3-8b-instruct-simpo/checkpoint-400
+[INFO|configuration_utils.py:471] 2025-10-29 18:50:19,348 >> Configuration saved in outputs/llama-3-8b-instruct-simpo/checkpoint-400/config.json
+[INFO|configuration_utils.py:697] 2025-10-29 18:50:19,348 >> Configuration saved in outputs/llama-3-8b-instruct-simpo/checkpoint-400/generation_config.json
+[INFO|modeling_utils.py:2598] 2025-10-29 18:50:25,233 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/llama-3-8b-instruct-simpo/checkpoint-400/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2488] 2025-10-29 18:50:25,237 >> tokenizer config file saved in outputs/llama-3-8b-instruct-simpo/checkpoint-400/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2497] 2025-10-29 18:50:25,238 >> Special tokens file saved in outputs/llama-3-8b-instruct-simpo/checkpoint-400/special_tokens_map.json
+[2025-10-29 18:50:25,443] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step400 is about to be saved!
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/nn/modules/module.py:1877: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/nn/modules/module.py:1877: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/nn/modules/module.py:1877: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/nn/modules/module.py:1877: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2025-10-29 18:50:25,453] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/llama-3-8b-instruct-simpo/checkpoint-400/global_step400/zero_pp_rank_0_mp_rank_00_model_states.pt
+[2025-10-29 18:50:25,454] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/llama-3-8b-instruct-simpo/checkpoint-400/global_step400/zero_pp_rank_0_mp_rank_00_model_states.pt...
+[2025-10-29 18:50:25,470] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/llama-3-8b-instruct-simpo/checkpoint-400/global_step400/zero_pp_rank_0_mp_rank_00_model_states.pt.
+[2025-10-29 18:50:25,473] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/llama-3-8b-instruct-simpo/checkpoint-400/global_step400/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt...
+[2025-10-29 18:50:46,461] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/llama-3-8b-instruct-simpo/checkpoint-400/global_step400/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt.
+[2025-10-29 18:50:46,461] [INFO] [engine.py:3393:_save_zero_checkpoint] zero checkpoint saved outputs/llama-3-8b-instruct-simpo/checkpoint-400/global_step400/bf16_zero_pp_rank_0_mp_rank_00_optim_states.pt
+[2025-10-29 18:50:48,890] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step400 is ready now!
+/root/miniconda3/envs/simpo/lib/python3.10/site-packages/torch/autograd/__init__.py:266: UserWarning: c10d::broadcast_: an autograd kernel was not registered to the Autograd key(s) but we are trying to backprop through it. This may lead to silently incorrect behavior. This behavior is deprecated and will be removed in a future version of PyTorch. If your operator is differentiable, please ensure you have registered an autograd kernel to the correct Autograd key (e.g. DispatchKey::Autograd, DispatchKey::CompositeImplicitAutograd). If your operator is not differentiable, or to squash this warning and use the previous behavior, please register torch::CppFunction::makeFallthrough() to DispatchKey::Autograd. (Triggered internally at ../torch/csrc/autograd/autograd_not_implemented_fallback.cpp:63.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[2025-10-29 18:51:15,453] [WARNING] [stage3.py:1949:step] 5 pytorch allocator cache flushes since last step. this happens when there is high memory pressure and is detrimental to performance. if this is happening frequently consider adjusting settings to reduce memory consumption. If you are unable to make the cache flushes go away consider adding get_accelerator().empty_cache() calls in your training loop to ensure that all ranks flush their caches at the same time
+ 86%|████████▌ | 401/467 [3:02:05<1:19:12, 72.01s/it] 86%|████████▌ | 402/467 [3:02:33<1:03:51, 58.95s/it] 86%|████████▋ | 403/467 [3:03:00<52:32, 49.26s/it]   87%|████████▋ | 404/467 [3:03:24<43:43, 41.65s/it] 87%|████████▋ | 405/467 [3:03:49<38:02, 36.81s/it]                                                   {'loss': 0.7359, 'grad_norm': 53.25553534484923, 'learning_rate': 5.2811296166831666e-08, 'rewards/chosen': -11.216293334960938, 'rewards/rejected': -14.533353805541992, 'rewards/accuracies': 0.8062499761581421, 'rewards/margins': 3.3170604705810547, 'logps/rejected': -5.81334114074707, 'logps/chosen': -4.486517429351807, 'logits/rejected': -0.6521176695823669, 'logits/chosen': -0.6516739130020142, 'epoch': 0.87}
+ 87%|████████▋ | 405/467 [3:03:49<38:02, 36.81s/it] 87%|████████▋ | 406/467 [3:04:14<33:48, 33.26s/it] 87%|████████▋ | 407/467 [3:04:41<31:13, 31.22s/it] 87%|████████▋ | 408/467 [3:05:10<30:09, 30.67s/it] 88%|████████▊ | 409/467 [3:05:38<28:44, 29.74s/it] 88%|████████▊ | 410/467 [3:06:04<27:13, 28.66s/it]                                                   {'loss': 0.8252, 'grad_norm': 58.54988382483955, 'learning_rate': 4.4761226670592066e-08, 'rewards/chosen': -10.393922805786133, 'rewards/rejected': -13.360621452331543, 'rewards/accuracies': 0.8125, 'rewards/margins': 2.9666991233825684, 'logps/rejected': -5.3442487716674805, 'logps/chosen': -4.157569408416748, 'logits/rejected': -0.6644526720046997, 'logits/chosen': -0.6827143430709839, 'epoch': 0.88}
+ 88%|████████▊ | 410/467 [3:06:04<27:13, 28.66s/it] 88%|████████▊ | 411/467 [3:06:32<26:41, 28.60s/it] 88%|████████▊ | 412/467 [3:07:00<25:52, 28.23s/it] 88%|████████▊ | 413/467 [3:07:27<25:01, 27.80s/it] 89%|████████▊ | 414/467 [3:07:52<23:56, 27.10s/it] 89%|████████▉ | 415/467 [3:08:17<23:02, 26.59s/it]                                                   {'loss': 0.7901, 'grad_norm': 48.60908268330038, 'learning_rate': 3.734784976300165e-08, 'rewards/chosen': -10.233412742614746, 'rewards/rejected': -13.89141845703125, 'rewards/accuracies': 0.862500011920929, 'rewards/margins': 3.6580047607421875, 'logps/rejected': -5.556567192077637, 'logps/chosen': -4.09336519241333, 'logits/rejected': -0.6080155372619629, 'logits/chosen': -0.7163386344909668, 'epoch': 0.89}
+ 89%|████████▉ | 415/467 [3:08:17<23:02, 26.59s/it] 89%|████████▉ | 416/467 [3:08:48<23:33, 27.71s/it] 89%|████████▉ | 417/467 [3:09:15<22:59, 27.58s/it] 90%|████████▉ | 418/467 [3:09:42<22:20, 27.36s/it] 90%|████████▉ | 419/467 [3:10:07<21:20, 26.67s/it] 90%|████████▉ | 420/467 [3:10:36<21:23, 27.32s/it]                                                   {'loss': 0.7412, 'grad_norm': 52.70136373043188, 'learning_rate': 3.058153372200695e-08, 'rewards/chosen': -9.905073165893555, 'rewards/rejected': -13.377614974975586, 'rewards/accuracies': 0.862500011920929, 'rewards/margins': 3.4725422859191895, 'logps/rejected': -5.351046085357666, 'logps/chosen': -3.962028980255127, 'logits/rejected': -0.6654635071754456, 'logits/chosen': -0.7625176310539246, 'epoch': 0.9}
+ 90%|████████▉ | 420/467 [3:10:36<21:23, 27.32s/it] 90%|█████████ | 421/467 [3:11:03<20:49, 27.17s/it] 90%|█████████ | 422/467 [3:11:29<20:17, 27.06s/it] 91%|█████████ | 423/467 [3:11:55<19:33, 26.67s/it] 91%|█████████ | 424/467 [3:12:20<18:46, 26.20s/it] 91%|█████████ | 425/467 [3:12:50<19:07, 27.32s/it]                                                   {'loss': 0.8263, 'grad_norm': 54.87098960752638, 'learning_rate': 2.4471741852423233e-08, 'rewards/chosen': -11.055484771728516, 'rewards/rejected': -14.297139167785645, 'rewards/accuracies': 0.824999988079071, 'rewards/margins': 3.2416534423828125, 'logps/rejected': -5.718854904174805, 'logps/chosen': -4.422194004058838, 'logits/rejected': -0.6978380084037781, 'logits/chosen': -0.7328473329544067, 'epoch': 0.91}
+ 91%|█████████ | 425/467 [3:12:50<19:07, 27.32s/it] 91%|█████████ | 426/467 [3:13:16<18:18, 26.80s/it] 91%|█████████▏| 427/467 [3:13:42<17:42, 26.56s/it] 92%|█████████▏| 428/467 [3:14:08<17:15, 26.55s/it] 92%|█████████▏| 429/467 [3:14:36<16:57, 26.78s/it] 92%|█████████▏| 430/467 [3:15:02<16:26, 26.65s/it]                                                   {'loss': 0.7715, 'grad_norm': 59.736493126726685, 'learning_rate': 1.9027019250647036e-08, 'rewards/chosen': -10.890939712524414, 'rewards/rejected': -14.28990364074707, 'rewards/accuracies': 0.856249988079071, 'rewards/margins': 3.3989644050598145, 'logps/rejected': -5.715961456298828, 'logps/chosen': -4.356375694274902, 'logits/rejected': -0.6531417369842529, 'logits/chosen': -0.7042436003684998, 'epoch': 0.92}
+ 92%|█████████▏| 430/467 [3:15:02<16:26, 26.65s/it] 92%|█████████▏| 431/467 [3:15:27<15:46, 26.28s/it] 93%|█████████▎| 432/467 [3:15:55<15:39, 26.84s/it] 93%|█████████▎| 433/467 [3:16:21<15:01, 26.51s/it] 93%|█████████▎| 434/467 [3:16:48<14:34, 26.49s/it] 93%|█████████▎| 435/467 [3:17:13<13:52, 26.01s/it]                                                   {'loss': 0.7194, 'grad_norm': 43.668426604602566, 'learning_rate': 1.4254980853566246e-08, 'rewards/chosen': -9.86375904083252, 'rewards/rejected': -13.335550308227539, 'rewards/accuracies': 0.8812500238418579, 'rewards/margins': 3.4717910289764404, 'logps/rejected': -5.334219932556152, 'logps/chosen': -3.9455037117004395, 'logits/rejected': -0.5899907946586609, 'logits/chosen': -0.6723120212554932, 'epoch': 0.93}
+ 93%|█████████▎| 435/467 [3:17:13<13:52, 26.01s/it] 93%|█████████▎| 436/467 [3:17:37<13:11, 25.52s/it] 94%|█████████▎| 437/467 [3:18:02<12:41, 25.37s/it] 94%|█████████▍| 438/467 [3:18:30<12:36, 26.09s/it] 94%|█████████▍| 439/467 [3:18:54<11:56, 25.59s/it] 94%|█████████▍| 440/467 [3:19:21<11:39, 25.90s/it]                                                   {'loss': 0.7305, 'grad_norm': 42.14950428820315, 'learning_rate': 1.016230078838226e-08, 'rewards/chosen': -10.822051048278809, 'rewards/rejected': -13.879331588745117, 'rewards/accuracies': 0.84375, 'rewards/margins': 3.0572805404663086, 'logps/rejected': -5.551732540130615, 'logps/chosen': -4.32882022857666, 'logits/rejected': -0.5197362899780273, 'logits/chosen': -0.6160277128219604, 'epoch': 0.94}
+ 94%|█████████▍| 440/467 [3:19:21<11:39, 25.90s/it] 94%|█████████▍| 441/467 [3:19:47<11:15, 25.99s/it] 95%|█████████▍| 442/467 [3:20:14<10:57, 26.28s/it] 95%|█████████▍| 443/467 [3:20:41<10:35, 26.46s/it] 95%|█████████▌| 444/467 [3:21:07<10:08, 26.45s/it] 95%|█████████▌| 445/467 [3:21:33<09:38, 26.30s/it]                                                   {'loss': 0.6808, 'grad_norm': 46.77691072736176, 'learning_rate': 6.754703038239329e-09, 'rewards/chosen': -10.67969036102295, 'rewards/rejected': -14.475764274597168, 'rewards/accuracies': 0.862500011920929, 'rewards/margins': 3.7960731983184814, 'logps/rejected': -5.790305137634277, 'logps/chosen': -4.271875858306885, 'logits/rejected': -0.5485397577285767, 'logits/chosen': -0.5992873907089233, 'epoch': 0.95}
+ 95%|█████████▌| 445/467 [3:21:33<09:38, 26.30s/it] 96%|█████████▌| 446/467 [3:22:00<09:16, 26.49s/it] 96%|█████████▌| 447/467 [3:22:29<09:02, 27.13s/it] 96%|█████████▌| 448/467 [3:22:57<08:40, 27.38s/it] 96%|█████████▌| 449/467 [3:23:22<08:02, 26.80s/it] 96%|█████████▋| 450/467 [3:23:49<07:37, 26.91s/it]                                                   {'loss': 0.7628, 'grad_norm': 48.2515411434136, 'learning_rate': 4.036953436716895e-09, 'rewards/chosen': -10.41215991973877, 'rewards/rejected': -13.5216703414917, 'rewards/accuracies': 0.84375, 'rewards/margins': 3.109511375427246, 'logps/rejected': -5.408668041229248, 'logps/chosen': -4.1648640632629395, 'logits/rejected': -0.6933242678642273, 'logits/chosen': -0.7527958154678345, 'epoch': 0.96}
+ 96%|█████████▋| 450/467 [3:23:49<07:37, 26.91s/it] 97%|█████████▋| 451/467 [3:24:16<07:07, 26.74s/it] 97%|█████████▋| 452/467 [3:24:42<06:41, 26.75s/it] 97%|█████████▋| 453/467 [3:25:09<06:15, 26.79s/it] 97%|█████████▋| 454/467 [3:25:37<05:51, 27.01s/it] 97%|█████████▋| 455/467 [3:26:03<05:21, 26.80s/it]                                                   {'loss': 0.6637, 'grad_norm': 54.58560563771008, 'learning_rate': 2.0128530023804656e-09, 'rewards/chosen': -10.529540061950684, 'rewards/rejected': -14.362360000610352, 'rewards/accuracies': 0.925000011920929, 'rewards/margins': 3.8328213691711426, 'logps/rejected': -5.7449445724487305, 'logps/chosen': -4.21181583404541, 'logits/rejected': -0.6270977854728699, 'logits/chosen': -0.6987196207046509, 'epoch': 0.97}
+ 97%|█████████▋| 455/467 [3:26:03<05:21, 26.80s/it] 98%|█████████▊| 456/467 [3:26:29<04:52, 26.58s/it] 98%|█████████▊| 457/467 [3:26:57<04:29, 26.94s/it] 98%|█████████▊| 458/467 [3:27:22<03:58, 26.50s/it] 98%|█████████▊| 459/467 [3:27:52<03:38, 27.26s/it] 99%|█████████▊| 460/467 [3:28:18<03:08, 26.91s/it]                                                   {'loss': 0.7437, 'grad_norm': 51.50613026614956, 'learning_rate': 6.852326227130833e-10, 'rewards/chosen': -11.029531478881836, 'rewards/rejected': -14.540487289428711, 'rewards/accuracies': 0.831250011920929, 'rewards/margins': 3.5109570026397705, 'logps/rejected': -5.816195487976074, 'logps/chosen': -4.411812782287598, 'logits/rejected': -0.6667028665542603, 'logits/chosen': -0.6943272948265076, 'epoch': 0.98}
+ 99%|█████████▊| 460/467 [3:28:18<03:08, 26.91s/it] 99%|█████████▊| 461/467 [3:28:44<02:39, 26.62s/it] 99%|█████████▉| 462/467 [3:29:12<02:15, 27.19s/it] 99%|█████████▉| 463/467 [3:29:38<01:47, 26.80s/it] 99%|█████████▉| 464/467 [3:30:04<01:19, 26.46s/it]100%|█████████▉| 465/467 [3:30:31<00:53, 26.71s/it]                                                   {'loss': 0.7522, 'grad_norm': 54.14807942559825, 'learning_rate': 5.594909486328348e-11, 'rewards/chosen': -10.990094184875488, 'rewards/rejected': -14.724870681762695, 'rewards/accuracies': 0.8812500238418579, 'rewards/margins': 3.734776258468628, 'logps/rejected': -5.889947891235352, 'logps/chosen': -4.3960371017456055, 'logits/rejected': -0.6217262744903564, 'logits/chosen': -0.634533166885376, 'epoch': 0.99}
+100%|█████████▉| 465/467 [3:30:31<00:53, 26.71s/it]100%|█████████▉| 466/467 [3:30:59<00:27, 27.02s/it]100%|██████████| 467/467 [3:31:23<00:00, 26.12s/it][INFO|trainer.py:2316] 2025-10-29 19:20:33,318 >> 
+
+Training completed. Do not forget to share your model on huggingface.co/models =)
+
+
+                                                   {'train_runtime': 12689.6217, 'train_samples_per_second': 4.719, 'train_steps_per_second': 0.037, 'train_loss': 1.051696802104566, 'epoch': 1.0}
+100%|██████████| 467/467 [3:31:23<00:00, 26.12s/it]100%|██████████| 467/467 [3:31:23<00:00, 27.16s/it]
+***** train metrics *****
+  epoch                    =     0.9983
+  total_flos               =        0GF
+  train_loss               =     1.0517
+  train_runtime            = 3:31:29.62
+  train_samples            =      59876
+  train_samples_per_second =      4.719
+  train_steps_per_second   =      0.037
+2025-10-29 19:20:33 - INFO - __main__ - *** Training complete ***
+2025-10-29 19:20:33 - INFO - __main__ - *** Save model ***
+[INFO|trainer.py:3305] 2025-10-29 19:20:36,373 >> Saving model checkpoint to outputs/llama-3-8b-instruct-simpo
+[INFO|configuration_utils.py:471] 2025-10-29 19:20:36,374 >> Configuration saved in outputs/llama-3-8b-instruct-simpo/config.json
+[INFO|configuration_utils.py:697] 2025-10-29 19:20:36,375 >> Configuration saved in outputs/llama-3-8b-instruct-simpo/generation_config.json
+[INFO|modeling_utils.py:2598] 2025-10-29 19:20:42,519 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/llama-3-8b-instruct-simpo/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2488] 2025-10-29 19:20:42,523 >> tokenizer config file saved in outputs/llama-3-8b-instruct-simpo/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2497] 2025-10-29 19:20:42,523 >> Special tokens file saved in outputs/llama-3-8b-instruct-simpo/special_tokens_map.json
+2025-10-29 19:20:42 - INFO - __main__ - Model saved to outputs/llama-3-8b-instruct-simpo
+[INFO|modelcard.py:450] 2025-10-29 19:20:42,713 >> Dropping the following result as it does not have all the necessary fields:
+{'task': {'name': 'Causal Language Modeling', 'type': 'text-generation'}, 'dataset': {'name': 'princeton-nlp/llama3-ultrafeedback-armorm', 'type': 'princeton-nlp/llama3-ultrafeedback-armorm'}}
+[INFO|configuration_utils.py:471] 2025-10-29 19:20:42,715 >> Configuration saved in outputs/llama-3-8b-instruct-simpo/config.json
+2025-10-29 19:20:42 - INFO - __main__ - *** Evaluate ***
+[INFO|trainer.py:3614] 2025-10-29 19:20:42,716 >> ***** Running Evaluation *****
+[INFO|trainer.py:3616] 2025-10-29 19:20:42,716 >>   Num examples = 1961
+[INFO|trainer.py:3619] 2025-10-29 19:20:42,716 >>   Batch size = 4
+  0%|          | 0/123 [00:00<?, ?it/s]  2%|▏         | 2/123 [00:00<00:51,  2.37it/s]  2%|▏         | 3/123 [00:01<01:10,  1.71it/s]  3%|▎         | 4/123 [00:02<01:13,  1.62it/s]  4%|▍         | 5/123 [00:03<01:27,  1.35it/s]  5%|▍         | 6/123 [00:04<01:25,  1.38it/s]  6%|▌         | 7/123 [00:05<01:37,  1.19it/s]  7%|▋         | 8/123 [00:06<01:41,  1.14it/s]  7%|▋         | 9/123 [00:07<01:43,  1.10it/s]  8%|▊         | 10/123 [00:08<01:54,  1.01s/it]  9%|▉         | 11/123 [00:09<02:02,  1.09s/it] 10%|▉         | 12/123 [00:10<01:46,  1.04it/s] 11%|█         | 13/123 [00:11<01:44,  1.05it/s] 11%|█▏        | 14/123 [00:11<01:33,  1.16it/s] 12%|█▏        | 15/123 [00:12<01:25,  1.27it/s] 13%|█▎        | 16/123 [00:13<01:22,  1.29it/s] 14%|█▍        | 17/123 [00:14<01:27,  1.21it/s] 15%|█▍        | 18/123 [00:14<01:27,  1.19it/s] 15%|█▌        | 19/123 [00:15<01:29,  1.16it/s] 16%|█▋        | 20/123 [00:16<01:29,  1.15it/s] 17%|█▋        | 21/123 [00:17<01:23,  1.22it/s] 18%|█▊        | 22/123 [00:18<01:19,  1.28it/s] 19%|█▊        | 23/123 [00:18<01:13,  1.37it/s] 20%|█▉        | 24/123 [00:19<01:21,  1.22it/s] 20%|██        | 25/123 [00:20<01:21,  1.20it/s] 21%|██        | 26/123 [00:21<01:25,  1.13it/s] 22%|██▏       | 27/123 [00:22<01:29,  1.07it/s] 23%|██▎       | 28/123 [00:23<01:23,  1.13it/s] 24%|██▎       | 29/123 [00:24<01:18,  1.19it/s] 24%|██▍       | 30/123 [00:25<01:18,  1.18it/s] 25%|██▌       | 31/123 [00:25<01:11,  1.29it/s] 26%|██▌       | 32/123 [00:26<01:07,  1.35it/s] 27%|██▋       | 33/123 [00:27<01:04,  1.39it/s] 28%|██▊       | 34/123 [00:28<01:13,  1.20it/s] 28%|██▊       | 35/123 [00:29<01:14,  1.17it/s] 29%|██▉       | 36/123 [00:29<01:16,  1.14it/s] 30%|███       | 37/123 [00:31<01:21,  1.06it/s] 31%|███       | 38/123 [00:31<01:15,  1.13it/s] 32%|███▏      | 39/123 [00:32<01:21,  1.03it/s] 33%|███▎      | 40/123 [00:33<01:11,  1.17it/s] 33%|███▎      | 41/123 [00:34<01:05,  1.24it/s] 34%|███▍      | 42/123 [00:35<01:10,  1.15it/s] 35%|███▍      | 43/123 [00:36<01:08,  1.16it/s] 36%|███▌      | 44/123 [00:36<01:07,  1.17it/s] 37%|███▋      | 45/123 [00:38<01:13,  1.06it/s] 37%|███▋      | 46/123 [00:38<01:06,  1.16it/s] 38%|███▊      | 47/123 [00:39<01:02,  1.22it/s] 39%|███▉      | 48/123 [00:40<01:00,  1.23it/s] 40%|███▉      | 49/123 [00:41<01:00,  1.23it/s] 41%|████      | 50/123 [00:42<01:02,  1.16it/s] 41%|████▏     | 51/123 [00:42<00:58,  1.22it/s] 42%|████▏     | 52/123 [00:43<00:58,  1.22it/s] 43%|████▎     | 53/123 [00:44<00:54,  1.29it/s] 44%|████▍     | 54/123 [00:44<00:51,  1.34it/s] 45%|████▍     | 55/123 [00:46<00:58,  1.17it/s] 46%|████▌     | 56/123 [00:47<00:59,  1.12it/s] 46%|████▋     | 57/123 [00:48<01:00,  1.08it/s] 47%|████▋     | 58/123 [00:49<01:03,  1.02it/s] 48%|████▊     | 59/123 [00:50<01:03,  1.00it/s] 49%|████▉     | 60/123 [00:50<00:57,  1.10it/s] 50%|████▉     | 61/123 [00:51<00:54,  1.13it/s] 50%|█████     | 62/123 [00:53<01:01,  1.01s/it] 51%|█████     | 63/123 [00:53<00:55,  1.08it/s] 52%|█████▏    | 64/123 [00:54<00:57,  1.03it/s] 53%|█████▎    | 65/123 [00:55<00:55,  1.04it/s] 54%|█████▎    | 66/123 [00:56<00:54,  1.05it/s] 54%|█████▍    | 67/123 [00:57<00:52,  1.06it/s] 55%|█████▌    | 68/123 [00:58<00:54,  1.01it/s] 56%|█████▌    | 69/123 [00:59<00:52,  1.03it/s] 57%|█████▋    | 70/123 [01:00<00:53,  1.00s/it] 58%|█████▊    | 71/123 [01:01<00:52,  1.02s/it] 59%|█████▊    | 72/123 [01:02<00:46,  1.09it/s] 59%|█████▉    | 73/123 [01:03<00:49,  1.01it/s] 60%|██████    | 74/123 [01:04<00:43,  1.12it/s] 61%|██████    | 75/123 [01:05<00:42,  1.13it/s] 62%|██████▏   | 76/123 [01:05<00:39,  1.18it/s] 63%|██████▎   | 77/123 [01:06<00:38,  1.18it/s] 63%|██████▎   | 78/123 [01:07<00:38,  1.17it/s] 64%|██████▍   | 79/123 [01:08<00:39,  1.10it/s] 65%|██████▌   | 80/123 [01:09<00:37,  1.15it/s] 66%|██████▌   | 81/123 [01:10<00:38,  1.08it/s] 67%|██████▋   | 82/123 [01:11<00:41,  1.00s/it] 67%|██████▋   | 83/123 [01:12<00:38,  1.03it/s] 68%|██████▊   | 84/123 [01:13<00:35,  1.11it/s] 69%|██████▉   | 85/123 [01:14<00:34,  1.09it/s] 70%|██████▉   | 86/123 [01:14<00:31,  1.18it/s] 71%|███████   | 87/123 [01:15<00:30,  1.18it/s] 72%|███████▏  | 88/123 [01:17<00:34,  1.00it/s] 72%|███████▏  | 89/123 [01:18<00:36,  1.08s/it] 73%|███████▎  | 90/123 [01:19<00:34,  1.04s/it] 74%|███████▍  | 91/123 [01:19<00:28,  1.11it/s] 75%|███████▍  | 92/123 [01:21<00:29,  1.03it/s] 76%|███████▌  | 93/123 [01:22<00:28,  1.04it/s] 76%|███████▋  | 94/123 [01:22<00:25,  1.13it/s] 77%|███████▋  | 95/123 [01:23<00:24,  1.17it/s] 78%|███████▊  | 96/123 [01:24<00:21,  1.23it/s] 79%|███████▉  | 97/123 [01:25<00:23,  1.11it/s] 80%|███████▉  | 98/123 [01:26<00:22,  1.12it/s] 80%|████████  | 99/123 [01:27<00:21,  1.11it/s] 81%|████████▏ | 100/123 [01:27<00:20,  1.14it/s] 82%|████████▏ | 101/123 [01:28<00:19,  1.14it/s] 83%|████████▎ | 102/123 [01:29<00:18,  1.16it/s] 84%|████████▎ | 103/123 [01:30<00:16,  1.22it/s] 85%|████████▍ | 104/123 [01:31<00:15,  1.22it/s] 85%|████████▌ | 105/123 [01:31<00:14,  1.23it/s] 86%|████████▌ | 106/123 [01:33<00:15,  1.11it/s] 87%|████████▋ | 107/123 [01:34<00:15,  1.07it/s] 88%|████████▊ | 108/123 [01:34<00:13,  1.09it/s] 89%|████████▊ | 109/123 [01:35<00:12,  1.13it/s] 89%|████████▉ | 110/123 [01:36<00:11,  1.15it/s] 90%|█████████ | 111/123 [01:37<00:10,  1.14it/s] 91%|█████████ | 112/123 [01:38<00:09,  1.20it/s] 92%|█████████▏| 113/123 [01:38<00:07,  1.36it/s] 93%|█████████▎| 114/123 [01:39<00:06,  1.37it/s] 93%|█████████▎| 115/123 [01:40<00:06,  1.23it/s] 94%|█████████▍| 116/123 [01:41<00:05,  1.19it/s] 95%|█████████▌| 117/123 [01:42<00:05,  1.02it/s] 96%|█████████▌| 118/123 [01:43<00:04,  1.07it/s] 97%|█████████▋| 119/123 [01:44<00:03,  1.07it/s] 98%|█████████▊| 120/123 [01:45<00:02,  1.07it/s] 98%|█████████▊| 121/123 [01:46<00:02,  1.07s/it] 99%|█████████▉| 122/123 [01:47<00:00,  1.01it/s]100%|██████████| 123/123 [01:48<00:00,  1.06it/s]100%|██████████| 123/123 [01:48<00:00,  1.13it/s]
+***** eval metrics *****
+  epoch                   =     0.9983
+  eval_logits/chosen      =    -0.9781
+  eval_logits/rejected    =    -0.9768
+  eval_logps/chosen       =    -4.2556
+  eval_logps/rejected     =    -5.5519
+  eval_loss               =     0.7117
+  eval_rewards/accuracies =     0.8516
+  eval_rewards/chosen     =   -10.6391
+  eval_rewards/margins    =     3.2407
+  eval_rewards/rejected   =   -13.8798
+  eval_runtime            = 0:01:49.32
+  eval_samples            =       1961
+  eval_samples_per_second =     17.938
+  eval_steps_per_second   =      1.125
+2025-10-29 19:22:32 - INFO - __main__ - *** Training complete! ***
+wandb: Waiting for W&B process to finish... (success).
+wandb: 
+wandb: Run history:
+wandb:       eval/logits/chosen █▁
+wandb:     eval/logits/rejected █▁
+wandb:        eval/logps/chosen █▁
+wandb:      eval/logps/rejected █▁
+wandb:                eval/loss █▁
+wandb:  eval/rewards/accuracies ▁▁
+wandb:      eval/rewards/chosen █▁
+wandb:     eval/rewards/margins ▁█
+wandb:    eval/rewards/rejected █▁
+wandb:             eval/runtime █▁
+wandb:  eval/samples_per_second ▁█
+wandb:    eval/steps_per_second ▁█
+wandb:              train/epoch ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇████
+wandb:        train/global_step ▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▇▇▇▇▇▇████
+wandb:          train/grad_norm ▁▁▁▁▄▂▃▁▁▂▂▂▃▃▄▅▅▅▇▄▄▇▆▄▅▅▆▇▅▅▅▆█▆▆▅▆▅▅▆
+wandb:      train/learning_rate ▂▃▅▇██████▇▇▇▇▇▆▆▆▆▅▅▅▄▄▄▄▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb:      train/logits/chosen ▂▃▂▃▂▁▃▂▁▃▃▂▃▄▅▆▆██▇▇▇▇▇▆▆▆▆▇▆▇▆▆▆▆▆▆▇▅▇
+wandb:    train/logits/rejected ▂▂▂▂▂▁▃▂▁▃▃▁▂▃▄▆▆██▇▆▆▇▇▆▆▅▆▇▆▇▆▅▆▆▆▅▇▅▆
+wandb:       train/logps/chosen ██████████▇▇▇▆▅▅▄▃▃▃▃▂▂▂▂▂▂▁▁▁▂▂▂▁▁▂▁▁▂▁
+wandb:     train/logps/rejected ██████████▇▇▇▆▅▅▄▃▃▃▃▂▂▂▂▂▂▁▁▁▂▂▂▁▁▁▁▁▂▁
+wandb:               train/loss ██████▇▇▇▇▇▆▆▅▅▄▃▄▃▃▃▂▂▃▁▁▂▂▁▂▁▂▂▂▁▂▂▁▂▂
+wandb: train/rewards/accuracies ▁▄▂▃▂▃▃▄▃▄▆▅▆▆▆▇▇▆▇▆▆▇▇▇▇▇▇▇▇█▇▇▇█▇█▇▇▇█
+wandb:     train/rewards/chosen ██████████▇▇▇▆▅▅▄▃▃▃▃▂▂▂▂▂▂▁▁▁▂▂▂▁▁▂▁▁▂▁
+wandb:    train/rewards/margins ▁▁▁▁▁▁▁▁▁▂▂▃▂▃▄▄▅▅▅▅▆▆▆▆▇▆▆█▇█▇▇▇▇▇█▇▇▇█
+wandb:   train/rewards/rejected ██████████▇▇▇▆▅▅▄▃▃▃▃▂▂▂▂▂▂▁▁▁▂▂▂▁▁▁▁▁▂▁
+wandb: 
+wandb: Run summary:
+wandb:       eval/logits/chosen -0.97811
+wandb:     eval/logits/rejected -0.97677
+wandb:        eval/logps/chosen -4.25564
+wandb:      eval/logps/rejected -5.55194
+wandb:                eval/loss 0.71166
+wandb:  eval/rewards/accuracies 0.85163
+wandb:      eval/rewards/chosen -10.6391
+wandb:     eval/rewards/margins 3.24075
+wandb:    eval/rewards/rejected -13.87985
+wandb:             eval/runtime 109.3213
+wandb:  eval/samples_per_second 17.938
+wandb:    eval/steps_per_second 1.125
+wandb:               total_flos 0.0
+wandb:              train/epoch 0.99826
+wandb:        train/global_step 467
+wandb:          train/grad_norm 54.14808
+wandb:      train/learning_rate 0.0
+wandb:      train/logits/chosen -0.63453
+wandb:    train/logits/rejected -0.62173
+wandb:       train/logps/chosen -4.39604
+wandb:     train/logps/rejected -5.88995
+wandb:               train/loss 0.7522
+wandb: train/rewards/accuracies 0.88125
+wandb:     train/rewards/chosen -10.99009
+wandb:    train/rewards/margins 3.73478
+wandb:   train/rewards/rejected -14.72487
+wandb:               train_loss 1.0517
+wandb:            train_runtime 12689.6217
+wandb: train_samples_per_second 4.719
+wandb:   train_steps_per_second 0.037
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /SimPO-main/wandb/offline-run-20251029_154904-9y5gpmt0
+wandb: Find logs at: ./wandb/offline-run-20251029_154904-9y5gpmt0/logs
