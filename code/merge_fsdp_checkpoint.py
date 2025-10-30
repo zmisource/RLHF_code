@@ -92,8 +92,8 @@ import shutil
 
 # --- 1. 配置参数 ---
 base_model_path = "/train/Llama-3-8B-Instruct" # <--- ‼️ 请务必修改为你的基础模型
-fsdp_checkpoint_path = "/train/output_model/llama3-8b-sympo-1e-6_no_term2/checkpoint-300" # <--- ‼️ 请修改为你的 checkpoint 路径
-consolidated_model_path = "/train/output_model/llama3-8b-sympo-1e-6_no_term2_merged/checkpoint-300" # <--- ‼️ 你可以自定义保存路径
+fsdp_checkpoint_path = "/train/output_model/llama3-8b-sympo-5e-5/checkpoint-40" # <--- ‼️ 请修改为你的 checkpoint 路径
+consolidated_model_path = "/train/output_model/llama3-8b-sympo-5e-5_merged/checkpoint-40" # <--- ‼️ 你可以自定义保存路径
 
 # --- 2. 初始化Accelerator和模型 ---
 # 初始化Accelerator，它会自动处理设备放置
