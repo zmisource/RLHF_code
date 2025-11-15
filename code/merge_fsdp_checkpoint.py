@@ -163,3 +163,44 @@ except Exception as e:
     print(f"警告：无法自动保存Tokenizer。请从 '{base_model_path}' 手动复制。错误: {e}")
 
 print("\n合并流程完成！")
+
+
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
+from accelerate import load_checkpoint_in_model
+import torch, os
+
+base_model = "meta-llama/Llama-3-8b"           # your base arch (must match training)
+ckpt_dir   = "path/to/checkpoint-500"          # folder with pytorch_model_fsdp_0, optimizer_0, etc.
+out_dir    = "path/to/consolidated-model"
+
+# 1) Build an equivalent, UNWRAPPED model (CPU is fine)
+cfg   = AutoConfig.from_pretrained(base_model)
+model = AutoModelForCausalLM.from_config(cfg)
+model.to("cpu")  # stays on CPU while loading
+
+# 2) Load the FSDP sharded weights into this model
+#    If your checkpoint has a subfolder for the model shards, specify it.
+#    Depending on Accelerate version, the arg can be `subfolder` or `model_name`.
+load_checkpoint_in_model(
+    model,
+    checkpoint=ckpt_dir,
+    # one of these depending on your layout/version:
+    # subfolder="pytorch_model_fsdp_0",
+    # model_name="pytorch_model_fsdp_0",
+    strict=False,                # helpful if heads/tied weights differ slightly
+)
+
+# (Optional) Tie weights if your arch expects it
+if hasattr(model, "tie_weights"):
+    model.tie_weights()
+
+# 3) Save a single-file consolidated HF checkpoint
+os.makedirs(out_dir, exist_ok=True)
+model.save_pretrained(out_dir, safe_serialization=True)   # writes model.safetensors + config.json
+
+# 4) Also save tokenizer so from_pretrained works out-of-the-box later
+try:
+    tok = AutoTokenizer.from_pretrained(base_model, use_fast=False)
+    tok.save_pretrained(out_dir)
+except Exception:
+    pass

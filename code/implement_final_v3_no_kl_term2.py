@@ -1,5 +1,8 @@
 import os
+import random
+import numpy as np
 import torch
+import torch.nn.functional as F
 import argparse
 from datasets import load_from_disk
 from transformers import (
@@ -11,6 +14,26 @@ from transformers import (
 )
 from typing import Dict, Any, List, Union
 from dataclasses import dataclass
+
+# ---------------------------------------------------------------------------
+# 随机种子设置函数（确保可重复性）
+# ---------------------------------------------------------------------------
+
+def seed_everything(seed=42):
+    """
+    设置所有随机数生成器的种子，确保训练的可重复性。
+    
+    Args:
+        seed: 随机种子值（默认: 2003）
+    """
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False  # 为了可重复性，禁用benchmark
+    # 设置环境变量以确保完全确定性（如果使用CUDA）
+    os.environ['PYTHONHASHSEED'] = str(seed)
 
 # ---------------------------------------------------------------------------
 # CustomSymPOTrainer
@@ -36,7 +59,23 @@ class CustomSymPOTrainer(Trainer):
         self.beta_kl = beta_kl
         self.log_ratio_clip_min = log_ratio_clip_min
         self.log_ratio_clip_max = log_ratio_clip_max
+        self.use_smooth_clip = False  # 默认使用硬裁剪，可通过参数切换
 
+    def _smooth_clamp(self, x: torch.Tensor, min_val: float, max_val: float, temperature: float = 0.1) -> torch.Tensor:
+        """
+        平滑裁剪函数，在边界处保持小梯度，避免梯度突然截断。
+        
+        使用 tanh-based 平滑函数：
+        - 在边界处梯度连续，不会突然变为0
+        - temperature 控制平滑程度（越小越接近硬裁剪）
+        """
+        # 将输入归一化到 [-1, 1] 范围
+        normalized = 2.0 * (x - min_val) / (max_val - min_val) - 1.0
+        # 使用 tanh 进行平滑裁剪
+        clipped_normalized = torch.tanh(normalized / temperature)
+        # 映射回原始范围
+        return (clipped_normalized + 1.0) / 2.0 * (max_val - min_val) + min_val
+    
     def _get_log_probs(self, model: AutoModelForCausalLM, prompts: List[str], responses: List[str]) -> torch.Tensor:
         # 这个辅助函数无需修改，它可以通用地计算任何模型、prompt 和 response 的 log_probs
         original_padding_side = self.processor.padding_side
@@ -48,7 +87,7 @@ class CustomSymPOTrainer(Trainer):
         max_len = unwrapped_model.config.max_position_embeddings
         full_tokens = self.processor(
             full_texts, padding='longest', truncation=True,
-            max_length=max_len,
+            max_length=4096,
             return_tensors="pt"
         )
         input_ids = full_tokens['input_ids'].to(self.args.device)
@@ -115,9 +154,17 @@ class CustomSymPOTrainer(Trainer):
             weight2 = f_y1
 
             
-        clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        # 使用平滑裁剪或硬裁剪
+        if self.use_smooth_clip:
+            # 平滑裁剪：在边界处保持小梯度，提高训练稳定性
+            clamped_log_ratio_y1 = self._smooth_clamp(log_ratio_y1, self.log_ratio_clip_min, self.log_ratio_clip_max)
+            clamped_log_ratio_y2 = self._smooth_clamp(log_ratio_y2, self.log_ratio_clip_min, self.log_ratio_clip_max)
+        else:
+            # 硬裁剪：传统方式，边界处梯度为0
+            clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+            clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        
         ratio_y1 = torch.exp(clamped_log_ratio_y1)
-        clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
         ratio_y2 = torch.exp(clamped_log_ratio_y2)
         
         # ratio_y1 = torch.exp(log_ratio_y1)
@@ -174,7 +221,7 @@ def parse_args():
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
     parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/precomputed_traindataset", help="Path to the precomputed dataset.")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.1", help="Directory to save checkpoints and final model.")
+    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.1_no_kl_2", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
@@ -189,19 +236,27 @@ def parse_args():
     parser.add_argument("--save_total_limit", type=int, default=20, help="Limit the total number of saved checkpoints.")
 
     # --- SymPO 特定参数 ---
-    parser.add_argument("--beta_kl", type=float, default=0.1, help="KL divergence penalty coefficient.")
+    parser.add_argument("--beta_kl", type=float, default=1, help="KL divergence penalty coefficient.")
     parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Minimum clip value for log probability ratio.")
     parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Maximum clip value for log probability ratio.")
+    parser.add_argument("--use_smooth_clip", action='store_true', help="Use smooth clipping for better gradient stability (recommended).")
     
     # --- W&B (Weights & Biases) 日志参数 ---
     parser.add_argument("--report_to", type=str, default="wandb", help="The integration to report results to (e.g., 'wandb').")
     parser.add_argument("--run_name", type=str, default=f"policy-llama3-8b-sympo-default", help="A name for the W&B run.")
+    
+    # --- 随机种子参数 ---
+    parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility .")
 
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
+    
+    # 设置随机种子以确保可重复性
+    print(f"设置随机种子为: {args.seed}")
+    seed_everything(args.seed)
 
     tokenizer = AutoTokenizer.from_pretrained(args.sft_model_path)
     if tokenizer.pad_token is None:
@@ -213,13 +268,13 @@ def main():
 
     print("加载用于训练的策略模型 (Policy Model)...")
     policy_model = AutoModelForCausalLM.from_pretrained(
-        args.sft_model_path, attn_implementation="flash_attention_2", torch_dtype=torch.bfloat16
+        args.sft_model_path, dtype=torch.bfloat16
     )
 
     # 5. 新增：加载作为参考的SFT模型 (Reference Model)
     print("加载作为参考的SFT模型 (Reference Model)...")
     ref_model = AutoModelForCausalLM.from_pretrained(
-        args.sft_model_path, attn_implementation="flash_attention_2", torch_dtype=torch.bfloat16
+        args.sft_model_path, dtype=torch.bfloat16
     )
     # # 将参考模型设置为评估模式，并且不需要计算它的梯度
     # ref_model.eval()
@@ -266,12 +321,57 @@ def main():
         log_ratio_clip_min=args.log_ratio_clip_min,
         log_ratio_clip_max=args.log_ratio_clip_max,
     )
+    # 设置是否使用平滑裁剪
+    trainer.use_smooth_clip = args.use_smooth_clip
+    # 移除 sft_model_path，因为它已经通过 ref_model 对象传入了
+    # sft_model_path=args.sft_model_path, 
+
+        # 设置是否使用平滑裁剪
+    trainer.use_smooth_clip = args.use_smooth_clip
     # 移除 sft_model_path，因为它已经通过 ref_model 对象传入了
     # sft_model_path=args.sft_model_path, 
 
     print("开始分布式训练...")
-    trainer.train()
+    train_result = trainer.train()
     print("所有任务已完成！")
 
+    ##################################
+    # Save final model (HuggingFace format)
+    ##################################
+    print("\n" + "=" * 60)
+    print("*** Save final model ***")
+    print("=" * 60)
+    print(f"⚠️  注意: 如果使用 FSDP，此步骤会自动合并分片权重并保存为 HuggingFace 格式")
+    print(f"保存路径: {args.output_dir}")
+    
+    # 确保 FSDP 使用 FULL_STATE_DICT 模式保存最终模型
+    if trainer.is_fsdp_enabled and trainer.accelerator.state.fsdp_plugin is not None:
+        print("检测到 FSDP，设置状态字典类型为 FULL_STATE_DICT...")
+        trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
+    
+    # 保存最终模型（自动处理 FSDP 合并）
+    trainer.save_model(args.output_dir)
+    print(f"✅ 模型已保存到: {args.output_dir}")
+    
+    # 保存 tokenizer
+    try:
+        tokenizer.save_pretrained(args.output_dir)
+        print("✅ Tokenizer 已保存")
+    except Exception as e:
+        print(f"⚠️  警告: 无法自动保存 tokenizer: {e}")
+    
+    # 保存训练指标
+    if trainer.accelerator.is_main_process:
+        trainer.log_metrics("train", train_result.metrics)
+        trainer.save_metrics("train", train_result.metrics)
+        print("✅ 训练指标已保存")
+    
+    print("\n" + "=" * 60)
+    print("🎉 训练和模型保存完成！")
+    print("=" * 60)
+    print(f"\n最终 HuggingFace 模型已保存到: {args.output_dir}")
+    print("可以直接使用 HuggingFace 的 from_pretrained() 加载模型")
+    print(f"\n注意: checkpoint-* 目录是训练过程中的中间检查点（FSDP 分片格式）")
+    print(f"最终模型保存在 {args.output_dir} 根目录（HuggingFace 格式）")
 if __name__ == "__main__":
     main()
