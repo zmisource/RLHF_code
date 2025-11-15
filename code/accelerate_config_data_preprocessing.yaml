@@ -1,0 +1,17 @@
+compute_environment: LOCAL_MACHINE
+debug: false
+distributed_type: MULTI_GPU  # 使用 MULTI_GPU 而不是 FSDP，更适合推理任务
+downcast_bf16: 'no'
+enable_cpu_affinity: false
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16  # 保持 bf16 精度
+num_machines: 1
+num_processes: 4  # 4个 A100 GPU
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false
+

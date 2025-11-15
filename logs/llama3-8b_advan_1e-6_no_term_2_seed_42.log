@@ -1,0 +1,290 @@
+nohup: ignoring input
+[W1105 06:29:14.298745467 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+设置随机种子为: 42
+设置随机种子为: 42
+设置随机种子为: 42
+设置随机种子为: 42
+从磁盘加载数据集...
+加载用于训练的策略模型 (Policy Model)...
+从磁盘加载数据集...
+加载用于训练的策略模型 (Policy Model)...
+从磁盘加载数据集...
+加载用于训练的策略模型 (Policy Model)...
+从磁盘加载数据集...
+加载用于训练的策略模型 (Policy Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 93.43it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.31it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 90.22it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 89.75it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 91.42it/s]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 95.22it/s]
+[W1105 06:29:23.590011584 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.56it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.02it/s]
+[W1105 06:29:23.608936462 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1105 06:29:23.619950610 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W1105 06:29:23.638656592 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_no_term2.py:53: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_no_term2.py:53: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_no_term2.py:53: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlhf_code/code/implement_final_v3_no_term2.py:53: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+WARNING:accelerate.utils.other:Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /wandb/offline-run-20251105_062931-n7as2fcr
+  0%|          | 0/3753 [00:00<?, ?it/s]--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -101.0
+Sample 0 - pi_logp_chosen:  -100.70752716064453
+Sample 0 - Difference (pi - ref): 0.29247283935546875
+---------------------------------
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---Sample 0 - ref_logp_chosen: -44.25
+Sample 0 - ref_logp_chosen: -111.5
+
+Sample 0 - pi_logp_chosen:  -111.85967254638672
+Sample 0 - Difference (pi - ref): -0.35967254638671875
+---------------------------------
+Sample 0 - pi_logp_chosen:  -44.201560974121094
+Sample 0 - Difference (pi - ref): 0.04843902587890625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -233.0
+Sample 0 - pi_logp_chosen:  -233.36923217773438
+Sample 0 - Difference (pi - ref): -0.369232177734375
+---------------------------------
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -66.0
+Sample 0 - pi_logp_chosen:  -65.80047607421875
+Sample 0 - Difference (pi - ref): 0.19952392578125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -247.0
+Sample 0 - pi_logp_chosen:  -246.7006378173828
+Sample 0 - Difference (pi - ref): 0.2993621826171875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -209.0
+Sample 0 - pi_logp_chosen:  -208.79156494140625
+Sample 0 - Difference (pi - ref): 0.20843505859375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -380.0
+Sample 0 - pi_logp_chosen:  -381.4108581542969
+Sample 0 - Difference (pi - ref): -1.410858154296875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -70.5
+Sample 0 - pi_logp_chosen:  -70.00367736816406
+Sample 0 - Difference (pi - ref): 0.4963226318359375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -167.0
+Sample 0 - pi_logp_chosen:  -167.5421905517578
+Sample 0 - Difference (pi - ref): -0.5421905517578125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -350.0
+Sample 0 - pi_logp_chosen:  -349.8619689941406
+Sample 0 - Difference (pi - ref): 0.138031005859375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -454.0
+Sample 0 - pi_logp_chosen:  -453.206298828125
+Sample 0 - Difference (pi - ref): 0.793701171875
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -81.5
+Sample 0 - pi_logp_chosen:  -81.74288177490234
+Sample 0 - Difference (pi - ref): -0.24288177490234375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -99.0
+Sample 0 - pi_logp_chosen:  -98.41529846191406
+Sample 0 - Difference (pi - ref): 0.5847015380859375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -251.0
+Sample 0 - pi_logp_chosen:  -250.63693237304688
+Sample 0 - Difference (pi - ref): 0.363067626953125
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -243.0
+Sample 0 - pi_logp_chosen:  -242.63800048828125
+Sample 0 - Difference (pi - ref): 0.36199951171875
+---------------------------------
+  0%|          | 1/3753 [00:02<2:43:52,  2.62s/it]{'loss': -0.7182, 'grad_norm': 3103.212158203125, 'learning_rate': 0.0, 'mean_ratio_chosen': 1.4377331733703613, 'weight_chosen': 0.740388035774231, 'kl_term_chosen': 0.1815338134765625, 'epoch': 0.0002664890073284477}
+                                                  {'loss': -0.7182, 'grad_norm': 3103.212158203125, 'learning_rate': 0.0, 'mean_ratio_chosen': 1.4377331733703613, 'weight_chosen': 0.740388035774231, 'kl_term_chosen': 0.1815338134765625, 'epoch': 0.0}
+  0%|          | 1/3753 [00:02<2:43:52,  2.62s/it]  0%|          | 2/3753 [00:05<2:48:08,  2.69s/it]  0%|          | 3/3753 [00:07<2:41:12,  2.58s/it]  0%|          | 4/3753 [00:10<2:33:14,  2.45s/it]  0%|          | 5/3753 [00:12<2:30:45,  2.41s/it]  0%|          | 6/3753 [00:14<2:34:28,  2.47s/it]  0%|          | 7/3753 [00:17<2:30:45,  2.41s/it]  0%|          | 8/3753 [00:19<2:31:37,  2.43s/it]  0%|          | 9/3753 [00:22<2:40:22,  2.57s/it]  0%|          | 10/3753 [00:24<2:30:13,  2.41s/it]{'loss': -0.7118, 'grad_norm': 2978.84716796875, 'learning_rate': 2.3936170212765956e-08, 'mean_ratio_chosen': 1.2820969820022583, 'weight_chosen': 0.12083649635314941, 'kl_term_chosen': 0.12424850463867188, 'epoch': 0.002664890073284477}
+                                                   {'loss': -0.7118, 'grad_norm': 2978.84716796875, 'learning_rate': 2.3936170212765956e-08, 'mean_ratio_chosen': 1.2820969820022583, 'weight_chosen': 0.12083649635314941, 'kl_term_chosen': 0.12424850463867188, 'epoch': 0.0}
+  0%|          | 10/3753 [00:24<2:30:13,  2.41s/it]  0%|          | 11/3753 [00:27<2:28:41,  2.38s/it]  0%|          | 12/3753 [00:29<2:36:43,  2.51s/it]  0%|          | 13/3753 [00:32<2:32:52,  2.45s/it]  0%|          | 14/3753 [00:34<2:29:15,  2.40s/it]  0%|          | 15/3753 [00:36<2:24:59,  2.33s/it]  0%|          | 16/3753 [00:38<2:19:45,  2.24s/it]  0%|          | 17/3753 [00:40<2:16:35,  2.19s/it]  0%|          | 18/3753 [00:43<2:24:07,  2.32s/it]  1%|          | 19/3753 [00:46<2:32:22,  2.45s/it]  1%|          | 20/3753 [00:48<2:28:24,  2.39s/it]{'loss': -0.7029, 'grad_norm': 2824.765625, 'learning_rate': 5.053191489361702e-08, 'mean_ratio_chosen': 1.1789848804473877, 'weight_chosen': 0.6502649188041687, 'kl_term_chosen': 0.08232688903808594, 'epoch': 0.005329780146568954}
+                                                   {'loss': -0.7029, 'grad_norm': 2824.765625, 'learning_rate': 5.053191489361702e-08, 'mean_ratio_chosen': 1.1789848804473877, 'weight_chosen': 0.6502649188041687, 'kl_term_chosen': 0.08232688903808594, 'epoch': 0.01}
+  1%|          | 20/3753 [00:48<2:28:24,  2.39s/it]  1%|          | 21/3753 [00:50<2:23:41,  2.31s/it]  1%|          | 22/3753 [00:53<2:38:49,  2.55s/it]  1%|          | 23/3753 [00:56<2:39:07,  2.56s/it]  1%|          | 24/3753 [00:58<2:28:45,  2.39s/it]  1%|          | 25/3753 [01:00<2:26:51,  2.36s/it]  1%|          | 26/3753 [01:02<2:19:52,  2.25s/it]  1%|          | 27/3753 [01:04<2:19:53,  2.25s/it]  1%|          | 28/3753 [01:07<2:22:26,  2.29s/it]  1%|          | 29/3753 [01:09<2:27:47,  2.38s/it]  1%|          | 30/3753 [01:11<2:26:59,  2.37s/it]{'loss': -0.2973, 'grad_norm': 2044.221435546875, 'learning_rate': 7.712765957446808e-08, 'mean_ratio_chosen': 3.868323802947998, 'weight_chosen': -0.04845947027206421, 'kl_term_chosen': 0.6764106750488281, 'epoch': 0.007994670219853431}
+                                                   {'loss': -0.2973, 'grad_norm': 2044.221435546875, 'learning_rate': 7.712765957446808e-08, 'mean_ratio_chosen': 3.868323802947998, 'weight_chosen': -0.04845947027206421, 'kl_term_chosen': 0.6764106750488281, 'epoch': 0.01}
+  1%|          | 30/3753 [01:12<2:26:59,  2.37s/it]  1%|          | 31/3753 [01:14<2:35:59,  2.51s/it]  1%|          | 32/3753 [01:16<2:28:47,  2.40s/it]  1%|          | 33/3753 [01:19<2:22:32,  2.30s/it]  1%|          | 34/3753 [01:21<2:20:33,  2.27s/it]  1%|          | 35/3753 [01:23<2:21:23,  2.28s/it]  1%|          | 36/3753 [01:26<2:36:02,  2.52s/it]  1%|          | 37/3753 [01:29<2:40:50,  2.60s/it]  1%|          | 38/3753 [01:32<2:42:19,  2.62s/it]  1%|          | 39/3753 [01:34<2:39:03,  2.57s/it]  1%|          | 40/3753 [01:36<2:34:10,  2.49s/it]{'loss': 2.4276, 'grad_norm': 1869.4375, 'learning_rate': 1.0372340425531915e-07, 'mean_ratio_chosen': 4.442573547363281, 'weight_chosen': 0.012177467346191406, 'kl_term_chosen': 0.7456169128417969, 'epoch': 0.010659560293137908}
+                                                   {'loss': 2.4276, 'grad_norm': 1869.4375, 'learning_rate': 1.0372340425531915e-07, 'mean_ratio_chosen': 4.442573547363281, 'weight_chosen': 0.012177467346191406, 'kl_term_chosen': 0.7456169128417969, 'epoch': 0.01}
+  1%|          | 40/3753 [01:36<2:34:10,  2.49s/it]  1%|          | 41/3753 [01:39<2:32:32,  2.47s/it]  1%|          | 42/3753 [01:41<2:22:50,  2.31s/it]  1%|          | 43/3753 [01:43<2:26:27,  2.37s/it]  1%|          | 44/3753 [01:45<2:23:34,  2.32s/it]  1%|          | 45/3753 [01:48<2:27:27,  2.39s/it]  1%|          | 46/3753 [01:51<2:32:52,  2.47s/it]  1%|▏         | 47/3753 [01:53<2:35:18,  2.51s/it]  1%|▏         | 48/3753 [01:55<2:28:26,  2.40s/it]  1%|▏         | 49/3753 [01:58<2:24:20,  2.34s/it]  1%|▏         | 50/3753 [02:00<2:19:26,  2.26s/it]{'loss': 0.9327, 'grad_norm': 1132.706787109375, 'learning_rate': 1.3031914893617022e-07, 'mean_ratio_chosen': 1.5877810716629028, 'weight_chosen': 0.6322228908538818, 'kl_term_chosen': 0.2311687469482422, 'epoch': 0.013324450366422385}
+                                                   {'loss': 0.9327, 'grad_norm': 1132.706787109375, 'learning_rate': 1.3031914893617022e-07, 'mean_ratio_chosen': 1.5877810716629028, 'weight_chosen': 0.6322228908538818, 'kl_term_chosen': 0.2311687469482422, 'epoch': 0.01}
+  1%|▏         | 50/3753 [02:00<2:19:26,  2.26s/it]  1%|▏         | 51/3753 [02:02<2:20:49,  2.28s/it]  1%|▏         | 52/3753 [02:04<2:23:17,  2.32s/it]  1%|▏         | 53/3753 [02:07<2:28:26,  2.41s/it]  1%|▏         | 54/3753 [02:09<2:22:42,  2.31s/it]  1%|▏         | 55/3753 [02:13<2:43:05,  2.65s/it]  1%|▏         | 56/3753 [02:15<2:37:33,  2.56s/it]  2%|▏         | 57/3753 [02:18<2:44:02,  2.66s/it]  2%|▏         | 58/3753 [02:20<2:34:04,  2.50s/it]  2%|▏         | 59/3753 [02:22<2:26:11,  2.37s/it]  2%|▏         | 60/3753 [02:24<2:19:52,  2.27s/it]{'loss': 0.8681, 'grad_norm': 4401.9365234375, 'learning_rate': 1.5691489361702126e-07, 'mean_ratio_chosen': 1.6904613971710205, 'weight_chosen': -0.23228615522384644, 'kl_term_chosen': 0.2625007629394531, 'epoch': 0.015989340439706862}
+                                                   {'loss': 0.8681, 'grad_norm': 4401.9365234375, 'learning_rate': 1.5691489361702126e-07, 'mean_ratio_chosen': 1.6904613971710205, 'weight_chosen': -0.23228615522384644, 'kl_term_chosen': 0.2625007629394531, 'epoch': 0.02}
+  2%|▏         | 60/3753 [02:24<2:19:52,  2.27s/it]  2%|▏         | 61/3753 [02:26<2:21:39,  2.30s/it]  2%|▏         | 62/3753 [02:29<2:23:56,  2.34s/it]  2%|▏         | 63/3753 [02:31<2:25:07,  2.36s/it]  2%|▏         | 64/3753 [02:34<2:30:08,  2.44s/it]  2%|▏         | 65/3753 [02:36<2:24:28,  2.35s/it]  2%|▏         | 66/3753 [02:39<2:39:11,  2.59s/it]  2%|▏         | 67/3753 [02:41<2:34:38,  2.52s/it]  2%|▏         | 68/3753 [02:44<2:27:58,  2.41s/it]  2%|▏         | 69/3753 [02:46<2:28:00,  2.41s/it]  2%|▏         | 70/3753 [02:48<2:22:43,  2.33s/it]{'loss': 1.2182, 'grad_norm': 1296.496337890625, 'learning_rate': 1.8351063829787234e-07, 'mean_ratio_chosen': 8.217469215393066, 'weight_chosen': -0.08990055322647095, 'kl_term_chosen': 1.053131103515625, 'epoch': 0.018654230512991338}
+                                                   {'loss': 1.2182, 'grad_norm': 1296.496337890625, 'learning_rate': 1.8351063829787234e-07, 'mean_ratio_chosen': 8.217469215393066, 'weight_chosen': -0.08990055322647095, 'kl_term_chosen': 1.053131103515625, 'epoch': 0.02}
+  2%|▏         | 70/3753 [02:48<2:22:43,  2.33s/it]  2%|▏         | 71/3753 [02:51<2:24:32,  2.36s/it]  2%|▏         | 72/3753 [02:53<2:23:19,  2.34s/it]  2%|▏         | 73/3753 [02:55<2:19:28,  2.27s/it]  2%|▏         | 74/3753 [02:57<2:18:16,  2.26s/it]  2%|▏         | 75/3753 [03:00<2:21:21,  2.31s/it]  2%|▏         | 76/3753 [03:03<2:38:43,  2.59s/it]  2%|▏         | 77/3753 [03:05<2:26:51,  2.40s/it]  2%|▏         | 78/3753 [03:07<2:26:33,  2.39s/it]  2%|▏         | 79/3753 [03:09<2:22:12,  2.32s/it]  2%|▏         | 80/3753 [03:12<2:25:00,  2.37s/it]{'loss': 1.1973, 'grad_norm': 1634.47705078125, 'learning_rate': 2.101063829787234e-07, 'mean_ratio_chosen': 4.724154472351074, 'weight_chosen': 0.1520645022392273, 'kl_term_chosen': 0.7763442993164062, 'epoch': 0.021319120586275817}
+                                                   {'loss': 1.1973, 'grad_norm': 1634.47705078125, 'learning_rate': 2.101063829787234e-07, 'mean_ratio_chosen': 4.724154472351074, 'weight_chosen': 0.1520645022392273, 'kl_term_chosen': 0.7763442993164062, 'epoch': 0.02}
+  2%|▏         | 80/3753 [03:12<2:25:00,  2.37s/it]  2%|▏         | 81/3753 [03:14<2:29:04,  2.44s/it]  2%|▏         | 82/3753 [03:17<2:24:46,  2.37s/it]  2%|▏         | 83/3753 [03:20<2:35:55,  2.55s/it]  2%|▏         | 84/3753 [03:23<2:42:05,  2.65s/it]  2%|▏         | 85/3753 [03:25<2:32:57,  2.50s/it]  2%|▏         | 86/3753 [03:27<2:30:02,  2.45s/it]  2%|▏         | 87/3753 [03:30<2:40:58,  2.63s/it]  2%|▏         | 88/3753 [03:32<2:29:32,  2.45s/it]  2%|▏         | 89/3753 [03:34<2:26:23,  2.40s/it]  2%|▏         | 90/3753 [03:37<2:23:18,  2.35s/it]{'loss': 1.448, 'grad_norm': 1511.5806884765625, 'learning_rate': 2.3670212765957445e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -2.23399019241333, 'kl_term_chosen': 3.023223876953125, 'epoch': 0.023984010659560292}
+                                                   {'loss': 1.448, 'grad_norm': 1511.5806884765625, 'learning_rate': 2.3670212765957445e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -2.23399019241333, 'kl_term_chosen': 3.023223876953125, 'epoch': 0.02}
+  2%|▏         | 90/3753 [03:37<2:23:18,  2.35s/it]  2%|▏         | 91/3753 [03:39<2:16:21,  2.23s/it]  2%|▏         | 92/3753 [03:41<2:14:28,  2.20s/it]  2%|▏         | 93/3753 [03:43<2:17:22,  2.25s/it]  3%|▎         | 94/3753 [03:45<2:20:14,  2.30s/it]  3%|▎         | 95/3753 [03:48<2:32:09,  2.50s/it]  3%|▎         | 96/3753 [03:51<2:36:02,  2.56s/it]  3%|▎         | 97/3753 [03:53<2:29:33,  2.45s/it]  3%|▎         | 98/3753 [03:56<2:36:58,  2.58s/it]  3%|▎         | 99/3753 [03:58<2:28:16,  2.43s/it]  3%|▎         | 100/3753 [04:00<2:21:40,  2.33s/it]{'loss': 1.4715, 'grad_norm': 1163.8544921875, 'learning_rate': 2.632978723404255e-07, 'mean_ratio_chosen': 6.168820381164551, 'weight_chosen': -0.28180259466171265, 'kl_term_chosen': 0.9097537994384766, 'epoch': 0.02664890073284477}
+                                                    {'loss': 1.4715, 'grad_norm': 1163.8544921875, 'learning_rate': 2.632978723404255e-07, 'mean_ratio_chosen': 6.168820381164551, 'weight_chosen': -0.28180259466171265, 'kl_term_chosen': 0.9097537994384766, 'epoch': 0.03}
+  3%|▎         | 100/3753 [04:00<2:21:40,  2.33s/it]  3%|▎         | 101/3753 [04:03<2:22:50,  2.35s/it]  3%|▎         | 102/3753 [04:05<2:19:05,  2.29s/it]  3%|▎         | 103/3753 [04:07<2:23:14,  2.35s/it]  3%|▎         | 104/3753 [04:10<2:33:33,  2.53s/it]  3%|▎         | 105/3753 [04:13<2:35:16,  2.55s/it]  3%|▎         | 106/3753 [04:16<2:37:36,  2.59s/it]  3%|▎         | 107/3753 [04:18<2:34:50,  2.55s/it]  3%|▎         | 108/3753 [04:20<2:28:27,  2.44s/it]  3%|▎         | 109/3753 [04:23<2:24:44,  2.38s/it]  3%|▎         | 110/3753 [04:25<2:23:36,  2.37s/it]{'loss': 0.9749, 'grad_norm': 1541.4359130859375, 'learning_rate': 2.8989361702127657e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.26942896842956543, 'kl_term_chosen': 1.18310546875, 'epoch': 0.029313790806129246}
+                                                    {'loss': 0.9749, 'grad_norm': 1541.4359130859375, 'learning_rate': 2.8989361702127657e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.26942896842956543, 'kl_term_chosen': 1.18310546875, 'epoch': 0.03}
+  3%|▎         | 110/3753 [04:25<2:23:36,  2.37s/it]  3%|▎         | 111/3753 [04:27<2:26:07,  2.41s/it]  3%|▎         | 112/3753 [04:30<2:27:32,  2.43s/it]  3%|▎         | 113/3753 [04:32<2:18:22,  2.28s/it]  3%|▎         | 114/3753 [04:34<2:20:45,  2.32s/it]  3%|▎         | 115/3753 [04:36<2:18:19,  2.28s/it]  3%|▎         | 116/3753 [04:39<2:18:58,  2.29s/it]  3%|▎         | 117/3753 [04:41<2:16:59,  2.26s/it]  3%|▎         | 118/3753 [04:43<2:15:52,  2.24s/it]  3%|▎         | 119/3753 [04:45<2:11:46,  2.18s/it]  3%|▎         | 120/3753 [04:48<2:17:12,  2.27s/it]{'loss': 1.9752, 'grad_norm': 1325.08349609375, 'learning_rate': 3.1648936170212764e-07, 'mean_ratio_chosen': 2.0462937355041504, 'weight_chosen': 0.47853946685791016, 'kl_term_chosen': 0.3580150604248047, 'epoch': 0.031978680879413725}
+                                                    {'loss': 1.9752, 'grad_norm': 1325.08349609375, 'learning_rate': 3.1648936170212764e-07, 'mean_ratio_chosen': 2.0462937355041504, 'weight_chosen': 0.47853946685791016, 'kl_term_chosen': 0.3580150604248047, 'epoch': 0.03}
+  3%|▎         | 120/3753 [04:48<2:17:12,  2.27s/it]  3%|▎         | 121/3753 [04:50<2:24:59,  2.40s/it]  3%|▎         | 122/3753 [04:53<2:25:42,  2.41s/it]  3%|▎         | 123/3753 [04:55<2:29:14,  2.47s/it]  3%|▎         | 124/3753 [04:57<2:21:18,  2.34s/it]  3%|▎         | 125/3753 [05:00<2:21:48,  2.35s/it]  3%|▎         | 126/3753 [05:02<2:20:28,  2.32s/it]  3%|▎         | 127/3753 [05:04<2:15:30,  2.24s/it]  3%|▎         | 128/3753 [05:06<2:12:57,  2.20s/it]  3%|▎         | 129/3753 [05:09<2:22:43,  2.36s/it]  3%|▎         | 130/3753 [05:11<2:24:25,  2.39s/it]{'loss': 1.4055, 'grad_norm': 2731.769775390625, 'learning_rate': 3.430851063829787e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -1.2363131046295166, 'kl_term_chosen': 1.533782958984375, 'epoch': 0.034643570952698204}
+                                                    {'loss': 1.4055, 'grad_norm': 2731.769775390625, 'learning_rate': 3.430851063829787e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -1.2363131046295166, 'kl_term_chosen': 1.533782958984375, 'epoch': 0.03}
+  3%|▎         | 130/3753 [05:11<2:24:25,  2.39s/it]  3%|▎         | 131/3753 [05:14<2:26:32,  2.43s/it]  4%|▎         | 132/3753 [05:16<2:19:37,  2.31s/it]  4%|▎         | 133/3753 [05:19<2:27:33,  2.45s/it]  4%|▎         | 134/3753 [05:21<2:25:52,  2.42s/it]  4%|▎         | 135/3753 [05:23<2:21:08,  2.34s/it]  4%|▎         | 136/3753 [05:25<2:15:39,  2.25s/it]  4%|▎         | 137/3753 [05:27<2:14:15,  2.23s/it]  4%|▎         | 138/3753 [05:30<2:17:58,  2.29s/it]  4%|▎         | 139/3753 [05:32<2:13:35,  2.22s/it]  4%|▎         | 140/3753 [05:35<2:22:50,  2.37s/it]{'loss': 1.7696, 'grad_norm': 934.5765380859375, 'learning_rate': 3.696808510638298e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.583604097366333, 'kl_term_chosen': 1.443267822265625, 'epoch': 0.037308461025982675}
+                                                    {'loss': 1.7696, 'grad_norm': 934.5765380859375, 'learning_rate': 3.696808510638298e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.583604097366333, 'kl_term_chosen': 1.443267822265625, 'epoch': 0.04}
+  4%|▎         | 140/3753 [05:35<2:22:50,  2.37s/it]  4%|▍         | 141/3753 [05:37<2:20:28,  2.33s/it]  4%|▍         | 142/3753 [05:40<2:26:50,  2.44s/it]  4%|▍         | 143/3753 [05:42<2:25:28,  2.42s/it]  4%|▍         | 144/3753 [05:45<2:32:41,  2.54s/it]  4%|▍         | 145/3753 [05:48<2:41:01,  2.68s/it]  4%|▍         | 146/3753 [05:50<2:37:23,  2.62s/it]  4%|▍         | 147/3753 [05:53<2:40:30,  2.67s/it]  4%|▍         | 148/3753 [05:56<2:39:33,  2.66s/it]  4%|▍         | 149/3753 [05:58<2:37:01,  2.61s/it]  4%|▍         | 150/3753 [06:01<2:43:29,  2.72s/it]{'loss': 2.1243, 'grad_norm': 4234.5908203125, 'learning_rate': 3.962765957446808e-07, 'mean_ratio_chosen': 1.7697376012802124, 'weight_chosen': 0.05004405975341797, 'kl_term_chosen': 0.2854156494140625, 'epoch': 0.039973351099267154}
+                                                    {'loss': 2.1243, 'grad_norm': 4234.5908203125, 'learning_rate': 3.962765957446808e-07, 'mean_ratio_chosen': 1.7697376012802124, 'weight_chosen': 0.05004405975341797, 'kl_term_chosen': 0.2854156494140625, 'epoch': 0.04}
+  4%|▍         | 150/3753 [06:01<2:43:29,  2.72s/it]  4%|▍         | 151/3753 [06:04<2:46:45,  2.78s/it]  4%|▍         | 152/3753 [06:06<2:35:11,  2.59s/it]  4%|▍         | 153/3753 [06:09<2:34:26,  2.57s/it]  4%|▍         | 154/3753 [06:11<2:24:27,  2.41s/it]  4%|▍         | 155/3753 [06:13<2:22:00,  2.37s/it]  4%|▍         | 156/3753 [06:15<2:19:31,  2.33s/it]  4%|▍         | 157/3753 [06:17<2:17:42,  2.30s/it]  4%|▍         | 158/3753 [06:20<2:26:28,  2.44s/it]  4%|▍         | 159/3753 [06:23<2:23:36,  2.40s/it]  4%|▍         | 160/3753 [06:25<2:31:03,  2.52s/it]{'loss': 1.2739, 'grad_norm': 1814.569580078125, 'learning_rate': 4.228723404255319e-07, 'mean_ratio_chosen': 6.654302597045898, 'weight_chosen': -0.2676025629043579, 'kl_term_chosen': 0.9476318359375, 'epoch': 0.04263824117255163}
+                                                    {'loss': 1.2739, 'grad_norm': 1814.569580078125, 'learning_rate': 4.228723404255319e-07, 'mean_ratio_chosen': 6.654302597045898, 'weight_chosen': -0.2676025629043579, 'kl_term_chosen': 0.9476318359375, 'epoch': 0.04}
+  4%|▍         | 160/3753 [06:25<2:31:03,  2.52s/it]  4%|▍         | 161/3753 [06:28<2:23:56,  2.40s/it]  4%|▍         | 162/3753 [06:30<2:20:43,  2.35s/it]  4%|▍         | 163/3753 [06:32<2:13:48,  2.24s/it]  4%|▍         | 164/3753 [06:35<2:29:04,  2.49s/it]  4%|▍         | 165/3753 [06:38<2:38:19,  2.65s/it]  4%|▍         | 166/3753 [06:40<2:26:02,  2.44s/it]  4%|▍         | 167/3753 [06:42<2:24:54,  2.42s/it]  4%|▍         | 168/3753 [06:45<2:33:28,  2.57s/it]  5%|▍         | 169/3753 [06:47<2:25:14,  2.43s/it]  5%|▍         | 170/3753 [06:50<2:23:40,  2.41s/it]{'loss': 1.5258, 'grad_norm': 2167.669921875, 'learning_rate': 4.4946808510638295e-07, 'mean_ratio_chosen': 3.3411974906921387, 'weight_chosen': 0.2691826820373535, 'kl_term_chosen': 0.6031646728515625, 'epoch': 0.04530313124583611}
+                                                    {'loss': 1.5258, 'grad_norm': 2167.669921875, 'learning_rate': 4.4946808510638295e-07, 'mean_ratio_chosen': 3.3411974906921387, 'weight_chosen': 0.2691826820373535, 'kl_term_chosen': 0.6031646728515625, 'epoch': 0.05}
+  5%|▍         | 170/3753 [06:50<2:23:40,  2.41s/it]  5%|▍         | 171/3753 [06:52<2:27:10,  2.47s/it]  5%|▍         | 172/3753 [06:55<2:27:02,  2.46s/it]  5%|▍         | 173/3753 [06:57<2:21:08,  2.37s/it]  5%|▍         | 174/3753 [06:59<2:18:36,  2.32s/it]  5%|▍         | 175/3753 [07:01<2:19:25,  2.34s/it]  5%|▍         | 176/3753 [07:03<2:13:21,  2.24s/it]  5%|▍         | 177/3753 [07:06<2:21:56,  2.38s/it]  5%|▍         | 178/3753 [07:09<2:24:28,  2.42s/it]  5%|▍         | 179/3753 [07:11<2:24:18,  2.42s/it]  5%|▍         | 180/3753 [07:13<2:22:19,  2.39s/it]{'loss': 2.4495, 'grad_norm': 1754.3770751953125, 'learning_rate': 4.76063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.6282979249954224, 'kl_term_chosen': 1.5636444091796875, 'epoch': 0.047968021319120584}
+                                                    {'loss': 2.4495, 'grad_norm': 1754.3770751953125, 'learning_rate': 4.76063829787234e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.6282979249954224, 'kl_term_chosen': 1.5636444091796875, 'epoch': 0.05}
+  5%|▍         | 180/3753 [07:13<2:22:19,  2.39s/it]  5%|▍         | 181/3753 [07:16<2:23:00,  2.40s/it]  5%|▍         | 182/3753 [07:19<2:36:23,  2.63s/it]  5%|▍         | 183/3753 [07:21<2:33:17,  2.58s/it]  5%|▍         | 184/3753 [07:24<2:34:01,  2.59s/it]  5%|▍         | 185/3753 [07:26<2:32:50,  2.57s/it]  5%|▍         | 186/3753 [07:29<2:34:36,  2.60s/it]  5%|▍         | 187/3753 [07:31<2:28:50,  2.50s/it]  5%|▌         | 188/3753 [07:34<2:30:13,  2.53s/it]  5%|▌         | 189/3753 [07:37<2:36:50,  2.64s/it]  5%|▌         | 190/3753 [07:39<2:29:13,  2.51s/it]{'loss': 3.7658, 'grad_norm': 1113.6591796875, 'learning_rate': 5.026595744680851e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -1.637528657913208, 'kl_term_chosen': 2.5183258056640625, 'epoch': 0.05063291139240506}
+                                                    {'loss': 3.7658, 'grad_norm': 1113.6591796875, 'learning_rate': 5.026595744680851e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -1.637528657913208, 'kl_term_chosen': 2.5183258056640625, 'epoch': 0.05}
+  5%|▌         | 190/3753 [07:39<2:29:13,  2.51s/it]  5%|▌         | 191/3753 [07:41<2:23:38,  2.42s/it]  5%|▌         | 192/3753 [07:43<2:17:19,  2.31s/it]  5%|▌         | 193/3753 [07:46<2:16:53,  2.31s/it]  5%|▌         | 194/3753 [07:48<2:21:16,  2.38s/it]  5%|▌         | 195/3753 [07:51<2:23:30,  2.42s/it]  5%|▌         | 196/3753 [07:53<2:14:57,  2.28s/it]  5%|▌         | 197/3753 [07:57<2:43:22,  2.76s/it]  5%|▌         | 198/3753 [07:59<2:32:41,  2.58s/it]  5%|▌         | 199/3753 [08:01<2:34:30,  2.61s/it]  5%|▌         | 200/3753 [08:04<2:30:14,  2.54s/it]{'loss': 2.961, 'grad_norm': 1086.686279296875, 'learning_rate': 5.292553191489362e-07, 'mean_ratio_chosen': 8.196430206298828, 'weight_chosen': -0.10850179195404053, 'kl_term_chosen': 1.051849365234375, 'epoch': 0.05329780146568954}
+                                                    {'loss': 2.961, 'grad_norm': 1086.686279296875, 'learning_rate': 5.292553191489362e-07, 'mean_ratio_chosen': 8.196430206298828, 'weight_chosen': -0.10850179195404053, 'kl_term_chosen': 1.051849365234375, 'epoch': 0.05}
+  5%|▌         | 200/3753 [08:04<2:30:14,  2.54s/it]  5%|▌         | 201/3753 [08:06<2:27:33,  2.49s/it]  5%|▌         | 202/3753 [08:08<2:20:16,  2.37s/it]  5%|▌         | 203/3753 [08:11<2:23:09,  2.42s/it]  5%|▌         | 204/3753 [08:13<2:17:32,  2.33s/it]  5%|▌         | 205/3753 [08:15<2:19:54,  2.37s/it]  5%|▌         | 206/3753 [08:18<2:28:06,  2.51s/it]  6%|▌         | 207/3753 [08:21<2:29:02,  2.52s/it]  6%|▌         | 208/3753 [08:23<2:24:08,  2.44s/it]  6%|▌         | 209/3753 [08:25<2:21:16,  2.39s/it]  6%|▌         | 210/3753 [08:28<2:19:18,  2.36s/it]{'loss': 2.1962, 'grad_norm': 1741.8394775390625, 'learning_rate': 5.558510638297872e-07, 'mean_ratio_chosen': 1.3750170469284058, 'weight_chosen': 0.659503698348999, 'kl_term_chosen': 0.15923309326171875, 'epoch': 0.05596269153897402}
+                                                    {'loss': 2.1962, 'grad_norm': 1741.8394775390625, 'learning_rate': 5.558510638297872e-07, 'mean_ratio_chosen': 1.3750170469284058, 'weight_chosen': 0.659503698348999, 'kl_term_chosen': 0.15923309326171875, 'epoch': 0.06}
+  6%|▌         | 210/3753 [08:28<2:19:18,  2.36s/it]  6%|▌         | 211/3753 [08:30<2:23:30,  2.43s/it]  6%|▌         | 212/3753 [08:32<2:16:53,  2.32s/it]  6%|▌         | 213/3753 [08:35<2:18:47,  2.35s/it]  6%|▌         | 214/3753 [08:37<2:26:35,  2.49s/it]  6%|▌         | 215/3753 [08:40<2:22:32,  2.42s/it]  6%|▌         | 216/3753 [08:42<2:27:32,  2.50s/it]  6%|▌         | 217/3753 [08:44<2:19:29,  2.37s/it]  6%|▌         | 218/3753 [08:47<2:21:11,  2.40s/it]  6%|▌         | 219/3753 [08:49<2:17:11,  2.33s/it]  6%|▌         | 220/3753 [08:51<2:11:59,  2.24s/it]{'loss': 5.8402, 'grad_norm': 506.4134216308594, 'learning_rate': 5.824468085106384e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -1.9241539239883423, 'kl_term_chosen': 2.6058807373046875, 'epoch': 0.05862758161225849}
+                                                    {'loss': 5.8402, 'grad_norm': 506.4134216308594, 'learning_rate': 5.824468085106384e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -1.9241539239883423, 'kl_term_chosen': 2.6058807373046875, 'epoch': 0.06}
+  6%|▌         | 220/3753 [08:51<2:11:59,  2.24s/it]  6%|▌         | 221/3753 [08:53<2:11:04,  2.23s/it]  6%|▌         | 222/3753 [08:56<2:12:48,  2.26s/it]  6%|▌         | 223/3753 [08:58<2:14:16,  2.28s/it]  6%|▌         | 224/3753 [09:00<2:11:39,  2.24s/it]  6%|▌         | 225/3753 [09:03<2:18:22,  2.35s/it]  6%|▌         | 226/3753 [09:05<2:14:58,  2.30s/it]  6%|▌         | 227/3753 [09:08<2:23:55,  2.45s/it]  6%|▌         | 228/3753 [09:10<2:15:17,  2.30s/it]  6%|▌         | 229/3753 [09:12<2:19:10,  2.37s/it]  6%|▌         | 230/3753 [09:15<2:28:57,  2.54s/it]{'loss': 5.5563, 'grad_norm': 548.065673828125, 'learning_rate': 6.090425531914894e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.3194420337677002, 'kl_term_chosen': 1.25665283203125, 'epoch': 0.06129247168554297}
+                                                    {'loss': 5.5563, 'grad_norm': 548.065673828125, 'learning_rate': 6.090425531914894e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.3194420337677002, 'kl_term_chosen': 1.25665283203125, 'epoch': 0.06}
+  6%|▌         | 230/3753 [09:15<2:28:57,  2.54s/it]  6%|▌         | 231/3753 [09:17<2:24:43,  2.47s/it]  6%|▌         | 232/3753 [09:20<2:27:19,  2.51s/it]  6%|▌         | 233/3753 [09:23<2:28:03,  2.52s/it]  6%|▌         | 234/3753 [09:26<2:35:33,  2.65s/it]  6%|▋         | 235/3753 [09:28<2:31:43,  2.59s/it]  6%|▋         | 236/3753 [09:30<2:27:20,  2.51s/it]  6%|▋         | 237/3753 [09:32<2:19:37,  2.38s/it]  6%|▋         | 238/3753 [09:35<2:19:03,  2.37s/it]  6%|▋         | 239/3753 [09:37<2:20:12,  2.39s/it]  6%|▋         | 240/3753 [09:39<2:16:37,  2.33s/it]{'loss': 16.656, 'grad_norm': 0.0, 'learning_rate': 6.356382978723404e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.6618493795394897, 'kl_term_chosen': 1.4929924011230469, 'epoch': 0.06395736175882745}
+                                                    {'loss': 16.656, 'grad_norm': 0.0, 'learning_rate': 6.356382978723404e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -0.6618493795394897, 'kl_term_chosen': 1.4929924011230469, 'epoch': 0.06}
+  6%|▋         | 240/3753 [09:39<2:16:37,  2.33s/it]  6%|▋         | 241/3753 [09:42<2:13:51,  2.29s/it]  6%|▋         | 242/3753 [09:44<2:19:45,  2.39s/it]  6%|▋         | 243/3753 [09:47<2:20:43,  2.41s/it]  7%|▋         | 244/3753 [09:50<2:33:34,  2.63s/it]  7%|▋         | 245/3753 [09:52<2:28:11,  2.53s/it]  7%|▋         | 246/3753 [09:54<2:18:54,  2.38s/it]  7%|▋         | 247/3753 [09:58<2:43:35,  2.80s/it]  7%|▋         | 248/3753 [10:00<2:39:45,  2.73s/it]  7%|▋         | 249/3753 [10:03<2:30:33,  2.58s/it]  7%|▋         | 250/3753 [10:05<2:31:44,  2.60s/it]{'loss': 13.845, 'grad_norm': 660.816650390625, 'learning_rate': 6.622340425531915e-07, 'mean_ratio_chosen': 8.495931625366211, 'weight_chosen': -0.175004243850708, 'kl_term_chosen': 1.069793701171875, 'epoch': 0.06662225183211193}
+                                                    {'loss': 13.845, 'grad_norm': 660.816650390625, 'learning_rate': 6.622340425531915e-07, 'mean_ratio_chosen': 8.495931625366211, 'weight_chosen': -0.175004243850708, 'kl_term_chosen': 1.069793701171875, 'epoch': 0.07}
+  7%|▋         | 250/3753 [10:05<2:31:44,  2.60s/it]  7%|▋         | 251/3753 [10:09<2:45:20,  2.83s/it]  7%|▋         | 252/3753 [10:11<2:38:08,  2.71s/it]  7%|▋         | 253/3753 [10:14<2:35:52,  2.67s/it]  7%|▋         | 254/3753 [10:16<2:24:11,  2.47s/it]  7%|▋         | 255/3753 [10:18<2:18:29,  2.38s/it]  7%|▋         | 256/3753 [10:20<2:13:18,  2.29s/it]  7%|▋         | 257/3753 [10:22<2:12:32,  2.27s/it]  7%|▋         | 258/3753 [10:24<2:11:09,  2.25s/it]  7%|▋         | 259/3753 [10:26<2:07:57,  2.20s/it]  7%|▋         | 260/3753 [10:29<2:19:38,  2.40s/it]{'loss': 6.7301, 'grad_norm': 156.91102600097656, 'learning_rate': 6.888297872340425e-07, 'mean_ratio_chosen': 7.248239994049072, 'weight_chosen': -0.10317474603652954, 'kl_term_chosen': 0.9903793334960938, 'epoch': 0.06928714190539641}
+                                                    {'loss': 6.7301, 'grad_norm': 156.91102600097656, 'learning_rate': 6.888297872340425e-07, 'mean_ratio_chosen': 7.248239994049072, 'weight_chosen': -0.10317474603652954, 'kl_term_chosen': 0.9903793334960938, 'epoch': 0.07}
+  7%|▋         | 260/3753 [10:29<2:19:38,  2.40s/it]  7%|▋         | 261/3753 [10:32<2:20:51,  2.42s/it]  7%|▋         | 262/3753 [10:34<2:24:49,  2.49s/it]  7%|▋         | 263/3753 [10:37<2:19:53,  2.40s/it]  7%|▋         | 264/3753 [10:39<2:17:22,  2.36s/it]  7%|▋         | 265/3753 [10:41<2:16:22,  2.35s/it]  7%|▋         | 266/3753 [10:43<2:13:07,  2.29s/it]  7%|▋         | 267/3753 [10:46<2:11:22,  2.26s/it]  7%|▋         | 268/3753 [10:48<2:16:10,  2.34s/it]  7%|▋         | 269/3753 [10:50<2:15:45,  2.34s/it]  7%|▋         | 270/3753 [10:53<2:16:38,  2.35s/it]{'loss': 11.4256, 'grad_norm': 1834.9990234375, 'learning_rate': 7.154255319148937e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -2.372659206390381, 'kl_term_chosen': 3.348236083984375, 'epoch': 0.07195203197868089}
+                                                    {'loss': 11.4256, 'grad_norm': 1834.9990234375, 'learning_rate': 7.154255319148937e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -2.372659206390381, 'kl_term_chosen': 3.348236083984375, 'epoch': 0.07}
+  7%|▋         | 270/3753 [10:53<2:16:38,  2.35s/it]  7%|▋         | 271/3753 [10:56<2:23:40,  2.48s/it]  7%|▋         | 272/3753 [10:58<2:19:50,  2.41s/it]  7%|▋         | 273/3753 [11:00<2:14:57,  2.33s/it]  7%|▋         | 274/3753 [11:02<2:12:31,  2.29s/it]  7%|▋         | 275/3753 [11:04<2:11:45,  2.27s/it]  7%|▋         | 276/3753 [11:07<2:08:52,  2.22s/it]  7%|▋         | 277/3753 [11:09<2:18:07,  2.38s/it]  7%|▋         | 278/3753 [11:11<2:10:56,  2.26s/it]  7%|▋         | 279/3753 [11:14<2:21:15,  2.44s/it]  7%|▋         | 280/3753 [11:17<2:20:59,  2.44s/it]{'loss': 7.2534, 'grad_norm': 99.29964447021484, 'learning_rate': 7.420212765957447e-07, 'mean_ratio_chosen': 0.21500498056411743, 'weight_chosen': 1.699005365371704, 'kl_term_chosen': -0.7685470581054688, 'epoch': 0.07461692205196535}
+                                                    {'loss': 7.2534, 'grad_norm': 99.29964447021484, 'learning_rate': 7.420212765957447e-07, 'mean_ratio_chosen': 0.21500498056411743, 'weight_chosen': 1.699005365371704, 'kl_term_chosen': -0.7685470581054688, 'epoch': 0.07}
+  7%|▋         | 280/3753 [11:17<2:20:59,  2.44s/it]  7%|▋         | 281/3753 [11:19<2:22:47,  2.47s/it]  8%|▊         | 282/3753 [11:22<2:25:40,  2.52s/it]  8%|▊         | 283/3753 [11:24<2:19:00,  2.40s/it]  8%|▊         | 284/3753 [11:26<2:12:57,  2.30s/it]  8%|▊         | 285/3753 [11:29<2:27:12,  2.55s/it]  8%|▊         | 286/3753 [11:31<2:16:50,  2.37s/it]  8%|▊         | 287/3753 [11:33<2:13:17,  2.31s/it]  8%|▊         | 288/3753 [11:36<2:20:16,  2.43s/it]  8%|▊         | 289/3753 [11:38<2:21:02,  2.44s/it]  8%|▊         | 290/3753 [11:42<2:35:06,  2.69s/it]{'loss': 50.3731, 'grad_norm': 0.0, 'learning_rate': 7.686170212765957e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -7.511441230773926, 'kl_term_chosen': 8.264907836914062, 'epoch': 0.07728181212524983}
+                                                    {'loss': 50.3731, 'grad_norm': 0.0, 'learning_rate': 7.686170212765957e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -7.511441230773926, 'kl_term_chosen': 8.264907836914062, 'epoch': 0.08}
+  8%|▊         | 290/3753 [11:42<2:35:06,  2.69s/it]  8%|▊         | 291/3753 [11:44<2:24:55,  2.51s/it]  8%|▊         | 292/3753 [11:46<2:27:25,  2.56s/it]  8%|▊         | 293/3753 [11:49<2:20:30,  2.44s/it]  8%|▊         | 294/3753 [11:51<2:14:45,  2.34s/it]  8%|▊         | 295/3753 [11:53<2:17:39,  2.39s/it]  8%|▊         | 296/3753 [11:55<2:13:50,  2.32s/it]  8%|▊         | 297/3753 [11:58<2:20:53,  2.45s/it]  8%|▊         | 298/3753 [12:01<2:24:52,  2.52s/it]  8%|▊         | 299/3753 [12:03<2:25:17,  2.52s/it]  8%|▊         | 300/3753 [12:05<2:17:19,  2.39s/it]{'loss': 73.2943, 'grad_norm': 0.0, 'learning_rate': 7.952127659574468e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -9.460555076599121, 'kl_term_chosen': 10.384696960449219, 'epoch': 0.07994670219853431}
+                                                    {'loss': 73.2943, 'grad_norm': 0.0, 'learning_rate': 7.952127659574468e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -9.460555076599121, 'kl_term_chosen': 10.384696960449219, 'epoch': 0.08}
+  8%|▊         | 300/3753 [12:05<2:17:19,  2.39s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py:860: UserWarning: `_get_pg_default_device` will be deprecated, it only stays for backward-compatiblity reason. If you need to find a device for object collectives, please use `_get_object_coll_device`. If you need to query the device types supported by group, please use `_device_capability(group)`. 
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:722: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  local_shape = tensor.shape
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:739: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.shape,
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/_state_dict_utils.py:741: FutureWarning: Please use DTensor instead and we are deprecating ShardedTensor.
+  tensor.dtype,
+  8%|▊         | 301/3753 [12:56<16:09:40, 16.85s/it]  8%|▊         | 302/3753 [12:58<12:00:59, 12.54s/it]  8%|▊         | 303/3753 [13:01<9:06:44,  9.51s/it]   8%|▊         | 304/3753 [13:03<6:54:53,  7.22s/it]  8%|▊         | 305/3753 [13:05<5:26:30,  5.68s/it]  8%|▊         | 306/3753 [13:07<4:25:42,  4.63s/it]  8%|▊         | 307/3753 [13:10<3:51:40,  4.03s/it]  8%|▊         | 308/3753 [13:12<3:26:42,  3.60s/it]  8%|▊         | 309/3753 [13:15<3:06:55,  3.26s/it]  8%|▊         | 310/3753 [13:17<2:55:44,  3.06s/it]{'loss': 83.0852, 'grad_norm': 0.0, 'learning_rate': 8.218085106382978e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -6.3530049324035645, 'kl_term_chosen': 7.016674041748047, 'epoch': 0.08261159227181879}
+                                                    {'loss': 83.0852, 'grad_norm': 0.0, 'learning_rate': 8.218085106382978e-07, 'mean_ratio_chosen': 9.974181175231934, 'weight_chosen': -6.3530049324035645, 'kl_term_chosen': 7.016674041748047, 'epoch': 0.08}
+  8%|▊         | 310/3753 [13:17<2:55:44,  3.06s/it]  8%|▊         | 311/3753 [13:20<2:41:12,  2.81s/it]  8%|▊         | 312/3753 [13:22<2:27:54,  2.58s/it]  8%|▊         | 313/3753 [13:24<2:21:34,  2.47s/it]W1105 06:42:58.947000 31326 site-packages/torch/distributed/elastic/agent/server/api.py:723] Received 15 death signal, shutting down workers
+W1105 06:42:58.948000 31326 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 31510 closing signal SIGTERM
+W1105 06:42:58.959000 31326 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 31511 closing signal SIGTERM
+W1105 06:42:58.963000 31326 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 31512 closing signal SIGTERM
+W1105 06:42:58.965000 31326 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 31513 closing signal SIGTERM
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/advan/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1222, in launch_command
+    multi_gpu_launcher(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 268, in launch_agent
+    result = agent.run()
+             ^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/metrics/api.py", line 138, in wrapper
+    result = f(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 715, in run
+    result = self._invoke_run(role)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/agent/server/api.py", line 879, in _invoke_run
+    time.sleep(monitor_interval)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/api.py", line 84, in _terminate_process_handler
+    raise SignalException(f"Process {os.getpid()} got signal: {sigval}", sigval=sigval)
+torch.distributed.elastic.multiprocessing.api.SignalException: Process 31326 got signal: 15
