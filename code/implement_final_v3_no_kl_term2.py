@@ -221,7 +221,7 @@ def parse_args():
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
     parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/precomputed_traindataset", help="Path to the precomputed dataset.")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.1_no_kl_2", help="Directory to save checkpoints and final model.")
+    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.5_no_kl_2_seed_42", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
@@ -236,7 +236,7 @@ def parse_args():
     parser.add_argument("--save_total_limit", type=int, default=20, help="Limit the total number of saved checkpoints.")
 
     # --- SymPO 特定参数 ---
-    parser.add_argument("--beta_kl", type=float, default=1, help="KL divergence penalty coefficient.")
+    parser.add_argument("--beta_kl", type=float, default=0.5, help="KL divergence penalty coefficient.")
     parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Minimum clip value for log probability ratio.")
     parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Maximum clip value for log probability ratio.")
     parser.add_argument("--use_smooth_clip", action='store_true', help="Use smooth clipping for better gradient stability (recommended).")
