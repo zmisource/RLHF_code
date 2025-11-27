@@ -1,0 +1,172 @@
+nohup: ignoring input
+[W1123 11:27:49.298923707 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...
+加载用于训练的策略模型 (Policy Model)...
+加载用于训练的策略模型 (Policy Model)...
+`torch_dtype` is deprecated! Use `dtype` instead!
+`torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/rlhf_code/code/implement_final_v3_length.py", line 297, in <module>
+    main()
+  File "/rlhf_code/code/implement_final_v3_length.py", line 235, in main
+    policy_model = AutoModelForCausalLM.from_pretrained(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+Traceback (most recent call last):
+  File "/rlhf_code/code/implement_final_v3_length.py", line 297, in <module>
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 288, in _wrapper
+    return func(*args, **kwargs)
+            main() 
+  ^^^^^^^^^^^^^^^^  File "/rlhf_code/code/implement_final_v3_length.py", line 235, in main
+^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5103, in from_pretrained
+    policy_model = AutoModelForCausalLM.from_pretrained(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 288, in _wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5103, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 419, in __init__
+    super().__init__(config)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2197, in __init__
+    model = cls(config, *model_args, **model_kwargs)
+    self.config._attn_implementation_internal = self._check_and_adjust_attn_implementation( 
+                     ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^^^
+^^^  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 419, in __init__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2807, in _check_and_adjust_attn_implementation
+    super().__init__(config)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2197, in __init__
+    self.config._attn_implementation_internal = self._check_and_adjust_attn_implementation(
+                           applicable_attn_implementation = self.get_correct_attn_implementation( 
+                                               ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2807, in _check_and_adjust_attn_implementation
+^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2835, in get_correct_attn_implementation
+    applicable_attn_implementation = self.get_correct_attn_implementation(
+              self._flash_attn_2_can_dispatch(is_init_check) 
+                   File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2547, in _flash_attn_2_can_dispatch
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2835, in get_correct_attn_implementation
+    raise ImportError(f"{preface} the package flash_attn seems to be not installed. {install_message}")
+ImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.
+    self._flash_attn_2_can_dispatch(is_init_check)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2547, in _flash_attn_2_can_dispatch
+    raise ImportError(f"{preface} the package flash_attn seems to be not installed. {install_message}")
+ImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.
+Traceback (most recent call last):
+  File "/rlhf_code/code/implement_final_v3_length.py", line 297, in <module>
+Traceback (most recent call last):
+  File "/rlhf_code/code/implement_final_v3_length.py", line 297, in <module>
+    main()
+      File "/rlhf_code/code/implement_final_v3_length.py", line 235, in main
+main()
+  File "/rlhf_code/code/implement_final_v3_length.py", line 235, in main
+    policy_model = AutoModelForCausalLM.from_pretrained(
+                    policy_model = AutoModelForCausalLM.from_pretrained( 
+  ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+             return model_class.from_pretrained( 
+ ^^^^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 288, in _wrapper
+^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 288, in _wrapper
+    return func(*args, **kwargs)
+    return func(*args, **kwargs)
+           ^^^^^^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^^^^^^^^^^
+^^^^^^^^^^  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5103, in from_pretrained
+^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 5103, in from_pretrained
+    model = cls(config, *model_args, **model_kwargs)    
+model = cls(config, *model_args, **model_kwargs)
+                      ^ ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 419, in __init__
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/models/llama/modeling_llama.py", line 419, in __init__
+    super().__init__(config)    
+super().__init__(config)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2197, in __init__
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2197, in __init__
+    self.config._attn_implementation_internal = self._check_and_adjust_attn_implementation(
+    self.config._attn_implementation_internal = self._check_and_adjust_attn_implementation( 
+                                                                                            ^ ^ ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2807, in _check_and_adjust_attn_implementation
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2807, in _check_and_adjust_attn_implementation
+    applicable_attn_implementation = self.get_correct_attn_implementation(
+    applicable_attn_implementation = self.get_correct_attn_implementation( 
+                                                                      ^ ^ ^ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2835, in get_correct_attn_implementation
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2835, in get_correct_attn_implementation
+    self._flash_attn_2_can_dispatch(is_init_check)
+    self._flash_attn_2_can_dispatch(is_init_check)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2547, in _flash_attn_2_can_dispatch
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/transformers/modeling_utils.py", line 2547, in _flash_attn_2_can_dispatch
+    raise ImportError(f"{preface} the package flash_attn seems to be not installed. {install_message}")
+    raise ImportError(f"{preface} the package flash_attn seems to be not installed. {install_message}")
+ImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.
+ImportError: FlashAttention2 has been toggled on, but it cannot be used due to the following error: the package flash_attn seems to be not installed. Please refer to the documentation of https://huggingface.co/docs/transformers/perf_infer_gpu_one#flashattention-2 to install Flash Attention 2.
+W1123 11:27:54.835000 47699 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 47787 closing signal SIGTERM
+W1123 11:27:54.836000 47699 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 47788 closing signal SIGTERM
+E1123 11:27:54.901000 47699 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 2 (pid: 47789) of binary: /root/miniconda3/envs/advan/bin/python3.12
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/advan/bin/accelerate", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/accelerate_cli.py", line 50, in main
+    args.func(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 1222, in launch_command
+    multi_gpu_launcher(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/commands/launch.py", line 853, in multi_gpu_launcher
+    distrib_run.run(args)
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/rlhf_code/code/implement_final_v3_length.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-11-23_11:27:54
+  host      : ZBJbkJ
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 47790)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-11-23_11:27:54
+  host      : ZBJbkJ
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 47789)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

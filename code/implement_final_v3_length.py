@@ -48,6 +48,9 @@ class CustomSymPOTrainer(Trainer):
         beta_kl: float,
         log_ratio_clip_min: float,
         log_ratio_clip_max: float,
+        max_length: int = None,
+        max_prompt_length: int = None,
+        truncation_mode: str = "keep_end",
         **kwargs,
     ):
         super().__init__(model=model, args=args, **kwargs)
@@ -60,6 +63,12 @@ class CustomSymPOTrainer(Trainer):
         self.log_ratio_clip_min = log_ratio_clip_min
         self.log_ratio_clip_max = log_ratio_clip_max
         self.use_smooth_clip = False  # 默认使用硬裁剪，可通过参数切换
+        
+        # 截断相关参数
+        unwrapped_model = model.module if hasattr(model, "module") else model
+        self.max_length = max_length if max_length is not None else unwrapped_model.config.max_position_embeddings
+        self.max_prompt_length = max_prompt_length if max_prompt_length is not None else self.max_length // 2
+        self.truncation_mode = truncation_mode  # "keep_start" 或 "keep_end"
 
     def _smooth_clamp(self, x: torch.Tensor, min_val: float, max_val: float, temperature: float = 0.1) -> torch.Tensor:
         """
@@ -76,49 +85,106 @@ class CustomSymPOTrainer(Trainer):
         # 映射回原始范围
         return (clipped_normalized + 1.0) / 2.0 * (max_val - min_val) + min_val
     
-    def _get_log_probs(self, model: AutoModelForCausalLM, prompts: List[str], responses: List[str]) -> torch.Tensor:
-        # 这个辅助函数无需修改，它可以通用地计算任何模型、prompt 和 response 的 log_probs
-        original_padding_side = self.processor.padding_side
-        self.processor.padding_side = 'right'
-        full_texts = [p + r for p, r in zip(prompts, responses)]
-        prompt_tokens = self.processor(prompts, padding=False, truncation=False)
-        prompt_lengths = [len(p) for p in prompt_tokens['input_ids']]
-        unwrapped_model = model.module if hasattr(model, "module") else model
-        max_len = unwrapped_model.config.max_position_embeddings
-        full_tokens = self.processor(
-            full_texts, padding='longest', truncation=True,
-            max_length=2048,
-            return_tensors="pt"
-        )
-        input_ids = full_tokens['input_ids'].to(self.args.device)
-        attention_mask = full_tokens['attention_mask'].to(self.args.device)
+    def _get_log_probs(self, model: AutoModelForCausalLM, prompts: List[str], responses: List[str]) -> tuple[torch.Tensor, torch.Tensor]:
+        original_padding_side = self.processor.padding_side        
+        self.processor.padding_side = 'right' 
+        
+        # 1. 先 tokenize prompt 和 response 获取长度（不截断，不添加特殊token）
+        prompt_tokens_list = self.processor(prompts, padding=False, truncation=False, add_special_tokens=False)
+        response_tokens_list = self.processor(responses, padding=False, truncation=False, add_special_tokens=False)
+        
+        # 2. 对每个样本进行截断处理（仿照 SimPO 的逻辑）
+        all_input_ids = []
+        all_attention_masks = []
+        prompt_lengths = []
+        
+        for i, (prompt_tokens, response_tokens) in enumerate(zip(prompt_tokens_list['input_ids'], response_tokens_list['input_ids'])):
+            prompt_len = len(prompt_tokens)
+            response_len = len(response_tokens)
+            longer_response_length = response_len
+            
+            # 如果 combined sequence 太长，先截断 prompt
+            if prompt_len + longer_response_length > self.max_length:
+                if self.truncation_mode == "keep_start":
+                    # 保留开头部分
+                    prompt_tokens = prompt_tokens[:self.max_prompt_length]
+                elif self.truncation_mode == "keep_end":
+                    # 保留结尾部分
+                    prompt_tokens = prompt_tokens[-self.max_prompt_length:] if len(prompt_tokens) > self.max_prompt_length else prompt_tokens
+                else:
+                    raise ValueError(f"Unknown truncation mode: {self.truncation_mode}")
+                prompt_len = len(prompt_tokens)
+            
+            # 如果截断 prompt 后还是太长，截断 response
+            # 注意：这里使用 max_prompt_length 而不是实际的 prompt_len，与 SimPO 保持一致
+            if prompt_len + longer_response_length > self.max_length:
+                max_response_len = self.max_length - self.max_prompt_length
+                response_tokens = response_tokens[:max_response_len] if max_response_len > 0 else []
+                response_len = len(response_tokens)
+            
+            # 直接拼接 prompt 和 response tokens（不添加特殊token，因为已经在原始文本中）
+            full_input_ids = prompt_tokens + response_tokens
+            full_attention_mask = [1] * len(full_input_ids)
+            
+            all_input_ids.append(full_input_ids)
+            all_attention_masks.append(full_attention_mask)
+            prompt_lengths.append(prompt_len)
+        
+        # 3. Padding（right padding）
+        max_seq_len = max(len(ids) for ids in all_input_ids)
+        pad_token_id = self.processor.pad_token_id if self.processor.pad_token_id is not None else 0
+        
+        padded_input_ids = []
+        padded_attention_masks = []
+        for input_ids, attention_mask in zip(all_input_ids, all_attention_masks):
+            pad_length = max_seq_len - len(input_ids)
+            padded_input_ids.append(input_ids + [pad_token_id] * pad_length)
+            padded_attention_masks.append(attention_mask + [0] * pad_length)
+        
+        # 4. 转换为 tensor
+        input_ids = torch.tensor(padded_input_ids, dtype=torch.long, device=self.args.device)
+        attention_mask = torch.tensor(padded_attention_masks, dtype=torch.long, device=self.args.device)
+        
+        # 5. Forward
         outputs = model(input_ids, attention_mask=attention_mask, return_dict=True, use_cache=False)
         logits = outputs.logits
+        
+        # 6. Shift logits/labels
         shifted_logits = logits[..., :-1, :]
         shifted_labels = input_ids[..., 1:]
+        
         loss_fct = torch.nn.CrossEntropyLoss(reduction='none')
         nll_per_token = loss_fct(shifted_logits.reshape(-1, shifted_logits.size(-1)), shifted_labels.reshape(-1))
         nll_per_token = nll_per_token.view(input_ids.size(0), -1)
         log_probs_per_token = -nll_per_token
+        
+        # 7. Create Mask
         seq_len = shifted_labels.size(1)
         position_ids = torch.arange(seq_len, device=self.args.device).expand_as(shifted_labels)
         prompt_lengths_tensor = torch.tensor(prompt_lengths, device=self.args.device).unsqueeze(1)
+        
+        # Mask 逻辑：保留 index >= (prompt_len - 1) 的部分
+        # 因为 padding_side='right'，所以 index 0 确实是文本开头，逻辑成立。
         response_start_index = prompt_lengths_tensor - 1
         mask = position_ids >= response_start_index
+        
         attention_mask_shifted = attention_mask[:, 1:].to(torch.bool)
         response_mask = mask & attention_mask_shifted
+        
         masked_log_probs = log_probs_per_token * response_mask
         total_log_probs = masked_log_probs.sum(dim=1)
+        
+        response_lengths = response_mask.float().sum(dim=1)
+        
+        # 恢复原来的 padding_side (通常是 left)
         self.processor.padding_side = original_padding_side
-        return total_log_probs
-
+        
+        return total_log_probs, response_lengths
+    
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         prompts = inputs.pop("prompt")
         chosen_responses = inputs.pop("chosen")
         rejected_responses = inputs.pop("rejected")
-        # 3. 移除从 inputs 中获取 ref_logp 的代码
-        # log_probs_ref_y1 = inputs.pop("ref_logp_chosen").to(self.args.device)
-        # log_probs_ref_y2 = inputs.pop("ref_logp_rejected").to(self.args.device)
         f_y1 = inputs.pop("reward_chosen").to(self.args.device)
         f_y2 = inputs.pop("reward_rejected").to(self.args.device)
 
@@ -126,66 +192,60 @@ class CustomSymPOTrainer(Trainer):
         combined_prompts = prompts + prompts
         combined_responses = chosen_responses + rejected_responses
 
-        # --- 计算策略模型的 log_probs ---
-        all_log_probs_pi = self._get_log_probs(model, combined_prompts, combined_responses)
+        # --- 计算策略模型的 log_probs 和 长度 ---
+        all_log_probs_pi, all_lengths = self._get_log_probs(model, combined_prompts, combined_responses)
         log_probs_pi_y1 = all_log_probs_pi[:batch_size]
         log_probs_pi_y2 = all_log_probs_pi[batch_size:]
+        len_y1 = all_lengths[:batch_size] 
+        len_y2 = all_lengths[batch_size:]
 
-        # --- 4. 动态计算参考模型的 log_probs ---
+        # --- 动态计算参考模型的 log_probs ---
         with torch.no_grad():
-            all_log_probs_ref = self._get_log_probs(self.ref_model, combined_prompts, combined_responses)
+            # ref模型不需要长度，用 _ 占位
+            all_log_probs_ref, _ = self._get_log_probs(self.ref_model, combined_prompts, combined_responses)
             log_probs_ref_y1 = all_log_probs_ref[:batch_size]
             log_probs_ref_y2 = all_log_probs_ref[batch_size:]
-        if self.state.global_step == 0: # 只在第一步打印
+
+        if self.state.global_step == 0:
             print(f"--- Sanity Check at Step 0 ---")
-            print(f"Sample 0 - ref_logp_chosen: {log_probs_ref_y1[0].item()}")
-            print(f"Sample 0 - pi_logp_chosen:  {log_probs_pi_y1[0].item()}")
-            print(f"Sample 0 - Difference (pi - ref): {log_probs_pi_y1[0].item() - log_probs_ref_y1[0].item()}")
+            print(f"Sample 0 - Length Chosen:   {len_y1[0].item()}")
+            print(f"Sample 0 - Length Rejected: {len_y2[0].item()}")
             print(f"---------------------------------")
-        # --- 后续损失计算逻辑不变 ---
+
         log_ratio_y1 = log_probs_pi_y1 - log_probs_ref_y1
         log_ratio_y2 = log_probs_pi_y2 - log_probs_ref_y2
         
         with torch.no_grad():
             kl_term1 = self.beta_kl * log_ratio_y1.detach()
-            # kl_term2 = self.beta_kl * log_ratio_y2.detach()
-            weight1 = 1 - f_y2 - kl_term1
-            # weight2 = f_y1 + kl_term2
-            weight2 = f_y1
-
+            kl_term2 = self.beta_kl * log_ratio_y2.detach()
             
-        # 使用平滑裁剪或硬裁剪
-        if self.use_smooth_clip:
-            # 平滑裁剪：在边界处保持小梯度，提高训练稳定性
-            clamped_log_ratio_y1 = self._smooth_clamp(log_ratio_y1, self.log_ratio_clip_min, self.log_ratio_clip_max)
-            clamped_log_ratio_y2 = self._smooth_clamp(log_ratio_y2, self.log_ratio_clip_min, self.log_ratio_clip_max)
-        else:
-            # 硬裁剪：传统方式，边界处梯度为0
-            clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-            clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-        
+            len_y1 = torch.clamp(len_y1, min=1.0)
+            len_y2 = torch.clamp(len_y2, min=1.0)
+            
+            weight1 = (1 - f_y2 - kl_term1) / len_y1
+            weight2 = (f_y1 + kl_term2) / len_y2
+            
+        clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
         ratio_y1 = torch.exp(clamped_log_ratio_y1)
+        clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
         ratio_y2 = torch.exp(clamped_log_ratio_y2)
         
-        # ratio_y1 = torch.exp(log_ratio_y1)
-        # ratio_y2 = torch.exp(log_ratio_y2)
         J_sym_objective = ratio_y1 * weight1 - ratio_y2 * weight2
         total_loss = -J_sym_objective.mean()
         
         logs = {
-            # "mean_log_probs_pi_chosen": log_probs_pi_y1.detach().mean().item(),
-            # "mean_log_probs_pi_rejected": log_probs_pi_y2.detach().mean().item(),
-            # "mean_log_probs_ref_chosen": log_probs_ref_y1.detach().mean().item(),
-            # "mean_log_probs_ref_rejected": log_probs_ref_y2.detach().mean().item(),
             "mean_ratio_chosen": ratio_y1.detach().mean().item(),
             "mean_ratio_rejected": ratio_y2.detach().mean().item(),
             "weight_chosen": weight1.detach().mean().item(),
             "weight_rejected": weight2.detach().mean().item(),
             "kl_term_chosen": kl_term1.detach().mean().item(),
+            "mean_len_chosen": len_y1.detach().mean().item(),
+            "mean_len_rejected": len_y2.detach().mean().item()
         }
         self._current_logs = logs
         
         return total_loss
+
 
     # log 方法无需修改
     def log(self, logs: dict, *args, **kwargs) -> None:
@@ -221,7 +281,7 @@ def parse_args():
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
     parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/precomputed_traindataset", help="Path to the precomputed dataset.")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.5_no_kl_2_seed_42_2048_left", help="Directory to save checkpoints and final model.")
+    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.5_length_seed_42_2048", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
     parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
@@ -232,7 +292,7 @@ def parse_args():
     parser.add_argument("--warmup_ratio", type=float, default=0.1, help="Warmup ratio for learning rate scheduler.")
     parser.add_argument("--max_grad_norm", type=float, default=1.0, help="Max gradient norm for clipping.")
     parser.add_argument("--logging_steps", type=int, default=10, help="Log metrics every N steps.")
-    parser.add_argument("--save_steps", type=int, default=500, help="Save a checkpoint every N steps.")
+    parser.add_argument("--save_steps", type=int, default=10000, help="Save a checkpoint every N steps.")
     parser.add_argument("--save_total_limit", type=int, default=20, help="Limit the total number of saved checkpoints.")
 
     # --- SymPO 特定参数 ---
@@ -240,6 +300,11 @@ def parse_args():
     parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Minimum clip value for log probability ratio.")
     parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Maximum clip value for log probability ratio.")
     parser.add_argument("--use_smooth_clip", action='store_true', help="Use smooth clipping for better gradient stability (recommended).")
+    
+    # --- 截断参数（仿照 SimPO） ---
+    parser.add_argument("--max_length", type=int, default=2048, help="Maximum length of the combined prompt+response sequence. If None, uses model's max_position_embeddings.")
+    parser.add_argument("--max_prompt_length", type=int, default=1800, help="Maximum length of the prompt. If None, uses max_length // 2.")
+    parser.add_argument("--truncation_mode", type=str, default="keep_end", choices=["keep_start", "keep_end"], help="Truncation mode: 'keep_start' keeps the beginning of prompt, 'keep_end' keeps the end of prompt.")
     
     # --- W&B (Weights & Biases) 日志参数 ---
     parser.add_argument("--report_to", type=str, default="wandb", help="The integration to report results to (e.g., 'wandb').")
@@ -320,6 +385,9 @@ def main():
         beta_kl=args.beta_kl,
         log_ratio_clip_min=args.log_ratio_clip_min,
         log_ratio_clip_max=args.log_ratio_clip_max,
+        max_length=args.max_length,
+        max_prompt_length=args.max_prompt_length,
+        truncation_mode=args.truncation_mode,
     )
     # 设置是否使用平滑裁剪
     trainer.use_smooth_clip = args.use_smooth_clip
