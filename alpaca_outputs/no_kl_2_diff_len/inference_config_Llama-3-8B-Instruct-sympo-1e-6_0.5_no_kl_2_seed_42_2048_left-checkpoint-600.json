@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "oumi": "0.5.0"
+  },
+  "configs": {
+    "inference_config": "InferenceConfig(model=ModelParams(model_name='/train/output_model/merged-llama3-8b-sympo-1e-6_0.5_no_kl_2_seed_42_2048_left-checkpoint-600', adapter_model=None, tokenizer_name=None, tokenizer_pad_token=None, tokenizer_kwargs={'pad_token': '<|end_of_text|>'}, processor_kwargs={}, model_max_length=8192, load_pretrained_weights=True, trust_remote_code=False, torch_dtype_str='auto', compile=False, chat_template=None, chat_template_kwargs=None, attn_implementation=None, device_map='auto', model_kwargs={}, enable_liger_kernel=False, shard_for_eval=False, freeze_layers=[], model_revision=None), generation=GenerationParams(max_new_tokens=8192, batch_size=1, exclude_prompt_from_response=True, seed=None, temperature=0.9, top_p=1.0, frequency_penalty=0.0, presence_penalty=0.0, stop_strings=None, stop_token_ids=None, logit_bias={}, min_p=0.0, use_cache=False, num_beams=1, use_sampling=False, guided_decoding=None, skip_special_tokens=True), input_path=None, output_path=None, engine=None, remote_params=None)"
+  },
+  "model_display_name": "Llama-3-8B-Instruct-sympo-1e-6_0.5_no_kl_2_seed_42_2048_left-checkpoint-600"
+}
