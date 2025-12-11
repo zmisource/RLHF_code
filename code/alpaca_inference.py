@@ -19,8 +19,11 @@ def parse_args():
     # 修改：输出目录现在只用于存放临时的JSON文件
     parser.add_argument("--output_dir", type=str, default="/train/output_model/alpaca_outputs", help="保存模型输出(JSON)的目录")
     parser.add_argument("--num_examples", type=int, default=805, help="用于评估的样本数量 (默认: 805, 即完整数据集)")
-    parser.add_argument("--max_new_tokens", type=int, default=8192, help="模型生成时允许的最大token数")
-    parser.add_argument("--temperature", type=float, default=0.9, help="生成时的温度参数")
+    parser.add_argument("--max_new_tokens", type=int, default=4096, help="模型生成时允许的最大token数 (默认: 4096, 与SimPO配置一致)")
+    parser.add_argument("--temperature", type=float, default=0.9, help="生成时的温度参数 (默认: 0.9)")
+    parser.add_argument("--top_p", type=float, default=1.0, help="Nucleus采样概率阈值 (默认: 1.0, 与SimPO配置一致)")
+    parser.add_argument("--stop_token_ids", type=int, nargs="+", default=[128001, 128009], help="停止生成的token ID列表 (默认: [128001, 128009], 与SimPO配置一致)")
+    parser.add_argument("--use_sampling", action="store_true", default=True, help="是否使用采样 (默认: True, 对应do_sample=true)")
     # 移除了 --annotators_config，推理阶段不需要
     return parser.parse_args()
 
@@ -54,7 +57,13 @@ def main():
 
     # --- 3. 配置并运行 VLLM 推理 ---
     print("\n--- 步骤 3: 配置并运行 VLLM 推理 ---")
-    generation_params = GenerationParams(max_new_tokens=args.max_new_tokens, temperature=args.temperature)
+    generation_params = GenerationParams(
+        max_new_tokens=args.max_new_tokens,
+        temperature=args.temperature,
+        top_p=args.top_p,
+        stop_token_ids=args.stop_token_ids,
+        use_sampling=args.use_sampling
+    )
     model_params = ModelParams(
         model_name=args.model_path,
         # tokenizer_name=args.model_path,
