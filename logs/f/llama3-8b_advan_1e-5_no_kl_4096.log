@@ -1,0 +1,209 @@
+nohup: ignoring input
+[W103 10:14:49.386673251 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+⚙️  Running in WANDB offline mode
+⚙️  Running in WANDB offline mode
+设置随机种子为: 42
+⚙️  Running in WANDB offline mode
+设置随机种子为: 42
+设置随机种子为: 42
+从磁盘加载数据集...
+正在检查并过滤数据集中的空值 (None)...
+⚠️ 警告: 过滤掉了 56 条包含 None 的脏数据！
+加载用于训练的策略模型 (Policy Model)...
+从磁盘加载数据集...
+正在检查并过滤数据集中的空值 (None)...
+⚠️ 警告: 过滤掉了 56 条包含 None 的脏数据！
+加载用于训练的策略模型 (Policy Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]从磁盘加载数据集...
+正在检查并过滤数据集中的空值 (None)...
+⚠️ 警告: 过滤掉了 56 条包含 None 的脏数据！
+加载用于训练的策略模型 (Policy Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 92.75it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 94.75it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 93.79it/s]
+冻结参考模型并设为 Eval 模式...
+⚙️  Running in WANDB offline mode
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 91.24it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 96.41it/s]
+冻结参考模型并设为 Eval 模式...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]设置随机种子为: 42
+Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 91.75it/s]
+冻结参考模型并设为 Eval 模式...
+从磁盘加载数据集...
+正在检查并过滤数据集中的空值 (None)...
+⚠️ 警告: 过滤掉了 56 条包含 None 的脏数据！
+加载用于训练的策略模型 (Policy Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 79.78it/s]
+加载作为参考的SFT模型 (Reference Model)...
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 80.73it/s]
+冻结参考模型并设为 Eval 模式...
+[W103 10:14:54.800486829 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W103 10:14:54.831089884 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W103 10:14:54.842710997 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[W103 10:14:54.882580888 socket.cpp:755] [c10d] The client socket cannot be initialized to connect to [::ffff:127.0.0.1]:29500 (errno: 97 - Address family not supported by protocol).
+[Gloo] Rank [Gloo] Rank 3 is connected to 03 is connected to  peer ranks. [Gloo] Rank 3Expected number of connected peer ranks is :  peer ranks. 13Expected number of connected peer ranks is :  is connected to 
+33
+ peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+初始化 CustomSymPOTrainer...
+/rlREMOVEDcode/code/implement_final_v3_no_kl_term2.py:50: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlREMOVEDcode/code/implement_final_v3_no_kl_term2.py:50: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlREMOVEDcode/code/implement_final_v3_no_kl_term2.py:50: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+初始化 CustomSymPOTrainer...
+/rlREMOVEDcode/code/implement_final_v3_no_kl_term2.py:50: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `CustomSymPOTrainer.__init__`. Use `processing_class` instead.
+  super().__init__(model=model, args=args, **kwargs)
+Detected kernel version 5.4.119, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+Trainer.tokenizer is now deprecated. You should use Trainer.processing_class instead.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+开始分布式训练...
+The tokenizer has new PAD/BOS/EOS tokens that differ from the model config and generation config. The model config and generation config were aligned accordingly, being updated with the tokenizer's values. Updated tokens: {'pad_token_id': 128009}.
+libibverbs: Warning: couldn't open config directory '/etc/libibverbs.d'.
+libibverbs: Warning: couldn't open config directory '/etc/libibverbs.d'.
+libibverbs: Warning: couldn't open config directory '/etc/libibverbs.d'.
+libibverbs: Warning: couldn't open config directory '/etc/libibverbs.d'.
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaForCausalLM because mixed precision turned on in FSDP. Affects: model.embed_tokens.weight, model.norm.weight, lm_head.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1962: UserWarning: Upcasted low precision parameters in LlamaDecoderLayer because mixed precision turned on in FSDP. Affects: self_attn.q_proj.weight, self_attn.k_proj.weight, self_attn.v_proj.weight, self_attn.o_proj.weight, mlp.gate_proj.weight, mlp.up_proj.weight, mlp.down_proj.weight, input_layernorm.weight, post_attention_layernorm.weight.
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/accelerate/accelerator.py:1968: UserWarning: FSDP upcast of low precision parameters may affect the precision of model checkpoints.
+  warnings.warn(
+wandb: Tracking run with wandb version 0.21.3
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /wandb/offline-run-20260103_101504-u2gi5rmj
+  0%|          | 0/3749 [00:00<?, ?it/s]--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -81.5
+Sample 0 - pi_logp_chosen:  -81.10782623291016
+Difference: 0.39217376708984375
+---------------------------------
+Sample 0 - ref_logp_chosen: -49.75
+Sample 0 - pi_logp_chosen:  -50.150123596191406
+Difference: -0.40012359619140625
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -165.0
+Sample 0 - pi_logp_chosen:  -165.23532104492188
+Difference: -0.235321044921875
+---------------------------------
+Sample 0 - ref_logp_chosen: -204.0
+Sample 0 - pi_logp_chosen:  -204.27545166015625
+Difference: -0.27545166015625
+---------------------------------
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -154.0
+Sample 0 - pi_logp_chosen:  -152.93569946289062
+Difference: 1.064300537109375
+---------------------------------
+Sample 0 - ref_logp_chosen: -78.5
+Sample 0 - pi_logp_chosen:  -78.76414489746094
+Difference: -0.2641448974609375
+---------------------------------
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -262.0
+Sample 0 - pi_logp_chosen:  -261.517333984375
+Difference: 0.482666015625
+---------------------------------
+Sample 0 - ref_logp_chosen: -400.0
+Sample 0 - pi_logp_chosen:  -399.7900390625
+Difference: 0.2099609375
+---------------------------------
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -70.0
+Sample 0 - pi_logp_chosen:  -69.58036804199219
+Difference: 0.4196319580078125
+---------------------------------
+Sample 0 - ref_logp_chosen: -143.0
+Sample 0 - pi_logp_chosen:  -142.98629760742188
+Difference: 0.013702392578125
+---------------------------------
+Sample 0 - ref_logp_chosen: -80.5
+Sample 0 - pi_logp_chosen:  -80.57589721679688
+Difference: -0.075897216796875
+---------------------------------
+Sample 0 - ref_logp_chosen: -169.0
+Sample 0 - pi_logp_chosen:  -169.57281494140625
+Difference: -0.57281494140625
+---------------------------------
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -64.0
+Sample 0 - pi_logp_chosen:  -64.53520965576172
+Difference: -0.5352096557617188
+---------------------------------
+--- Sanity Check at Step 0 ---
+--- Sanity Check at Step 0 ---
+Sample 0 - ref_logp_chosen: -229.0
+Sample 0 - pi_logp_chosen:  -231.05410766601562
+Difference: -2.054107666015625
+---------------------------------
+Sample 0 - ref_logp_chosen: -398.0
+Sample 0 - pi_logp_chosen:  -396.657470703125
+Difference: 1.342529296875
+---------------------------------
+Sample 0 - ref_logp_chosen: -250.0
+Sample 0 - pi_logp_chosen:  -251.0890350341797
+Difference: -1.0890350341796875
+---------------------------------
+  0%|          | 1/3749 [00:05<5:41:50,  5.47s/it]                                                  {'loss': 0.0849987044930458, 'grad_norm': 7851.4169921875, 'learning_rate': 0.0, 'mean_ratio_chosen': 0.1047053411602974, 'mean_ratio_rejected': 0.5929335355758667, 'weight_chosen': 0.25, 'weight_rejected': 0.1875, 'epoch': 0.0}
+  0%|          | 1/3749 [00:05<5:41:50,  5.47s/it]  0%|          | 2/3749 [00:09<4:48:11,  4.61s/it]  0%|          | 3/3749 [00:13<4:19:59,  4.16s/it]  0%|          | 4/3749 [00:21<5:55:18,  5.69s/it]  0%|          | 5/3749 [00:24<5:07:15,  4.92s/it]  0%|          | 6/3749 [00:29<5:06:40,  4.92s/it]  0%|          | 7/3749 [00:32<4:22:07,  4.20s/it]  0%|          | 8/3749 [00:37<4:37:39,  4.45s/it]  0%|          | 9/3749 [00:42<4:42:16,  4.53s/it]  0%|          | 10/3749 [00:47<4:58:18,  4.79s/it]                                                   {'loss': 2.2585387229919434, 'grad_norm': 6186.89208984375, 'learning_rate': 2.4000000000000003e-07, 'mean_ratio_chosen': 0.25595811009407043, 'mean_ratio_rejected': 3.6392579078674316, 'weight_chosen': 0.0625, 'weight_rejected': 0.625, 'epoch': 0.0}
+  0%|          | 10/3749 [00:47<4:58:18,  4.79s/it]  0%|          | 11/3749 [00:52<5:02:29,  4.86s/it]  0%|          | 12/3749 [00:56<4:48:45,  4.64s/it]  0%|          | 13/3749 [01:00<4:41:39,  4.52s/it]  0%|          | 14/3749 [01:04<4:21:54,  4.21s/it]  0%|          | 15/3749 [01:09<4:36:48,  4.45s/it]  0%|          | 16/3749 [01:13<4:24:47,  4.26s/it]  0%|          | 17/3749 [01:17<4:25:52,  4.27s/it]  0%|          | 18/3749 [01:21<4:26:21,  4.28s/it]  1%|          | 19/3749 [01:26<4:33:29,  4.40s/it]  1%|          | 20/3749 [01:30<4:28:47,  4.32s/it]                                                   {'loss': -0.5236303806304932, 'grad_norm': 3129.20654296875, 'learning_rate': 5.066666666666667e-07, 'mean_ratio_chosen': 9.973953247070312, 'mean_ratio_rejected': 9.974172592163086, 'weight_chosen': 0.0625, 'weight_rejected': 0.009999999776482582, 'epoch': 0.01}
+  1%|          | 20/3749 [01:30<4:28:47,  4.32s/it]  1%|          | 21/3749 [01:34<4:27:41,  4.31s/it]  1%|          | 22/3749 [01:41<5:02:41,  4.87s/it]  1%|          | 23/3749 [01:45<5:02:53,  4.88s/it]  1%|          | 24/3749 [01:50<4:57:57,  4.80s/it]  1%|          | 25/3749 [01:58<6:00:13,  5.80s/it]  1%|          | 26/3749 [02:02<5:21:34,  5.18s/it]  1%|          | 27/3749 [02:07<5:13:59,  5.06s/it]  1%|          | 28/3749 [02:11<4:58:21,  4.81s/it]  1%|          | 29/3749 [02:17<5:29:50,  5.32s/it]  1%|          | 30/3749 [02:22<5:20:32,  5.17s/it]                                                   {'loss': -2.491917610168457, 'grad_norm': 97.66668701171875, 'learning_rate': 7.733333333333335e-07, 'mean_ratio_chosen': 9.968936920166016, 'mean_ratio_rejected': 9.974000930786133, 'weight_chosen': 0.3125, 'weight_rejected': 0.0625, 'epoch': 0.01}
+  1%|          | 30/3749 [02:22<5:20:32,  5.17s/it]  1%|          | 31/3749 [02:27<5:12:17,  5.04s/it]  1%|          | 32/3749 [02:31<4:51:48,  4.71s/it]  1%|          | 33/3749 [02:38<5:33:50,  5.39s/it]  1%|          | 34/3749 [02:42<5:13:59,  5.07s/it]  1%|          | 35/3749 [02:47<5:01:47,  4.88s/it]  1%|          | 36/3749 [02:51<4:44:18,  4.59s/it]  1%|          | 37/3749 [02:54<4:24:03,  4.27s/it]  1%|          | 38/3749 [03:03<5:44:47,  5.57s/it]  1%|          | 39/3749 [03:07<5:19:40,  5.17s/it]  1%|          | 40/3749 [03:11<4:58:25,  4.83s/it]                                                   {'loss': -0.5236445069313049, 'grad_norm': 0.0, 'learning_rate': 1.04e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.0625, 'weight_rejected': 0.009999999776482582, 'epoch': 0.01}
+  1%|          | 40/3749 [03:11<4:58:25,  4.83s/it]  1%|          | 41/3749 [03:15<4:49:11,  4.68s/it]  1%|          | 42/3749 [03:20<4:52:47,  4.74s/it]  1%|          | 43/3749 [03:23<4:24:33,  4.28s/it]  1%|          | 44/3749 [03:28<4:35:57,  4.47s/it]  1%|          | 45/3749 [03:32<4:27:11,  4.33s/it]  1%|          | 46/3749 [03:37<4:43:27,  4.59s/it]  1%|▏         | 47/3749 [03:42<4:43:08,  4.59s/it]  1%|▏         | 48/3749 [03:48<5:10:00,  5.03s/it]  1%|▏         | 49/3749 [03:52<4:43:55,  4.60s/it]  1%|▏         | 50/3749 [03:55<4:11:51,  4.09s/it]                                                   {'loss': 1.2467725276947021, 'grad_norm': 0.0, 'learning_rate': 1.3066666666666667e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.0625, 'weight_rejected': 0.1875, 'epoch': 0.01}
+  1%|▏         | 50/3749 [03:55<4:11:51,  4.09s/it]  1%|▏         | 51/3749 [03:57<3:47:39,  3.69s/it]  1%|▏         | 52/3749 [04:02<4:05:52,  3.99s/it]  1%|▏         | 53/3749 [04:06<4:09:32,  4.05s/it]  1%|▏         | 54/3749 [04:12<4:32:10,  4.42s/it]  1%|▏         | 55/3749 [04:15<4:21:14,  4.24s/it]  1%|▏         | 56/3749 [04:20<4:24:03,  4.29s/it]  2%|▏         | 57/3749 [04:23<4:03:59,  3.97s/it]  2%|▏         | 58/3749 [04:28<4:23:35,  4.28s/it]  2%|▏         | 59/3749 [04:32<4:17:19,  4.18s/it]  2%|▏         | 60/3749 [04:36<4:17:40,  4.19s/it]                                                   {'loss': -1.2467725276947021, 'grad_norm': 0.0, 'learning_rate': 1.5733333333333334e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.4375, 'weight_rejected': 0.3125, 'epoch': 0.02}
+  2%|▏         | 60/3749 [04:36<4:17:40,  4.19s/it]  2%|▏         | 61/3749 [04:40<4:14:10,  4.14s/it]  2%|▏         | 62/3749 [04:46<4:53:35,  4.78s/it]  2%|▏         | 63/3749 [04:52<5:09:14,  5.03s/it]  2%|▏         | 64/3749 [04:56<4:45:46,  4.65s/it]  2%|▏         | 65/3749 [04:59<4:24:36,  4.31s/it]  2%|▏         | 66/3749 [05:04<4:33:24,  4.45s/it]  2%|▏         | 67/3749 [05:09<4:35:12,  4.48s/it]  2%|▏         | 68/3749 [05:13<4:32:02,  4.43s/it]  2%|▏         | 69/3749 [05:17<4:17:51,  4.20s/it]  2%|▏         | 70/3749 [05:21<4:13:27,  4.13s/it]                                                   {'loss': 1.2467727661132812, 'grad_norm': 0.0, 'learning_rate': 1.8400000000000002e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.1875, 'weight_rejected': 0.3125, 'epoch': 0.02}
+  2%|▏         | 70/3749 [05:21<4:13:27,  4.13s/it]  2%|▏         | 71/3749 [05:25<4:15:31,  4.17s/it]  2%|▏         | 72/3749 [05:29<4:22:17,  4.28s/it]  2%|▏         | 73/3749 [05:34<4:19:14,  4.23s/it]  2%|▏         | 74/3749 [05:38<4:23:04,  4.30s/it]  2%|▏         | 75/3749 [05:40<3:49:11,  3.74s/it]  2%|▏         | 76/3749 [05:45<3:55:16,  3.84s/it]  2%|▏         | 77/3749 [05:49<4:03:06,  3.97s/it]  2%|▏         | 78/3749 [05:53<4:13:11,  4.14s/it]  2%|▏         | 79/3749 [05:58<4:13:36,  4.15s/it]  2%|▏         | 80/3749 [06:05<5:17:46,  5.20s/it]                                                   {'loss': -0.0, 'grad_norm': 0.4852246046066284, 'learning_rate': 2.1066666666666667e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.125, 'weight_rejected': 0.125, 'epoch': 0.02}
+  2%|▏         | 80/3749 [06:05<5:17:46,  5.20s/it]  2%|▏         | 81/3749 [06:09<4:46:50,  4.69s/it]  2%|▏         | 82/3749 [06:12<4:21:58,  4.29s/it]  2%|▏         | 83/3749 [06:21<5:48:47,  5.71s/it]  2%|▏         | 84/3749 [06:25<5:15:44,  5.17s/it]  2%|▏         | 85/3749 [06:29<5:00:40,  4.92s/it]  2%|▏         | 86/3749 [06:34<5:02:22,  4.95s/it]  2%|▏         | 87/3749 [06:41<5:40:04,  5.57s/it]  2%|▏         | 88/3749 [06:47<5:40:15,  5.58s/it]  2%|▏         | 89/3749 [06:52<5:24:00,  5.31s/it]  2%|▏         | 90/3749 [06:57<5:19:55,  5.25s/it]                                                   {'loss': -1.7704170942306519, 'grad_norm': 0.0, 'learning_rate': 2.3733333333333336e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.1875, 'weight_rejected': 0.009999999776482582, 'epoch': 0.02}
+  2%|▏         | 90/3749 [06:57<5:19:55,  5.25s/it]  2%|▏         | 91/3749 [07:01<4:58:08,  4.89s/it]  2%|▏         | 92/3749 [07:07<5:18:27,  5.22s/it]  2%|▏         | 93/3749 [07:12<5:24:04,  5.32s/it]  3%|▎         | 94/3749 [07:16<4:54:09,  4.83s/it]  3%|▎         | 95/3749 [07:21<4:53:30,  4.82s/it]  3%|▎         | 96/3749 [07:24<4:22:44,  4.32s/it]  3%|▎         | 97/3749 [07:27<4:04:19,  4.01s/it]  3%|▎         | 98/3749 [07:31<3:51:10,  3.80s/it]  3%|▎         | 99/3749 [07:34<3:48:07,  3.75s/it]  3%|▎         | 100/3749 [07:39<3:58:54,  3.93s/it]                                                    {'loss': 0.5236445069313049, 'grad_norm': 0.0, 'learning_rate': 2.64e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.009999999776482582, 'weight_rejected': 0.0625, 'epoch': 0.03}
+  3%|▎         | 100/3749 [07:39<3:58:54,  3.93s/it]/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+/root/miniconda3/envs/advan/lib/python3.12/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py:678: FutureWarning: FSDP.state_dict_type() and FSDP.set_state_dict_type() are being deprecated. Please use APIs, get_state_dict() and set_state_dict(), which can support different parallelisms, FSDP1, FSDP2, DDP. API doc: https://pytorch.org/docs/stable/distributed.checkpoint.html#torch.distributed.checkpoint.state_dict.get_state_dict .Tutorial: https://pytorch.org/tutorials/recipes/distributed_checkpoint_recipe.html .
+  warnings.warn(
+  3%|▎         | 101/3749 [09:14<31:52:39, 31.46s/it]  3%|▎         | 102/3749 [09:19<23:42:52, 23.41s/it]  3%|▎         | 103/3749 [09:23<17:53:19, 17.66s/it]  3%|▎         | 104/3749 [09:28<13:51:35, 13.69s/it]  3%|▎         | 105/3749 [09:32<10:56:54, 10.82s/it]  3%|▎         | 106/3749 [09:40<10:06:24,  9.99s/it]  3%|▎         | 107/3749 [09:44<8:21:41,  8.27s/it]   3%|▎         | 108/3749 [09:50<7:37:38,  7.54s/it]  3%|▎         | 109/3749 [09:54<6:37:04,  6.55s/it]  3%|▎         | 110/3749 [09:58<5:42:49,  5.65s/it]                                                    {'loss': -1.7704170942306519, 'grad_norm': 0.0, 'learning_rate': 2.906666666666667e-06, 'mean_ratio_chosen': 9.974181175231934, 'mean_ratio_rejected': 9.974181175231934, 'weight_chosen': 0.1875, 'weight_rejected': 0.009999999776482582, 'epoch': 0.03}
+  3%|▎         | 110/3749 [09:58<5:42:49,  5.65s/it]  3%|▎         | 111/3749 [10:02<5:28:24,  5.42s/it]

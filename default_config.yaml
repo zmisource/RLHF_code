@@ -26,3 +26,28 @@ tpu_use_cluster: false
 tpu_use_sudo: false
 use_cpu: false
 
+
+compute_environment: LOCAL_MACHINE
+debug: false
+distributed_type: FSDP
+downcast_bf16: 'no'
+fsdp_config:
+  fsdp_activation_checkpointing: true  # 显存足够时，如果想追求极致速度，甚至可以尝试设为 false (用显存换计算时间)，但在 4096 长度下建议保持 true
+  fsdp_auto_wrap_policy: TRANSFORMER_BASED_WRAP
+  fsdp_transformer_layer_cls_to_wrap: LlamaDecoderLayer # 必须加！
+  fsdp_backward_prefetch: BACKWARD_PRE
+  fsdp_cpu_ram_efficient_loading: true
+  fsdp_forward_prefetch: false
+  fsdp_offload_params: false  # 坚决选 false，A100 没必要用 CPU offload，会拖慢速度
+  fsdp_sharding_strategy: FULL_SHARD # 保持 FULL_SHARD，最大化 Batch Size 空间
+  fsdp_state_dict_type: FULL_STATE_DICT # 方便保存
+  fsdp_sync_module_states: true
+  fsdp_use_orig_params: true
+machine_rank: 0
+main_training_function: main
+mixed_precision: bf16
+num_machines: 1
+num_processes: 4
+rdzv_backend: static
+same_network: true
+use_cpu: false

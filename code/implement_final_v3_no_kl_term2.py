@@ -22,17 +22,13 @@ from dataclasses import dataclass
 def seed_everything(seed=42):
     """
     设置所有随机数生成器的种子，确保训练的可重复性。
-    
-    Args:
-        seed: 随机种子值（默认: 2003）
     """
     torch.manual_seed(seed)
     torch.cuda.manual_seed_all(seed)
     np.random.seed(seed)
     random.seed(seed)
     torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False  # 为了可重复性，禁用benchmark
-    # 设置环境变量以确保完全确定性（如果使用CUDA）
+    torch.backends.cudnn.benchmark = False
     os.environ['PYTHONHASHSEED'] = str(seed)
 
 # ---------------------------------------------------------------------------
@@ -43,7 +39,7 @@ class CustomSymPOTrainer(Trainer):
     def __init__(
         self,
         model: Union[torch.nn.Module],
-        ref_model: Union[torch.nn.Module], # 1. 新增 ref_model 参数
+        ref_model: Union[torch.nn.Module], 
         args: TrainingArguments,
         beta_kl: float,
         log_ratio_clip_min: float,
@@ -56,26 +52,16 @@ class CustomSymPOTrainer(Trainer):
         if not hasattr(self, 'processor') or self.processor is None:
             self.processor = self.tokenizer
 
+        # 确保 ref_model 在正确的设备上
         self.ref_model = ref_model.to(self.args.device)
         self.beta_kl = beta_kl
         self.log_ratio_clip_min = log_ratio_clip_min
         self.log_ratio_clip_max = log_ratio_clip_max
-        self.max_length = max_length  # [新增] 存储到 self
-        self.use_smooth_clip = False  # 默认使用硬裁剪，可通过参数切换
+        self.max_length = max_length
 
     def _smooth_clamp(self, x: torch.Tensor, min_val: float, max_val: float, temperature: float = 0.1) -> torch.Tensor:
-        """
-        平滑裁剪函数，在边界处保持小梯度，避免梯度突然截断。
-        
-        使用 tanh-based 平滑函数：
-        - 在边界处梯度连续，不会突然变为0
-        - temperature 控制平滑程度（越小越接近硬裁剪）
-        """
-        # 将输入归一化到 [-1, 1] 范围
         normalized = 2.0 * (x - min_val) / (max_val - min_val) - 1.0
-        # 使用 tanh 进行平滑裁剪
         clipped_normalized = torch.tanh(normalized / temperature)
-        # 映射回原始范围
         return (clipped_normalized + 1.0) / 2.0 * (max_val - min_val) + min_val
     
     def _get_log_probs(
@@ -95,97 +81,99 @@ class CustomSymPOTrainer(Trainer):
         original_padding_side = processor.padding_side
         original_truncation_side = processor.truncation_side
         
-        # 2. 强制配置
-        processor.padding_side = 'left'
-        processor.truncation_side = 'left' 
+        try:
+            # 2. 强制配置
+            processor.padding_side = 'left'
+            processor.truncation_side = 'left' 
 
-        # 3. 文本拼接
-        full_texts = [p + r for p, r in zip(prompts, responses)]
+            # 3. 文本拼接
+            full_texts = [p + r for p, r in zip(prompts, responses)]
 
-        # 4. 确定 Max Length
-        if max_length is None:
-            if hasattr(model.config, "max_position_embeddings"):
-                max_length = model.config.max_position_embeddings
-            else:
-                max_length = 2048
+            # 4. 确定 Max Length
+            if max_length is None:
+                if hasattr(model.config, "max_position_embeddings"):
+                    max_length = model.config.max_position_embeddings
+                else:
+                    max_length = 2048
 
-        # 5. 获取 Response 物理长度
-        response_inputs = processor(
-            responses, 
-            padding=False, 
-            truncation=False, 
-            add_special_tokens=False, 
-            return_attention_mask=False
-        )
-        response_lengths = [len(ids) for ids in response_inputs['input_ids']]
-        response_lengths_tensor = torch.tensor(response_lengths, device=device, dtype=torch.long)
+            # 5. 获取 Response 物理长度
+            response_inputs = processor(
+                responses, 
+                padding=False, 
+                truncation=False, 
+                add_special_tokens=False, 
+                return_attention_mask=False
+            )
+            response_lengths = [len(ids) for ids in response_inputs['input_ids']]
+            response_lengths_tensor = torch.tensor(response_lengths, device=device, dtype=torch.long)
 
-        # 6. Full Text 编码
-        full_tokens = processor(
-            full_texts,
-            padding='longest',
-            truncation=True,
-            max_length=max_length,
-            return_tensors='pt',
-        )
-        
-        input_ids = full_tokens['input_ids'].to(device)
-        attention_mask = full_tokens['attention_mask'].to(device)
+            # 6. Full Text 编码
+            full_tokens = processor(
+                full_texts,
+                padding='longest',
+                truncation=True,
+                max_length=max_length,
+                return_tensors='pt',
+            )
+            
+            input_ids = full_tokens['input_ids'].to(device)
+            attention_mask = full_tokens['attention_mask'].to(device)
 
-        # 7. 模型前向
-        # [重要修正] 移除了 with torch.no_grad():
-        # 这样策略模型 (Policy Model) 才能保留梯度图。
-        # 参考模型 (Ref Model) 在 compute_loss 外部已经有 no_grad 保护，所以也是安全的。
-        outputs = model(input_ids, attention_mask=attention_mask, return_dict=True, use_cache=False)
-        
-        logits = outputs.logits
-        shifted_logits = logits[..., :-1, :]
-        shifted_labels = input_ids[..., 1:]
+            # 7. 模型前向
+            # 注意：Policy Model 需要梯度，Ref Model 不需要，由外部调用者控制 context
+            outputs = model(input_ids, attention_mask=attention_mask, return_dict=True, use_cache=False)
+            
+            logits = outputs.logits
+            shifted_logits = logits[..., :-1, :]
+            shifted_labels = input_ids[..., 1:]
 
-        # 8. 计算逐 Token Loss
-        loss_fct = torch.nn.CrossEntropyLoss(reduction='none')
-        nll_per_token = loss_fct(
-            shifted_logits.reshape(-1, shifted_logits.size(-1)), 
-            shifted_labels.reshape(-1)
-        )
-        nll_per_token = nll_per_token.view(shifted_labels.size())
-        log_probs_per_token = -nll_per_token
+            # 8. 计算逐 Token Loss
+            loss_fct = torch.nn.CrossEntropyLoss(reduction='none')
+            nll_per_token = loss_fct(
+                shifted_logits.reshape(-1, shifted_logits.size(-1)), 
+                shifted_labels.reshape(-1)
+            )
+            nll_per_token = nll_per_token.view(shifted_labels.size())
+            log_probs_per_token = -nll_per_token
 
-        # 9. Mask 计算
-        shifted_attention_mask = attention_mask[:, 1:]
-        seq_len = shifted_labels.size(1)
-        position_ids = torch.arange(seq_len, device=device, dtype=torch.long).unsqueeze(0)
-        
-        response_start_indices = seq_len - response_lengths_tensor
-        response_start_indices = torch.clamp(response_start_indices, min=0)
-        
-        response_mask = (position_ids >= response_start_indices.unsqueeze(1)) & shifted_attention_mask.bool()
+            # 9. Mask 计算
+            shifted_attention_mask = attention_mask[:, 1:]
+            seq_len = shifted_labels.size(1)
+            position_ids = torch.arange(seq_len, device=device, dtype=torch.long).unsqueeze(0)
+            
+            # Left Padding 下，Response 在序列末尾
+            # seq_len 是 L-1, response_len 是 R
+            # 有效 Label 的起始索引是 L-1 - R (对应 input_ids 的 L-R)
+            response_start_indices = seq_len - response_lengths_tensor
+            response_start_indices = torch.clamp(response_start_indices, min=0)
+            
+            response_mask = (position_ids >= response_start_indices.unsqueeze(1)) & shifted_attention_mask.bool()
 
-        # 10. 汇总结果
-        masked_log_probs = log_probs_per_token * response_mask
-        total_log_probs = masked_log_probs.sum(dim=1)
-        valid_response_lengths = response_mask.sum(dim=1)
-
-        # 11. 恢复配置
-        processor.padding_side = original_padding_side
-        processor.truncation_side = original_truncation_side
-        
-        return total_log_probs, valid_response_lengths
+            # 10. 汇总结果
+            masked_log_probs = log_probs_per_token * response_mask
+            total_log_probs = masked_log_probs.sum(dim=1)
+            valid_response_lengths = response_mask.sum(dim=1)
+            
+            return total_log_probs, valid_response_lengths
+            
+        finally:
+            # 11. 恢复配置 (确保即使出错也恢复)
+            processor.padding_side = original_padding_side
+            processor.truncation_side = original_truncation_side
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         prompts = inputs.pop("prompt")
         chosen_responses = inputs.pop("chosen")
         rejected_responses = inputs.pop("rejected")
         
-        f_y1 = inputs.pop("reward_chosen").to(self.args.device)
-        f_y2 = inputs.pop("reward_rejected").to(self.args.device)
+        f_y1 = inputs.pop("f_Y_chosen").to(self.args.device)
+        f_y2 = inputs.pop("f_Y_rejected").to(self.args.device)
 
         batch_size = len(prompts)
         combined_prompts = prompts + prompts
         combined_responses = chosen_responses + rejected_responses
 
         # --- 计算策略模型的 log_probs ---
-        # [修正 3] 这里解包返回的元组，只取 total_log_probs
         all_log_probs_pi, _ = self._get_log_probs(
             model, 
             combined_prompts, 
@@ -195,9 +183,8 @@ class CustomSymPOTrainer(Trainer):
         log_probs_pi_y1 = all_log_probs_pi[:batch_size]
         log_probs_pi_y2 = all_log_probs_pi[batch_size:]
 
-        # --- 4. 动态计算参考模型的 log_probs ---
+        # --- 计算参考模型的 log_probs ---
         with torch.no_grad():
-            # [修正 4] 同样解包
             all_log_probs_ref, _ = self._get_log_probs(
                 self.ref_model, 
                 combined_prompts, 
@@ -217,49 +204,52 @@ class CustomSymPOTrainer(Trainer):
         log_ratio_y1 = log_probs_pi_y1 - log_probs_ref_y1
         log_ratio_y2 = log_probs_pi_y2 - log_probs_ref_y2
         
+        # SymPO 核心计算逻辑
         with torch.no_grad():
-            kl_term1 = self.beta_kl * log_ratio_y1.detach()
-            weight1 = 1 - f_y2 - kl_term1
-            weight2 = f_y1
+            # kl_term1 = self.beta_kl * log_ratio_y1.detach()
+            # kl_term2 = self.beta_kl * log_ratio_y2.detach()
+            weight1 = 1 - f_y2
+            # weight2 = f_y1
+            # weight1 = torch.clamp(1.0 - f_y2, min=0.01) # 保证至少有 0.01 的权重
+            # weight2 = torch.clamp(f_y1, min=0.01)
 
-        # 使用平滑裁剪或硬裁剪
-        if self.use_smooth_clip:
-            clamped_log_ratio_y1 = self._smooth_clamp(log_ratio_y1, self.log_ratio_clip_min, self.log_ratio_clip_max)
-            clamped_log_ratio_y2 = self._smooth_clamp(log_ratio_y2, self.log_ratio_clip_min, self.log_ratio_clip_max)
-        else:
-            clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
-            clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+
+        clamped_log_ratio_y1 = torch.clamp(log_ratio_y1, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
+        # clamped_log_ratio_y2 = torch.clamp(log_ratio_y2, min=self.log_ratio_clip_min, max=self.log_ratio_clip_max)
         
         ratio_y1 = torch.exp(clamped_log_ratio_y1)
-        ratio_y2 = torch.exp(clamped_log_ratio_y2)
+        # ratio_y2 = torch.exp(clamped_log_ratio_y2)
         
-        J_sym_objective = ratio_y1 * weight1 - ratio_y2 * weight2
+        J_sym_objective = ratio_y1 * weight1
         total_loss = -J_sym_objective.mean()
         
         logs = {
             "mean_ratio_chosen": ratio_y1.detach().mean().item(),
-            "mean_ratio_rejected": ratio_y2.detach().mean().item(),
+            # "mean_ratio_rejected": ratio_y2.detach().mean().item(),
             "weight_chosen": weight1.detach().mean().item(),
-            "weight_rejected": weight2.detach().mean().item(),
-            "kl_term_chosen": kl_term1.detach().mean().item(),
+            # "weight_rejected": weight2.detach().mean().item(),
+            # "kl_term_chosen": kl_term1.detach().mean().item(),
+            # "kl_term_rejected": kl_term2.detach().mean().item(),
+            "loss": total_loss.item()
         }
         self._current_logs = logs
+        
+        # 遵循 Trainer 接口，如果需要返回 outputs (虽然这里通常不需要)
+        if return_outputs:
+            return (total_loss, None)
         return total_loss
 
-    # log 方法无需修改
     def log(self, logs: dict, *args, **kwargs) -> None:
         if hasattr(self, "_current_logs") and self._current_logs is not None:
             logs.update(self._current_logs)
             self._current_logs = None
         super().log(logs, *args, **kwargs)
 
-# Data Collator 和 Callback 无需修改
 @dataclass
 class DataCollatorForCustomSymPO:
     def __call__(self, features: List[Dict[str, Any]]) -> Dict[str, Any]:
         batch = {}
         for key in features[0].keys():
-            # 移除 ref_logp 相关字段的处理，因为它们已不存在
             if key.startswith("ref_logp"):
                 continue
             if isinstance(features[0][key], str):
@@ -271,83 +261,103 @@ class DataCollatorForCustomSymPO:
 class PrintingCallback(TrainerCallback):
     def on_log(self, args, state, control, logs=None, **kwargs):
         if state.is_local_process_zero and logs:
-            print(logs)
+            pass # 避免过度打印，Trainer 自带 tqdm 和 log 打印
 
-# argparse 函数无需修改
 def parse_args():
     parser = argparse.ArgumentParser(description="Train a policy model with SymPO algorithm.")
     
     # --- 路径参数 ---
     parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
-    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/precomputed_traindataset", help="Path to the precomputed dataset.")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-1e-6_0.5_no_kl_2_seed_42_1024_padding_left_800", help="Directory to save checkpoints and final model.")
+    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/ds_with_metrics", help="Path to the precomputed dataset.")
+    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-5e-6_no_kl_2_4096_seed_42", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
-    parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
+    parser.add_argument("--learning_rate", type=float, default=5e-6, help="Learning rate.")
     parser.add_argument("--num_train_epochs", type=int, default=1, help="Number of training epochs.")
     parser.add_argument("--per_device_train_batch_size", type=int, default=1, help="Batch size per GPU.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=4, help="Number of gradient accumulation steps.")
-    parser.add_argument("--gradient_checkpointing", action='store_true', help="Enable gradient checkpointing to save memory.")
-    parser.add_argument("--warmup_ratio", type=float, default=0.1, help="Warmup ratio for learning rate scheduler.")
-    parser.add_argument("--max_grad_norm", type=float, default=1.0, help="Max gradient norm for clipping.")
+    parser.add_argument("--gradient_checkpointing", action='store_true', help="Enable gradient checkpointing.")
+    parser.add_argument("--warmup_ratio", type=float, default=0.1, help="Warmup ratio.")
+    parser.add_argument("--max_grad_norm", type=float, default=1.0, help="Max gradient norm.")
     parser.add_argument("--logging_steps", type=int, default=10, help="Log metrics every N steps.")
-    parser.add_argument("--save_steps", type=int, default=800, help="Save a checkpoint every N steps.")
-    parser.add_argument("--save_total_limit", type=int, default=20, help="Limit the total number of saved checkpoints.")
+    parser.add_argument("--save_steps", type=int, default=500, help="Save a checkpoint every N steps.")
+    parser.add_argument("--save_total_limit", type=int, default=20, help="Limit number of saved checkpoints.")
 
     # --- SymPO 特定参数 ---
-    parser.add_argument("--beta_kl", type=float, default=0.5, help="KL divergence penalty coefficient.")
-    parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Minimum clip value for log probability ratio.")
-    parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Maximum clip value for log probability ratio.")
-    parser.add_argument("--use_smooth_clip", action='store_true', help="Use smooth clipping for better gradient stability (recommended).")
-    parser.add_argument("--max_length", type=int, default=2048, help="Max length for log prob calculation.")
+    parser.add_argument("--beta_kl", type=float, default=0.01, help="KL divergence penalty coefficient.")
+    parser.add_argument("--log_ratio_clip_min", type=float, default=-2.3, help="Min clip value.")
+    parser.add_argument("--log_ratio_clip_max", type=float, default=2.3, help="Max clip value.")
+    parser.add_argument("--use_smooth_clip", type=bool, default=True, help="Use smooth clipping.")
+    parser.add_argument("--max_length", type=int, default=4096, help="Max length for log prob calculation.")
     
-    # --- W&B (Weights & Biases) 日志参数 ---
-    parser.add_argument("--report_to", type=str, default="wandb", help="The integration to report results to (e.g., 'wandb').")
-    parser.add_argument("--run_name", type=str, default=f"policy-llama3-8b-sympo-default", help="A name for the W&B run.")
+    # --- W&B ---
+    parser.add_argument("--report_to", type=str, default="wandb", help="Integration to report results to.")
+    parser.add_argument("--run_name", type=str, default=f"policy-llama3-8b-sympo-default", help="W&B run name.")
     
-    # --- 随机种子参数 ---
-    parser.add_argument("--seed", type=int, default=42, help="Random seed for reproducibility .")
-
+    # --- 随机种子 ---
+    parser.add_argument("--seed", type=int, default=42, help="Random seed.")
     return parser.parse_args()
 
 
 def main():
     args = parse_args()
     
-    # 设置随机种子以确保可重复性
     print(f"设置随机种子为: {args.seed}")
     seed_everything(args.seed)
 
     tokenizer = AutoTokenizer.from_pretrained(args.sft_model_path)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token_id = tokenizer.eos_token_id
     tokenizer.padding_side = 'left' 
 
-    print("从磁盘加载数据集 (注意: 数据集中不再需要 ref_logp)...")
+    print("从磁盘加载数据集...")
     precomputed_dataset_train = load_from_disk(args.preprocessed_dataset_path)
+
+        # =============== 新增修复代码开始 ===============
+    print("正在检查并过滤数据集中的空值 (None)...")
+    
+    # 1. 定义检查函数，确保关键字段不是 None
+    def filter_none(example):
+        # 检查关键的数值字段，根据你的数据集字段名调整
+        for key in ['f_Y_chosen', 'f_Y_rejected']:
+            if example.get(key) is None:
+                return False
+        return True
+
+    original_len = len(precomputed_dataset_train)
+    precomputed_dataset_train = precomputed_dataset_train.filter(filter_none)
+    filtered_len = len(precomputed_dataset_train)
+    
+    if original_len != filtered_len:
+        print(f"⚠️ 警告: 过滤掉了 {original_len - filtered_len} 条包含 None 的脏数据！")
+    else:
+        print("✅ 数据集检查通过，无 None 值。")
+    # =============== 新增修复代码结束 ===============
 
     print("加载用于训练的策略模型 (Policy Model)...")
     policy_model = AutoModelForCausalLM.from_pretrained(
-        args.sft_model_path, dtype=torch.bfloat16
+        args.sft_model_path, 
+        dtype=torch.bfloat16
     )
 
-    # 5. 新增：加载作为参考的SFT模型 (Reference Model)
     print("加载作为参考的SFT模型 (Reference Model)...")
     ref_model = AutoModelForCausalLM.from_pretrained(
-        args.sft_model_path, dtype=torch.bfloat16
+        args.sft_model_path, 
+        dtype=torch.bfloat16
     )
-    # # 将参考模型设置为评估模式，并且不需要计算它的梯度
-    # ref_model.eval()
-    # ref_model.requires_grad_(False)
+    
+    # [修正] 必须启用 eval 模式和禁用梯度，否则内存爆炸且计算错误
+    print("冻结参考模型并设为 Eval 模式...")
+    ref_model.eval()
+    ref_model.requires_grad_(False)
 
-    # TrainingArguments 定义无需修改
     training_args = TrainingArguments(
         output_dir=args.output_dir,
         num_train_epochs=args.num_train_epochs,
         per_device_train_batch_size=args.per_device_train_batch_size,
         gradient_accumulation_steps=args.gradient_accumulation_steps,
-        # gradient_checkpointing=args.gradient_checkpointing,
-        gradient_checkpointing=False,
+        gradient_checkpointing=args.gradient_checkpointing,
         gradient_checkpointing_kwargs={'use_reentrant': False},
         optim="adamw_torch",
         learning_rate=args.learning_rate,
@@ -372,7 +382,7 @@ def main():
     print("初始化 CustomSymPOTrainer...")
     trainer = CustomSymPOTrainer(
         model=policy_model,
-        ref_model=ref_model, # 6. 将 ref_model 传递给 Trainer
+        ref_model=ref_model,
         args=training_args,
         tokenizer=tokenizer,
         train_dataset=precomputed_dataset_train,
@@ -383,57 +393,36 @@ def main():
         log_ratio_clip_max=args.log_ratio_clip_max,
         max_length=args.max_length,
     )
+    
     # 设置是否使用平滑裁剪
     trainer.use_smooth_clip = args.use_smooth_clip
-    # 移除 sft_model_path，因为它已经通过 ref_model 对象传入了
-    # sft_model_path=args.sft_model_path, 
-
-        # 设置是否使用平滑裁剪
-    trainer.use_smooth_clip = args.use_smooth_clip
-    # 移除 sft_model_path，因为它已经通过 ref_model 对象传入了
-    # sft_model_path=args.sft_model_path, 
+    
+    # [修正] 移除了此处重复的 trainer 配置代码块
 
     print("开始分布式训练...")
     train_result = trainer.train()
     print("所有任务已完成！")
 
     ##################################
-    # Save final model (HuggingFace format)
+    # Save final model
     ##################################
     print("\n" + "=" * 60)
     print("*** Save final model ***")
-    print("=" * 60)
-    print(f"⚠️  注意: 如果使用 FSDP，此步骤会自动合并分片权重并保存为 HuggingFace 格式")
-    print(f"保存路径: {args.output_dir}")
     
-    # 确保 FSDP 使用 FULL_STATE_DICT 模式保存最终模型
     if trainer.is_fsdp_enabled and trainer.accelerator.state.fsdp_plugin is not None:
-        print("检测到 FSDP，设置状态字典类型为 FULL_STATE_DICT...")
         trainer.accelerator.state.fsdp_plugin.set_state_dict_type("FULL_STATE_DICT")
     
-    # 保存最终模型（自动处理 FSDP 合并）
     trainer.save_model(args.output_dir)
     print(f"✅ 模型已保存到: {args.output_dir}")
     
-    # 保存 tokenizer
     try:
         tokenizer.save_pretrained(args.output_dir)
-        print("✅ Tokenizer 已保存")
     except Exception as e:
         print(f"⚠️  警告: 无法自动保存 tokenizer: {e}")
     
-    # 保存训练指标
     if trainer.accelerator.is_main_process:
         trainer.log_metrics("train", train_result.metrics)
         trainer.save_metrics("train", train_result.metrics)
-        print("✅ 训练指标已保存")
-    
-    print("\n" + "=" * 60)
-    print("🎉 训练和模型保存完成！")
-    print("=" * 60)
-    print(f"\n最终 HuggingFace 模型已保存到: {args.output_dir}")
-    print("可以直接使用 HuggingFace 的 from_pretrained() 加载模型")
-    print(f"\n注意: checkpoint-* 目录是训练过程中的中间检查点（FSDP 分片格式）")
-    print(f"最终模型保存在 {args.output_dir} 根目录（HuggingFace 格式）")
+
 if __name__ == "__main__":
     main()
