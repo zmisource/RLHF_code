@@ -14,6 +14,7 @@ from transformers import (
 )
 from typing import Dict, Any, List, Union, Tuple
 from dataclasses import dataclass
+from torch.nn.utils.rnn import pad_sequence
 
 # ---------------------------------------------------------------------------
 # 随机种子设置函数（确保可重复性）
@@ -39,9 +40,11 @@ class CustomSymPOTrainer(Trainer):
     def __init__(
         self,
         model: Union[torch.nn.Module],
+        ref_model: Union[torch.nn.Module], 
         args: TrainingArguments,
-        beta: float,
-        gamma: float,
+        beta_kl: float,
+        clip_eps_min: float,
+        clip_eps_max: float,
         max_length: int = None,
         **kwargs,
     ):
@@ -50,15 +53,19 @@ class CustomSymPOTrainer(Trainer):
         if not hasattr(self, 'processor') or self.processor is None:
             self.processor = self.tokenizer
 
-        self.beta = beta
-        self.gamma = gamma
+        
+        self.beta_kl = beta_kl
+        self.clip_eps_min = clip_eps_min
+        self.clip_eps_max = clip_eps_max
         self.max_length = max_length
 
-        
-        # SimPO is reference-free
-        # if self.is_fsdp_enabled: ...
-    
-
+        # 确保 ref_model 在正确的设备上
+        if self.args.device:
+            self.ref_model = ref_model.to(self.args.device)
+        else:
+            self.ref_model = ref_model.to(torch.device("cuda", torch.cuda.current_device()))
+        self._metrics_buffer = {} 
+        self._batch_cnt = 0
 
     def _get_log_probs(
         self, 
@@ -68,110 +75,59 @@ class CustomSymPOTrainer(Trainer):
         max_length: int = None
     ) -> Tuple[torch.Tensor, torch.Tensor]:
         
-        # 1. 获取 Processor
-        if hasattr(self, "processing_class") and self.processing_class is not None:
-            processor = self.processing_class
-        else:
-            processor = self.tokenizer
-            
+        tokenizer = self.processing_class
+        
         device = self.args.device
-
-        # 2. Tokenize (关掉特殊 token，避免双重 BOS)
-        prompt_encodings = processor(
-            prompts, 
-            add_special_tokens=False, 
-            padding=False, 
-            truncation=False
-        )
-        response_encodings = processor(
-            responses, 
-            add_special_tokens=False, 
-            padding=False, 
-            truncation=False
-        )
-
-        input_ids_list = []
-        loss_masks_list = []
-
         if max_length is None:
             max_length = 2048
 
-        # 3. 拼接与构建 Mask
-        for i in range(len(prompts)):
-            p_ids = prompt_encodings['input_ids'][i]
-            r_ids = response_encodings['input_ids'][i]
+        prompt_ids_list = tokenizer(prompts, add_special_tokens=False)["input_ids"]
+        response_ids_list = tokenizer(responses, add_special_tokens=False)["input_ids"]
+        
+        input_ids_list = []
+        labels_list = []
+        
+        for p_ids, r_ids in zip(prompt_ids_list, response_ids_list):
+            full_ids = p_ids + r_ids
+            curr_labels = [-100] * len(p_ids) + r_ids
             
-            combined_ids = p_ids + r_ids
-            # Prompt=0, Response=1
-            mask = [0] * len(p_ids) + [1] * len(r_ids)
+            if len(full_ids) > max_length:
+                full_ids = full_ids[:max_length]
+                curr_labels = curr_labels[:max_length]
             
-            # 截断处理
-            if len(combined_ids) > max_length:
-                # 这是一个策略选择：保留尾部
-                combined_ids = combined_ids[-max_length:]
-                mask = mask[-max_length:]
-            
-            # 转 Tensor
-            input_ids_list.append(torch.tensor(combined_ids, dtype=torch.long))
-            loss_masks_list.append(torch.tensor(mask, dtype=torch.float)) # Float 用于后续计算
+            input_ids_list.append(torch.tensor(full_ids, dtype=torch.long))
+            labels_list.append(torch.tensor(curr_labels, dtype=torch.long))
 
-        # 4. Padding (Left Padding)
+        input_ids_flipped = [t.flip(0) for t in input_ids_list]
+        labels_flipped = [t.flip(0) for t in labels_list]
         
-        # A. 处理 input_ids (使用 processor 以处理 padding_side 和 pad_token)
-        # 确保 tokenizer 设置为左填充
-        original_padding_side = processor.padding_side
-        processor.padding_side = 'left'
+        input_ids_padded = pad_sequence(input_ids_flipped, batch_first=True, padding_value=tokenizer.pad_token_id).flip(1)
+        labels_padded = pad_sequence(labels_flipped, batch_first=True, padding_value=-100).flip(1)
         
-        padded_inputs = processor.pad(
-            {"input_ids": input_ids_list},
-            padding='longest',
-            max_length=max_length,
-            return_tensors='pt'
-        )
-        input_ids = padded_inputs['input_ids'].to(device)
-        attention_mask = padded_inputs['attention_mask'].to(device)
-        
-        max_batch_len = input_ids.shape[1]
-        padded_loss_masks = torch.zeros((len(loss_masks_list), max_batch_len), dtype=torch.float, device=device)
-        
-        for i, mask_tensor in enumerate(loss_masks_list):
-            seq_len = len(mask_tensor)
-            # Left Padding: 数据放在最后
-            if seq_len > 0:
-                padded_loss_masks[i, -seq_len:] = mask_tensor.to(device)
-            
-        processor.padding_side = original_padding_side # 恢复设置
+        input_ids = input_ids_padded.to(device)
+        labels = labels_padded.to(device)
+        attention_mask = (input_ids != tokenizer.pad_token_id).long().to(device)
 
-        # 5. 前向传播
         outputs = model(input_ids, attention_mask=attention_mask, return_dict=True, use_cache=False)
         logits = outputs.logits
 
-        # 6. Shift
-        shifted_logits = logits[..., :-1, :]
-        shifted_labels = input_ids[..., 1:]
+        shifted_logits = logits[..., :-1, :].contiguous()
+        shifted_labels = labels[..., 1:].contiguous()
         
-        # Mask 也要移位
-        shifted_mask = padded_loss_masks[..., 1:] 
-        shifted_attention_mask = attention_mask[..., 1:]
-
-        # 结合 Attention Mask (双重保险)
-        final_mask = shifted_mask * shifted_attention_mask.float()
-
-        # 7. 计算 Loss
-        loss_fct = torch.nn.CrossEntropyLoss(reduction='none')
+        loss_fct = torch.nn.CrossEntropyLoss(reduction='none', ignore_index=-100)
+        
         nll_per_token = loss_fct(
-            shifted_logits.reshape(-1, shifted_logits.size(-1)), 
-            shifted_labels.reshape(-1)
+            shifted_logits.view(-1, shifted_logits.size(-1)), 
+            shifted_labels.view(-1)
         )
         nll_per_token = nll_per_token.view(shifted_labels.size())
         
-        log_probs_per_token = -nll_per_token
-        
-        # 应用 Mask
-        masked_log_probs = log_probs_per_token * final_mask
+        valid_mask = (shifted_labels != -100).float()
+        masked_log_probs = (-nll_per_token) * valid_mask
         
         total_log_probs = masked_log_probs.sum(dim=1)
-        valid_response_lens = final_mask.sum(dim=1)
+        valid_response_lens = valid_mask.sum(dim=1)
+        valid_response_lens = torch.clamp(valid_response_lens, min=1e-8)
         
         return total_log_probs, valid_response_lens
 
@@ -179,40 +135,66 @@ class CustomSymPOTrainer(Trainer):
         prompts = inputs.pop("prompt")
         chosen_responses = inputs.pop("chosen")
         rejected_responses = inputs.pop("rejected")
+        
+        f_chosen = inputs.pop("f_Y_chosen").to(self.args.device)
+        f_rejected = inputs.pop("f_Y_rejected").to(self.args.device)
     
         batch_size = len(prompts)
+        Z = torch.randint(0, 2, (batch_size,), device=self.args.device).float()
         combined_prompts = prompts + prompts
         combined_responses = chosen_responses + rejected_responses
         
-        all_log_probs_pi, valid_response_lens = self._get_log_probs(model, combined_prompts, combined_responses, max_length=self.max_length)        
-
+        all_log_probs_pi, _ = self._get_log_probs(model, combined_prompts, combined_responses, max_length=self.max_length)        
+        with torch.no_grad():
+            all_log_probs_ref, _ = self._get_log_probs(self.ref_model, combined_prompts, combined_responses, max_length=self.max_length)
+    
         # 拆分
         pi_chosen = all_log_probs_pi[:batch_size]
         pi_rejected = all_log_probs_pi[batch_size:]
+        ref_chosen = all_log_probs_ref[:batch_size]
+        ref_rejected = all_log_probs_ref[batch_size:]
+    
+        log_ratio_chosen = pi_chosen - ref_chosen
+        log_ratio_rejected = pi_rejected - ref_rejected
         
-        len_chosen = valid_response_lens[:batch_size]
-        len_rejected = valid_response_lens[batch_size:]
+        log_ratio_y1 = Z * log_ratio_chosen + (1 - Z) * log_ratio_rejected
+        f_y2_selected = Z * f_rejected + (1 - Z) * f_chosen
 
-        reward_chosen = (pi_chosen / len_chosen) * self.beta
-        reward_rejected = (pi_rejected / len_rejected) * self.beta
+        log_ratio_y1_safe = torch.clamp(log_ratio_y1, -20, 20) 
+        ratio_y1 = torch.exp(log_ratio_y1_safe)
+    
         
-        margin = reward_chosen - reward_rejected - self.gamma
+        with torch.no_grad():
+            weight = Z - f_y2_selected
+    
+        # 3. 计算两个 Surrogate Objective (代理目标)
+        # 第一项：未截断的原始目标
+        surr1 = ratio_y1 * weight
         
-        loss = -F.logsigmoid(margin).mean()
-        
-        # Logs
-        chosen_rewards = reward_chosen.detach().mean().item()
-        rejected_rewards = reward_rejected.detach().mean().item()
-        accuracy = (margin > 0).float().mean().item()
+        # 第二项：截断后的目标
+        # 将 ratio 限制在 [1-eps, 1+eps] 范围内
+        ratio_clipped = torch.clamp(ratio_y1, 1.0 - self.clip_eps_min, 1.0 + self.clip_eps_max)
+        surr2 = ratio_clipped * weight
 
-        logs = {
+        objective = torch.min(surr1, surr2)
+        loss_main = - objective.mean()
+        loss = loss_main
+        
+        current_metrics = {
             "loss": loss.item(),
-            "rewards/chosen": chosen_rewards,
-            "rewards/rejected": rejected_rewards,
-            "rewards/accuracies": accuracy,
-            "rewards/margins": margin.detach().mean().item(),
+            # "loss_main": loss_main.item(),
+            # "loss_kl": loss_kl.item(),
+            "avg_Z": Z.mean().item(), 
+            "avg_weight": weight.abs().mean().item(),
+            "ratio_mean": ratio_y1.mean().item(),
         }
-        self._current_logs = logs
+
+        for k, v in current_metrics.items():
+            if k not in self._metrics_buffer:
+                self._metrics_buffer[k] = 0.0
+            self._metrics_buffer[k] += v
+        
+        self._batch_cnt += 1
         
         if return_outputs:
             return (loss, None)
@@ -226,7 +208,7 @@ class CustomSymPOTrainer(Trainer):
         super().log(logs, *args, **kwargs)
 
 @dataclass
-class DataCollatorForSimPO:
+class DataCollatorForCustomSymPO:
     def __call__(self, features: List[Dict[str, Any]]) -> Dict[str, Any]:
         batch = {}
         for key in features[0].keys():
@@ -247,26 +229,27 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Train a policy model with SymPO algorithm.")
     
     # --- 路径参数 ---
-    parser.add_argument("--sft_model_path", type=str, default="/train/Llama-3-8B-Instruct", help="Path to the SFT base model.")
-    parser.add_argument("--preprocessed_dataset_path", type=str, default="/train/ds_with_metrics", help="Path to the precomputed dataset.")
-    parser.add_argument("--output_dir", type=str, default="/train/output_model/llama3-8b-sympo-5e-6_no_kl_2_4096_seed_42", help="Directory to save checkpoints and final model.")
+    parser.add_argument("--sft_model_path", type=str, default="/root/autodl-tmp//Llama-3-8B-Instruct", help="Path to the SFT base model.")
+    parser.add_argument("--preprocessed_dataset_path", type=str, default="/root/autodl-tmp/ds_with_metrics", help="Path to the precomputed dataset.")
+    parser.add_argument("--output_dir", type=str, default="/root/autodl-fs/train/output_model/llama3-8b-sympo-1e-6_ppo_4096_seed_42", help="Directory to save checkpoints and final model.")
     
     # --- 训练超参数 ---
-    parser.add_argument("--learning_rate", type=float, default=5e-6, help="Learning rate.")
+    parser.add_argument("--learning_rate", type=float, default=1e-6, help="Learning rate.")
     parser.add_argument("--num_train_epochs", type=int, default=1, help="Number of training epochs.")
-    parser.add_argument("--per_device_train_batch_size", type=int, default=1, help="Batch size per GPU.")
+    parser.add_argument("--per_device_train_batch_size", type=int, default=2, help="Batch size per GPU.")
     parser.add_argument("--gradient_accumulation_steps", type=int, default=4, help="Number of gradient accumulation steps.")
     parser.add_argument("--gradient_checkpointing", action='store_true', help="Enable gradient checkpointing.")
     parser.add_argument("--warmup_ratio", type=float, default=0.1, help="Warmup ratio.")
     parser.add_argument("--max_grad_norm", type=float, default=1.0, help="Max gradient norm.")
-    parser.add_argument("--logging_steps", type=int, default=10, help="Log metrics every N steps.")
-    parser.add_argument("--save_steps", type=int, default=500, help="Save a checkpoint every N steps.")
+    parser.add_argument("--logging_steps", type=int, default=5, help="Log metrics every N steps.")
+    parser.add_argument("--save_steps", type=int, default=1000, help="Save a checkpoint every N steps.")
     parser.add_argument("--save_total_limit", type=int, default=20, help="Limit number of saved checkpoints.")
 
-    # --- SimPO 特定参数 ---
-    parser.add_argument("--beta", type=float, default=2.0, help="SimPO beta coefficient.")
-    parser.add_argument("--gamma", type=float, default=1.4, help="SimPO target reward margin.")
-    parser.add_argument("--max_length", type=int, default=4096, help="Max length for log prob calculation.")
+    # --- SymPO 特定参数 ---
+    parser.add_argument("--beta_kl", type=float, default=0.01, help="KL divergence penalty coefficient.")
+    parser.add_argument("--clip_eps_min", type=float, default=0.9, help="Min clip value.")
+    parser.add_argument("--clip_eps_max", type=float, default=9, help="Max clip value.")
+    parser.add_argument("--max_length", type=int, default=2048, help="Max length for log prob calculation.")
     
     # --- W&B ---
     parser.add_argument("--report_to", type=str, default="wandb", help="Integration to report results to.")
@@ -319,6 +302,17 @@ def main():
         dtype=torch.bfloat16
     )
 
+    print("加载作为参考的SFT模型 (Reference Model)...")
+    ref_model = AutoModelForCausalLM.from_pretrained(
+        args.sft_model_path, 
+        dtype=torch.bfloat16
+    )
+    
+    # [修正] 必须启用 eval 模式和禁用梯度，否则内存爆炸且计算错误
+    print("冻结参考模型并设为 Eval 模式...")
+    ref_model.eval()
+    ref_model.requires_grad_(False)
+
     training_args = TrainingArguments(
         output_dir=args.output_dir,
         num_train_epochs=args.num_train_epochs,
@@ -333,7 +327,7 @@ def main():
         lr_scheduler_type="cosine",
         logging_strategy="steps",
         logging_steps=args.logging_steps,
-        logging_first_step=True,
+        logging_first_step=False,
         bf16=True,
         save_strategy="steps",
         save_steps=args.save_steps,
@@ -344,19 +338,20 @@ def main():
         run_name=args.run_name,
     )
     
-    data_collator = DataCollatorForSimPO()
+    data_collator = DataCollatorForCustomSymPO()
 
-    print("初始化 CustomSimPOTrainer...")
+    print("初始化 CustomSymPOTrainer...")
     trainer = CustomSymPOTrainer(
         model=policy_model,
-        # ref_model=ref_model, # SimPO removed ref_model
+        ref_model=ref_model,
         args=training_args,
         tokenizer=tokenizer,
         train_dataset=precomputed_dataset_train,
         data_collator=data_collator,
         callbacks=[PrintingCallback()],
-        beta=args.beta,
-        gamma=args.gamma,
+        beta_kl=args.beta_kl,
+        clip_eps_min=args.clip_eps_min,
+        clip_eps_max=args.clip_eps_max,
         max_length=args.max_length,
     )
     
